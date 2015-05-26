@@ -266,7 +266,6 @@
       "formula": "sottrunc2 ~ 1+T+P+F+TP+TF+PF+TPF+(1+T+F+TF|session)+(1+T+P+TP|item)"
     },
     {
-      "lmm": {},
       "lmer": {
         "deviance": 7977.36967845489,
         "theta": [
@@ -286,7 +285,7 @@
         ],
         "feval": 209
       },
-      "formula": "sottrunc2 ~ 1+T+P+F+TP+TF+PF+TPF + (1+T+F+TF||session) + (1+T+P+TP||item)"
+      "formula": "sottrunc2 ~ 1+T+P+F+TP+TF+PF+TPF + (1|session) + (0+T|session) + (0+F|session) +(0+TF|session) + (1|item) + (0+T|item) + (0+P|item) +(0+TP|item)"
     }
   ],
   "lme4::Penicillin": [
