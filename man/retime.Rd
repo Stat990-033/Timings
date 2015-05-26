@@ -4,10 +4,10 @@
 \alias{retime}
 \title{Retime a model fit}
 \usage{
-retime(lst, ...)
+retime(fnm, redo = FALSE, ...)
 }
 \arguments{
-\item{lst}{a list containing, at least, components \code{formula} and \code{data}}
+\item{fnm}{name of a json file}
 }
 \value{
 the same list augmented with a new timing
