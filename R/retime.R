@@ -4,6 +4,7 @@
 #' by refitting the model.
 #' 
 #' @param fnm name of a json file
+#' @param redo logical - should existing timings be repeated? (default FALSE)
 #' @return the same list augmented with a new timing
 #' @export
 retime <- function(fnm, redo=FALSE, ...) {
@@ -17,7 +18,8 @@ retime <- function(fnm, redo=FALSE, ...) {
             mm <- mods[[i]]
             stopifnot(is.character(form <- mm$formula))
             if (redo || !("lmer" %in% names(mm))) {
-                tt <- system.time(ff <- lmer(formula(form),dat,REML=FALSE))
+                tt <- system.time(ff <- lmer(formula(form),dat,REML=FALSE,
+                                             control=lmerControl(optCtrl=list(maxfun=120000L))))
                 lst[[dsnm]][[i]]$lmer <- 
                     list(deviance=deviance(ff),
                          theta=getME(ff,"theta"),
