@@ -1,4 +1,4 @@
-using JSON,Showoff
+using JSON,Showoff,Compat
 
 immutable Lmer
     deviance::Float64
@@ -27,6 +27,7 @@ immutable Timing
     formula::ASCIIString
     lmer::Lmer
     lmm::Lmm
+    lmmng::Lmm
 end
 
 function gettimings(fnm)
@@ -34,15 +35,16 @@ function gettimings(fnm)
     ret = Timing[]
     for k in keys(js)
         for mm in js[k]
-            lmer = Lmer(haskey(mm,"lmer") ? mm["lmer"] : Dict{AbstractString,Any}())
-            lmm = Lmm(haskey(mm,"lmm") ? mm["lmm"] : Dict{AbstractString,Any}())
-            push!(ret,Timing(k,get(mm,"formula",""),lmer,lmm))
+            lmer = Lmer(haskey(mm,"lmer") ? mm["lmer"] : Dict{ASCIIString,Any}())
+            lmm = Lmm(haskey(mm,"lmm") ? mm["lmm"] : Dict{ASCIIString,Any}())
+            lmmng = Lmm(haskey(mm,"lmmng") ? mm["lmmng"] : Dict{ASCIIString,Any}())            
+            push!(ret,Timing(k,get(mm,"formula",""),lmer,lmm,lmmng))
         end
     end
     ret
 end
 
-function rtalign{T<:AbstractString}(v::Vector{T})
+function rtalign(v::Vector)
     ll = maximum(length,v) + 1
     [lpad(r,ll) for r in v]
 end
@@ -56,8 +58,8 @@ end
 function Devs(tv::Vector{Timing})
     n = length(tv)
     mm = zeros(4,n)
-    dsn = sizehint!(ASCIIString[],n)
-    forms = sizehint!(ASCIIString[],n)
+    dsn = @compat sizehint!(ASCIIString[],n)
+    forms = @compat sizehint!(ASCIIString[],n)
     for j in 1:n
         tt = tv[j]
         push!(dsn,tt.dsname)
