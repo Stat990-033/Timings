@@ -1,0 +1,24 @@
+{
+  "n": 1104,
+  "models": [
+    {
+      "formula": "dif ~ 1+S+F+SF + (1+S+F+SF|subj) + (1+S+F+SF|item)",
+      "fits": [
+        {
+          "deviance": 1030.9552950677933,
+          "optimizer": "LN_BOBYQA",
+          "function": "lmm",
+          "time": 1.1332e-5,
+          "geval": 0,
+          "feval": 382
+        }
+      ],
+      "q": [
+        368,
+        48
+      ],
+      "p": 4
+    }
+  ],
+  "dsname": "bs10"
+}

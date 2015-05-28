@@ -33,17 +33,18 @@
 }
 \references{
   Cook, F. E. (1938) \emph{Chocolate cake, I. Optimum
-  baking temperature}. Master's Thesis, Iowa State College.
+    baking temperature}. Master's Thesis, Iowa State College.
+  
   Cochran, W. G., and Cox, G. M. (1957) \emph{Experimental
-  designs}, 2nd Ed.  New York, John Wiley \& Sons.
+    designs}, 2nd Ed.  New York, John Wiley \& Sons.
+
   Lee, Y., Nelder, J. A., and Pawitan, Y. (2006)
   \emph{Generalized linear models with random effects.
-  Unified analysis via H-likelihood}. Boca Raton, Chapman
+    Unified analysis via H-likelihood}. Boca Raton, Chapman
   and Hall/CRC.
 }
 \examples{
 str(cake)
-## 'temp' is continuous, 'temperature' an ordered factor with 6 levels
 (fm1 <- lmer(a ~ rec * t + (1|rr), cake, REML= FALSE))
 (fm2 <- lmer(a ~ rec + t + (1|rr), cake, REML= FALSE))
 ## and now "choose" :

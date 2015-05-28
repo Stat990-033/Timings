@@ -5,32 +5,32 @@
     The \code{Assay} data frame has 60 rows and 6 columns.
 }
 \format{
-    This data frame contains the following columns:
-    \describe{
+  This data frame contains the following columns:
+  \describe{
     \item{b}{
-	    an factor with levels \code{A} and \code{B}
-	    identifying the block of the well
-	}
-	\item{s}{
-	    a factor with levels \code{a} to \code{f} identifying the
-	    sample corresponding to the well
-	}
-	\item{d}{
-	    an ordered factor with levels \code{1} to \code{5}
-	    indicating the dilution applied to the well
-	}
-	\item{l}{
-	    a numeric vector of the log-optical density
-	}
+      an factor with levels \code{A} and \code{B}
+      identifying the block of the well
+    }
+    \item{s}{
+      a factor with levels \code{a} to \code{f} identifying the
+      sample corresponding to the well
+    }
+    \item{d}{
+      an ordered factor with levels \code{1} to \code{5}
+      indicating the dilution applied to the well
+    }
+    \item{l}{
+      a numeric vector of the log-optical density
+    }
     \item{bs}{
-        a factor with two levels indicating the interaction 
-        between factor b and factor s
+      a factor with twelve levels representing the interaction 
+      between factor \code{b} and factor \code{s}
     }
     \item{bd}{
-        a factor with two levels indicating the interaction
-        between factor b and factor d
+      a factor with ten levels representing the interaction
+      between factor \code{b} and factor \code{d}
     }
-    }
+  }
 }
 \details{
     These data, courtesy of Rich Wolfe and David Lansky from Searle,
@@ -48,8 +48,8 @@
     can make the stain, so the optical density is a measure of the number
     of cells that are alive and healthy.}
 \source{
-   Pinheiro, J. C. and Bates, D. M. (2000), \emph{Mixed-Effects Models in S
-     and S-PLUS}, Springer, New York. (Appendix A.2)
+  Pinheiro, J. C. and Bates, D. M. (2000), \emph{Mixed-Effects Models in S
+    and S-PLUS}, Springer, New York. (Appendix A.2)
 }
 \examples{
 str(Assay)
