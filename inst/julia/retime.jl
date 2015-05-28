@@ -1,34 +1,22 @@
 using DataFrames,JSON,MixedModels,RCall
 
-function retime(fnm;repeet::Bool=false)
+function retime(fnm)
     js = JSON.parsefile(fnm)
-    for k in keys(js)
-        println(k)
-        dat = DataFrame(k)
-        for mm in js[k]
-            ff = mm["formula"]
-            println(ff)
-            form = eval(parse(ff))
-            if (repeet || !haskey(mm,"lmm"))
-                println("lmm")
-                lm = lmm(form,dat)
-                fm = fit(lmm(form,dat))
-                gc()
-                tt = @elapsed(fit(lmm(form,dat)))
-                mm["lmm"] = [:deviance=>deviance(fm),
-                             :theta=>MixedModels.θ(fm),
-                             :hasgrad=>hasgrad(fm),
-                             :time=>tt]
-                if (hasgrad(fm))
-                    println("lmmng")
-                    fm = fit(lmm(form,dat),false,false)
-                    gc()
-                    tt = @elapsed(fit(lmm(form,dat),false,false))
-                    mm["lmmng"] = [:deviance=>deviance(fm),
-                                   :theta=>MixedModels.θ(fm),
-                                   :time=>tt]
-                end
-            end
+    dsname = js["dsname"]
+    dat = DataFrame(string("Timings::",dsname))
+    js["n"] = size(dat,1)
+    for m in js["models"]
+        form = eval(parse(m["formula"]))
+        for f in m["fits"]
+            f["function"] == "lmm" || next
+            mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
+            f["deviance"] = mod.opt.fmin
+            f["feval"] = mod.opt.feval
+            f["geval"] = mod.opt.geval
+            gc()
+            f["time"] = @elapsed(fit(lmm(form,dat)))
+            m["p"] = size(mod.X,2)
+            m["q"] = Int[length(b) for b in mod.b]
         end
     end
     json(js,2)
