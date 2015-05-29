@@ -4,29 +4,34 @@
 #' by refitting the model.
 #' 
 #' @param fnm name of a json file
-#' @param redo logical - should existing timings be repeated? (default FALSE)
 #' @return the same list augmented with a new timing
 #' @export
-retime <- function(fnm, redo=FALSE, ...) {
-    lst <- fromJSON(fnm,FALSE)
-    stopifnot(is.list(lst))
-    dsnms <- names(lst)
-    for (dsnm in dsnms) {
-        dat <- eval(parse(text=dsnm))
-        mods <- lst[[dsnm]]
-        for (i in seq_along(mods)) {
-            mm <- mods[[i]]
-            stopifnot(is.character(form <- mm$formula))
-            if (redo || !("lmer" %in% names(mm))) {
-                tt <- system.time(ff <- lmer(formula(form),dat,REML=FALSE,
-                                             control=lmerControl(optCtrl=list(maxfun=120000L))))
-                lst[[dsnm]][[i]]$lmer <- 
-                    list(deviance=deviance(ff),
-                         theta=getME(ff,"theta"),
-                         time=unclass(tt)[1:3],
-                         feval=ff@optinfo$feval)
-            }
+retime <- function(fin,fout) {
+    stopifnot(is.list(js <- fromJSON(fin,FALSE)),
+              is.data.frame(dat <- eval(as.symbol(js$dsname))),
+              is.list(mods <- js$models))
+    for (i in seq_along(mods)) {
+        m <- mods[[i]]
+        form <- eval(parse(text=m$formula))
+        for (j in seq_along(m$fits)) {
+            f <- m$fits[[j]]
+            if (f[["function"]] != "lmer")
+                next
+            opt <- f$optimizer
+            optCtrl <- switch(opt,
+                              bobyqa = list(maxfun=1e6),
+                              Nelder_Mead = list(maxfun=1e6),
+                              nloptwrap = list(algorithm=f$algorithm),
+                              optimx = list(method=f$method))
+            if (opt == "nloptr")
+            optCtrl <- list(algorithm=f$algorithm)
+            ctrl <- lmerControl(optimizer=f$optimizer)
+            tt <- system.time(ff <- lmer(form,dat,REML=FALSE,control=ctrl))
+            f$time <- unclass(tt)[1:3]
+            f$deviance <- deviance(ff)
+            f$feval <- ff@optinfo$feval
+            js$models[[i]][["fits"]][[j]] <- f
         }
     }
-    toJSON(lst,digits=I(16),auto_unbox=TRUE,pretty=2)
+    cat(toJSON(js,digits=I(16),auto_unbox=TRUE,pretty=2),file=fout)
 }
