@@ -1,5 +1,9 @@
 {
-  "dsname": "InstEval",
+  "n": 73421,
+  "OS": "Linux",
+  "BLAS": "openblas",
+  "CPU": "AMD Athlon(tm) II X4 635 Processor",
+  "WORD_SIZE": 64,
   "models": [
     {
       "formula": "y ~ 1 + dept*service + (1|s) + (1|d)",
@@ -8,7 +12,7 @@
           "deviance": 237585.55341516933,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 5.496136154,
+          "time": 4.849915911,
           "geval": 0,
           "feval": 48
         },
@@ -16,7 +20,7 @@
           "deviance": 237585.55341517954,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 5.282255793,
+          "time": 4.921845928,
           "geval": 0,
           "feval": 54
         },
@@ -24,15 +28,15 @@
           "deviance": 237585.55341516936,
           "optimizer": "LN_PRAXIS",
           "function": "lmm",
-          "time": 6.043964413,
+          "time": 4.905459961,
           "geval": 0,
-          "feval": 80
+          "feval": 89
         },
         {
           "deviance": 237585.55341524034,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 5.355816968,
+          "time": 4.867741292,
           "geval": 0,
           "feval": 89
         },
@@ -40,7 +44,7 @@
           "deviance": 237585.55341517797,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 5.1656041,
+          "time": 4.899222911,
           "geval": 0,
           "feval": 136
         }
@@ -49,7 +53,9 @@
         2972,
         1128
       ],
-      "p": 28
+      "nopt": 2,
+      "p": 28,
+      "mtype": "PLSDiag{Int32}"
     },
     {
       "formula": "y ~ 1 + service + (1|s) + (1|d) + (1|dept)",
@@ -58,7 +64,7 @@
           "deviance": 237721.76877451796,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 12.312072146,
+          "time": 9.079106026,
           "geval": 0,
           "feval": 109
         },
@@ -66,7 +72,7 @@
           "deviance": 237721.76877511907,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 9.558414717,
+          "time": 9.429746056,
           "geval": 0,
           "feval": 2442
         },
@@ -74,15 +80,15 @@
           "deviance": 237721.76877449578,
           "optimizer": "LN_PRAXIS",
           "function": "lmm",
-          "time": 9.389388739,
+          "time": 14.286981483,
           "geval": 0,
-          "feval": 133
+          "feval": 128
         },
         {
           "deviance": 237721.76877452037,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 9.56211245,
+          "time": 14.059859465,
           "geval": 0,
           "feval": 216
         },
@@ -90,7 +96,7 @@
           "deviance": 237721.76877450314,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 9.424559672,
+          "time": 10.014895617,
           "geval": 0,
           "feval": 194
         }
@@ -100,8 +106,12 @@
         1128,
         14
       ],
-      "p": 2
+      "nopt": 3,
+      "p": 2,
+      "mtype": "PLSDiag{Int32}"
     }
   ],
-  "n": 73421
+  "Julia": "0.3.8",
+  "memory": "7.796 GB",
+  "dsname": "InstEval"
 }

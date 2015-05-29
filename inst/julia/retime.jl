@@ -1,12 +1,21 @@
 using DataFrames,JSON,MixedModels,RCall
 
-function retime(fnm)
+function retime(fnm,ofile)
     js = JSON.parsefile(fnm)
     dsname = js["dsname"]
     dat = DataFrame(string("Timings::",dsname))
     js["n"] = size(dat,1)
+    js["CPU"] = Sys.cpu_info()[1].model
+    js["OS"] = Sys.OS_NAME
+    js["Julia"] = string(VERSION)
+    js["WORD_SIZE"] = Sys.WORD_SIZE
+    js["BLAS"] = Base.blas_vendor()
+    js["memory"] = string(@sprintf("%.3f ",Sys.total_memory()/2^30),"GB")
     for m in js["models"]
         form = eval(parse(m["formula"]))
+        mod = lmm(form,dat)
+        m["nopt"] = length(MixedModels.θ(mod))
+        m["mtype"] = typeof(mod.s)
         for f in m["fits"]
             f["function"] == "lmm" || next
             mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
@@ -19,5 +28,7 @@ function retime(fnm)
             m["q"] = Int[length(b) for b in mod.b]
         end
     end
-    json(js,2)
+    open(ofile,"w") do io
+        write(io,json(js,2))
+    end
 end
