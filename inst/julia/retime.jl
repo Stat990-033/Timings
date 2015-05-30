@@ -17,15 +17,16 @@ function retime(fnm,ofile)
         m["nopt"] = length(MixedModels.θ(mod))
         m["mtype"] = typeof(mod.s)
         for f in m["fits"]
-            f["function"] == "lmm" || next
-            mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
-            f["deviance"] = mod.opt.fmin
-            f["feval"] = mod.opt.feval
-            f["geval"] = mod.opt.geval
-            gc()
-            f["time"] = @elapsed(fit(lmm(form,dat)))
-            m["p"] = size(mod.X,2)
-            m["q"] = Int[length(b) for b in mod.b]
+            println(f["function"],": ",f["optimizer"])
+            if f["function"] == "lmm"
+                gc()
+                f["time"] = @elapsed mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
+                f["deviance"] = mod.opt.fmin
+                f["feval"] = mod.opt.feval
+                f["geval"] = mod.opt.geval
+                m["p"] = size(mod.X,2)
+                m["q"] = Int[length(b) for b in mod.b]
+            end
         end
     end
     open(ofile,"w") do io
