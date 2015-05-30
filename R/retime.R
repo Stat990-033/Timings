@@ -3,10 +3,11 @@
 #' \code{retime} adds a new timing to a list, usually created from a JSON file,
 #' by refitting the model.
 #' 
-#' @param fnm name of a json file
+#' @param fin name of the input JSON file
+#' @param fout name of the output JSON file, default is the same name as the input.
 #' @return the same list augmented with a new timing
 #' @export
-retime <- function(fin,fout) {
+retime <- function(fin,fout=fin) {
     stopifnot(is.list(js <- fromJSON(fin,FALSE)),
               is.data.frame(dat <- eval(as.symbol(js$dsname))),
               is.list(mods <- js$models))
@@ -23,9 +24,7 @@ retime <- function(fin,fout) {
                               Nelder_Mead = list(maxfun=1e6),
                               nloptwrap = list(algorithm=f$algorithm),
                               optimx = list(method=f$method))
-            if (opt == "nloptr")
-            optCtrl <- list(algorithm=f$algorithm)
-            ctrl <- lmerControl(optimizer=f$optimizer)
+            ctrl <- lmerControl(optimizer=f$optimizer,optCtrl=optCtrl)
             tt <- system.time(ff <- lmer(form,dat,REML=FALSE,control=ctrl))
             f$time <- unclass(tt)[1:3]
             f$deviance <- deviance(ff)
