@@ -1,0 +1,206 @@
+{
+  "dsname": "Alfalfa",
+  "OS": "Linux",
+  "BLAS": "mkl",
+  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "WORD_SIZE": 64,
+  "CPU_CORES": 4,
+  "models": [
+    {
+      "formula": "y ~ 1 + d*v + (1|b)",
+      "fits": [
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.0159999999999627,
+            0,
+            0.0180000000000291
+          ],
+          "feval": 15
+        },
+        {
+          "deviance": -10.8102280684346,
+          "optimizer": "Nelder_Mead",
+          "function": "lmer",
+          "time": [
+            0.0199999999999818,
+            0,
+            0.0190000000002328
+          ],
+          "feval": 36
+        },
+        {
+          "deviance": -10.8102280685581,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999818,
+            0,
+            0.022000000000844
+          ],
+          "algorithm": "NLOPT_LN_BOBYQA",
+          "feval": 13
+        },
+        {
+          "deviance": -10.8102280685581,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999818,
+            0,
+            0.0190000000002328
+          ],
+          "algorithm": "NLOPT_LN_COBYLA",
+          "feval": 13
+        },
+        {
+          "deviance": -10.8102280685581,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999818,
+            0,
+            0.0180000000000291
+          ],
+          "algorithm": "NLOPT_LN_NELDERMEAD",
+          "feval": 13
+        },
+        {
+          "deviance": -10.8102280685581,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999818,
+            0,
+            0.0190000000002328
+          ],
+          "algorithm": "NLOPT_LN_SBPLX",
+          "feval": 13
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LN_BOBYQA",
+          "function": "lmm",
+          "time": 0.002366054,
+          "geval": 0,
+          "feval": 15
+        },
+        {
+          "deviance": -10.8102280685234,
+          "optimizer": "LN_COBYLA",
+          "function": "lmm",
+          "time": 0.002015419,
+          "geval": 0,
+          "feval": 25
+        },
+        {
+          "deviance": -10.8102280129129,
+          "optimizer": "LN_NELDERMEAD",
+          "function": "lmm",
+          "time": 0.002365363,
+          "geval": 0,
+          "feval": 26
+        },
+        {
+          "deviance": -10.8102280685234,
+          "optimizer": "LN_SBPLX",
+          "function": "lmm",
+          "time": 0.002971939,
+          "geval": 0,
+          "feval": 50
+        },
+        {
+          "deviance": -10.8102280685989,
+          "optimizer": "LD_MMA",
+          "function": "lmm",
+          "time": 0.162755057,
+          "geval": 14,
+          "feval": 14
+        },
+        {
+          "deviance": -10.8102280685987,
+          "optimizer": "LD_CCSAQ",
+          "function": "lmm",
+          "time": 0.001875733,
+          "geval": 16,
+          "feval": 16
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_SLSQP",
+          "function": "lmm",
+          "time": 0.001252055,
+          "geval": 8,
+          "feval": 10
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_LBFGS",
+          "function": "lmm",
+          "time": 0.003399265,
+          "geval": 8,
+          "feval": 8
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_TNEWTON",
+          "function": "lmm",
+          "time": 0.002869006,
+          "geval": 9,
+          "feval": 9
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_TNEWTON_PRECOND",
+          "function": "lmm",
+          "time": 0.003501405,
+          "geval": 9,
+          "feval": 9
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_TNEWTON_RESTART",
+          "function": "lmm",
+          "time": 0.003764958,
+          "geval": 10,
+          "feval": 10
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
+          "function": "lmm",
+          "time": 0.003571555,
+          "geval": 10,
+          "feval": 10
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_VAR1",
+          "function": "lmm",
+          "time": 0.003520371,
+          "geval": 8,
+          "feval": 8
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "LD_VAR2",
+          "function": "lmm",
+          "time": 0.003698697,
+          "geval": 8,
+          "feval": 8
+        }
+      ],
+      "q": [
+        6
+      ],
+      "nopt": 1,
+      "p": 12,
+      "mtype": "MixedModels.PLSOne"
+    }
+  ],
+  "Julia": "0.4.0-dev+5114",
+  "memory": "5.745 GB",
+  "n": 72
+}

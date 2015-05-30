@@ -1,0 +1,147 @@
+{
+  "dsname": "Assay",
+  "OS": "Linux",
+  "BLAS": "openblas",
+  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "WORD_SIZE": 64,
+  "CPU_CORES": 4,
+  "models": [
+    {
+      "formula": "l ~ 1 + b + s * d + (1|bs) +(1|bd)",
+      "fits": [
+        {
+          "deviance": -240.389080232639,
+          "optimizer": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.02800000000002,
+            0,
+            0.0280000000020664
+          ],
+          "feval": 51
+        },
+        {
+          "deviance": -240.389080231973,
+          "optimizer": "Nelder_Mead",
+          "function": "lmer",
+          "time": [
+            0.0599999999999454,
+            0,
+            0.0579999999972642
+          ],
+          "feval": 79
+        },
+        {
+          "deviance": -240.389072308303,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.02800000000002,
+            0,
+            0.0279999999984284
+          ],
+          "algorithm": "NLOPT_LN_BOBYQA",
+          "feval": 27
+        },
+        {
+          "deviance": -240.389072308303,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0240000000000009,
+            0,
+            0.0259999999980209
+          ],
+          "algorithm": "NLOPT_LN_COBYLA",
+          "feval": 27
+        },
+        {
+          "deviance": -240.389072308303,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0240000000000009,
+            0,
+            0.0260000000016589
+          ],
+          "algorithm": "NLOPT_LN_PRAXIS",
+          "feval": 27
+        },
+        {
+          "deviance": -240.389072308303,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.02800000000002,
+            0,
+            0.0270000000018626
+          ],
+          "algorithm": "NLOPT_LN_NELDERMEAD",
+          "feval": 27
+        },
+        {
+          "deviance": -240.389072308303,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0240000000000009,
+            0,
+            0.0270000000018626
+          ],
+          "algorithm": "NLOPT_LN_SBPLX",
+          "feval": 27
+        },
+        {
+          "deviance": -240.38908023259003,
+          "optimizer": "LN_BOBYQA",
+          "function": "lmm",
+          "time": 0.008774008,
+          "geval": 0,
+          "feval": 31
+        },
+        {
+          "deviance": -240.3890802300369,
+          "optimizer": "LN_COBYLA",
+          "function": "lmm",
+          "time": 0.006008167,
+          "geval": 0,
+          "feval": 45
+        },
+        {
+          "deviance": -240.38908023263943,
+          "optimizer": "LN_PRAXIS",
+          "function": "lmm",
+          "time": 0.007448038,
+          "geval": 0,
+          "feval": 61
+        },
+        {
+          "deviance": -240.32966270186793,
+          "optimizer": "LN_NELDERMEAD",
+          "function": "lmm",
+          "time": 0.014183302,
+          "geval": 0,
+          "feval": 54
+        },
+        {
+          "deviance": -240.3890802315423,
+          "optimizer": "LN_SBPLX",
+          "function": "lmm",
+          "time": 0.011062296,
+          "geval": 0,
+          "feval": 98
+        }
+      ],
+      "q": [
+        12,
+        10
+      ],
+      "nopt": 2,
+      "p": 31,
+      "mtype": "PLSDiag{Int32}"
+    }
+  ],
+  "Julia": "0.3.8",
+  "memory": "5.745 GB",
+  "n": 60
+}

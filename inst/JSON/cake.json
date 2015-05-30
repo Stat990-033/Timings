@@ -1,0 +1,206 @@
+{
+  "n": 270,
+  "OS": "Linux",
+  "BLAS": "mkl",
+  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "WORD_SIZE": 64,
+  "CPU_CORES": 4,
+  "models": [
+    {
+      "formula": "a ~ 1 + rec*t + (1|rr)",
+      "fits": [
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LN_BOBYQA",
+          "function": "lmm",
+          "time": 1.302400422,
+          "geval": 0,
+          "feval": 14
+        },
+        {
+          "deviance": 1679.05186525511,
+          "optimizer": "LN_COBYLA",
+          "function": "lmm",
+          "time": 0.004542234,
+          "geval": 0,
+          "feval": 28
+        },
+        {
+          "deviance": 1679.05186526679,
+          "optimizer": "LN_NELDERMEAD",
+          "function": "lmm",
+          "time": 0.004821906,
+          "geval": 0,
+          "feval": 30
+        },
+        {
+          "deviance": 1679.05186525495,
+          "optimizer": "LN_SBPLX",
+          "function": "lmm",
+          "time": 0.008120292,
+          "geval": 0,
+          "feval": 57
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_MMA",
+          "function": "lmm",
+          "time": 0.166929627,
+          "geval": 10,
+          "feval": 10
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_CCSAQ",
+          "function": "lmm",
+          "time": 0.004161758,
+          "geval": 16,
+          "feval": 16
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_SLSQP",
+          "function": "lmm",
+          "time": 0.003203454,
+          "geval": 9,
+          "feval": 14
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_LBFGS",
+          "function": "lmm",
+          "time": 0.005601705,
+          "geval": 13,
+          "feval": 13
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_TNEWTON",
+          "function": "lmm",
+          "time": 0.005090876,
+          "geval": 11,
+          "feval": 11
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_TNEWTON_PRECOND",
+          "function": "lmm",
+          "time": 0.005276759,
+          "geval": 11,
+          "feval": 11
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_TNEWTON_RESTART",
+          "function": "lmm",
+          "time": 0.004817084,
+          "geval": 12,
+          "feval": 12
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
+          "function": "lmm",
+          "time": 0.005227619,
+          "geval": 12,
+          "feval": 12
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_VAR1",
+          "function": "lmm",
+          "time": 0.005432036,
+          "geval": 13,
+          "feval": 13
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "LD_VAR2",
+          "function": "lmm",
+          "time": 0.005513219,
+          "geval": 13,
+          "feval": 13
+        },
+        {
+          "deviance": 1679.05186525557,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0160000000000764,
+            0,
+            0.0229999999974098
+          ],
+          "algorithm": "NLOPT_LN_BOBYQA",
+          "feval": 11
+        },
+        {
+          "deviance": 1679.05186525557,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0200000000000955,
+            0,
+            0.022000000000844
+          ],
+          "algorithm": "NLOPT_LN_COBYLA",
+          "feval": 11
+        },
+        {
+          "deviance": 1679.05186525557,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999818,
+            0,
+            0.0210000000006403
+          ],
+          "algorithm": "NLOPT_LN_NELDERMEAD",
+          "feval": 11
+        },
+        {
+          "deviance": 1679.05186525557,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0240000000000009,
+            0,
+            0.0250000000014552
+          ],
+          "algorithm": "NLOPT_LN_SBPLX",
+          "feval": 11
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.0199999999999818,
+            0,
+            0.0200000000004366
+          ],
+          "feval": 16
+        },
+        {
+          "deviance": 1679.05186525494,
+          "optimizer": "Nelder_Mead",
+          "function": "lmer",
+          "time": [
+            0.0240000000000009,
+            0,
+            0.0240000000012515
+          ],
+          "feval": 32
+        }
+      ],
+      "q": [
+        45
+      ],
+      "nopt": 1,
+      "p": 18,
+      "mtype": "MixedModels.PLSOne"
+    }
+  ],
+  "Julia": "0.4.0-dev+5114",
+  "memory": "5.745 GB",
+  "dsname": "cake"
+}
