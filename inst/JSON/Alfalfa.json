@@ -14,9 +14,9 @@
           "optimizer": "bobyqa",
           "function": "lmer",
           "time": [
-            0.0159999999999627,
+            0.016,
             0,
-            0.0180000000000291
+            0.0160000000000053
           ],
           "feval": 15
         },
@@ -25,9 +25,9 @@
           "optimizer": "Nelder_Mead",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.016,
             0,
-            0.0190000000002328
+            0.0189999999999984
           ],
           "feval": 36
         },
@@ -36,48 +36,48 @@
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.0199999999999996,
             0,
-            0.022000000000844
+            0.0189999999999984
           ],
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 13
         },
         {
-          "deviance": -10.8102280685581,
+          "deviance": -10.8102280653537,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.0199999999999996,
             0,
-            0.0190000000002328
+            0.019999999999996
           ],
           "algorithm": "NLOPT_LN_COBYLA",
-          "feval": 13
+          "feval": 22
         },
         {
-          "deviance": -10.8102280685581,
+          "deviance": -10.8102279729183,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.02,
             0,
-            0.0180000000000291
+            0.0219999999999985
           ],
           "algorithm": "NLOPT_LN_NELDERMEAD",
-          "feval": 13
+          "feval": 24
         },
         {
-          "deviance": -10.8102280685581,
+          "deviance": -10.8102279729183,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.024,
             0,
-            0.0190000000002328
+            0.0249999999999986
           ],
           "algorithm": "NLOPT_LN_SBPLX",
-          "feval": 13
+          "feval": 36
         },
         {
           "deviance": -10.8102280685992,

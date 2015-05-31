@@ -14,9 +14,9 @@
           "optimizer": "bobyqa",
           "function": "lmer",
           "time": [
-            0.0240000000000009,
+            0.0239999999998872,
             0,
-            0.0240000000012515
+            0.0250000000000909
           ],
           "feval": 69
         },
@@ -27,7 +27,7 @@
           "time": [
             0.02800000000002,
             0,
-            0.0299999999988358
+            0.0289999999999964
           ],
           "feval": 97
         },
@@ -36,60 +36,60 @@
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.0240000000001146,
             0,
-            0.0239999999976135
+            0.0230000000001382
           ],
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 27
         },
         {
-          "deviance": 332.188353156272,
+          "deviance": 332.188349126145,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.02800000000002,
+            0.0239999999998872,
             0,
-            0.0259999999980209
+            0.0249999999998636
           ],
           "algorithm": "NLOPT_LN_COBYLA",
-          "feval": 27
+          "feval": 41
         },
         {
-          "deviance": 332.188353156272,
+          "deviance": 332.188348668501,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.02800000000002,
+            0.0239999999998872,
             0,
-            0.0259999999980209
+            0.0249999999998636
           ],
           "algorithm": "NLOPT_LN_PRAXIS",
-          "feval": 27
+          "feval": 44
         },
         {
-          "deviance": 332.188353156272,
+          "deviance": 332.188349597467,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0240000000000009,
+            0.0239999999998872,
             0,
-            0.0240000000012515
+            0.02800000000002
           ],
           "algorithm": "NLOPT_LN_NELDERMEAD",
-          "feval": 27
+          "feval": 54
         },
         {
-          "deviance": 332.188353156272,
+          "deviance": 332.18834867533,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0240000000000009,
+            0.0319999999999254,
             0,
-            0.0250000000014552
+            0.0299999999999727
           ],
           "algorithm": "NLOPT_LN_SBPLX",
-          "feval": 27
+          "feval": 103
         },
         {
           "deviance": 332.188348672276,

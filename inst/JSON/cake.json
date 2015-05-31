@@ -126,57 +126,57 @@
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0160000000000764,
+            0.044,
             0,
-            0.0229999999974098
+            0.0449999999999982
           ],
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 11
         },
         {
-          "deviance": 1679.05186525557,
+          "deviance": 1679.05186555473,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0200000000000955,
+            0.028,
             0,
-            0.022000000000844
+            0.0249999999999986
           ],
           "algorithm": "NLOPT_LN_COBYLA",
-          "feval": 11
+          "feval": 21
         },
         {
-          "deviance": 1679.05186525557,
+          "deviance": 1679.05187256635,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.028,
             0,
-            0.0210000000006403
+            0.0259999999999998
           ],
           "algorithm": "NLOPT_LN_NELDERMEAD",
-          "feval": 11
+          "feval": 22
         },
         {
-          "deviance": 1679.05186525557,
+          "deviance": 1679.05187256635,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.0240000000000009,
+            0.028,
             0,
-            0.0250000000014552
+            0.0269999999999975
           ],
           "algorithm": "NLOPT_LN_SBPLX",
-          "feval": 11
+          "feval": 34
         },
         {
           "deviance": 1679.05186525477,
           "optimizer": "bobyqa",
           "function": "lmer",
           "time": [
-            0.0199999999999818,
+            0.02,
             0,
-            0.0200000000004366
+            0.022000000000002
           ],
           "feval": 16
         },
@@ -185,9 +185,9 @@
           "optimizer": "Nelder_Mead",
           "function": "lmer",
           "time": [
-            0.0240000000000009,
+            0.032,
             0,
-            0.0240000000012515
+            0.0300000000000011
           ],
           "feval": 32
         }

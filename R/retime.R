@@ -20,9 +20,9 @@ retime <- function(fin,fout=fin) {
                 next
             opt <- f$optimizer
             optCtrl <- switch(opt,
-                              bobyqa = list(maxfun=1e6),
-                              Nelder_Mead = list(maxfun=1e6),
-                              nloptwrap = list(algorithm=f$algorithm),
+                              bobyqa = list(maxfun=1e10),
+                              Nelder_Mead = list(maxfun=1e10),
+                              nloptwrap = list(algorithm=f$algorithm, maxeval=1e10),
                               optimx = list(method=f$method))
             ctrl <- lmerControl(optimizer=f$optimizer,optCtrl=optCtrl)
             tt <- system.time(ff <- lmer(form,dat,REML=FALSE,control=ctrl))
