@@ -3,7 +3,8 @@ revisefr <- function(f) {
     f$dev <- round(f$dev,2)
     names(f)[names(f)=="function"] <- "fun"
     f$optimizer <- ifelse(is.na(f$algorithm),f$optimizer,f$algorithm)
-    f <- subset(f,select=-c(algorithm,geval))
+    f$optimizer <- ifelse(is.na(f$method), f$optimizer, paste(f$optimizer,f$method,sep=':'))
+    f <- subset(f,select=-c(algorithm,method,geval))
     f$time <- sapply(f$time,function(v)v[length(v)])
     f[order(f$dev,f$time),]
 }

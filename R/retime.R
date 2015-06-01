@@ -27,7 +27,7 @@ retime <- function(fin,fout=fin) {
                               optimx = list(method=f$method))
             ctrl <- lmerControl(optimizer=f$optimizer,optCtrl=optCtrl)
             tt <- system.time(ff <- lmer(form,dat,REML=FALSE,control=ctrl))
-            f$time <- unclass(tt)[1:3]
+            f$time <- unclass(tt)[3]
             f$deviance <- deviance(ff)
             f$feval <- ff@optinfo$feval
             js$models[[i]][["fits"]][[j]] <- f
