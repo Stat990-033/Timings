@@ -23,6 +23,7 @@ retime <- function(fin,fout=fin) {
                               bobyqa = list(maxfun=1e10),
                               Nelder_Mead = list(maxfun=1e10),
                               nloptwrap = list(algorithm=f$algorithm, maxeval=1e10),
+                              nlminbw = list(maxfun=1e10),
                               optimx = list(method=f$method))
             ctrl <- lmerControl(optimizer=f$optimizer,optCtrl=optCtrl)
             tt <- system.time(ff <- lmer(form,dat,REML=FALSE,control=ctrl))
@@ -34,3 +35,5 @@ retime <- function(fin,fout=fin) {
     }
     cat(toJSON(js,digits=I(16),auto_unbox=TRUE,pretty=2),file=fout)
 }
+
+nlminbw <- lme4:::nlminbwrap
