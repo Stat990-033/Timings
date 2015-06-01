@@ -1,0 +1,206 @@
+{
+  "n": 30,
+  "OS": "Linux",
+  "BLAS": "openblas",
+  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "WORD_SIZE": 64,
+  "CPU_CORES": 4,
+  "models": [
+    {
+      "formula": "y ~ 1 + (1|b)",
+      "fits": [
+        {
+          "deviance": 327.3270598811351,
+          "optimizer": "LN_BOBYQA",
+          "function": "lmm",
+          "time": 0.01145749,
+          "geval": 0,
+          "feval": 18
+        },
+        {
+          "deviance": 327.32705988117056,
+          "optimizer": "LN_COBYLA",
+          "function": "lmm",
+          "time": 0.000909642,
+          "geval": 0,
+          "feval": 26
+        },
+        {
+          "deviance": 327.3270598989099,
+          "optimizer": "LN_NELDERMEAD",
+          "function": "lmm",
+          "time": 0.00092546,
+          "geval": 0,
+          "feval": 28
+        },
+        {
+          "deviance": 327.3270598989099,
+          "optimizer": "LN_SBPLX",
+          "function": "lmm",
+          "time": 0.001157936,
+          "geval": 0,
+          "feval": 43
+        },
+        {
+          "deviance": 327.3270598811376,
+          "optimizer": "LD_MMA",
+          "function": "lmm",
+          "time": 0.000618283,
+          "geval": 10,
+          "feval": 10
+        },
+        {
+          "deviance": 327.32705988113986,
+          "optimizer": "LD_CCSAQ",
+          "function": "lmm",
+          "time": 0.000828578,
+          "geval": 13,
+          "feval": 13
+        },
+        {
+          "deviance": 327.32705988113514,
+          "optimizer": "LD_SLSQP",
+          "function": "lmm",
+          "time": 0.000735523,
+          "geval": 8,
+          "feval": 9
+        },
+        {
+          "deviance": 327.327059881135,
+          "optimizer": "LD_LBFGS",
+          "function": "lmm",
+          "time": 0.003447898,
+          "geval": 9,
+          "feval": 9
+        },
+        {
+          "deviance": 327.3270598811351,
+          "optimizer": "LD_TNEWTON",
+          "function": "lmm",
+          "time": 0.002820944,
+          "geval": 11,
+          "feval": 11
+        },
+        {
+          "deviance": 327.3270598811351,
+          "optimizer": "LD_TNEWTON_PRECOND",
+          "function": "lmm",
+          "time": 0.003421332,
+          "geval": 11,
+          "feval": 11
+        },
+        {
+          "deviance": 327.3270598811351,
+          "optimizer": "LD_TNEWTON_RESTART",
+          "function": "lmm",
+          "time": 0.002804117,
+          "geval": 13,
+          "feval": 13
+        },
+        {
+          "deviance": 327.3270598811351,
+          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
+          "function": "lmm",
+          "time": 0.003535673,
+          "geval": 13,
+          "feval": 13
+        },
+        {
+          "deviance": 327.327059881135,
+          "optimizer": "LD_VAR1",
+          "function": "lmm",
+          "time": 0.002229498,
+          "geval": 9,
+          "feval": 9
+        },
+        {
+          "deviance": 327.327059881135,
+          "optimizer": "LD_VAR2",
+          "function": "lmm",
+          "time": 0.001682336,
+          "geval": 9,
+          "feval": 9
+        },
+        {
+          "deviance": 327.327059881137,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999996,
+            0,
+            0.0220000000000482
+          ],
+          "algorithm": "NLOPT_LN_BOBYQA",
+          "feval": 18
+        },
+        {
+          "deviance": 327.327059881838,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999996,
+            0,
+            0.0220000000000482
+          ],
+          "algorithm": "NLOPT_LN_COBYLA",
+          "feval": 22
+        },
+        {
+          "deviance": 327.327061013763,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.0199999999999996,
+            0,
+            0.0220000000000482
+          ],
+          "algorithm": "NLOPT_LN_NELDERMEAD",
+          "feval": 22
+        },
+        {
+          "deviance": 327.327061013763,
+          "optimizer": "nloptwrap",
+          "function": "lmer",
+          "time": [
+            0.032,
+            0,
+            0.0289999999999964
+          ],
+          "algorithm": "NLOPT_LN_SBPLX",
+          "feval": 30
+        },
+        {
+          "deviance": 327.702650873442,
+          "optimizer": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.016,
+            0,
+            0.0170000000000528
+          ],
+          "feval": 1
+        },
+        {
+          "deviance": 327.327059881166,
+          "optimizer": "Nelder_Mead",
+          "function": "lmer",
+          "time": [
+            0.0280000000000005,
+            0,
+            0.0259999999999536
+          ],
+          "feval": 36
+        }
+      ],
+      "q": [
+        6
+      ],
+      "nopt": 1,
+      "p": 1,
+      "mtype": "PLSOne"
+    }
+  ],
+  "Julia": "0.3.8",
+  "memory": "5.745 GB",
+  "dsname": "Dyestuff"
+}
