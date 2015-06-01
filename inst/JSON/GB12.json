@@ -92,6 +92,54 @@
           "feval": 1547
         },
         {
+          "deviance": -10.8102280685951,
+          "optimizer": "optimx",
+          "method": "L-BFGS-B",
+          "function": "lmer",
+          "time": [
+            0.207999999999998,
+            0,
+            0.221000000000004
+          ],
+          "feval": 14
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "optimx",
+          "method": "nlminb",
+          "function": "lmer",
+          "time": [
+            0.208,
+            0,
+            0.207999999999998
+          ],
+          "feval": 19
+        },
+        {
+          "deviance": -10.810228068597,
+          "optimizer": "optimx",
+          "method": "spg",
+          "function": "lmer",
+          "time": [
+            0.372,
+            0,
+            0.405000000000001
+          ],
+          "feval": "NA"
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "optimx",
+          "method": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.200000000000001,
+            0.004,
+            0.203000000000003
+          ],
+          "feval": "NA"
+        },
+        {
           "deviance": 7926.675430409116,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
@@ -304,6 +352,54 @@
           ],
           "algorithm": "NLOPT_LN_SBPLX",
           "feval": 323
+        },
+        {
+          "deviance": -10.8102280685951,
+          "optimizer": "optimx",
+          "method": "L-BFGS-B",
+          "function": "lmer",
+          "time": [
+            0.207999999999998,
+            0,
+            0.221000000000004
+          ],
+          "feval": 14
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "optimx",
+          "method": "nlminb",
+          "function": "lmer",
+          "time": [
+            0.208,
+            0,
+            0.207999999999998
+          ],
+          "feval": 19
+        },
+        {
+          "deviance": -10.810228068597,
+          "optimizer": "optimx",
+          "method": "spg",
+          "function": "lmer",
+          "time": [
+            0.372,
+            0,
+            0.405000000000001
+          ],
+          "feval": "NA"
+        },
+        {
+          "deviance": -10.8102280685992,
+          "optimizer": "optimx",
+          "method": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.200000000000001,
+            0.004,
+            0.203000000000003
+          ],
+          "feval": "NA"
         },
         {
           "deviance": 7977.369678456061,
