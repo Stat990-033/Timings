@@ -1,0 +1,63 @@
+<!--
+%\VignetteEngine{knitr::rmarkdown}
+%\VignetteIndexEntry{Timings}
+-->
+
+```{r opts, echo = FALSE, message = FALSE}
+library("knitr")
+```
+	
+```{r loadpkg,message=FALSE}
+library("jsonlite")
+library("Timings")
+library("plyr") ## handy for ddply, rename
+library("ggplot2"); theme_set(theme_bw())
+```
+```{r}
+lf <- list.files(system.file("JSON",package="Timings"),full.names=TRUE)
+L1 <- lapply(lf,fromJSON)
+sfun <- function(x) {
+    ff <- x$models$fits[[1]]
+    dd <- data.frame(ds=x$dsname,
+               ff[c("deviance","optimizer","function","feval")])
+    dd$time <- sapply(ff$time,tail,1)
+    ## 'function' and 'deviance' both make trouble for NSE
+    dd <- rename(dd,replace=c(function.="fun",deviance="dev"))
+    dd <- ddply(dd,"ds",transform,
+                ddev=dev-min(dev,na.rm=TRUE),
+                reltime=time/min(time,na.rm=TRUE))
+    dd
+}
+## structure of data objects differs ...
+has.dsnames <- sapply(lapply(L1,names),function(x) "dsname" %in% x)
+sdf <- do.call(rbind,lapply(L1[has.dsnames],sfun))
+sdf <- transform(sdf,method=paste(fun,optimizer,sep="."))
+sdf <- transform(sdf,method=reorder(method,time),
+                     ds=reorder(ds,time))
+sdf <- sdf[with(sdf,order(method,ds)),]
+                 
+## timings
+## (we've already ordered methods by average time)
+ggplot(sdf,aes(time,method,colour=ds))+
+    geom_point()+
+    geom_path(aes(group=ds))+
+    scale_x_log10()
+
+ggplot(sdf,aes(reltime,method,colour=ds))+
+    geom_point()+
+    geom_path(aes(group=ds))+
+    scale_x_log10()
+
+## taking
+ggplot(sdf,aes(ddev,method,colour=ds))+
+    geom_point()+
+        geom_path(aes(group=ds))+
+            geom_vline(xintercept=0.01,linetype=2)+
+                scale_x_log10()
+ggplot(sdf,aes(ddev,ds,colour=method))+
+    geom_point()+
+        geom_path(aes(group=method))+
+            geom_vline(xintercept=0.01,linetype=2)+
+                scale_x_log10()
+
+```
