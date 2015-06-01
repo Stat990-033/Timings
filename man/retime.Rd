@@ -4,10 +4,12 @@
 \alias{retime}
 \title{Retime a model fit}
 \usage{
-retime(fnm, redo = FALSE, ...)
+retime(fin, fout = fin)
 }
 \arguments{
-\item{fnm}{name of a json file}
+\item{fin}{name of the input JSON file}
+
+\item{fout}{name of the output JSON file, default is the same name as the input.}
 }
 \value{
 the same list augmented with a new timing
