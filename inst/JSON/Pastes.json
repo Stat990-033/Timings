@@ -1,7 +1,7 @@
 {
   "n": 60,
   "OS": "Linux",
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -92,42 +92,42 @@
           "feval": 77
         },
         {
-          "deviance": 247.994465862897,
+          "deviance": 247.9944658628968,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 0.005835113,
+          "time": 0.009571695,
           "geval": 0,
           "feval": 35
         },
         {
-          "deviance": 247.994465862539,
+          "deviance": 247.99446586401828,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 0.007064305,
+          "time": 0.009560302,
           "geval": 0,
-          "feval": 42
+          "feval": 35
         },
         {
-          "deviance": 247.994465862425,
+          "deviance": 247.9944658624249,
           "optimizer": "LN_PRAXIS",
           "function": "lmm",
-          "time": 0.01139916,
+          "time": 0.016005272,
           "geval": 0,
-          "feval": 64
+          "feval": 61
         },
         {
-          "deviance": 247.994465863478,
+          "deviance": 247.99446586347813,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 0.009934244,
+          "time": 0.017547735,
           "geval": 0,
           "feval": 67
         },
         {
-          "deviance": 247.994465865903,
+          "deviance": 247.99446586590258,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 0.01336223,
+          "time": 0.023260423,
           "geval": 0,
           "feval": 91
         }
@@ -138,10 +138,10 @@
       ],
       "nopt": 2,
       "p": 1,
-      "mtype": "PLSNested"
+      "mtype": "MixedModels.PLSNested"
     }
   ],
-  "Julia": "0.3.8",
+  "Julia": "0.4.0-dev+5136",
   "memory": "5.745 GB",
   "dsname": "Pastes"
 }

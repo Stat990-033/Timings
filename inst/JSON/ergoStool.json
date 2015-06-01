@@ -1,7 +1,7 @@
 {
-  "dsname": "ergoStool",
+  "n": 36,
   "OS": "Linux",
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -10,114 +10,114 @@
       "formula": "e ~ 1 + t + (1|s)",
       "fits": [
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810634,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 1.183262307,
+          "time": 0.078009,
           "geval": 0,
           "feval": 16
         },
         {
-          "deviance": 122.144437408119,
+          "deviance": 122.14443740811855,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 0.003150858,
+          "time": 0.001788745,
           "geval": 0,
           "feval": 25
         },
         {
-          "deviance": 122.144437411224,
+          "deviance": 122.14443741122368,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 0.002571286,
+          "time": 0.002031273,
           "geval": 0,
           "feval": 30
         },
         {
-          "deviance": 122.144437408119,
+          "deviance": 122.14443740811855,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 0.004990246,
+          "time": 0.002947533,
           "geval": 0,
           "feval": 50
         },
         {
-          "deviance": 122.144437408142,
+          "deviance": 122.14443740814212,
           "optimizer": "LD_MMA",
           "function": "lmm",
-          "time": 0.17868277,
+          "time": 0.001136473,
           "geval": 9,
           "feval": 9
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.1444374081065,
           "optimizer": "LD_CCSAQ",
           "function": "lmm",
-          "time": 0.001892608,
+          "time": 0.001548343,
           "geval": 16,
           "feval": 16
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810634,
           "optimizer": "LD_SLSQP",
           "function": "lmm",
-          "time": 0.001393451,
+          "time": 0.001173631,
           "geval": 8,
           "feval": 10
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810634,
           "optimizer": "LD_LBFGS",
           "function": "lmm",
-          "time": 0.02777147,
+          "time": 0.003437612,
           "geval": 8,
           "feval": 8
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810631,
           "optimizer": "LD_TNEWTON",
           "function": "lmm",
-          "time": 0.022171356,
+          "time": 0.003057215,
           "geval": 9,
           "feval": 9
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810631,
           "optimizer": "LD_TNEWTON_PRECOND",
           "function": "lmm",
-          "time": 0.010952711,
+          "time": 0.003471242,
           "geval": 9,
           "feval": 9
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810633,
           "optimizer": "LD_TNEWTON_RESTART",
           "function": "lmm",
-          "time": 0.01587268,
+          "time": 0.002911234,
           "geval": 8,
           "feval": 8
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810633,
           "optimizer": "LD_TNEWTON_PRECOND_RESTART",
           "function": "lmm",
-          "time": 0.014195053,
+          "time": 0.003455819,
           "geval": 8,
           "feval": 8
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810634,
           "optimizer": "LD_VAR1",
           "function": "lmm",
-          "time": 0.01065802,
+          "time": 0.002112195,
           "geval": 8,
           "feval": 8
         },
         {
-          "deviance": 122.144437408106,
+          "deviance": 122.14443740810634,
           "optimizer": "LD_VAR2",
           "function": "lmm",
-          "time": 0.010247203,
+          "time": 0.002011267,
           "geval": 8,
           "feval": 8
         },
@@ -197,10 +197,10 @@
       ],
       "nopt": 1,
       "p": 4,
-      "mtype": "PLSOne"
+      "mtype": "MixedModels.PLSOne"
     }
   ],
-  "Julia": "0.3.8",
+  "Julia": "0.4.0-dev+5136",
   "memory": "5.745 GB",
-  "n": 36
+  "dsname": "ergoStool"
 }

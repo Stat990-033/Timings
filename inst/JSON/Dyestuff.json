@@ -1,7 +1,7 @@
 {
   "n": 30,
   "OS": "Linux",
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -13,7 +13,7 @@
           "deviance": 327.3270598811351,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 0.01145749,
+          "time": 0.001123355,
           "geval": 0,
           "feval": 18
         },
@@ -21,15 +21,15 @@
           "deviance": 327.32705988117056,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 0.000909642,
+          "time": 0.001409596,
           "geval": 0,
-          "feval": 26
+          "feval": 27
         },
         {
           "deviance": 327.3270598989099,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 0.00092546,
+          "time": 0.001383692,
           "geval": 0,
           "feval": 28
         },
@@ -37,55 +37,55 @@
           "deviance": 327.3270598989099,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 0.001157936,
+          "time": 0.001905143,
           "geval": 0,
           "feval": 43
         },
         {
-          "deviance": 327.3270598811376,
+          "deviance": 327.32705988113764,
           "optimizer": "LD_MMA",
           "function": "lmm",
-          "time": 0.000618283,
+          "time": 0.000950059,
           "geval": 10,
           "feval": 10
         },
         {
-          "deviance": 327.32705988113986,
+          "deviance": 327.3270598811398,
           "optimizer": "LD_CCSAQ",
           "function": "lmm",
-          "time": 0.000828578,
+          "time": 0.001076576,
           "geval": 13,
           "feval": 13
         },
         {
-          "deviance": 327.32705988113514,
+          "deviance": 327.3270598811351,
           "optimizer": "LD_SLSQP",
           "function": "lmm",
-          "time": 0.000735523,
+          "time": 0.000905081,
           "geval": 8,
           "feval": 9
         },
         {
-          "deviance": 327.327059881135,
+          "deviance": 327.3270598811351,
           "optimizer": "LD_LBFGS",
           "function": "lmm",
-          "time": 0.003447898,
+          "time": 0.003290556,
           "geval": 9,
           "feval": 9
         },
         {
-          "deviance": 327.3270598811351,
+          "deviance": 327.32705988113514,
           "optimizer": "LD_TNEWTON",
           "function": "lmm",
-          "time": 0.002820944,
+          "time": 0.002906184,
           "geval": 11,
           "feval": 11
         },
         {
-          "deviance": 327.3270598811351,
+          "deviance": 327.32705988113514,
           "optimizer": "LD_TNEWTON_PRECOND",
           "function": "lmm",
-          "time": 0.003421332,
+          "time": 0.003371892,
           "geval": 11,
           "feval": 11
         },
@@ -93,7 +93,7 @@
           "deviance": 327.3270598811351,
           "optimizer": "LD_TNEWTON_RESTART",
           "function": "lmm",
-          "time": 0.002804117,
+          "time": 0.002993771,
           "geval": 13,
           "feval": 13
         },
@@ -101,23 +101,23 @@
           "deviance": 327.3270598811351,
           "optimizer": "LD_TNEWTON_PRECOND_RESTART",
           "function": "lmm",
-          "time": 0.003535673,
+          "time": 0.003450318,
           "geval": 13,
           "feval": 13
         },
         {
-          "deviance": 327.327059881135,
+          "deviance": 327.3270598811351,
           "optimizer": "LD_VAR1",
           "function": "lmm",
-          "time": 0.002229498,
+          "time": 0.003195288,
           "geval": 9,
           "feval": 9
         },
         {
-          "deviance": 327.327059881135,
+          "deviance": 327.3270598811351,
           "optimizer": "LD_VAR2",
           "function": "lmm",
-          "time": 0.001682336,
+          "time": 0.001834154,
           "geval": 9,
           "feval": 9
         },
@@ -197,10 +197,10 @@
       ],
       "nopt": 1,
       "p": 1,
-      "mtype": "PLSOne"
+      "mtype": "MixedModels.PLSOne"
     }
   ],
-  "Julia": "0.3.8",
+  "Julia": "0.4.0-dev+5136",
   "memory": "5.745 GB",
   "dsname": "Dyestuff"
 }

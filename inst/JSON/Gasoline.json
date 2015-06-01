@@ -1,7 +1,7 @@
 {
-  "dsname": "Gasoline",
+  "n": 32,
   "OS": "Linux",
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -13,111 +13,111 @@
           "deviance": 170.662519564425,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 0.001461153,
+          "time": 0.001620662,
           "geval": 0,
           "feval": 21
         },
         {
-          "deviance": 170.662519564459,
+          "deviance": 170.66251956445868,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 0.00173471,
+          "time": 0.001832577,
           "geval": 0,
           "feval": 26
         },
         {
-          "deviance": 170.662519654753,
+          "deviance": 170.6625196547525,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 0.00204775,
+          "time": 0.001924301,
           "geval": 0,
           "feval": 28
         },
         {
-          "deviance": 170.662519564459,
+          "deviance": 170.66251956445868,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 0.00274137,
+          "time": 0.002969188,
           "geval": 0,
           "feval": 49
         },
         {
-          "deviance": 170.662519564426,
+          "deviance": 170.66251956442608,
           "optimizer": "LD_MMA",
           "function": "lmm",
-          "time": 0.001486445,
+          "time": 0.001578205,
           "geval": 16,
           "feval": 16
         },
         {
-          "deviance": 170.662519564448,
+          "deviance": 170.66251956444796,
           "optimizer": "LD_CCSAQ",
           "function": "lmm",
-          "time": 0.001348102,
+          "time": 0.001384299,
           "geval": 13,
           "feval": 13
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.6625195644247,
           "optimizer": "LD_SLSQP",
           "function": "lmm",
-          "time": 0.001406757,
+          "time": 0.001548775,
           "geval": 12,
           "feval": 15
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.66251956442474,
           "optimizer": "LD_LBFGS",
           "function": "lmm",
-          "time": 0.017546827,
+          "time": 0.004372735,
           "geval": 22,
           "feval": 22
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.6625195644247,
           "optimizer": "LD_TNEWTON",
           "function": "lmm",
-          "time": 0.016628356,
+          "time": 0.003443602,
           "geval": 15,
           "feval": 15
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.6625195644247,
           "optimizer": "LD_TNEWTON_PRECOND",
           "function": "lmm",
-          "time": 0.016375455,
+          "time": 0.003904766,
           "geval": 15,
           "feval": 15
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.6625195644247,
           "optimizer": "LD_TNEWTON_RESTART",
           "function": "lmm",
-          "time": 0.01163171,
+          "time": 0.004103726,
           "geval": 26,
           "feval": 26
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.6625195644247,
           "optimizer": "LD_TNEWTON_PRECOND_RESTART",
           "function": "lmm",
-          "time": 0.01286894,
+          "time": 0.005404686,
           "geval": 26,
           "feval": 26
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.66251956442474,
           "optimizer": "LD_VAR1",
           "function": "lmm",
-          "time": 0.002997054,
+          "time": 0.003421456,
           "geval": 22,
           "feval": 22
         },
         {
-          "deviance": 170.662519564425,
+          "deviance": 170.66251956442474,
           "optimizer": "LD_VAR2",
           "function": "lmm",
-          "time": 0.002753291,
+          "time": 0.002902041,
           "geval": 22,
           "feval": 22
         },
@@ -197,10 +197,10 @@
       ],
       "nopt": 1,
       "p": 2,
-      "mtype": "PLSOne"
+      "mtype": "MixedModels.PLSOne"
     }
   ],
-  "Julia": "0.3.8",
+  "Julia": "0.4.0-dev+5136",
   "memory": "5.745 GB",
-  "n": 32
+  "dsname": "Gasoline"
 }
