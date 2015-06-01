@@ -91,6 +91,54 @@
           "algorithm": "NLOPT_LN_SBPLX",
           "feval": 1501
         },
+         {
+          "deviance": -240.389080232301,
+          "optimizer": "optimx",
+          "method": "L-BFGS-B",
+          "function": "lmer",
+          "time": [
+            0.252000000000001,
+            0,
+            0.26400000000001
+          ],
+          "feval": 48
+        },
+        {
+          "deviance": -240.389080232523,
+          "optimizer": "optimx",
+          "method": "nlminb",
+          "function": "lmer",
+          "time": [
+            0.228,
+            0,
+            0.228999999999928
+          ],
+          "feval": 74
+        },
+        {
+          "deviance": -240.329662702479,
+          "optimizer": "optimx",
+          "method": "spg",
+          "function": "lmer",
+          "time": [
+            0.4,
+            0,
+            0.413999999999987
+          ],
+          "feval": "NA"
+        },
+        {
+          "deviance": -240.389080232639,
+          "optimizer": "optimx",
+          "method": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.232000000000001,
+            0,
+            0.230999999999995
+          ],
+          "feval": "NA"
+        },
         {
           "deviance": 1030.9553052085953,
           "optimizer": "LN_BOBYQA",

@@ -126,21 +126,69 @@
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.044,
+            0.0480000000000018,
             0,
-            0.0449999999999982
+            0.0480000000000018
           ],
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 11
+        },
+        {
+          "deviance": 1679.05186525479,
+          "optimizer": "optimx",
+          "method": "L-BFGS-B",
+          "function": "lmer",
+          "time": [
+            0.20799999999997,
+            0.0040000000000191,
+            0.20900000000006
+          ],
+          "feval": 12
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "optimx",
+          "method": "nlminb",
+          "function": "lmer",
+          "time": [
+            0.211999999999989,
+            0,
+            0.211999999999989
+          ],
+          "feval": 15
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "optimx",
+          "method": "spg",
+          "function": "lmer",
+          "time": [
+            0.372000000000071,
+            0,
+            0.374000000000024
+          ],
+          "feval": "NA"
+        },
+        {
+          "deviance": 1679.05186525477,
+          "optimizer": "optimx",
+          "method": "bobyqa",
+          "function": "lmer",
+          "time": [
+            0.211999999999989,
+            0,
+            0.211999999999989
+          ],
+          "feval": "NA"
         },
         {
           "deviance": 1679.05186555473,
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.028,
+            0.0480000000000018,
             0,
-            0.0249999999999986
+            0.0489999999999782
           ],
           "algorithm": "NLOPT_LN_COBYLA",
           "feval": 21
@@ -150,9 +198,9 @@
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.028,
-            0,
-            0.0259999999999998
+            0.0480000000000018,
+            0.00399999999990541,
+            0.0499999999999545
           ],
           "algorithm": "NLOPT_LN_NELDERMEAD",
           "feval": 22
@@ -162,32 +210,32 @@
           "optimizer": "nloptwrap",
           "function": "lmer",
           "time": [
-            0.028,
+            0.05600000000004,
             0,
-            0.0269999999999975
+            0.0539999999998599
           ],
           "algorithm": "NLOPT_LN_SBPLX",
           "feval": 34
         },
         {
-          "deviance": 1679.05186525477,
+          "deviance": 1679.45471005176,
           "optimizer": "bobyqa",
           "function": "lmer",
           "time": [
-            0.02,
+            0.0359999999999445,
             0,
-            0.022000000000002
+            0.0380000000000109
           ],
-          "feval": 16
+          "feval": 1
         },
         {
           "deviance": 1679.05186525494,
           "optimizer": "Nelder_Mead",
           "function": "lmer",
           "time": [
-            0.032,
+            0.0520000000000209,
             0,
-            0.0300000000000011
+            0.0510000000001583
           ],
           "feval": 32
         }
