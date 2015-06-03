@@ -1,7 +1,7 @@
 {
-  "n": 73421,
+  "dsname": "InstEval",
   "OS": "Linux",
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -96,42 +96,42 @@
           "feval": "NA"
         },
         {
-          "deviance": 237585.553415169,
+          "deviance": 237585.5534151693,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 6.483874042,
+          "time": 4.459777821,
           "geval": 0,
-          "feval": 48
+          "feval": 47
         },
         {
-          "deviance": 237585.553415172,
+          "deviance": 237585.55341516968,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 6.38459421,
+          "time": 3.561461798,
           "geval": 0,
-          "feval": 62
+          "feval": 56
         },
         {
-          "deviance": 237585.553415169,
+          "deviance": 237585.5534151694,
           "optimizer": "LN_PRAXIS",
           "function": "lmm",
-          "time": 7.860444618,
+          "time": 3.966380697,
           "geval": 0,
-          "feval": 79
+          "feval": 80
         },
         {
-          "deviance": 237585.55341524,
+          "deviance": 237585.55341524034,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 8.763932027,
+          "time": 4.364727868,
           "geval": 0,
           "feval": 89
         },
         {
-          "deviance": 237585.553415178,
+          "deviance": 237585.55341517797,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 12.851814906,
+          "time": 6.351310395,
           "geval": 0,
           "feval": 136
         }
@@ -234,42 +234,42 @@
           "feval": "NA"
         },
         {
-          "deviance": 237721.768774949,
+          "deviance": 237721.76877452384,
           "optimizer": "LN_BOBYQA",
           "function": "lmm",
-          "time": 9.523328715,
+          "time": 4.877744011,
           "geval": 0,
-          "feval": 106
+          "feval": 115
         },
         {
-          "deviance": 237721.768774571,
+          "deviance": 237721.7687745035,
           "optimizer": "LN_COBYLA",
           "function": "lmm",
-          "time": 85.335601672,
+          "time": 60.485346625,
           "geval": 0,
-          "feval": 1051
+          "feval": 1623
         },
         {
-          "deviance": 237721.768774496,
+          "deviance": 237721.76877449578,
           "optimizer": "LN_PRAXIS",
           "function": "lmm",
-          "time": 11.127066713,
+          "time": 5.469709048,
           "geval": 0,
-          "feval": 130
+          "feval": 132
         },
         {
-          "deviance": 237721.76877452,
+          "deviance": 237721.76877452037,
           "optimizer": "LN_NELDERMEAD",
           "function": "lmm",
-          "time": 18.248425157,
+          "time": 8.367048582,
           "geval": 0,
           "feval": 216
         },
         {
-          "deviance": 237721.768774503,
+          "deviance": 237721.76877450314,
           "optimizer": "LN_SBPLX",
           "function": "lmm",
-          "time": 16.655594568,
+          "time": 7.514634708,
           "geval": 0,
           "feval": 194
         }
@@ -284,7 +284,7 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "Julia": "0.3.8",
+  "Julia": "0.3.10-pre+3",
   "memory": "5.745 GB",
-  "dsname": "InstEval"
+  "n": 73421
 }
