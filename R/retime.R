@@ -16,7 +16,7 @@ retime <- function(fin,fout=fin) {
         form <- eval(parse(text=m$formula))
         for (j in seq_along(m$fits)) {
             f <- m$fits[[j]]
-            if (f[["function"]] != "lmer")
+            if (f[["func"]] != "lmer")
                 next
             opt <- f$optimizer
             optCtrl <- switch(opt,
@@ -28,7 +28,7 @@ retime <- function(fin,fout=fin) {
             ctrl <- lmerControl(optimizer=f$optimizer,optCtrl=optCtrl)
             tt <- system.time(ff <- lmer(form,dat,REML=FALSE,control=ctrl))
             f$time <- unclass(tt)[3]
-            f$deviance <- deviance(ff)
+            f$dev <- deviance(ff)
             f$feval <- ff@optinfo$feval
             js$models[[i]][["fits"]][[j]] <- f
         }
