@@ -10,127 +10,127 @@
       "formula": "y ~ 1 + dept*service + (1|s) + (1|d)",
       "fits": [
         {
-          "deviance": 237585.553415169,
+          "dev": 237585.553415169,
           "optimizer": "bobyqa",
-          "function": "lmer",
+          "func": "lmer",
           "time": 8.341,
           "feval": 26
         },
         {
-          "deviance": 237585.553415787,
+          "dev": 237585.553415787,
           "optimizer": "Nelder_Mead",
-          "function": "lmer",
+          "func": "lmer",
           "time": 15.077,
           "feval": 77
         },
         {
-          "deviance": 237585.55341517,
+          "dev": 237585.55341517,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 8.368,
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 32
         },
         {
-          "deviance": 237585.553432371,
+          "dev": 237585.553432371,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 8.831,
           "algorithm": "NLOPT_LN_COBYLA",
           "feval": 37
         },
         {
-          "deviance": 237585.553415169,
+          "dev": 237585.553415169,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 15.809,
           "algorithm": "NLOPT_LN_PRAXIS",
           "feval": 82
         },
         {
-          "deviance": 237585.553415637,
+          "dev": 237585.553415637,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 16.833,
           "algorithm": "NLOPT_LN_NELDERMEAD",
           "feval": 67
         },
         {
-          "deviance": 237585.553415335,
+          "dev": 237585.553415335,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 20.888,
           "algorithm": "NLOPT_LN_SBPLX",
           "feval": 114
         },
         {
-          "deviance": 237585.553415492,
+          "dev": 237585.553415492,
           "optimizer": "optimx",
           "method": "L-BFGS-B",
-          "function": "lmer",
+          "func": "lmer",
           "time": 16.753,
           "feval": 18
         },
         {
-          "deviance": 237585.553415212,
+          "dev": 237585.553415212,
           "optimizer": "optimx",
           "method": "nlminb",
-          "function": "lmer",
+          "func": "lmer",
           "time": 20.184,
           "feval": 43
         },
         {
-          "deviance": 237585.553415169,
+          "dev": 237585.553415169,
           "optimizer": "optimx",
           "method": "spg",
-          "function": "lmer",
+          "func": "lmer",
           "time": 23.538,
           "feval": "NA"
         },
         {
-          "deviance": 237585.553415169,
+          "dev": 237585.553415169,
           "optimizer": "optimx",
           "method": "bobyqa",
-          "function": "lmer",
+          "func": "lmer",
           "time": 16.998,
           "feval": "NA"
         },
         {
-          "deviance": 237585.553415169,
+          "dev": 237585.553415169,
           "optimizer": "LN_BOBYQA",
-          "function": "lmm",
+          "func": "lmm",
           "time": 4.459777821,
           "geval": 0,
           "feval": 47
         },
         {
-          "deviance": 237585.55341517,
+          "dev": 237585.55341517,
           "optimizer": "LN_COBYLA",
-          "function": "lmm",
+          "func": "lmm",
           "time": 3.561461798,
           "geval": 0,
           "feval": 56
         },
         {
-          "deviance": 237585.553415169,
+          "dev": 237585.553415169,
           "optimizer": "LN_PRAXIS",
-          "function": "lmm",
+          "func": "lmm",
           "time": 3.966380697,
           "geval": 0,
           "feval": 80
         },
         {
-          "deviance": 237585.55341524,
+          "dev": 237585.55341524,
           "optimizer": "LN_NELDERMEAD",
-          "function": "lmm",
+          "func": "lmm",
           "time": 4.364727868,
           "geval": 0,
           "feval": 89
         },
         {
-          "deviance": 237585.553415178,
+          "dev": 237585.553415178,
           "optimizer": "LN_SBPLX",
-          "function": "lmm",
+          "func": "lmm",
           "time": 6.351310395,
           "geval": 0,
           "feval": 136
@@ -148,127 +148,127 @@
       "formula": "y ~ 1 + service + (1|s) + (1|d) + (1|dept)",
       "fits": [
         {
-          "deviance": 237721.768774496,
+          "dev": 237721.768774496,
           "optimizer": "bobyqa",
-          "function": "lmer",
+          "func": "lmer",
           "time": 17.038,
           "feval": 59
         },
         {
-          "deviance": 237721.768774734,
+          "dev": 237721.768774734,
           "optimizer": "Nelder_Mead",
-          "function": "lmer",
+          "func": "lmer",
           "time": 21.377,
           "feval": 123
         },
         {
-          "deviance": 237721.7687759,
+          "dev": 237721.7687759,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 18.82,
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 79
         },
         {
-          "deviance": 237721.769808599,
+          "dev": 237721.769808599,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 33.403,
           "algorithm": "NLOPT_LN_COBYLA",
           "feval": 200
         },
         {
-          "deviance": 237721.7687745,
+          "dev": 237721.7687745,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 16.323,
           "algorithm": "NLOPT_LN_PRAXIS",
           "feval": 87
         },
         {
-          "deviance": 237721.768775102,
+          "dev": 237721.768775102,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 26.396,
           "algorithm": "NLOPT_LN_NELDERMEAD",
           "feval": 116
         },
         {
-          "deviance": 237721.768774499,
+          "dev": 237721.768774499,
           "optimizer": "nloptwrap",
-          "function": "lmer",
+          "func": "lmer",
           "time": 34.277,
           "algorithm": "NLOPT_LN_SBPLX",
           "feval": 157
         },
         {
-          "deviance": 237721.768781072,
+          "dev": 237721.768781072,
           "optimizer": "optimx",
           "method": "L-BFGS-B",
-          "function": "lmer",
+          "func": "lmer",
           "time": 27.119,
           "feval": 26
         },
         {
-          "deviance": 237721.76877683,
+          "dev": 237721.76877683,
           "optimizer": "optimx",
           "method": "nlminb",
-          "function": "lmer",
+          "func": "lmer",
           "time": 35.224,
           "feval": 129
         },
         {
-          "deviance": 237721.768774498,
+          "dev": 237721.768774498,
           "optimizer": "optimx",
           "method": "spg",
-          "function": "lmer",
+          "func": "lmer",
           "time": 39.939,
           "feval": "NA"
         },
         {
-          "deviance": 237721.768774496,
+          "dev": 237721.768774496,
           "optimizer": "optimx",
           "method": "bobyqa",
-          "function": "lmer",
+          "func": "lmer",
           "time": 27.5700000000001,
           "feval": "NA"
         },
         {
-          "deviance": 237721.768774524,
+          "dev": 237721.768774524,
           "optimizer": "LN_BOBYQA",
-          "function": "lmm",
+          "func": "lmm",
           "time": 4.877744011,
           "geval": 0,
           "feval": 115
         },
         {
-          "deviance": 237721.768774503,
+          "dev": 237721.768774503,
           "optimizer": "LN_COBYLA",
-          "function": "lmm",
+          "func": "lmm",
           "time": 60.485346625,
           "geval": 0,
           "feval": 1623
         },
         {
-          "deviance": 237721.768774496,
+          "dev": 237721.768774496,
           "optimizer": "LN_PRAXIS",
-          "function": "lmm",
+          "func": "lmm",
           "time": 5.469709048,
           "geval": 0,
           "feval": 132
         },
         {
-          "deviance": 237721.76877452,
+          "dev": 237721.76877452,
           "optimizer": "LN_NELDERMEAD",
-          "function": "lmm",
+          "func": "lmm",
           "time": 8.367048582,
           "geval": 0,
           "feval": 216
         },
         {
-          "deviance": 237721.768774503,
+          "dev": 237721.768774503,
           "optimizer": "LN_SBPLX",
-          "function": "lmm",
+          "func": "lmm",
           "time": 7.514634708,
           "geval": 0,
           "feval": 194
