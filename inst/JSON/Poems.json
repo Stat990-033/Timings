@@ -1,7 +1,7 @@
 {
-  "n": 73421,
+  "dsname": "Poems",
   "OS": "Linux",
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -10,142 +10,143 @@
       "formula": "lR ~ 1 + lM + lF + (1|W) + (1|S) + (1|P)",
       "fits": [
         {
-          "deviance": 174757.888377933,
           "optimizer": "bobyqa",
-          "function": "lmer",
           "time": 26.2780000000002,
-          "feval": 83
+          "feval": 83,
+          "func": "lmer",
+          "dev": 174757.888377933
         },
         {
-          "deviance": 174757.888378287,
           "optimizer": "Nelder_Mead",
-          "function": "lmer",
           "time": 37.308,
-          "feval": 130
+          "feval": 130,
+          "func": "lmer",
+          "dev": 174757.888378287
         },
         {
-          "deviance": 174757.888378268,
           "optimizer": "nloptwrap",
-          "function": "lmer",
           "time": 17.6999999999998,
           "algorithm": "NLOPT_LN_BOBYQA",
-          "feval": 41
+          "feval": 41,
+          "func": "lmer",
+          "dev": 174757.888378268
         },
         {
-          "deviance": 174757.888425642,
           "optimizer": "nloptwrap",
-          "function": "lmer",
           "time": 25.8100000000004,
           "algorithm": "NLOPT_LN_COBYLA",
-          "feval": 80
+          "feval": 80,
+          "func": "lmer",
+          "dev": 174757.888425642
         },
         {
-          "deviance": 174757.888377927,
           "optimizer": "nloptwrap",
-          "function": "lmer",
           "time": 27.1990000000005,
           "algorithm": "NLOPT_LN_PRAXIS",
-          "feval": 80
+          "feval": 80,
+          "func": "lmer",
+          "dev": 174757.888377927
         },
         {
-          "deviance": 174757.888379246,
           "optimizer": "nloptwrap",
-          "function": "lmer",
           "time": 31.1530000000002,
           "algorithm": "NLOPT_LN_NELDERMEAD",
-          "feval": 110
+          "feval": 110,
+          "func": "lmer",
+          "dev": 174757.888379246
         },
         {
-          "deviance": 174757.888392058,
           "optimizer": "nloptwrap",
-          "function": "lmer",
           "time": 31.9989999999998,
           "algorithm": "NLOPT_LN_SBPLX",
-          "feval": 107
+          "feval": 107,
+          "func": "lmer",
+          "dev": 174757.888392058
         },
         {
-          "deviance": 174757.888378111,
           "optimizer": "optimx",
           "method": "L-BFGS-B",
-          "function": "lmer",
           "time": 46.1090000000004,
-          "feval": 28
+          "feval": 28,
+          "func": "lmer",
+          "dev": 174757.888378111
         },
         {
-          "deviance": 174757.888378234,
           "optimizer": "optimx",
           "method": "nlminb",
-          "function": "lmer",
           "time": 64.6379999999999,
-          "feval": 149
+          "feval": 149,
+          "func": "lmer",
+          "dev": 174757.888378234
         },
         {
-          "deviance": 174757.888378224,
           "optimizer": "optimx",
           "method": "spg",
-          "function": "lmer",
           "time": 114.708,
-          "feval": "NA"
+          "feval": "NA",
+          "func": "lmer",
+          "dev": 174757.888378224
         },
         {
-          "deviance": 174757.888377933,
           "optimizer": "optimx",
           "method": "bobyqa",
-          "function": "lmer",
           "time": 44.3050000000012,
-          "feval": "NA"
+          "feval": "NA",
+          "func": "lmer",
+          "dev": 174757.888377933
         },
         {
-          "deviance": 237585.553415169,
           "optimizer": "LN_BOBYQA",
-          "function": "lmm",
-          "time": 6.483874042,
+          "time": 7.063211126,
           "geval": 0,
-          "feval": 48
+          "feval": 103,
+          "func": "lmm",
+          "dev": 174757.8883780016
         },
         {
-          "deviance": 237585.553415172,
           "optimizer": "LN_COBYLA",
-          "function": "lmm",
-          "time": 6.38459421,
+          "time": 14.118111717,
           "geval": 0,
-          "feval": 62
+          "feval": 295,
+          "func": "lmm",
+          "dev": 174757.8883804301
         },
         {
-          "deviance": 237585.553415169,
           "optimizer": "LN_PRAXIS",
-          "function": "lmm",
-          "time": 7.860444618,
+          "time": 5.935967296,
           "geval": 0,
-          "feval": 79
+          "feval": 91,
+          "func": "lmm",
+          "dev": 174757.88837793146
         },
         {
-          "deviance": 237585.55341524,
           "optimizer": "LN_NELDERMEAD",
-          "function": "lmm",
-          "time": 8.763932027,
+          "time": 10.768557141,
           "geval": 0,
-          "feval": 89
+          "feval": 216,
+          "func": "lmm",
+          "dev": 174757.88837798103
         },
         {
-          "deviance": 237585.553415178,
           "optimizer": "LN_SBPLX",
-          "function": "lmm",
-          "time": 12.851814906,
+          "time": 10.06700819,
           "geval": 0,
-          "feval": 136
+          "feval": 186,
+          "func": "lmm",
+          "dev": 174757.88837806924
         }
       ],
       "q": [
-        2972,
-        1128
+        2315,
+        326,
+        87
       ],
-      "nopt": 2,
-      "p": 28,
+      "nopt": 3,
+      "p": 3,
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "Julia": "0.3.8",
+  "Julia": "0.3.10-pre+3",
   "memory": "5.745 GB",
-  "dsname": "Poems"
+  "n": 275996
 }

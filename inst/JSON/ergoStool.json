@@ -126,7 +126,7 @@
           "optimizer": "optimx",
           "method": "L-BFGS-B",
           "func": "lmer",
-          "time": 0.204000000000178,
+          "time": 0.135999999999967,
           "feval": 18
         },
         {
@@ -134,7 +134,7 @@
           "optimizer": "optimx",
           "method": "nlminb",
           "func": "lmer",
-          "time": 0.209000000000287,
+          "time": 0.118000000000052,
           "feval": 19
         },
         {
@@ -142,7 +142,7 @@
           "optimizer": "optimx",
           "method": "spg",
           "func": "lmer",
-          "time": 0.369999999999891,
+          "time": 0.221000000000004,
           "feval": "NA"
         },
         {
@@ -150,14 +150,14 @@
           "optimizer": "optimx",
           "method": "bobyqa",
           "func": "lmer",
-          "time": 0.202999999999975,
+          "time": 0.119000000000028,
           "feval": "NA"
         },
         {
           "dev": 122.144437408193,
           "optimizer": "nloptwrap",
           "func": "lmer",
-          "time": 0.0380000000000109,
+          "time": 0.0199999999999818,
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 11
         },
@@ -165,7 +165,7 @@
           "dev": 122.144437434193,
           "optimizer": "nloptwrap",
           "func": "lmer",
-          "time": 0.0390000000002146,
+          "time": 0.0259999999999536,
           "algorithm": "NLOPT_LN_COBYLA",
           "feval": 18
         },
@@ -173,7 +173,7 @@
           "dev": 122.144437739518,
           "optimizer": "nloptwrap",
           "func": "lmer",
-          "time": 0.0389999999997599,
+          "time": 0.0199999999999818,
           "algorithm": "NLOPT_LN_NELDERMEAD",
           "feval": 22
         },
@@ -181,7 +181,7 @@
           "dev": 122.144437739518,
           "optimizer": "nloptwrap",
           "func": "lmer",
-          "time": 0.0410000000001673,
+          "time": 0.0230000000000246,
           "algorithm": "NLOPT_LN_SBPLX",
           "feval": 30
         },
@@ -189,14 +189,14 @@
           "dev": 122.144437408106,
           "optimizer": "bobyqa",
           "func": "lmer",
-          "time": 0.0310000000004038,
+          "time": 0.0159999999999627,
           "feval": 19
         },
         {
           "dev": 122.144437408112,
           "optimizer": "Nelder_Mead",
           "func": "lmer",
-          "time": 0.0410000000001673,
+          "time": 0.0199999999999818,
           "feval": 40
         }
       ],

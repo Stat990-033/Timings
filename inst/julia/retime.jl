@@ -20,11 +20,11 @@ function retime(fnm,ofile)
         m["nopt"] = length(MixedModels.θ(mod))
         m["mtype"] = typeof(mod.s)
         for f in m["fits"]
-            print(f["function"],": ",f["optimizer"])
-            if f["function"] == "lmm"
+            print(f["func"],": ",f["optimizer"])
+            if f["func"] == "lmm"
                 gc()
                 f["time"] = @elapsed mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
-                f["deviance"] = mod.opt.fmin
+                f["dev"] = deviance(mod)
                 print(" ",mod.opt.fmin,", ",f["time"])
                 f["feval"] = mod.opt.feval
                 f["geval"] = mod.opt.geval
