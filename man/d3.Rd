@@ -1,13 +1,12 @@
-\name{Bachl_data}
-\alias{Bachl_data}
+\name{d3}
+\alias{d3}
 \docType{data}
-\title{
-Bachl_data (d3)
+\title{d3 dataset (formerly Bachl_data)
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of the dataset. ~~
 }
-\usage{data("Bachl_data")}
+\usage{data("d3")}
 \format{
   A data frame with 130418 observations on the following 4 variables.
   \describe{
@@ -28,5 +27,5 @@ Bachl_data (d3)
 %%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
-lmer(rtr2 ~ ts + (ts | i.t) +(ts | ti) + (ts | i),verbose = TRUE, d3)
+lmer(r ~ ts + (ts | i.t) +(ts | ti) + (ts | i),verbose = TRUE, d3)
 \keyword{datasets}
