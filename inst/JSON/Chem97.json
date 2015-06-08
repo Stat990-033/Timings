@@ -1,5 +1,5 @@
 {
-  "n": 1104,
+  "dsname": "Chem97",
   "OS": "Linux",
   "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
@@ -10,440 +10,280 @@
       "formula": "score ~ 1 + (1|school) + (1|l)",
       "fits": [
         {
-          "dev": 157869.92614932,
           "optimizer": "bobyqa",
+          "time": 1.12700000000001,
+          "feval": 32,
           "func": "lmer",
-          "time": 0.921000000000049,
-          "feval": 32
+          "dev": 157869.92614932
         },
         {
-          "dev": 157869.926149352,
           "optimizer": "Nelder_Mead",
+          "time": 0.829999999999998,
+          "feval": 87,
           "func": "lmer",
-          "time": 1.53700000000003,
-          "feval": 87
+          "dev": 157869.926149352
         },
         {
-          "dev": 157869.92614932,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 0.97199999999998,
+          "time": 0.564999999999998,
           "algorithm": "NLOPT_LN_BOBYQA",
-          "feval": 37
+          "feval": 37,
+          "func": "lmer",
+          "dev": 157869.92614932
         },
         {
-          "dev": 157869.926204763,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 2.22400000000005,
+          "time": 1.125,
           "algorithm": "NLOPT_LN_COBYLA",
-          "feval": 144
+          "feval": 132,
+          "func": "lmer",
+          "dev": 157869.926261206
         },
         {
-          "dev": 157869.926149319,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 1.49000000000001,
+          "time": 0.784999999999997,
           "algorithm": "NLOPT_LN_PRAXIS",
-          "feval": 81
+          "feval": 77,
+          "func": "lmer",
+          "dev": 157869.926149319
         },
         {
-          "dev": 157869.926149631,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 1.2700000000001,
+          "time": 0.704999999999998,
           "algorithm": "NLOPT_LN_NELDERMEAD",
-          "feval": 63
-        },
-        {
-          "dev": 157869.926149332,
-          "optimizer": "nloptwrap",
+          "feval": 63,
           "func": "lmer",
-          "time": 1.54700000000003,
-          "algorithm": "NLOPT_LN_SBPLX",
-          "feval": 87
+          "dev": 157869.926149631
         },
         {
-          "dev": 157869.926149346,
+          "optimizer": "nloptwrap",
+          "time": 0.84899999999999,
+          "algorithm": "NLOPT_LN_SBPLX",
+          "feval": 87,
+          "func": "lmer",
+          "dev": 157869.926149332
+        },
+        {
           "optimizer": "optimx",
           "method": "L-BFGS-B",
+          "time": 0.951999999999998,
+          "feval": 18,
           "func": "lmer",
-          "time": 1.72199999999998,
-          "feval": 18
+          "dev": 157869.926149347
         },
         {
-          "dev": 157869.926149373,
           "optimizer": "optimx",
           "method": "nlminb",
+          "time": 0.968000000000004,
+          "feval": 42,
           "func": "lmer",
-          "time": 1.70699999999999,
-          "feval": 42
+          "dev": 157869.926149375
         },
         {
-          "dev": 157869.92614932,
           "optimizer": "optimx",
           "method": "spg",
+          "time": 1.09999999999999,
+          "feval": "NA",
           "func": "lmer",
-          "time": 2.32500000000005,
-          "feval": "NA"
+          "dev": 157869.92614932
         },
         {
-          "dev": 157869.92614932,
           "optimizer": "optimx",
           "method": "bobyqa",
+          "time": 0.891000000000005,
+          "feval": "NA",
           "func": "lmer",
-          "time": 1.63200000000006,
-          "feval": "NA"
+          "dev": 157869.92614932
         },
         {
-          "dev": 1030.9553052086,
           "optimizer": "LN_BOBYQA",
-          "func": "lmm",
-          "time": 1.91717543,
+          "time": 0.618426186,
           "geval": 0,
-          "feval": 289
+          "feval": 32,
+          "func": "lmm",
+          "dev": 157869.926149324
         },
         {
-          "dev": 1030.95529505049,
           "optimizer": "LN_COBYLA",
-          "func": "lmm",
-          "time": 2.210359873,
+          "time": 1.111059111,
           "geval": 0,
-          "feval": 2128
+          "feval": 67,
+          "func": "lmm",
+          "dev": 157869.926149342
         },
         {
-          "dev": 1049.15151525609,
           "optimizer": "LN_PRAXIS",
-          "func": "lmm",
-          "time": 0.530924296,
+          "time": 1.094994602,
           "geval": 0,
-          "feval": 519
+          "feval": 65,
+          "func": "lmm",
+          "dev": 157869.92614932
         },
         {
-          "dev": 1031.92596983362,
           "optimizer": "LN_NELDERMEAD",
-          "func": "lmm",
-          "time": 30.431880349,
+          "time": 1.349472839,
           "geval": 0,
-          "feval": 28024
+          "feval": 85,
+          "func": "lmm",
+          "dev": 157869.926149434
         },
         {
-          "dev": 1030.95529524121,
           "optimizer": "LN_SBPLX",
-          "func": "lmm",
-          "time": 3.264646029,
+          "time": 2.102289673,
           "geval": 0,
-          "feval": 2031
-        },
-        {
-          "dev": 1030.9552950536,
-          "optimizer": "LD_MMA",
+          "feval": 123,
           "func": "lmm",
-          "time": 2.20029232,
-          "geval": 56,
-          "feval": 56
-        },
-        {
-          "dev": 1030.95529505256,
-          "optimizer": "LD_CCSAQ",
-          "func": "lmm",
-          "time": 2.272683717,
-          "geval": 70,
-          "feval": 70
-        },
-        {
-          "dev": 1030.95529505059,
-          "optimizer": "LD_SLSQP",
-          "func": "lmm",
-          "time": 1.878596996,
-          "geval": 95,
-          "feval": 181
-        },
-        {
-          "dev": 1030.9552950503,
-          "optimizer": "LD_LBFGS",
-          "func": "lmm",
-          "time": 0.484559562,
-          "geval": 25,
-          "feval": 25
-        },
-        {
-          "dev": 1030.9552950503,
-          "optimizer": "LD_TNEWTON",
-          "func": "lmm",
-          "time": 1.42631748,
-          "geval": 76,
-          "feval": 76
-        },
-        {
-          "dev": 1030.9552950503,
-          "optimizer": "LD_TNEWTON_PRECOND",
-          "func": "lmm",
-          "time": 0.910488616,
-          "geval": 48,
-          "feval": 48
-        },
-        {
-          "dev": 1030.9552950503,
-          "optimizer": "LD_TNEWTON_RESTART",
-          "func": "lmm",
-          "time": 0.875351944,
-          "geval": 46,
-          "feval": 46
-        },
-        {
-          "dev": 1030.9552950503,
-          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "func": "lmm",
-          "time": 0.83873157,
-          "geval": 44,
-          "feval": 44
-        },
-        {
-          "dev": 1030.9552950503,
-          "optimizer": "LD_VAR1",
-          "func": "lmm",
-          "time": 0.545706701,
-          "geval": 28,
-          "feval": 28
-        },
-        {
-          "dev": 1030.9552950503,
-          "optimizer": "LD_VAR2",
-          "func": "lmm",
-          "time": 0.532833655,
-          "geval": 28,
-          "feval": 28
+          "dev": 157869.926149336
         }
       ],
       "q": [
-        368,
-        48
+        2410,
+        131
       ],
-      "nopt": 20,
-      "p": 4,
-      "mtype": "MixedModels.PLSTwo"
+      "nopt": 2,
+      "p": 1,
+      "mtype": "PLSNested"
     },
     {
       "formula": "score ~ 1 + gcsecnt + (1|school) + (1|l)",
       "fits": [
         {
-          "dev": 141685.560214102,
           "optimizer": "bobyqa",
+          "time": 0.599000000000004,
+          "feval": 42,
           "func": "lmer",
-          "time": 1.07399999999996,
-          "feval": 42
+          "dev": 141685.560214102
         },
         {
-          "dev": 141685.560214149,
           "optimizer": "Nelder_Mead",
+          "time": 1.04300000000001,
+          "feval": 94,
           "func": "lmer",
-          "time": 1.71299999999997,
-          "feval": 94
+          "dev": 141685.560214149
         },
         {
-          "dev": 141685.560214104,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 0.990000000000009,
+          "time": 0.560000000000002,
           "algorithm": "NLOPT_LN_BOBYQA",
-          "feval": 35
+          "feval": 35,
+          "func": "lmer",
+          "dev": 141685.560214104
         },
         {
-          "dev": 141685.560270231,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 3.31500000000005,
+          "time": 1.465,
           "algorithm": "NLOPT_LN_COBYLA",
-          "feval": 220
+          "feval": 176,
+          "func": "lmer",
+          "dev": 141685.560779318
         },
         {
-          "dev": 141685.560214102,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 1.35199999999998,
+          "time": 0.800999999999988,
           "algorithm": "NLOPT_LN_PRAXIS",
-          "feval": 63
+          "feval": 72,
+          "func": "lmer",
+          "dev": 141685.560214102
         },
         {
-          "dev": 141685.560214614,
           "optimizer": "nloptwrap",
-          "func": "lmer",
-          "time": 1.40099999999995,
+          "time": 0.768000000000001,
           "algorithm": "NLOPT_LN_NELDERMEAD",
-          "feval": 68
-        },
-        {
-          "dev": 141685.560214332,
-          "optimizer": "nloptwrap",
+          "feval": 68,
           "func": "lmer",
-          "time": 1.67699999999991,
-          "algorithm": "NLOPT_LN_SBPLX",
-          "feval": 90
+          "dev": 141685.560214614
         },
         {
-          "dev": 141685.560214134,
+          "optimizer": "nloptwrap",
+          "time": 0.911999999999992,
+          "algorithm": "NLOPT_LN_SBPLX",
+          "feval": 90,
+          "func": "lmer",
+          "dev": 141685.560214332
+        },
+        {
           "optimizer": "optimx",
           "method": "L-BFGS-B",
+          "time": 1.08999999999999,
+          "feval": 22,
           "func": "lmer",
-          "time": 1.95900000000006,
-          "feval": 22
+          "dev": 141685.560214134
         },
         {
-          "dev": 141685.560214102,
           "optimizer": "optimx",
           "method": "nlminb",
+          "time": 0.998000000000005,
+          "feval": 43,
           "func": "lmer",
-          "time": 1.80999999999995,
-          "feval": 43
+          "dev": 141685.560214102
         },
         {
-          "dev": 141685.560214102,
           "optimizer": "optimx",
           "method": "spg",
+          "time": 1.232,
+          "feval": "NA",
           "func": "lmer",
-          "time": 2.27800000000002,
-          "feval": "NA"
+          "dev": 141685.560214102
         },
         {
-          "dev": 141685.560214102,
           "optimizer": "optimx",
           "method": "bobyqa",
+          "time": 1.002,
+          "feval": "NA",
           "func": "lmer",
-          "time": 1.83100000000002,
-          "feval": "NA"
+          "dev": 141685.560214102
         },
         {
-          "dev": 1080.08068408028,
           "optimizer": "LN_BOBYQA",
-          "func": "lmm",
-          "time": 0.215972631,
+          "time": 0.959435901,
           "geval": 0,
-          "feval": 124
+          "feval": 31,
+          "func": "lmm",
+          "dev": 141685.560214102
         },
         {
-          "dev": 1080.08068406805,
           "optimizer": "LN_COBYLA",
-          "func": "lmm",
-          "time": 0.882558239,
+          "time": 1.32735282,
           "geval": 0,
-          "feval": 1205
+          "feval": 82,
+          "func": "lmm",
+          "dev": 141685.560214117
         },
         {
-          "dev": 1080.08373000914,
           "optimizer": "LN_PRAXIS",
-          "func": "lmm",
-          "time": 0.577774756,
+          "time": 1.611144097,
           "geval": 0,
-          "feval": 785
+          "feval": 103,
+          "func": "lmm",
+          "dev": 141685.560214102
         },
         {
-          "dev": 1080.08068411398,
           "optimizer": "LN_NELDERMEAD",
-          "func": "lmm",
-          "time": 1.183185063,
+          "time": 1.461828102,
           "geval": 0,
-          "feval": 1625
+          "feval": 91,
+          "func": "lmm",
+          "dev": 141685.560214177
         },
         {
-          "dev": 1080.0806840648,
           "optimizer": "LN_SBPLX",
-          "func": "lmm",
-          "time": 0.250853671,
+          "time": 1.705932166,
           "geval": 0,
-          "feval": 340
-        },
-        {
-          "dev": 1080.08068406486,
-          "optimizer": "LD_MMA",
+          "feval": 111,
           "func": "lmm",
-          "time": 0.387728584,
-          "geval": 23,
-          "feval": 23
-        },
-        {
-          "dev": 1120.07543133767,
-          "optimizer": "LD_CCSAQ",
-          "func": "lmm",
-          "time": 0.074284596,
-          "geval": 4,
-          "feval": 4
-        },
-        {
-          "dev": 1120.07543133767,
-          "optimizer": "LD_SLSQP",
-          "func": "lmm",
-          "time": 0.040138883,
-          "geval": 2,
-          "feval": 2
-        },
-        {
-          "dev": 1080.0806840648,
-          "optimizer": "LD_LBFGS",
-          "func": "lmm",
-          "time": 0.281697861,
-          "geval": 17,
-          "feval": 17
-        },
-        {
-          "dev": 1099.92083669947,
-          "optimizer": "LD_TNEWTON",
-          "func": "lmm",
-          "time": 1.014494934,
-          "geval": 63,
-          "feval": 63
-        },
-        {
-          "dev": 1083.4312527518,
-          "optimizer": "LD_TNEWTON_PRECOND",
-          "func": "lmm",
-          "time": 0.512280676,
-          "geval": 31,
-          "feval": 31
-        },
-        {
-          "dev": 1099.92083669947,
-          "optimizer": "LD_TNEWTON_RESTART",
-          "func": "lmm",
-          "time": 0.830760806,
-          "geval": 52,
-          "feval": 52
-        },
-        {
-          "dev": 1083.4312527518,
-          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "func": "lmm",
-          "time": 0.390859667,
-          "geval": 24,
-          "feval": 24
-        },
-        {
-          "dev": 1080.0806840648,
-          "optimizer": "LD_VAR1",
-          "func": "lmm",
-          "time": 0.29666824,
-          "geval": 18,
-          "feval": 18
-        },
-        {
-          "dev": 1080.0806840648,
-          "optimizer": "LD_VAR2",
-          "func": "lmm",
-          "time": 0.30374883,
-          "geval": 18,
-          "feval": 18
+          "dev": 141685.560214177
         }
       ],
       "q": [
-        368,
-        48
+        2410,
+        131
       ],
-      "nopt": 8,
-      "p": 4,
-      "mtype": "MixedModels.PLSTwo"
+      "nopt": 2,
+      "p": 2,
+      "mtype": "PLSNested"
     }
   ],
-  "Julia": "0.4.0-dev+5163",
+  "Julia": "0.3.10-pre+4",
   "memory": "5.745 GB",
-  "dsname": "Chem97"
+  "n": 31022
 }
