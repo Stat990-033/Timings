@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "d ~ 1 + i*c + (1 | b)",
+      "formula": "g ~ p + (p | c)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -210,5 +210,5 @@
   ],
   "Julia": "0.3.10-pre+4",
   "memory": "5.745 GB",
-  "dsname": "Cultivation"
+  "dsname": "SIMS"
 }

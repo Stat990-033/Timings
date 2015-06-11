@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "d ~ 1 + i*c + (1 | b)",
+      "formula": "t ~ so + (1|l)+(1|lw) + (1|l)+(1|lso)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -210,5 +210,5 @@
   ],
   "Julia": "0.3.10-pre+4",
   "memory": "5.745 GB",
-  "dsname": "Cultivation"
+  "dsname": "Semi2"
 }
