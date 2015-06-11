@@ -28,4 +28,5 @@
 }
 \examples{
 lmer(r ~ ts + (ts | i.t) +(ts | ti) + (ts | i),verbose = TRUE, d3)
+}
 \keyword{datasets}
