@@ -1,6 +1,8 @@
 
-
-
+files <- list.files(path="~/Timings/Timings/inst/JSON", pattern=".json", all.files=T, full.names=T)
+OPTS<-c("NLOPT_LN_BOBYQA" ,    "NLOPT_LN_SBPLX"  ,    "NLOPT_LN_COBYLA"  ,   "optimx:spg"         
+        ,"optimx:L-BFGS-B"   ,  "optimx:nlminb"    ,   "NLOPT_LN_NELDERMEAD" ,"NLOPT_LN_PRAXIS"    
+        ,"bobyqa"   ,   "optimx:bobyqa" , "Nelder_Mead")
 table3=NULL
 for (i in OPTS[-8]){
     table.maker<-function(fn){
