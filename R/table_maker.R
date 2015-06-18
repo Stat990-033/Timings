@@ -13,10 +13,11 @@ for (i in OPTS[-8]){
         abs.time<-tester$time[tester$optimizer==i]-sort(unique(tester$time))[1]
         data.name.char<-js$dsname
         model.fit.char<-js$models[[1]]$formula
+        num.obs<-js$n
         num.re<-js$models[[1]]$q
         num.fe<-js$models[[1]]$p
-        table<-data.frame(data.name.char,model.fit.char,abs.dev,abs.time,num.fe)
-        colnames(table)<-c("Data","Model","Deviance","Time","FE")
+        table<-data.frame(data.name.char,model.fit.char,abs.dev,abs.time,num.fe,num.obs)
+        colnames(table)<-c("Data","Model","Deviance","Time","FE","N")
         return(table)
     }
     for (j in files[-39]){
