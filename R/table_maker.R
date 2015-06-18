@@ -1,8 +1,9 @@
-files <- list.files(system.file("JSON",package="Timings"))
+files <- list.files(system.file("JSON",package="Timings"),pattern=".json", all.files=TRUE, full.names=TRUE)
+
 OPTS<-c("NLOPT_LN_BOBYQA" ,    "NLOPT_LN_SBPLX"  ,    "NLOPT_LN_COBYLA"  ,   "optimx:spg"         
         ,"optimx:L-BFGS-B"   ,  "optimx:nlminb"    ,   "NLOPT_LN_NELDERMEAD" ,"NLOPT_LN_PRAXIS"    
         ,"bobyqa"   ,   "optimx:bobyqa" , "Nelder_Mead")
-#for (i in OPTS[-8]){
+
     table.maker<-function(fn){
         js <- fromJSON(fn,FALSE)     
         tester<-data.frame(extractor(fn)[1])  # edited to add [1]
@@ -11,10 +12,11 @@ OPTS<-c("NLOPT_LN_BOBYQA" ,    "NLOPT_LN_SBPLX"  ,    "NLOPT_LN_COBYLA"  ,   "op
         abs.time<-tester$time[tester$optimizer==i]-sort(unique(tester$time))[1]
         data.name.char<-js$dsname
         model.fit.char<-js$models[[1]]$formula
+        num.obs<-js$n
         num.re<-js$models[[1]]$q
         num.fe<-js$models[[1]]$p
-        table<-data.frame(data.name.char,model.fit.char,abs.dev,abs.time,num.fe)
-        colnames(table)<-c("Data","Model","Deviance","Time","FE")
+        table<-data.frame(data.name.char,model.fit.char,abs.dev,abs.time,num.fe,num.obs)
+        colnames(table)<-c("Data","Model","Deviance","Time","FE","N")
         return(table)
     }
 #     for (j in files[-39]){
