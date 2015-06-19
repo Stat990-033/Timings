@@ -33,12 +33,6 @@ optnm <- function(f) {
     stop(paste("unknown optimizer:", opt))
 }
 
-lmerfits <- function(fits) {
-    ans <- fits[sapply(fits,function(f)f$func == "lmer")]
-    names(ans) <- sapply(ans,optnm)
-    ans
-}
-
 #' From a directory name extract all the timings from the JSON files
 #' 
 #' @description Given a directory name read all the files in the directory
@@ -46,21 +40,18 @@ lmerfits <- function(fits) {
 #'   the list.
 #' @param dname name of a firectory
 #' @return a list of data sets, models within dataset, and fits within models
+#' @examples 
+#' str(jsondir(system.file("JSON",package="Timings")),4)
 #' @export
 jsondir <- function(dname) {
+    islmer <- function(fit) fit$func == "lmer"
     ans <- lapply(list.files(dname,pattern="*.json$",full.names=TRUE),fromJSON,simplifyVector=FALSE)
     names(ans) <- sapply(ans,function(tab)tab$dsname)
-    ans    
-}
-
-ropts <- function(fits) {
-    lst <- lapply(fits,optnm)
-    lst[is.character(lst)]
-}
-
-islmer <- function(fit) fit$func == "lmer"
-lmeronly <- function(mod) {
-    f <- mod$fits
-    mod$fits <- f[sapply(f,islmer)]
-    mod
+    for (j in seq_along(ans)) {
+        for (k in seq_along(ans[[j]]$models)) {
+            f <- ans[[j]]$models[[k]]$fits
+            ans[[j]]$models[[k]]$fits <- f[sapply(f,islmer)]
+        }
+    }
+    ans
 }
