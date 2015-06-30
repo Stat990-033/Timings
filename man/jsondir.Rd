@@ -17,4 +17,7 @@ Given a directory name read all the files in the directory
   with names ending in .json.  Returns a list of lists.  The names of
   the list.
 }
+\examples{
+str(jsondir(system.file("JSON",package="Timings")),4)
+}
 

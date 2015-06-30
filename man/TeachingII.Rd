@@ -36,7 +36,6 @@
     }
     }
 }
-%\details{}
 \source{
     Littel, R. C., Milliken, G. A., Stroup, W. W., and Wolfinger,
     R. D. (1996), \emph{SAS System for Mixed Models}, SAS Institute
@@ -44,4 +43,5 @@
 }
 \examples{
 fit.1<-lmer(s~1+gm+i.f.1+ i.f.2+ i.f.3+ i.m.1+ i.m.2+ i.m.3+(1|tm),REML=FALSE,data=TeachingII)
+}
 \keyword{datasets}
