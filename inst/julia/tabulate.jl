@@ -32,34 +32,28 @@ end
 js = JSON.parsefile("/home/bates/git/Timings/inst/JSON/Alfalfa.json")
 
 function optimizers(fin)
-      js = JSON.parsefile(fin)
-    dsnames = ASCIIString[]
-    models = ASCIIString[]
-    opts = ASCIIString[]
-    times = Float64[]
-    devs = Float64[]
-    dsn = js["dsname"]
-    for m in js["models"]
-        form = m["formula"]
-        for f in m["fits"]
-      @show f["func"]
-            if f["func"] == "lmer"
-              push!(dsnames,dsn)
-              push!(models,form)
-              push!(opts,f["optimizer"])
-              push!(times,f["time"])
-              push!(devs,f["dev"])
+  js = JSON.parsefile(fin)
+  dsnames = ASCIIString[]
+  models = ASCIIString[]
+  opts = ASCIIString[]
+  times = Float64[]
+  devs = Float64[]
+  dsn = js["dsname"]
+  for m in js["models"]
+    form = m["formula"]
+    for f in m["fits"]
+      if f["func"] == "lmer"
+        push!(dsnames,dsn)
+        push!(models,form)
+        push!(opts,f["optimizer"])
+        push!(times,f["time"])
+        push!(devs,f["dev"])
       end
     end
   end
-  DataFrame(Any[pool(dsnames),pool(models),pool(opts),DataArray(times),DataArray(devs)],Symbol[:dsname,:model,:opt,:time,:dev])
+  DataFrame(dsnames = pool(dsnames),models = pool(models),opts = pool(opts),times = DataArray(times),devs = DataArray(devs))
 end
 
 cd("/home/bates/git/Timings/inst/JSON")
 
 opts = optimizers("Alfalfa.json")
-using DataArrays
-pool(opts["dsnames"])
-DataArray(opts["devs"])
-
-methods(DataFrame)
