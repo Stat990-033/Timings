@@ -29,31 +29,51 @@ function timingtab(fin)
         end
     end
 end
-js = JSON.parsefile("/home/bates/git/Timings/inst/JSON/Alfalfa.json")
 
-function optimizers(fin)
-  js = JSON.parsefile(fin)
-  dsnames = ASCIIString[]
-  models = ASCIIString[]
-  opts = ASCIIString[]
-  times = Float64[]
-  devs = Float64[]
-  dsn = js["dsname"]
-  for m in js["models"]
-    form = m["formula"]
-    for f in m["fits"]
-      if f["func"] == "lmer"
-        push!(dsnames,dsn)
-        push!(models,form)
-        push!(opts,f["optimizer"])
-        push!(times,f["time"])
-        push!(devs,f["dev"])
-      end
-    end
-  end
-  DataFrame(dsnames = pool(dsnames),models = pool(models),opts = pool(opts),times = DataArray(times),devs = DataArray(devs))
+function optname(f)
+    opt = f["optimizer"]
+    opt == "nloptwrap" && return f["algorithm"]
+    opt == "optimx" && return string(opt,":",f["method"])
+    opt
 end
 
-cd("/home/bates/git/Timings/inst/JSON")
+function modelsummary(m)
+    opt = ASCIIString[]
+    times = Float64[]
+    devs = Float64[]
+    for f in filter(f->f["func"]=="lmer",m["fits"])
+        push!(opt,optname(f))
+        push!(times,f["time"])
+        push!(devs,f["dev"])
+    end
+    opt,times,devs,devs .- minimum(devs),fill(m["formula"],length(opt))
+end
 
-opts = optimizers("Alfalfa.json")
+function optdir(dnm)
+    dsnames = ASCIIString[]
+    models = ASCIIString[]
+    opts = ASCIIString[]
+    times = Float64[]
+    devs = Float64[]
+    excessdev = Float64[]
+    for nm in readdir(dnm)
+        js = JSON.parsefile(joinpath(dnm,nm))
+        dsn = js["dsname"]
+        for m in js["models"]
+            opt,tt,dev,edevs,forms = modelsummary(m)
+            append!(models,forms)
+            append!(opts,opt)
+            append!(devs,dev)
+            append!(excessdev,edevs)
+            append!(times,tt)
+            append!(dsnames,fill(dsn,length(opt)))
+        end
+    end
+    ret = DataFrame(opt=pool(opts),dsname=pool(dsnames),excess=DataArray(excessdev),
+                    times=DataArray(times),devs=DataArray(devs),models=pool(models))
+    ret[sortperm(ret[:opt]),:]
+end
+
+#cd("/home/bates/git/Timings/inst/JSON")
+
+#opts = optimizers("Alfalfa.json")
