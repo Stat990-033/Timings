@@ -9,16 +9,16 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{s}{
+    \item{G}{
 	    a factor denoting the sire. (5 levels)
 	}
-	\item{d}{
+	\item{I}{
 	    a factor denoting the dam. (2 levels)
 	}
-	\item{a}{
+	\item{Y}{
 	    a numeric vector of average daily weight gains
 	}
-    \item{ds}{
+    \item{H}{
         a factor for the interaction between sire and dam
     }
     }
@@ -31,6 +31,6 @@
     (Data Set 6.4).
 }
 \examples{
-fit.1<-lmer(a~1+(1|s)+(1|ds),REML=FALSE,data=Animal)
+fit.1<-lmer(Y~1+(1|G)+(1|H),REML=FALSE,data=Animal)
 }
 \keyword{datasets}
