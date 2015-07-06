@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "dif ~ 1+S+F+SF + (1+S+F+SF|subj) + (1+S+F+SF|item)",
+      "formula": "Y ~ 1+U+V+W + (1+U+V+W|G) + (1+U+V+W|H)",
       "fits": [
         {
           "dev": 1049.18017484148,
@@ -225,7 +225,7 @@
       "mtype": "MixedModels.PLSTwo"
     },
     {
-      "formula": "dif ~ 1+S+F+SF + (1|subj)+(0+S|subj)+(0+F|subj)+(0+SF|subj) + (1|item)+(0+S|item)+(0+F|item)+(0+SF|item)",
+      "formula": "Y ~ 1+U+V+W + (1|G)+(0+U|G)+(0+V|G)+(0+W|G) + (1|H)+(0+U|H)+(0+V|H)+(0+W|H)",
       "fits": [
         {
           "dev": 1080.0806840648,
