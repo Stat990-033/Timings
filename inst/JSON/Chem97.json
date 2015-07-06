@@ -1,7 +1,7 @@
 {
-  "dsname": "Chem97",
+  "n": 31022,
   "OS": "Linux",
-  "BLAS": "mkl",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -97,43 +97,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.618426186,
+          "time": 0.822833614,
           "geval": 0,
           "feval": 32,
           "func": "lmm",
-          "dev": 157869.926149324
+          "dev": 157869.9261493236
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 1.111059111,
+          "time": 1.58120971,
           "geval": 0,
           "feval": 67,
           "func": "lmm",
-          "dev": 157869.926149342
+          "dev": 157869.92614934163
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 1.094994602,
+          "time": 1.563733556,
           "geval": 0,
-          "feval": 65,
+          "feval": 68,
           "func": "lmm",
-          "dev": 157869.92614932
+          "dev": 157869.9261493199
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 1.349472839,
+          "time": 1.892011545,
           "geval": 0,
           "feval": 85,
           "func": "lmm",
-          "dev": 157869.926149434
+          "dev": 157869.92614943397
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 2.102289673,
+          "time": 2.659392328,
           "geval": 0,
           "feval": 123,
           "func": "lmm",
-          "dev": 157869.926149336
+          "dev": 157869.9261493361
         }
       ],
       "q": [
@@ -145,7 +145,7 @@
       "mtype": "PLSNested"
     },
     {
-      "formula": "score ~ 1 + gcsecnt + (1|school) + (1|l)",
+      "formula": "Y ~ 1 + gcsecnt + (1|G) + (1|H)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -235,43 +235,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.959435901,
+          "time": 0.885664367,
           "geval": 0,
           "feval": 31,
           "func": "lmm",
-          "dev": 141685.560214102
+          "dev": 141685.56021410233
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 1.32735282,
+          "time": 2.160980465,
           "geval": 0,
-          "feval": 82,
+          "feval": 87,
           "func": "lmm",
-          "dev": 141685.560214117
+          "dev": 141685.5602141067
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 1.611144097,
+          "time": 2.243041937,
           "geval": 0,
-          "feval": 103,
+          "feval": 90,
           "func": "lmm",
-          "dev": 141685.560214102
+          "dev": 141685.5602141023
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 1.461828102,
+          "time": 2.247871408,
           "geval": 0,
           "feval": 91,
           "func": "lmm",
-          "dev": 141685.560214177
+          "dev": 141685.56021417724
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 1.705932166,
+          "time": 2.69770943,
           "geval": 0,
           "feval": 111,
           "func": "lmm",
-          "dev": 141685.560214177
+          "dev": 141685.56021417715
         }
       ],
       "q": [
@@ -283,7 +283,7 @@
       "mtype": "PLSNested"
     }
   ],
-  "Julia": "0.3.10-pre+4",
+  "Julia": "0.3.10",
   "memory": "5.745 GB",
-  "n": 31022
+  "dsname": "Chem97"
 }
