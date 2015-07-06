@@ -7,18 +7,18 @@
 \format{
     This data frame contains the following columns:
     \describe{
-	\item{e}{
+	\item{Y}{
 	    a numeric vector giving the effort (Borg scale) required to
 	    arise from a stool
 	}
-	\item{t}{
+	\item{A}{
 	    a factor with levels
 	    \code{T1}, 
 	    \code{T2}, 
 	    \code{T3}, and 
 	    \code{T4} giving the stool type
 	}
-	\item{s}{
+	\item{G}{
 	    a factor with levels \code{A} to \code{I}
 	}
     }
@@ -38,7 +38,7 @@
 \examples{
 options(show.signif.stars = FALSE)
 str(ergoStool)
-print(m1 <- lmer(e ~ t + (1|s), ergoStool), corr = FALSE)
+print(m1 <- lmer(Y ~ A + (1|G), ergoStool), corr = FALSE)
 anova(m1)
 }
 \keyword{datasets}
