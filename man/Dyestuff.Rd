@@ -5,9 +5,9 @@
 \title{Yield of dyestuff by batch}
 \format{Data frames, each with 30 observations on the following 2 variables.
   \describe{
-    \item{\code{b}}{a factor indicating the batch of the
+    \item{\code{G}}{a factor indicating the batch of the
       intermediate product from which the preparation was created.}
-    \item{\code{y}}{the yield of dyestuff from the preparation
+    \item{\code{Y}}{the yield of dyestuff from the preparation
       (grams of standard color).}
   }}
 \source{

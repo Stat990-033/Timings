@@ -10,13 +10,13 @@
 \format{
   A data frame with 7230 observations on the following 6 variables.
   \describe{
-    \item{sid}{a factor of school identifiers}
-    \item{cid}{a factor of student identifiers}
-    \item{y}{a numeric vector indicating the year of the test}
-    \item{m}{a numeric vector of test scores on the IRT scale score metric}
-    \item{f}{a factor with levels \code{Female} \code{Male}
+    \item{H}{a factor of school identifiers}
+    \item{G}{a factor of student identifiers}
+    \item{U}{a numeric vector indicating the year of the test}
+    \item{Y}{a numeric vector of test scores on the IRT scale score metric}
+    \item{A}{a factor with levels \code{Female} \code{Male}
       indicating the student's sex}
-    \item{s}{a numeric vector indicating the number of students
+    \item{V}{a numeric vector indicating the number of students
       enrolled in the school}
   }
 }
@@ -32,6 +32,6 @@
 }
 \examples{
 str(egsingle)
-(fm1 <- lmer(m~y*s+f+(1|cid)+(1|sid), egsingle))
+(fm1 <- lmer(Y~U*V+A+(1|G)+(1|H), egsingle))
 }
 \keyword{datasets}
