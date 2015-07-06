@@ -5,12 +5,12 @@
 \format{A data frame with 270 observations on the following 5 variables.
   \describe{
     \item{\code{rep}}{a factor with levels \code{1} to \code{15}}
-    \item{\code{rec}}{a factor with levels \code{A}, \code{B} and \code{C}}
-    \item{\code{t}}{an ordered factor with levels \code{175}
+    \item{\code{A}}{a factor with levels \code{A}, \code{B} and \code{C}}
+    \item{\code{B}}{an ordered factor with levels \code{175}
       < \code{185} < \code{195} < \code{205} < \code{215} < \code{225}}
-    \item{\code{a}}{a numeric vector giving the angle at which the
+    \item{\code{Y}}{a numeric vector giving the angle at which the
       cake broke.}
-    \item{\code{rr}}{a factor with 45 levels (for all interactions)}
+    \item{\code{G}}{a factor with 45 levels (for all interactions)}
   }}
 \source{
   Original data were presented in Cook (1938), and reported
@@ -45,8 +45,8 @@
 }
 \examples{
 str(cake)
-(fm1 <- lmer(a ~ rec * t + (1|rr), cake, REML= FALSE))
-(fm2 <- lmer(a ~ rec + t + (1|rr), cake, REML= FALSE))
+(fm1 <- lmer(Y ~ A * B + (1|G), cake, REML= FALSE))
+(fm2 <- lmer(Y ~ A + B + (1|G), cake, REML= FALSE))
 ## and now "choose" :
 anova(fm2, fm1)
 }

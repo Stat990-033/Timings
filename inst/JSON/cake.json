@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "a ~ 1 + rec*t + (1|rr)",
+      "formula": "Y ~ 1 + A*B + (1|G)",
       "fits": [
         {
           "dev": 1679.05186525477,
