@@ -16,11 +16,10 @@ function timingtab(fin)
         elapsed = Float64[]
         deviance = Float64[]
         for f in m["fits"]
-            push!(opts,string(lpad(f["function"],5),":",
+            push!(opts,string(lpad(f["func"],5),":",
                               rpad(f["optimizer"] == "nloptwrap" ?
                                    f["algorithm"] : f["optimizer"],30)))
-            push!(elapsed,
-                  f["function"] == "lmer" ? f["time"][3] : f["time"])
+            push!(elapsed, f["time"])
             push!(deviance,f["deviance"])
         end
         for i in sortperm(deviance)

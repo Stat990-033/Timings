@@ -1,7 +1,7 @@
 {
   "n": 24,
   "OS": "Linux",
-  "BLAS": "mkl",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -11,21 +11,21 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.0160000000000053,
+          "time": 0.0169999999999959,
           "feval": 24,
           "func": "lmer",
           "dev": 73.3218355593602
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.0210000000000008,
+          "time": 0.0189999999999984,
           "feval": 43,
           "func": "lmer",
           "dev": 73.3218355593827
         },
         {
           "optimizer": "nloptwrap",
-          "time": 0.0210000000000008,
+          "time": 0.0189999999999984,
           "algorithm": "NLOPT_LN_BOBYQA",
           "feval": 11,
           "func": "lmer",
@@ -33,7 +33,7 @@
         },
         {
           "optimizer": "nloptwrap",
-          "time": 0.0259999999999962,
+          "time": 0.0180000000000007,
           "algorithm": "NLOPT_LN_COBYLA",
           "feval": 18,
           "func": "lmer",
@@ -41,7 +41,7 @@
         },
         {
           "optimizer": "nloptwrap",
-          "time": 0.0210000000000008,
+          "time": 0.0189999999999984,
           "algorithm": "NLOPT_LN_NELDERMEAD",
           "feval": 24,
           "func": "lmer",
@@ -49,7 +49,7 @@
         },
         {
           "optimizer": "nloptwrap",
-          "time": 0.0219999999999914,
+          "time": 0.0200000000000031,
           "algorithm": "NLOPT_LN_SBPLX",
           "feval": 36,
           "func": "lmer",
@@ -58,7 +58,7 @@
         {
           "optimizer": "optimx",
           "method": "L-BFGS-B",
-          "time": 0.116,
+          "time": 0.104999999999997,
           "feval": 18,
           "func": "lmer",
           "dev": 73.3218355593614
@@ -66,7 +66,7 @@
         {
           "optimizer": "optimx",
           "method": "nlminb",
-          "time": 0.111999999999995,
+          "time": 0.106000000000002,
           "feval": 21,
           "func": "lmer",
           "dev": 73.3218355593602
@@ -74,7 +74,7 @@
         {
           "optimizer": "optimx",
           "method": "spg",
-          "time": 0.195000000000007,
+          "time": 0.198999999999998,
           "feval": "NA",
           "func": "lmer",
           "dev": 73.3218355593604
@@ -82,22 +82,22 @@
         {
           "optimizer": "optimx",
           "method": "bobyqa",
-          "time": 0.109999999999999,
+          "time": 0.104999999999997,
           "feval": "NA",
           "func": "lmer",
           "dev": 73.3218355593602
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001239357,
+          "time": 0.005027963,
           "geval": 0,
           "feval": 13,
           "func": "lmm",
-          "dev": 73.32183555936021
+          "dev": 73.32183555936022
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001641088,
+          "time": 0.001608985,
           "geval": 0,
           "feval": 24,
           "func": "lmm",
@@ -105,15 +105,15 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001818596,
+          "time": 0.001780361,
           "geval": 0,
           "feval": 30,
           "func": "lmm",
-          "dev": 73.32183556430834
+          "dev": 73.32183556430836
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.002553209,
+          "time": 0.002488089,
           "geval": 0,
           "feval": 50,
           "func": "lmm",
@@ -121,31 +121,31 @@
         },
         {
           "optimizer": "LD_MMA",
-          "time": 0.001174988,
+          "time": 0.001043285,
           "geval": 8,
           "feval": 8,
           "func": "lmm",
-          "dev": 73.3218355593603
+          "dev": 73.32183555936028
         },
         {
           "optimizer": "LD_CCSAQ",
-          "time": 0.000804955,
+          "time": 0.001094181,
           "geval": 8,
           "feval": 8,
           "func": "lmm",
-          "dev": 73.32183555936025
+          "dev": 73.32183555936024
         },
         {
           "optimizer": "LD_SLSQP",
-          "time": 0.000800303,
+          "time": 0.000961068,
           "geval": 5,
           "feval": 6,
           "func": "lmm",
-          "dev": 73.32183555936018
+          "dev": 73.32183555936022
         },
         {
           "optimizer": "LD_LBFGS",
-          "time": 0.002893195,
+          "time": 0.003627132,
           "geval": 5,
           "feval": 5,
           "func": "lmm",
@@ -153,39 +153,39 @@
         },
         {
           "optimizer": "LD_TNEWTON",
-          "time": 0.002405374,
+          "time": 0.003241911,
           "geval": 7,
           "feval": 7,
           "func": "lmm",
-          "dev": 73.3218355593602
+          "dev": 73.32183555936022
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND",
-          "time": 0.002941849,
+          "time": 0.003755712,
           "geval": 7,
           "feval": 7,
           "func": "lmm",
-          "dev": 73.3218355593602
+          "dev": 73.32183555936022
         },
         {
           "optimizer": "LD_TNEWTON_RESTART",
-          "time": 0.002405064,
+          "time": 0.003171578,
           "geval": 5,
           "feval": 5,
           "func": "lmm",
-          "dev": 73.3218355593602
+          "dev": 73.32183555936021
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "time": 0.002872198,
+          "time": 0.003634185,
           "geval": 5,
           "feval": 5,
           "func": "lmm",
-          "dev": 73.3218355593602
+          "dev": 73.32183555936021
         },
         {
           "optimizer": "LD_VAR1",
-          "time": 0.00167231,
+          "time": 0.001879982,
           "geval": 5,
           "feval": 5,
           "func": "lmm",
@@ -193,7 +193,7 @@
         },
         {
           "optimizer": "LD_VAR2",
-          "time": 0.001646521,
+          "time": 0.001874371,
           "geval": 5,
           "feval": 5,
           "func": "lmm",
@@ -208,7 +208,7 @@
       "mtype": "PLSOne"
     }
   ],
-  "Julia": "0.3.10-pre+4",
+  "Julia": "0.3.10",
   "memory": "5.745 GB",
   "dsname": "Cultivation"
 }
