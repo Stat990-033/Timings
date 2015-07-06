@@ -10,11 +10,11 @@
 \format{
   A data frame with 130418 observations on the following 4 variables.
   \describe{
-    \item{\code{r}}{a numeric vector (formerly encoded as rtr2)}
-    \item{\code{ts}}{a numeric vector (formerly encoded as turnsec)}
-    \item{\code{ti}}{a factor with 34 levels (formerly encoded as turnid)}
-    \item{\code{i}}{a factor with 172 levels (formerly idnr)}
-    \item{\code{i.t}}{a factor with 4726 levels for the interaction between i and ti}
+    \item{\code{Y}}{a numeric vector (formerly encoded as rtr2)}
+    \item{\code{U}}{a numeric vector (formerly encoded as turnsec)}
+    \item{\code{I}}{a factor with 34 levels (formerly encoded as turnid)}
+    \item{\code{H}}{a factor with 172 levels (formerly idnr)}
+    \item{\code{G}}{a factor with 4726 levels for the interaction between i and ti}
   }
 }
 \details{
@@ -27,6 +27,6 @@
 %%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
-lmer(r ~ ts + (ts | i.t) +(ts | ti) + (ts | i),verbose = TRUE, d3)
+lmer(Y ~ U + (U | G) +(U | H) + (U | I),verbose = TRUE, d3)
 }
 \keyword{datasets}

@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "r ~ ts + (ts | it) +(ts | ti) + (ts | i)",
+      "formula": "Y ~ U + (U | G)  + (U | H) + (U | I)",
       "fits": [
         {
           "dev": 884957.553935358,
