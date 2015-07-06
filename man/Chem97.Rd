@@ -11,10 +11,10 @@
 \format{
   A data frame with 31022 observations on the following 8 variables.
   \describe{
-    \item{l}{Local Education Authority - a factor}
-    \item{school}{School identifier - a factor}
+    \item{H}{Local Education Authority - a factor}
+    \item{G}{School identifier - a factor}
     \item{student}{Student identifier - a factor}
-    \item{score}{Point score on A-level Chemistry in 1997}
+    \item{Y}{Point score on A-level Chemistry in 1997}
     \item{gender}{Student's gender}
     \item{age}{Age in month, centred at 222 months or 18.5 years}
     \item{gcsescore}{Average GCSE score of individual.}
@@ -37,7 +37,7 @@
 \examples{
 str(Chem97)
 summary(Chem97)
-(fm1 <- lmer(score ~ (1|school) + (1|l), Chem97))
-(fm2 <- lmer(score ~ gcsecnt + (1|school) + (1|l), Chem97))
+(fm1 <- lmer(Y ~ (1|G) + (1|H), Chem97))
+
 }
 \keyword{datasets}

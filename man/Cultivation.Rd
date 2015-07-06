@@ -9,17 +9,17 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{b}{
+    \item{G}{
 	    a factor with levels \code{1} to \code{4}
 	}
-	\item{c}{
+	\item{B}{
 	    the cultivar factor with levels \code{a} and \code{b}
 	}
-	\item{i}{
+	\item{A}{
 	    the innoculant factor with levels \code{con}, \code{dea} and
 	    \code{liv}
 	}
-	\item{d}{
+	\item{Y}{
 	    a numeric vector of dry weight yields
 	}
     }
@@ -34,17 +34,17 @@
 }
 \examples{
 str(Cultivation)
-xtabs(~b+c, Cultivation)
+xtabs(~G+B, Cultivation)
 if (require("lme4", quietly = TRUE, character = TRUE)) {
   options(contrasts = c(unordered = "contr.SAS", ordered = "contr.poly"))
   ## compare with Output 2.10, page 58
-  print(fm1Cult <- lmer(d ~ i * c + (1|b) + (1|c),
+  print(fm1Cult <- lmer(Y ~ A * B + (1|G) + (1|B),
                           Cultivation))
   print(anova(fm1Cult))
-  print(fm2Cult <- lmer(d ~ i + c + (1|b) + (1|c),
+  print(fm2Cult <- lmer(Y ~ A + B + (1|G) + (1|B),
                           Cultivation))
   print(anova(fm2Cult))
-  print(fm3Cult <- lmer(d ~ i + (1|b) + (1|c), Cultivation))
+  print(fm3Cult <- lmer(Y ~ A + (1|G) + (1|B), Cultivation))
   print(anova(fm3Cult))
 }
 }
