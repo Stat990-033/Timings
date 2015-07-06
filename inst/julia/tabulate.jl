@@ -45,7 +45,8 @@ function modelsummary(m)
         push!(times,f["time"])
         push!(devs,f["dev"])
     end
-    opt,times,devs,devs .- minimum(devs),fill(m["formula"],length(opt))
+    opt,times,devs,devs .- minimum(devs),fill(m["formula"],length(opt)),
+       fill(m["p"],length(opt)),fill(m["q"],length(opt)),fill(m["nopt"],length(opt))
 end
 
 function optdir(dnm)
@@ -55,20 +56,28 @@ function optdir(dnm)
     times = Float64[]
     devs = Float64[]
     excessdev = Float64[]
+    n = Int[]
+    p = Int[]
+    q = Vector{Int}[]
+    np = Int[]
     for nm in readdir(dnm)
         js = JSON.parsefile(joinpath(dnm,nm))
         dsn = js["dsname"]
         for m in js["models"]
-            opt,tt,dev,edevs,forms = modelsummary(m)
+            opt,tt,dev,edevs,forms,pp,qq,nnpp = modelsummary(m)
             append!(models,forms)
             append!(opts,opt)
             append!(devs,dev)
             append!(excessdev,edevs)
             append!(times,tt)
+            append!(p,pp)
+            append!(q,qq)
+            append!(np,nnpp)
             append!(dsnames,fill(dsn,length(opt)))
+            append!(n, fill(js["n"],length(opt)))
         end
     end
-    ret = DataFrame(opt=pool(opts),dsname=pool(dsnames),excess=DataArray(excessdev),
+    ret = DataFrame(opt=pool(opts),dsname=pool(dsnames),n=n,p=p,q=q,np=np,excess=DataArray(excessdev),
                     times=DataArray(times),devs=DataArray(devs),models=pool(models))
     ret[sortperm(ret[:opt]),:]
 end
