@@ -8,27 +8,27 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{State}{
+    \item{H}{
 	    an ordered factor with levels
 	    \code{WA} < \code{FL} < \code{CA} < \code{TX} < \code{IL} < \code{DC} < \code{NY}
 	}
-	\item{Year}{
+	\item{G}{
 	    an ordered factor with levels
 	    \code{1949} < \dots{} < \code{1959}
 	}
-	\item{d}{
+	\item{Y}{
 	    a numeric vector of per-capita demand deposits
 	}
-	\item{y}{
+	\item{U}{
 	    a numeric vector of permanent per-capita personal income
 	}
-	\item{rd}{
+	\item{V}{
 	    a numeric vector of service charges on demand deposits
 	}
-	\item{rt}{
+	\item{W}{
 	    a numeric vector of interest rates on time deposits
 	}
-	\item{rs}{
+	\item{X}{
 	    a numeric vector of interest rates on savings and loan
 	    association shares.
 	}
@@ -47,7 +47,7 @@ str(Demand)
 if (require("lme4", quietly = TRUE, character = TRUE)) {
   ## compare to output 3.13, p. 132
   summary(fm1Demand <-
-      lmer(log(d) ~ log(y) + log(rd) + log(rt) + log(rs) + (1|State) + (1|Year),
+      lmer(Y ~ 1 + U + V + W + X + (1|G) + (1|H),
          Demand))
 }
 }

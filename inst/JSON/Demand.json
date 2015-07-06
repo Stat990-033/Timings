@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "log(d) ~ 1 + log(y) + log(rd) + log(rt) + log(rs) + (1|State) + (1|Year)",
+      "formula": "Y ~ 1 + U + V + W + X + (1|G) + (1|H)",
       "fits": [
         {
           "optimizer": "bobyqa",
