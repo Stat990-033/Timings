@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "adg ~ 1 + InitWt * Treatment + (1|Block)",
+      "formula": "Y ~ 1 + U * A + (1|G)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -216,7 +216,7 @@
       "mtype": "PLSOne"
     },
     {
-      "formula": "adg ~ 1 + InitWt + Treatment + (1|Block)",
+      "formula": "Y ~ 1 + U + A + (1|G)",
       "fits": [
         {
           "optimizer": "bobyqa",
