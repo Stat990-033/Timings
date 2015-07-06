@@ -7,23 +7,23 @@
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{v}{
+    \item{A}{
       a factor with levels
       \code{Cossack},
       \code{Ladak}, and 
       \code{Ranger} 
     }
-    \item{d}{
+    \item{B}{
       a factor with levels
       \code{None} 
       \code{S1} 
       \code{S20} 
       \code{O7} 
     }
-    \item{b}{
+    \item{G}{
       a factor with levels \code{A} to \code{F}
     }
-    \item{y}{
+    \item{Y}{
       a numeric vector
     }
   }
@@ -49,6 +49,6 @@
 }
 \examples{
 str(Alfalfa)
-(m1 <- lmer(y ~ v * d + (1|b), Alfalfa, verbose = TRUE))
+(m1 <- lmer(Y ~ A * B + (1|G), Alfalfa, verbose = TRUE))
 }
 \keyword{datasets}
