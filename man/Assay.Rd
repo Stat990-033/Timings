@@ -7,26 +7,26 @@
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{b}{
+    \item{A}{
       an factor with levels \code{A} and \code{B}
       identifying the block of the well
     }
-    \item{s}{
+    \item{B}{
       a factor with levels \code{a} to \code{f} identifying the
       sample corresponding to the well
     }
-    \item{d}{
+    \item{C}{
       an ordered factor with levels \code{1} to \code{5}
       indicating the dilution applied to the well
     }
-    \item{l}{
+    \item{Y}{
       a numeric vector of the log-optical density
     }
-    \item{bs}{
+    \item{G}{
       a factor with twelve levels representing the interaction 
       between factor \code{b} and factor \code{s}
     }
-    \item{bd}{
+    \item{H}{
       a factor with ten levels representing the interaction
       between factor \code{b} and factor \code{d}
     }
@@ -53,15 +53,15 @@
 }
 \examples{
 str(Assay)
-m1 <- lmer(l ~ s * d + (1|b) + (1|bs) +
+m1 <- lmer(Y ~ B * C + (1|A) + (1|G) +
            (1|bd), Assay, verbose = TRUE)
 print(m1, corr = FALSE)
 anova(m1)
-m2 <- lmer(l ~ s + d + (1|b) + (1|bs) +
+m2 <- lmer(Y ~ B + C + (1|A) + (1|G) +
            (1|bd), Assay, verbose = TRUE)
 print(m2, corr = FALSE)
 anova(m2)
-m3 <- lmer(l ~ s + d + (1|b) + (1|bs),
+m3 <- lmer(Y ~ B + C + (1|A) + (1|G),
            Assay, verbose = TRUE)
 print(m3, corr = FALSE)
 anova(m3)
