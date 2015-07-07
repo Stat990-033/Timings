@@ -11,9 +11,11 @@ retime <- function(fin,fout=fin) {
     stopifnot(is.list(js <- fromJSON(fin,FALSE)),
               is.data.frame(dat <- eval(as.symbol(js$dsname))),
               is.list(mods <- js$models))
+    print(js$dsname)
     for (i in seq_along(mods)) {
         m <- mods[[i]]
         form <- eval(parse(text=m$formula))
+        
         for (j in seq_along(m$fits)) {
             f <- m$fits[[j]]
             if (f[["func"]] != "lmer")
@@ -31,6 +33,7 @@ retime <- function(fin,fout=fin) {
             f$dev <- deviance(ff)
             f$feval <- ff@optinfo$feval
             js$models[[i]][["fits"]][[j]] <- f
+            print(paste(opt,f$time,f$feval,f$dev))
         }
     }
     cat(toJSON(js,digits=I(16),auto_unbox=TRUE,pretty=2),file=fout)
