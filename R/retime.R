@@ -31,7 +31,6 @@ retime <- function(fin,fout=fin) {
                 algorithm <- opt
                 opt <- "nloptwrap"
             }
-            print(paste(opt,algorithm,method))
             optCtrl <- switch(opt,
                               bobyqa = list(maxfun=100000),
                               Nelder_Mead = list(maxfun=100000),
