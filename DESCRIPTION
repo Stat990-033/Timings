@@ -1,6 +1,6 @@
 Package: Timings
 Title: Retime a model described in a JSON file
-Version: 0.0.4
+Version: 0.0.5
 Authors@R: c(person("Douglas", "Bates", email = "bates@stat.wisc.edu", role = c("aut", "cre")),
       person("Colin", "Longhurst", email = "longhurst@stat.wisc.edu", role = "aut"))
 Description: Automate timing of fitting linear mixed-effects models.
