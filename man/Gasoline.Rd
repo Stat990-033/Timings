@@ -7,15 +7,15 @@
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{y}{
+    \item{Y}{
       a numeric vector giving the percentage of crude oil converted to
       gasoline after distillation and fractionation
     }
-    \item{e}{
+    \item{U}{
         a numeric vector giving the temperature (degrees F) at which all
 	the gasoline is vaporized
     }
-    \item{s}{
+    \item{G}{
       the inferred crude oil sample number - a factor with levels
       \code{A} to \code{J}
     }
@@ -59,19 +59,15 @@
 }
 \examples{
 str(Gasoline)
-xyplot(y ~ e | s, Gasoline, aspect = 'xy',
+xyplot(Y ~ U | G, Gasoline, aspect = 'xy',
        main = "Gasoline data", xlab = "Endpoint (degrees F)",
        ylab = "Percentage yield",
        type = c("g", "p", "r"),
        index.cond = function(x,y) coef(lm(y~x))[2],
        layout = c(5,2))
-print(m1 <- lmer(y ~ e + (1|s), Gasoline), corr = FALSE)
-m2 <- lmer(y ~ e + (e|s), Gasoline, verbose = 1)
+print(m1 <- lmer(Y ~ U + (1|G), Gasoline), corr = FALSE)
+m2 <- lmer(Y ~ U + (U|G), Gasoline, verbose = 1)
 print(m2)
-Gasoline$endptC <- with(Gasoline, e - mean(e))
-m3 <- lmer(y ~ e + (endptC|s), Gasoline, verbose = 1)
-print(m3)
-xyplot(endptC ~ `(Intercept)`, ranef(m3)[[1]], type = c("g", "p", "r"),
-       aspect = 1)
+
 }
 \keyword{datasets}
