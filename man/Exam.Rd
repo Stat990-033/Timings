@@ -9,12 +9,12 @@
 \format{
   A data frame with 4059 observations on the following 9 variables.
   \describe{
-    \item{school}{School ID - a factor.}
-    \item{normexam}{Normalized exam score.}
-    \item{schgend}{School gender - a factor.  Levels are \code{mixed},
+    \item{G}{School ID - a factor.}
+    \item{Y}{Normalized exam score.}
+    \item{B}{School gender - a factor.  Levels are \code{mixed},
       \code{boys}, and \code{girls}.}
-    \item{standLRT}{Standardised LR test score.}
-    \item{sex}{Sex of the student - levels are \code{F} and \code{M}.}
+    \item{U}{Standardised LR test score.}
+    \item{A}{Sex of the student - levels are \code{F} and \code{M}.}
   }
 }
 %\details{}
@@ -28,8 +28,8 @@
 \examples{
 str(Exam)
 summary(Exam)
-(fm1 <- lmer(normexam ~ standLRT + sex + schgend + (1|school), Exam))
-(fm2 <- lmer(normexam ~ standLRT*sex + schgend + (1|school), Exam))
-(fm3 <- lmer(normexam ~ standLRT*sex + schgend + (1|school), Exam))
+(fm1 <- lmer(Y ~ U + A + B + (1|G), Exam))
+
+
 }
 \keyword{datasets}

@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "normexam ~ 1+ standLRT + sex + schgend + (1|school)",
+      "formula": "Y ~ 1+ U + A + B + (1|G)",
       "fits": [
         {
           "dev": 9325.4273050669,
@@ -225,7 +225,7 @@
       "mtype": "MixedModels.PLSTwo"
     },
     {
-      "formula": "normexam ~ 1 + standLRT*sex + schgend + (1|school)",
+      "formula": "Y ~ 1 + U*A + B + (1|G)",
       "fits": [
         {
           "dev": 9325.38460889901,
