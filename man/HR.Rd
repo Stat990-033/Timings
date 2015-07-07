@@ -8,20 +8,20 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{p}{
+    \item{G}{
 	    an ordered factor indicating the patient.
 	}
-	\item{d}{
+	\item{A}{
 	    the drug treatment - a factor with levels \code{a},
 	    \code{b} and \code{p} where \code{p} represents the placebo.
 	}
-	\item{b}{
+	\item{V}{
 	    the patient's base heart rate
 	}
-	\item{h}{
+	\item{Y}{
 	    the observed heart rate at different times in the experiment
 	}
-	\item{t}{
+	\item{U}{
 	    the time of the observation
 	}
     }
@@ -41,7 +41,7 @@ if (require("lattice", quietly = TRUE, character = TRUE)) {
 if (require("lme4", quietly = TRUE, character = TRUE)) {
   options(contrasts = c(unordered = "contr.SAS", ordered = "contr.poly"))
   ## linear trend in time
-  print(fm1HR <- lmer(h ~ t * d + b + (t|p), HR))  
+  print(fm1HR <- lmer(Y ~ U * A + V + (U|G), HR))  
   print(anova(fm1HR))
 \dontrun{
 fm2HR <- update(fm1HR, weights = varPower(0.5)) # use power-of-mean variance
@@ -49,11 +49,7 @@ summary(fm2HR)
 intervals(fm2HR)             # variance function does not seem significant
 anova(fm1HR, fm2HR)         # confirm with likelihood ratio
 }
- print(fm3HR <- lmer(h ~ t + d + b + (Time|p), HR))
- print(anova(fm3HR))
- ## remove Drug term
- print(fm4HR <- lmer(h ~ t + b + (Time|p), HR))
- print(anova(fm4HR))
+ 
 }
 }
 \keyword{datasets}
