@@ -8,14 +8,14 @@
   This data frame contains the following columns:
   \describe{
     \item{o}{a numeric vector }
-    \item{l}{
+    \item{G}{
       an ordered factor with levels
       \code{B} < \code{D} < \code{E} < \code{I} < \code{G} <
       \code{A} < \code{C} < \code{F} < \code{H}
     }
-    \item{b}{a \code{\link{factor}} with levels \code{1} to \code{3} }
-    \item{t}{a factor with levels \code{1} to \code{4} }
-    \item{a}{ a numeric vector }
+    \item{H}{a \code{\link{factor}} with levels \code{1} to \code{3} }
+    \item{A}{a factor with levels \code{1} to \code{4} }
+    \item{Y}{ a numeric vector }
     \item{f}{ a numeric vector }
     \item{g}{ an \code{\link{ordered}} factor with levels
       \code{B/1} < \code{B/2} < \code{B/3} < \code{D/1} <
@@ -35,28 +35,8 @@
 }
 \examples{%% same is in vignette -- keep in sync ! -- ../vignettes/Usinglmer.Rnw
 str(Multilocation)
-if (require("lme4", quietly = TRUE, character = TRUE)) {
-  options(contrasts = c(unordered = "contr.SAS", ordered = "contr.poly"))
-  ### Create a Block %in% Location factor
-  Multilocation$g <- with(Multilocation, b:l)
-  print(fm1Mult <- lmer(a ~ l * t + (1|g), Multilocation))
-  print(anova(fm1Mult))
-  print(fm2Mult <- lmer(a ~ l + t + (1|g), Multilocation), corr=FALSE)
-  print(fm3Mult <- lmer(a ~ l + (1|g), Multilocation), corr=FALSE)
-  print(fm4Mult <- lmer(a ~ t + (1|g), Multilocation))
-  print(fm5Mult <- lmer(a ~ 1 + (1|g), Multilocation))
-  print(anova(fm2Mult))
-  print(anova(fm1Mult, fm2Mult, fm3Mult, fm4Mult, fm5Mult))
-  ### Treating the location as a random effect
-  print(fm1MultR <- lmer(a ~ t + (1|l/t) + (1|g), Multilocation))
-  print(anova(fm1MultR))
-  fm2MultR <- lmer(a ~ t + (t - 1|l) + (1|b), Multilocation)
-  ## Warning (not error ?!): Convergence failure in 10000 iter %% __FIXME__
-  print(fm2MultR)# does not mention previous conv.failure %% FIXME ??
-  print(anova(fm1MultR, fm2MultR))
- \dontrun{
-  confint(fm1MultR)% was intervals(.)
+lmer(Y ~ 1 + A + (0+A|G) + (1|H),REML=FALSE,data=Multilocation)
  }
-}% if( .. lme4 .. )
+}
 }
 \keyword{datasets}
