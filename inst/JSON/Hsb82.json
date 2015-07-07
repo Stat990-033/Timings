@@ -11,41 +11,41 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.0760000000000218,
+          "time": 0.0760000000000076,
           "feval": 20,
           "func": "lmer",
           "dev": 46331.4324058454
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.0930000000000177,
+          "time": 0.0999999999999943,
           "feval": 36,
           "func": "lmer",
           "dev": 46331.4324058705
         },
         {
-          "time": 0.075999999999965,
+          "time": 0.0729999999999933,
           "optimizer": "NLOPT_LN_BOBYQA",
           "feval": 15,
           "func": "lmer",
           "dev": 46331.4324058454
         },
         {
-          "time": 0.0850000000000364,
+          "time": 0.0819999999999936,
           "optimizer": "NLOPT_LN_COBYLA",
           "feval": 24,
           "func": "lmer",
           "dev": 46331.4324072474
         },
         {
-          "time": 0.100000000000023,
+          "time": 0.0900000000000034,
           "optimizer": "NLOPT_LN_NELDERMEAD",
           "feval": 32,
           "func": "lmer",
           "dev": 46331.4324060829
         },
         {
-          "time": 0.10899999999998,
+          "time": 0.108000000000004,
           "optimizer": "NLOPT_LN_SBPLX",
           "feval": 48,
           "func": "lmer",
@@ -53,28 +53,28 @@
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 0.197999999999979,
+          "time": 0.185999999999993,
           "feval": 16,
           "func": "lmer",
           "dev": 46331.4324058508
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 0.204999999999984,
+          "time": 0.176999999999992,
           "feval": 20,
           "func": "lmer",
           "dev": 46331.4324058454
         },
         {
           "optimizer": "optimx:spg",
-          "time": 0.29000000000002,
+          "time": 0.256,
           "feval": "NA",
           "func": "lmer",
           "dev": 46331.4324058454
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 0.197000000000003,
+          "time": 0.178999999999988,
           "feval": "NA",
           "func": "lmer",
           "dev": 46331.4324058454
@@ -202,5 +202,6 @@
   ],
   "Julia": "0.3.10-pre+4",
   "memory": "5.745 GB",
-  "dsname": "Hsb82"
+  "dsname": "Hsb82",
+  "Rversion": "R version 3.2.0 (2015-04-16)"
 }

@@ -11,20 +11,20 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.0159999999999911,
+          "time": 0.0180000000000007,
           "feval": 27,
           "func": "lmer",
           "dev": 92.9914641231901
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.0210000000000008,
+          "time": 0.0220000000000056,
           "feval": 52,
           "func": "lmer",
           "dev": 92.9914641231912
         },
         {
-          "time": 0.0189999999999912,
+          "time": 0.019999999999996,
           "optimizer": "NLOPT_LN_BOBYQA",
           "feval": 17,
           "func": "lmer",
@@ -38,14 +38,14 @@
           "dev": 92.9914641232045
         },
         {
-          "time": 0.019999999999996,
+          "time": 0.0200000000000102,
           "optimizer": "NLOPT_LN_NELDERMEAD",
           "feval": 24,
           "func": "lmer",
           "dev": 92.9914642289338
         },
         {
-          "time": 0.0240000000000009,
+          "time": 0.0210000000000008,
           "optimizer": "NLOPT_LN_SBPLX",
           "feval": 36,
           "func": "lmer",
@@ -53,14 +53,14 @@
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 0.105000000000004,
+          "time": 0.106000000000009,
           "feval": 20,
           "func": "lmer",
           "dev": 92.9914641231901
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 0.103999999999999,
+          "time": 0.106999999999999,
           "feval": 22,
           "func": "lmer",
           "dev": 92.9914641231901
@@ -74,7 +74,7 @@
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 0.105000000000004,
+          "time": 0.106999999999999,
           "feval": "NA",
           "func": "lmer",
           "dev": 92.9914641231901
@@ -202,5 +202,6 @@
   ],
   "Julia": "0.3.11-pre+13",
   "memory": "5.745 GB",
-  "n": 24
+  "n": 24,
+  "Rversion": "R version 3.2.0 (2015-04-16)"
 }

@@ -11,14 +11,14 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.0420000000000016,
+          "time": 0.0550000000000068,
           "feval": 22,
           "func": "lmer",
           "dev": 6.47808567202431
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.0229999999999961,
+          "time": 0.0260000000000105,
           "feval": 66,
           "func": "lmer",
           "dev": 6.47808567207255
@@ -31,21 +31,21 @@
           "dev": 6.47808568132722
         },
         {
-          "time": 0.0230000000000032,
+          "time": 0.0240000000000009,
           "optimizer": "NLOPT_LN_COBYLA",
           "feval": 44,
           "func": "lmer",
           "dev": 6.47808567460328
         },
         {
-          "time": 0.0230000000000032,
+          "time": 0.0240000000000009,
           "optimizer": "NLOPT_LN_NELDERMEAD",
           "feval": 47,
           "func": "lmer",
           "dev": 6.47808584333482
         },
         {
-          "time": 0.0240000000000009,
+          "time": 0.0250000000000057,
           "optimizer": "NLOPT_LN_SBPLX",
           "feval": 68,
           "func": "lmer",
@@ -53,28 +53,28 @@
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 0.113,
+          "time": 0.11099999999999,
           "feval": 12,
           "func": "lmer",
           "dev": 6.47808567202435
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 0.109000000000002,
+          "time": 0.109999999999999,
           "feval": 33,
           "func": "lmer",
           "dev": 6.47808567202434
         },
         {
           "optimizer": "optimx:spg",
-          "time": 0.199999999999996,
+          "time": 0.195000000000007,
           "feval": "NA",
           "func": "lmer",
           "dev": 6.47808567202444
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 0.106999999999999,
+          "time": 0.109999999999999,
           "feval": "NA",
           "func": "lmer",
           "dev": 6.47808567202431
@@ -123,5 +123,6 @@
   ],
   "Julia": "0.3.11-pre+13",
   "memory": "5.745 GB",
-  "n": 20
+  "n": 20,
+  "Rversion": "R version 3.2.0 (2015-04-16)"
 }

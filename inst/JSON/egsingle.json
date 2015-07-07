@@ -11,41 +11,41 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.488,
-          "feval": 46,
+          "time": 0.193999999999996,
+          "feval": 42,
           "func": "lmer",
-          "dev": 16732.4965433667
+          "dev": 16732.4965433669
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.488,
+          "time": 0.265000000000001,
           "feval": 82,
           "func": "lmer",
           "dev": 16732.4965433718
         },
         {
-          "time": 0.341999999999999,
+          "time": 0.171999999999997,
           "optimizer": "NLOPT_LN_BOBYQA",
           "feval": 35,
           "func": "lmer",
           "dev": 16732.4965433669
         },
         {
-          "time": 0.657000000000004,
+          "time": 0.373999999999995,
           "optimizer": "NLOPT_LN_COBYLA",
-          "feval": 125,
+          "feval": 135,
           "func": "lmer",
-          "dev": 16732.4966020915
+          "dev": 16732.4966205209
         },
         {
-          "time": 0.407000000000004,
+          "time": 0.219000000000001,
           "optimizer": "NLOPT_LN_NELDERMEAD",
           "feval": 60,
           "func": "lmer",
           "dev": 16732.4965441124
         },
         {
-          "time": 0.490000000000002,
+          "time": 0.264000000000003,
           "optimizer": "NLOPT_LN_SBPLX",
           "feval": 82,
           "func": "lmer",
@@ -53,31 +53,31 @@
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 0.654000000000003,
+          "time": 0.366999999999997,
           "feval": 18,
           "func": "lmer",
           "dev": 16732.4965433719
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 0.633000000000003,
+          "time": 0.355000000000004,
           "feval": 41,
           "func": "lmer",
           "dev": 16732.4965433668
         },
         {
           "optimizer": "optimx:spg",
-          "time": 0.819000000000003,
+          "time": 0.471000000000004,
           "feval": "NA",
           "func": "lmer",
           "dev": 16732.4965433667
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 0.652000000000001,
+          "time": 0.358999999999995,
           "feval": "NA",
           "func": "lmer",
-          "dev": 16732.4965433667
+          "dev": 16732.4965433669
         },
         {
           "optimizer": "LN_BOBYQA",
@@ -202,5 +202,6 @@
   ],
   "Julia": "0.4.0-dev+5181",
   "memory": "5.745 GB",
-  "n": 72
+  "n": 72,
+  "Rversion": "R version 3.2.0 (2015-04-16)"
 }
