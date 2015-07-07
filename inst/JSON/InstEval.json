@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "y ~ 1 + dept*service + (1|s) + (1|d)",
+      "formula": "Y ~ 1 + I*A + (1|G) + (1|H)",
       "fits": [
         {
           "dev": 237585.553415169,
@@ -145,7 +145,7 @@
       "mtype": "PLSDiag{Int32}"
     },
     {
-      "formula": "y ~ 1 + service + (1|s) + (1|d) + (1|dept)",
+      "formula": "Y ~ 1 + A + (1|G) + (1|H) + (1|I)",
       "fits": [
         {
           "dev": 237721.768774496,
