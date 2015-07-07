@@ -130,42 +130,37 @@
         },
         {
           "dev": 1751.93934477222,
-          "optimizer": "optimx",
-          "method": "L-BFGS-B",
+          "optimizer": "optimx:L-BFGS-B",
           "func": "lmer",
           "time": 0.233999999999924,
           "feval": 38
         },
         {
           "dev": 1751.93934446322,
-          "optimizer": "optimx",
-          "method": "nlminb",
+          "optimizer": "optimx:nlminb",
           "func": "lmer",
           "time": 0.227000000000317,
           "feval": 120
         },
         {
           "dev": 1751.93934446321,
-          "optimizer": "optimx",
-          "method": "spg",
+          "optimizer": "optimx:spg",
           "func": "lmer",
           "time": 0.423999999999978,
           "feval": "NA"
         },
         {
           "dev": 1751.9393444632,
-          "optimizer": "optimx",
-          "method": "bobyqa",
+          "optimizer": "optimx:bobyqa",
           "func": "lmer",
           "time": 0.22400000000016,
           "feval": "NA"
         },
         {
           "dev": 1751.93934448899,
-          "optimizer": "nloptwrap",
           "func": "lmer",
           "time": 0.0489999999999782,
-          "algorithm": "NLOPT_LN_BOBYQA",
+          "optimizer": "NLOPT_LN_BOBYQA",
           "feval": 50
         },
         {
@@ -314,58 +309,51 @@
         },
         {
           "dev": 1752.00325527462,
-          "optimizer": "nloptwrap",
           "func": "lmer",
           "time": 0.0520000000001346,
-          "algorithm": "NLOPT_LN_BOBYQA",
+          "optimizer": "NLOPT_LN_BOBYQA",
           "feval": 26
         },
         {
           "dev": 1752.00327849407,
-          "optimizer": "nloptwrap",
           "func": "lmer",
           "time": 0.0639999999998508,
-          "algorithm": "NLOPT_LN_COBYLA",
+          "optimizer": "NLOPT_LN_COBYLA",
           "feval": 93
         },
         {
           "dev": 1752.00325514229,
-          "optimizer": "optimx",
-          "method": "L-BFGS-B",
+          "optimizer": "optimx:L-BFGS-B",
           "func": "lmer",
           "time": 0.23700000000008,
           "feval": 34
         },
         {
           "dev": 1752.00325513989,
-          "optimizer": "optimx",
-          "method": "nlminb",
+          "optimizer": "optimx:nlminb",
           "func": "lmer",
           "time": 0.230999999999767,
           "feval": 55
         },
         {
           "dev": 1752.00325513988,
-          "optimizer": "optimx",
-          "method": "spg",
+          "optimizer": "optimx:spg",
           "func": "lmer",
           "time": 0.412000000000262,
           "feval": "NA"
         },
         {
           "dev": 1752.00325513988,
-          "optimizer": "optimx",
-          "method": "bobyqa",
+          "optimizer": "optimx:bobyqa",
           "func": "lmer",
           "time": 0.233999999999924,
           "feval": "NA"
         },
         {
           "dev": 1752.00325516111,
-          "optimizer": "nloptwrap",
           "func": "lmer",
           "time": 0.0650000000000546,
-          "algorithm": "NLOPT_LN_SBPLX",
+          "optimizer": "NLOPT_LN_SBPLX",
           "feval": 110
         },
         {

@@ -24,64 +24,56 @@
           "dev": 92.9914641231912
         },
         {
-          "optimizer": "nloptwrap",
           "time": 0.0189999999999912,
-          "algorithm": "NLOPT_LN_BOBYQA",
+          "optimizer": "NLOPT_LN_BOBYQA",
           "feval": 17,
           "func": "lmer",
           "dev": 92.9914642059217
         },
         {
-          "optimizer": "nloptwrap",
           "time": 0.019999999999996,
-          "algorithm": "NLOPT_LN_COBYLA",
+          "optimizer": "NLOPT_LN_COBYLA",
           "feval": 23,
           "func": "lmer",
           "dev": 92.9914641232045
         },
         {
-          "optimizer": "nloptwrap",
           "time": 0.019999999999996,
-          "algorithm": "NLOPT_LN_NELDERMEAD",
+          "optimizer": "NLOPT_LN_NELDERMEAD",
           "feval": 24,
           "func": "lmer",
           "dev": 92.9914642289338
         },
         {
-          "optimizer": "nloptwrap",
           "time": 0.0240000000000009,
-          "algorithm": "NLOPT_LN_SBPLX",
+          "optimizer": "NLOPT_LN_SBPLX",
           "feval": 36,
           "func": "lmer",
           "dev": 92.9914641232045
         },
         {
-          "optimizer": "optimx",
-          "method": "L-BFGS-B",
+          "optimizer": "optimx:L-BFGS-B",
           "time": 0.105000000000004,
           "feval": 20,
           "func": "lmer",
           "dev": 92.9914641231901
         },
         {
-          "optimizer": "optimx",
-          "method": "nlminb",
+          "optimizer": "optimx:nlminb",
           "time": 0.103999999999999,
           "feval": 22,
           "func": "lmer",
           "dev": 92.9914641231901
         },
         {
-          "optimizer": "optimx",
-          "method": "spg",
+          "optimizer": "optimx:spg",
           "time": 0.192999999999998,
           "feval": "NA",
           "func": "lmer",
           "dev": 92.9914641231902
         },
         {
-          "optimizer": "optimx",
-          "method": "bobyqa",
+          "optimizer": "optimx:bobyqa",
           "time": 0.105000000000004,
           "feval": "NA",
           "func": "lmer",
