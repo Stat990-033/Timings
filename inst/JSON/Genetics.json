@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "y ~ f + (1|l)+(1|lb)",
+      "formula": "Y ~ A + (1|G)+(1|H)",
       "fits": [
         {
           "optimizer": "bobyqa",

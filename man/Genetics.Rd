@@ -7,20 +7,20 @@ The \code{Genetics} data frame has 60 rows and 5 columns.
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{l}{
+    \item{H}{
 	    a factor with levels \code{1} to \code{4} 
 	}
 	\item{b}{
 	    a factor with levels \code{1} to \code{3}
 	}
-	\item{f}{
+	\item{A}{
 	    a factor with levels \code{1} to \code{5}
 	}
-	\item{y}{
+	\item{Y}{
 	    a numeric vector of crop yields
 	}
-    \item{lb}{
-        a factor for the interaction effect of l and b
+    \item{G}{
+        a factor for the interaction effect of H and b
     }
     }
 }
@@ -33,7 +33,7 @@ The \code{Genetics} data frame has 60 rows and 5 columns.
 str(Genetics)
 if (require("lme4", quietly = TRUE, character = TRUE)) {
   options(contrasts = c(unordered = "contr.SAS", ordered = "contr.poly"))
-  summary(fm1Gen <- lmer(y ~ f + (1|l)+(1|lb), Genetics))
+  summary(fm1Gen <- lmer(Y ~ A + (1|H)+(1|G), Genetics))
 }
 }
 \keyword{datasets}
