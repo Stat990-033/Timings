@@ -7,19 +7,19 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{b}{
+    \item{G}{
 	    an ordered factor giving the block
 	}
-	\item{t}{
+	\item{A}{
 	    a factor with levels \code{1} to \code{4} 
 	}
-	\item{y}{
+	\item{Y}{
 	    a numeric vector
 	}
 	\item{x}{
 	    a numeric vector
 	}
-    \item{xt.1-xt.4}{
+    \item{U,V,W,Z}{
         Interaction effects for x and different treatment groups
     }
     }
@@ -33,6 +33,6 @@
     (Data Set 5.5).
 }
 \examples{
-fit<-lmer(y~0+t+xt.1+xt.2+xt.3+xt.4+(1|b),REML=FALSE,data=IncBlk))
+fit<-lmer(Y~0+A+U+V+W+Z+(1|G),REML=FALSE,data=IncBlk))
 }
 \keyword{datasets}

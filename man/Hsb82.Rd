@@ -10,14 +10,14 @@
   A data frame with 7185 observations on students including the
   following 8 variables.
   \describe{
-    \item{school}{an ordered factor designating the school that the
+    \item{G}{an ordered factor designating the school that the
       student attends.}
-    \item{minrty}{a factor with levels}
-    \item{sx}{a factor with levels \code{Male} and \code{Female}}
-    \item{ses}{a numeric vector of socio-economic scores}
-    \item{mAch}{a numeric vector of Mathematics achievement scores}
+    \item{B}{a factor with levels}
+    \item{A}{a factor with levels \code{Male} and \code{Female}}
+    \item{U}{a numeric vector of socio-economic scores}
+    \item{Y}{a numeric vector of Mathematics achievement scores}
     \item{meanses}{a numeric vector of mean \code{ses} for the school}
-    \item{sector}{a factor with levels \code{Public} and \code{Catholic}}
+    \item{C}{a factor with levels \code{Public} and \code{Catholic}}
     \item{cses}{a numeric vector of centered \code{ses} values where the
     centering is with respect to the \code{meanses} for the school.}
   }
@@ -33,6 +33,7 @@
 }
 \examples{
 data(Hsb82)
+lmer(Y ~ 1 + A + U + B +C + (1|G),REML=FALSE,data=Hsb82)
 summary(Hsb82)
 }
 \keyword{datasets}

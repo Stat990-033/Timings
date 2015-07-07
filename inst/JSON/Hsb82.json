@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "mAch ~ 1 + sx + ses + minrty + sector + (1|school)",
+      "formula": "Y ~ 1 + A + U + B +C + (1|G)",
       "fits": [
         {
           "optimizer": "bobyqa",
