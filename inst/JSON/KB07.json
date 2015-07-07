@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "RTtrunc ~ 1+S+P+C+SP+SC+PC+SPC + (1+S+P+C+SP+SC+PC+SPC|subj) + (1+S+P+C+SP+SC+PC+SPC|item)",
+      "formula": "Y ~ 1+S+T+U+V+W+X+Z + (1+S+T+U+V+W+X+Z|G) + (1+S+T+U+V+W+X+Z|H)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -216,7 +216,7 @@
       "mtype": "MixedModels.PLSTwo"
     },
     {
-      "formula": "RTtrunc ~ 1+S+P+C+SP+SC+PC+SPC + (1|subj)+(0+S|subj)+(0+P|subj)+(0+C|subj)+(0+SP|subj)+(0+SC|subj)+(0+PC|subj)+(0+SPC|subj) + (1|item)+(0+S|item)+(0+P|item)+(0+C|item)+(0+SP|item)+(0+SC|item)+(0+PC|item)+(0+SPC|item)",
+      "formula": "Y ~ 1+S+T+U+V+W+X+Z + (1|G)+(0+S|G)+(0+T|G)+(0+U|G)+(0+V|G)+(0+W|G)+(0+X|G)+(0+Z|G) + (1|H)+(0+S|H)+(0+T|H)+(0+U|H)+(0+V|H)+(0+W|H)+(0+X|H)+(0+Z|H)",
       "fits": [
         {
           "optimizer": "bobyqa",

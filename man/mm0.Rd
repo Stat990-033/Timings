@@ -11,11 +11,11 @@ mm0 data
 \format{
   A data frame with 0 observations on the following 2 variables.
   \describe{
-    \item{\code{mean}}{a numeric vector}
-    \item{\code{sdiff}}{a numeric vector}
-    \item{\code{ambiguity}}{a factor with 2 levels}
-    \item{\code{subj}}{a factor with 37 levels}
-    \item{\code{item}}{a factor with 60 levels}
+    \item{\code{Y}}{a numeric vector}
+    \item{\code{U}}{a numeric vector}
+    \item{\code{A}}{a factor with 2 levels}
+    \item{\code{H}}{a factor with 37 levels}
+    \item{\code{G}}{a factor with 60 levels}
   }
 }
 \details{

@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "mean~ambiguity*sdiff+(1+sdiff|item)+(1+sdiff|subj)",
+      "formula": "Y~A*U+(1+U|G)+(1+U|H)",
       "fits": [
         {
           "optimizer": "bobyqa",
