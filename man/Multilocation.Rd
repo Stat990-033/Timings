@@ -36,7 +36,5 @@
 \examples{%% same is in vignette -- keep in sync ! -- ../vignettes/Usinglmer.Rnw
 str(Multilocation)
 lmer(Y ~ 1 + A + (0+A|G) + (1|H),REML=FALSE,data=Multilocation)
- }
-}
 }
 \keyword{datasets}
