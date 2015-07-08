@@ -30,6 +30,8 @@ function retime(fnm,ofile)
                 f["geval"] = mod.opt.geval
                 m["p"] = size(mod.X,2)
                 m["q"] = Int[length(b) for b in mod.b]
+            else
+                print(" ",f["dev"],", ",f["time"])
             end
             println()
         end

@@ -29,19 +29,12 @@ function timingtab(fin)
     end
 end
 
-function optname(f)
-    opt = f["optimizer"]
-    opt == "nloptwrap" && return f["algorithm"]
-    opt == "optimx" && return string(opt,":",f["method"])
-    opt
-end
-
 function modelsummary(m)
     opt = ASCIIString[]
     times = Float64[]
     devs = Float64[]
-    for f in filter(f->f["func"]=="lmer",m["fits"])
-        push!(opt,optname(f))
+    for f in m["fits"]
+        push!(opt,f["optimizer"])
         push!(times,f["time"])
         push!(devs,f["dev"])
     end
