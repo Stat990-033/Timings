@@ -1,7 +1,7 @@
 {
-  "dsname": "Poems",
+  "n": 275996,
   "OS": "Linux",
-  "BLAS": "mkl",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -24,36 +24,36 @@
           "dev": 174757.888378287
         },
         {
-          "time": 17.6999999999998,
           "optimizer": "NLOPT_LN_BOBYQA",
+          "time": 17.6999999999998,
           "feval": 41,
           "func": "lmer",
           "dev": 174757.888378268
         },
         {
-          "time": 25.8100000000004,
           "optimizer": "NLOPT_LN_COBYLA",
+          "time": 25.8100000000004,
           "feval": 80,
           "func": "lmer",
           "dev": 174757.888425642
         },
         {
-          "time": 27.1990000000005,
           "optimizer": "NLOPT_LN_PRAXIS",
+          "time": 27.1990000000005,
           "feval": 80,
           "func": "lmer",
           "dev": 174757.888377927
         },
         {
-          "time": 31.1530000000002,
           "optimizer": "NLOPT_LN_NELDERMEAD",
+          "time": 31.1530000000002,
           "feval": 110,
           "func": "lmer",
           "dev": 174757.888379246
         },
         {
-          "time": 31.9989999999998,
           "optimizer": "NLOPT_LN_SBPLX",
+          "time": 31.9989999999998,
           "feval": 107,
           "func": "lmer",
           "dev": 174757.888392058
@@ -88,7 +88,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 7.063211126,
+          "time": 8.155810489,
           "geval": 0,
           "feval": 103,
           "func": "lmm",
@@ -96,31 +96,31 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 14.118111717,
+          "time": 25.432284305,
           "geval": 0,
-          "feval": 295,
+          "feval": 377,
           "func": "lmm",
-          "dev": 174757.8883804301
+          "dev": 174757.88837794986
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 5.935967296,
+          "time": 7.357853983,
           "geval": 0,
-          "feval": 91,
+          "feval": 89,
           "func": "lmm",
-          "dev": 174757.88837793146
+          "dev": 174757.8883779315
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 10.768557141,
+          "time": 15.262916427,
           "geval": 0,
           "feval": 216,
           "func": "lmm",
-          "dev": 174757.88837798103
+          "dev": 174757.88837798106
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 10.06700819,
+          "time": 13.372105223,
           "geval": 0,
           "feval": 186,
           "func": "lmm",
@@ -137,7 +137,7 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "Julia": "0.3.10-pre+3",
+  "Julia": "0.3.10",
   "memory": "5.745 GB",
-  "n": 275996
+  "dsname": "Poems"
 }

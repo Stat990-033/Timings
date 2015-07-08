@@ -1,7 +1,7 @@
 {
-  "n": 3435,
+  "dsname": "ScotsSec",
   "OS": "Linux",
-  "BLAS": "mkl",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "WORD_SIZE": 64,
   "CPU_CORES": 4,
@@ -24,29 +24,29 @@
           "dev": 14773.2214911727
         },
         {
-          "time": 0.0779999999999745,
           "optimizer": "NLOPT_LN_BOBYQA",
+          "time": 0.0779999999999745,
           "feval": 31,
           "func": "lmer",
           "dev": 14773.2214934107
         },
         {
-          "time": 0.112000000000023,
           "optimizer": "NLOPT_LN_COBYLA",
+          "time": 0.112000000000023,
           "feval": 74,
           "func": "lmer",
           "dev": 14773.2214922681
         },
         {
-          "time": 0.109999999999957,
           "optimizer": "NLOPT_LN_NELDERMEAD",
+          "time": 0.109999999999957,
           "feval": 66,
           "func": "lmer",
           "dev": 14773.2214915928
         },
         {
-          "time": 0.131000000000029,
           "optimizer": "NLOPT_LN_SBPLX",
+          "time": 0.131000000000029,
           "feval": 97,
           "func": "lmer",
           "dev": 14773.2214911681
@@ -81,43 +81,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.029550873,
+          "time": 0.01958539,
           "geval": 0,
           "feval": 43,
           "func": "lmm",
-          "dev": 14773.2214911605
+          "dev": 14773.221491160499
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.036392981,
+          "time": 0.034564814,
           "geval": 0,
-          "feval": 77,
+          "feval": 79,
           "func": "lmm",
-          "dev": 14773.2214911609
+          "dev": 14773.221491161246
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.034129257,
+          "time": 0.031997502,
           "geval": 0,
           "feval": 68,
           "func": "lmm",
-          "dev": 14773.2616362644
+          "dev": 14773.261636264375
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.044699965,
+          "time": 0.042449993,
           "geval": 0,
           "feval": 115,
           "func": "lmm",
-          "dev": 14773.2214911677
+          "dev": 14773.221491167722
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.040760337,
+          "time": 0.0347183,
           "geval": 0,
-          "feval": 96,
+          "feval": 80,
           "func": "lmm",
-          "dev": 14773.2214911605
+          "dev": 14773.221491160488
         }
       ],
       "q": [
@@ -129,7 +129,7 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "Julia": "0.3.10-pre+4",
+  "Julia": "0.3.10",
   "memory": "5.745 GB",
-  "dsname": "ScotsSec"
+  "n": 3435
 }
