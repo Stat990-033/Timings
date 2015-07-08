@@ -8,14 +8,14 @@
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{s}{
+    \item{G}{
       an ordered factor giving a unique identifier for each boy in
       the experiment
     }
-    \item{a}{
+    \item{U}{
       a numeric vector giving the standardized age (dimensionless)
     }
-    \item{h}{
+    \item{Y}{
       a numeric vector giving the height of the boy (cm)
     }
     \item{o}{
