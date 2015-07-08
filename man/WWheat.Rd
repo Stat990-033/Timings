@@ -7,13 +7,13 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{v}{
+    \item{G}{
 	    an ordered factor with 10 levels
 	}
-	\item{y}{
+	\item{Y}{
 	    a numeric vector of yields
 	}
-	\item{m}{
+	\item{U}{
 	    a numeric vector of soil moisture contents
 	}
     }
@@ -24,6 +24,6 @@
     (Data Set 7.2).
 }
 \examples{
-fit<-lmer(y~1+m+(1+m|v),REML=FALSE,data=WWheat)
+fit<-lmer(Y~1+U+(1+U|G),REML=FALSE,data=WWheat)
 }
 \keyword{datasets}
