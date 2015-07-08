@@ -4,11 +4,11 @@
 \title{Variation in penicillin testing}
 \format{A data frame with 144 observations on the following 3 variables.
   \describe{
-    \item{\code{d}}{diameter (mm) of the zone of inhibition of
+    \item{\code{Y}}{diameter (mm) of the zone of inhibition of
       the growth of the organism.}
-    \item{\code{p}}{assay plate.  A factor with levels \sQuote{a} to
+    \item{\code{G}}{assay plate.  A factor with levels \sQuote{a} to
       \sQuote{x}.}
-    \item{\code{s}}{penicillin sample.  A factor with levels
+    \item{\code{H}}{penicillin sample.  A factor with levels
       \sQuote{A} to \sQuote{F}.}
   }}
 \source{
@@ -44,11 +44,11 @@
 \examples{
 str(Penicillin)
 require(lattice)
-dotplot(reorder(p, d) ~ d, Penicillin, groups = s,
+dotplot(reorder(G, Y) ~ Y, Penicillin, groups = H,
         ylab = "Plate", xlab = "Diameter of growth inhibition zone (mm)",
         type = c("p", "a"), auto.key = list(columns = 3, lines = TRUE,
         title = "Penicillin sample"))
-(fm1 <- lmer(d ~ (1|p) + (1|s), Penicillin))
+(fm1 <- lmer(Y ~ (1|G) + (1|H), Penicillin))
 
 L <- getME(fm1, "L")
 Matrix::image(L, main = "L",

@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "d ~ 1 + (1|p) + (1|s)",
+      "formula": "Y ~ 1 + (1|G) + (1|H)",
       "fits": [
         {
           "optimizer": "bobyqa",
