@@ -11,16 +11,16 @@
 \format{
   A data frame with 3435 observations on the following 6 variables.
   \describe{
-    \item{v}{The verbal reasoning score on a test taken by the
+    \item{U}{The verbal reasoning score on a test taken by the
       students on entry to secondary school.}
-    \item{a}{The score attained on the standardized test taken at
+    \item{Y}{The score attained on the standardized test taken at
       age 16.}
-    \item{p}{A factor indicating the primary school that the
+    \item{G}{A factor indicating the primary school that the
       student attended.}
-    \item{sex}{A factor with levels \code{M} and \code{F}}
-    \item{soc}{The student's social class on a numeric scale from low
+    \item{A}{A factor with levels \code{M} and \code{F}}
+    \item{V}{The student's social class on a numeric scale from low
       to high social class.}
-    \item{sec}{A factor indicating the secondary school that the
+    \item{H}{A factor indicating the secondary school that the
       student attended.}
   }
 }
@@ -36,6 +36,6 @@
     in Education} \bold{5}: 97-121.
 }
 \examples{
-str(ScotsSec)
+lmer(Y ~ 1 + U + A + V + (1|G) + (1|H),REML=FALSE,data=ScotsSec)
 }
 \keyword{datasets}
