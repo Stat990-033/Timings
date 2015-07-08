@@ -7,13 +7,13 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{r}{
+    \item{Y}{
 	    a numeric vector
 	}
-	\item{t}{
+	\item{A}{
 	    a factor with levels \code{1} to \code{15} 
 	}
-	\item{b}{
+	\item{G}{
 	    an ordered factor with levels \code{1} to \code{15} 
 	}
     }
@@ -29,7 +29,7 @@ str(PBIB)
 if (require("lme4", quietly = TRUE, character = TRUE)) {
   options(contrasts = c(unordered = "contr.SAS", ordered = "contr.poly"))
   ## compare with output 1.7  pp. 24-25
-  print(fm1PBIB <- lmer(r ~ t + (1|b), PBIB))
+  print(fm1PBIB <- lmer(Y ~ A + (1|G), PBIB))
   print(anova(fm1PBIB))
 }
 }
