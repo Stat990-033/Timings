@@ -7,19 +7,19 @@
 \format{
     This data frame contains the following columns:
     \describe{
-    \item{r}{
+    \item{Y}{
 	    a numeric vector
 	}
-	\item{e}{
+	\item{A}{
 	    a factor with levels \code{1} to \code{4} representing etch time.
 	}
 	\item{w}{
 	    a factor with levels \code{1} to \code{3} 
 	}
-	\item{p}{
+	\item{B}{
 	    a factor with levels \code{1} to \code{4} 
 	}
-	\item{g}{
+	\item{G}{
 	    an ordered factor with levels
 	    \code{1/1} < \code{1/2} < \code{1/3} < \code{2/1} < \code{2/2} < \code{2/3} < \code{3/1} < \code{3/2} < \code{3/3} < \code{4/1} < \code{4/2} < \code{4/3}
 	}
@@ -36,9 +36,9 @@
 str(Semiconductor)
 if (require("lme4", quietly = TRUE, character = TRUE)) {
   options(contrasts = c(unordered = "contr.SAS", ordered = "contr.poly"))
-  print(fm1Semi <- lmer(r ~ e * p + (1|g), Semiconductor))
+  print(fm1Semi <- lmer(Y ~ A * B + (1|G), Semiconductor))
   print(anova(fm1Semi))
-  print((fm2Semi <- lmer(r ~ e + p + (1|g), Semiconductor)))
+  print((fm2Semi <- lmer(Y ~ A + B + (1|G), Semiconductor)))
   print(anova(fm2Semi))
 }
 }
