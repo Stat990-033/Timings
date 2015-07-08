@@ -6,7 +6,7 @@
   "WORD_SIZE": 64,
   "models": [
     {
-      "formula": "r ~ 1 + d + (1+d|s)",
+      "formula": "Y ~ 1 + U + (1+U|G)",
       "fits": [
         {
           "dev": 1751.93934446468,
