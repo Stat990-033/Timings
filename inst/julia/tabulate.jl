@@ -53,7 +53,7 @@ function optdir(dnm)
     p = Int[]
     q = Vector{Int}[]
     np = Int[]
-    for nm in readdir(dnm)
+    for nm in filter(r"\.json$",readdir(dnm))
         js = JSON.parsefile(joinpath(dnm,nm))
         dsn = js["dsname"]
         for m in js["models"]
@@ -70,8 +70,8 @@ function optdir(dnm)
             append!(n, fill(js["n"],length(opt)))
         end
     end
-    ret = DataFrame(opt=pool(opts),dsname=pool(dsnames),n=n,p=p,q=q,np=np,excess=DataArray(excessdev),
-                    times=DataArray(round(times,3)),devs=DataArray(round(devs,3)),models=pool(models))
+    ret = DataFrame(opt=pool(opts),dsname=pool(dsnames),n=n,p=p,q=q,np=np,excess=round(excessdev,5),
+                    time=round(times,4),objective=round(devs,5),models=pool(models))
     ret[sortperm(ret[:opt]),:]
 end
 
