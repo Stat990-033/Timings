@@ -4,13 +4,13 @@
 \title{Paste strength by batch and cask}
 \format{A data frame with 60 observations on the following 4 variables.
   \describe{
-    \item{\code{st}}{paste strength.}
-    \item{\code{b}}{delivery batch from which the sample was
+    \item{\code{Y}}{paste strength.}
+    \item{\code{H}}{delivery batch from which the sample was
       sample.  A factor with 10 levels: \sQuote{A} to \sQuote{J}.}
     \item{\code{c}}{cask within the delivery batch from which the
       sample was chosen.  A factor with 3 levels: \sQuote{a} to
       \sQuote{c}.}
-    \item{\code{samp}}{the sample of paste whose strength was assayed,
+    \item{\code{G}}{the sample of paste whose strength was assayed,
       two assays per sample. A factor with 30 levels: \sQuote{A:a} to
       \sQuote{J:c}.}
   }}
@@ -38,30 +38,30 @@
 \examples{
 str(Pastes)
 require(lattice)
-dotplot(c ~ st | reorder(b, st), Pastes,
+dotplot(c ~ Y | reorder(b, Y), Pastes,
         strip = FALSE, strip.left = TRUE, layout = c(1, 10),
         ylab = "Cask within batch",
         xlab = "Paste strength", jitter.y = TRUE)
 ## Modifying the factors to enhance the plot
-Pastes <- within(Pastes, b <- reorder(b, st))
-Pastes <- within(Pastes, samp <- reorder(reorder(samp, st),
-          as.numeric(b)))
-dotplot(samp ~ st | b, Pastes,
+Pastes <- within(Pastes, H<- reorder(H, Y))
+Pastes <- within(Pastes, G<- reorder(reorder(samp, Y),
+          as.numeric(H)))
+dotplot(G~ Y| H, Pastes,
         strip = FALSE, strip.left = TRUE, layout = c(1, 10),
         scales = list(y = list(relation = "free")),
         ylab = "Sample within batch",
         xlab = "Paste strength", jitter.y = TRUE)
 ## Four equivalent models differing only in specification
-(fm1 <- lmer(st ~ (1|b) + (1|s), Pastes))
-(fm2 <- lmer(st ~ (1|b/c), Pastes))
-(fm3 <- lmer(st ~ (1|b) + (1|b:c), Pastes))
-(fm4 <- lmer(st ~ (1|b/samp), Pastes))
+(fm1 <- lmer(Y~ (1|H) + (1|s), Pastes))
+(fm2 <- lmer(Y~ (1|H/c), Pastes))
+(fm3 <- lmer(Y~ (1|H) + (1|H:c), Pastes))
+(fm4 <- lmer(Y~ (1|H/G), Pastes))
 ## fm4 results in redundant labels on the sample:batch interaction
 head(ranef(fm4)[[1]])
 ## compare to fm1
 head(ranef(fm1)[[1]])
 ## This model is different and NOT appropriate for these data
-(fm5 <- lmer(st ~ (1|b) + (1|c), Pastes))
+(fm5 <- lmer(Y~ (1|H) + (1|c), Pastes))
 
 L <- getME(fm1, "L")
 Matrix::image(L, sub = "Structure of random effects interaction in pastes model")
