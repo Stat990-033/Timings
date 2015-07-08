@@ -19,19 +19,19 @@
 	\item{i}{
 	    a numeric vector
 	}
-	\item{s}{
+	\item{Y}{
 	    a numeric vector
 	}
 	\item{ut}{
 	    an ordered factor with levels
 	}
-    \item{tm}{
+    \item{G}{
         a factor for the interaction between "t" and "m"
     }
-    \item{gm}{
+    \item{A}{
         a factor for the interaction beween "g" and "m"
     }
-    \item{i.f.1-1.m.3}{
+    \item{U-Z}{
         variables for three way interactiob between "i", "m" and "g"
     }
     }
@@ -42,6 +42,6 @@
     (Data Set 5.7).
 }
 \examples{
-fit.1<-lmer(s~1+gm+i.f.1+ i.f.2+ i.f.3+ i.m.1+ i.m.2+ i.m.3+(1|tm),REML=FALSE,data=TeachingII)
+fit.1<-lmer(Y~1+A+T+U+V+W+X+Z+(1|G),REML=FALSE,data=TeachingII)
 }
 \keyword{datasets}
