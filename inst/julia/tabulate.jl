@@ -71,7 +71,7 @@ function optdir(dnm)
         end
     end
     ret = DataFrame(opt=pool(opts),dsname=pool(dsnames),n=n,p=p,q=q,np=np,excess=DataArray(excessdev),
-                    times=DataArray(times),devs=DataArray(devs),models=pool(models))
+                    times=DataArray(round(times,3)),devs=DataArray(round(devs,3)),models=pool(models))
     ret[sortperm(ret[:opt]),:]
 end
 

@@ -17,22 +17,25 @@ function retime(fnm,ofile)
         form = eval(parse(m["formula"]))
         @show form
         mod = lmm(form,dat)
-        m["nopt"] = length(MixedModels.θ(mod))
-        m["mtype"] = typeof(mod.s)
+        nopt = length(MixedModels.θ(mod))
+        mtype = typeof(mod.s)
+        @show(nopt,mtype)
+        m["mtype"] = mtype
+        m["nopt"] = nopt
+        println("-2log(likelihood) time(s) feval geval optimizer") 
         for f in m["fits"]
-            print(f["func"],": ",f["optimizer"])
             if f["func"] == "lmm"
                 gc()
                 f["time"] = @elapsed mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
                 f["dev"] = deviance(mod)
-                print(" ",mod.opt.fmin,", ",f["time"])
                 f["feval"] = mod.opt.feval
                 f["geval"] = mod.opt.geval
                 m["p"] = size(mod.X,2)
                 m["q"] = Int[length(b) for b in mod.b]
-            else
-                print(" ",f["dev"],", ",f["time"])
             end
+            geval = get(f,"geval",0)
+            @printf("%14.4f %10.4f%s%6d %s",f["dev"],f["time"],
+                    lpad(string(f["feval"]),6),geval,f["optimizer"])
             println()
         end
     end
