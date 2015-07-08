@@ -4,9 +4,9 @@
 \title{Reaction times in a sleep deprivation study}
 \format{A data frame with 180 observations on the following 3 variables.
   \describe{
-    \item{\code{r}}{Average reaction time (ms)}
-    \item{\code{d}}{Number of days of sleep deprivation}
-    \item{\code{s}}{Subject number on which the observation was made.}
+    \item{\code{Y}}{Average reaction time (ms)}
+    \item{\code{U}}{Number of days of sleep deprivation}
+    \item{\code{G}}{Subject number on which the observation was made.}
   }}
 \description{
   The average reaction time per day for subjects in a sleep
@@ -24,12 +24,12 @@
 \examples{
 str(sleepstudy)
 require(lattice)
-xyplot(r ~ d | s, sleepstudy, type = c("g","p","r"),
+xyplot(Y ~ U | G, sleepstudy, type = c("g","p","r"),
        index = function(x,y) coef(lm(y ~ x))[1],
        xlab = "Days of sleep deprivation",
        ylab = "Average reaction time (ms)", aspect = "xy")
-(fm1 <- lmer(r ~ d + (d|s), sleepstudy))
-(fm2 <- lmer(r ~ d + (1|s) + (0+d|s), sleepstudy))
+(fm1 <- lmer(Y ~ U + (U|G), sleepstudy))
+(fm2 <- lmer(Y ~ U + (1|G) + (0+U|G), sleepstudy))
 }
 \references{
   Gregory Belenky, Nancy J. Wesensten, David R. Thorne,

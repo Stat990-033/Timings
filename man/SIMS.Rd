@@ -7,13 +7,13 @@
 \format{
   This data frame contains the following columns:
   \describe{
-    \item{p}{
+    \item{U}{
       a numeric vector giving the student's pre-test total score
     }
-    \item{g}{
+    \item{Y}{
       a numeric vector giving gains from pre-test to the final test
     }
-    \item{c}{
+    \item{G}{
       an ordered factor giving the student's class
     }
   }
@@ -33,7 +33,7 @@ str(SIMS)
 if (require("lme4", quietly = TRUE, character = TRUE)) {
   options(contrasts = c(unordered = "contr.SAS", ordered = "contr.poly"))
   ## compare to output 7.4, p. 262
-  print(fm1SIMS <- lmer(g ~ p + (p | c), data = SIMS))
+  print(fm1SIMS <- lmer(Y ~ U + (U | G), data = SIMS))
   print(anova(fm1SIMS))
 }
 }
