@@ -2,7 +2,7 @@
 \alias{gb12}
 \docType{data}
 \title{
-
+GB data
 }
 \description{
 Data from a paper whose author's initials are G and B
