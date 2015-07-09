@@ -11,35 +11,35 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.032,
+          "time": 0.0300000000000011,
           "feval": 87,
           "func": "lmer",
           "dev": 456.863943872942
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.0410000000000004,
+          "time": 0.0429999999999779,
           "feval": 171,
           "func": "lmer",
           "dev": 456.863943872945
         },
         {
           "optimizer": "NLOPT_LN_BOBYQA",
-          "time": 0.0279999999999987,
+          "time": 0.0300000000000011,
           "feval": 35,
           "func": "lmer",
           "dev": 456.863943897632
         },
         {
           "optimizer": "NLOPT_LN_COBYLA",
-          "time": 0.0300000000000011,
+          "time": 0.0310000000000059,
           "feval": 46,
           "func": "lmer",
           "dev": 456.86394388204
         },
         {
           "optimizer": "NLOPT_LN_NELDERMEAD",
-          "time": 0.0320000000000036,
+          "time": 0.0360000000000014,
           "feval": 69,
           "func": "lmer",
           "dev": 456.8639439916
@@ -53,28 +53,28 @@
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 0.113999999999997,
+          "time": 0.118000000000023,
           "feval": 16,
           "func": "lmer",
           "dev": 456.863943872942
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 0.110999999999997,
+          "time": 0.11699999999999,
           "feval": 46,
           "func": "lmer",
           "dev": 456.863943873426
         },
         {
           "optimizer": "optimx:spg",
-          "time": 0.193000000000005,
+          "time": 0.198999999999984,
           "feval": "NA",
           "func": "lmer",
           "dev": 456.863943872944
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 0.113,
+          "time": 0.122000000000014,
           "feval": "NA",
           "func": "lmer",
           "dev": 456.863943872942

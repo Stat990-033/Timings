@@ -11,80 +11,80 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 26.2780000000002,
-          "feval": 83,
+          "time": 33.596,
+          "feval": 81,
           "func": "lmer",
-          "dev": 174757.888377933
+          "dev": 174757.888378013
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 37.308,
+          "time": 48.561,
           "feval": 130,
           "func": "lmer",
-          "dev": 174757.888378287
+          "dev": 174757.888378288
         },
         {
           "optimizer": "NLOPT_LN_BOBYQA",
-          "time": 17.6999999999998,
+          "time": 21.309,
           "feval": 41,
           "func": "lmer",
-          "dev": 174757.888378268
+          "dev": 174757.888378265
         },
         {
           "optimizer": "NLOPT_LN_COBYLA",
-          "time": 25.8100000000004,
-          "feval": 80,
+          "time": 36.183,
+          "feval": 95,
           "func": "lmer",
-          "dev": 174757.888425642
+          "dev": 174757.888382024
         },
         {
           "optimizer": "NLOPT_LN_PRAXIS",
-          "time": 27.1990000000005,
-          "feval": 80,
+          "time": 29.01,
+          "feval": 68,
           "func": "lmer",
-          "dev": 174757.888377927
+          "dev": 174757.888377926
         },
         {
           "optimizer": "NLOPT_LN_NELDERMEAD",
-          "time": 31.1530000000002,
+          "time": 41.033,
           "feval": 110,
           "func": "lmer",
-          "dev": 174757.888379246
+          "dev": 174757.888379247
         },
         {
           "optimizer": "NLOPT_LN_SBPLX",
-          "time": 31.9989999999998,
+          "time": 38.523,
           "feval": 107,
           "func": "lmer",
-          "dev": 174757.888392058
+          "dev": 174757.888392059
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 46.1090000000004,
+          "time": 56.693,
           "feval": 28,
           "func": "lmer",
-          "dev": 174757.888378111
+          "dev": 174757.888378108
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 64.6379999999999,
-          "feval": 149,
+          "time": 64.715,
+          "feval": 126,
           "func": "lmer",
-          "dev": 174757.888378234
+          "dev": 174757.888378717
         },
         {
           "optimizer": "optimx:spg",
-          "time": 114.708,
+          "time": 78.129,
           "feval": "NA",
           "func": "lmer",
-          "dev": 174757.888378224
+          "dev": 174757.888377939
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 44.3050000000012,
+          "time": 54.385,
           "feval": "NA",
           "func": "lmer",
-          "dev": 174757.888377933
+          "dev": 174757.888378013
         },
         {
           "optimizer": "LN_BOBYQA",
@@ -92,7 +92,7 @@
           "geval": 0,
           "feval": 103,
           "func": "lmm",
-          "dev": 174757.8883780016
+          "dev": 174757.888378002
         },
         {
           "optimizer": "LN_COBYLA",
@@ -100,7 +100,7 @@
           "geval": 0,
           "feval": 377,
           "func": "lmm",
-          "dev": 174757.88837794986
+          "dev": 174757.88837795
         },
         {
           "optimizer": "LN_PRAXIS",
@@ -108,7 +108,7 @@
           "geval": 0,
           "feval": 89,
           "func": "lmm",
-          "dev": 174757.8883779315
+          "dev": 174757.888377931
         },
         {
           "optimizer": "LN_NELDERMEAD",
@@ -116,7 +116,7 @@
           "geval": 0,
           "feval": 216,
           "func": "lmm",
-          "dev": 174757.88837798106
+          "dev": 174757.888377981
         },
         {
           "optimizer": "LN_SBPLX",
@@ -124,7 +124,7 @@
           "geval": 0,
           "feval": 186,
           "func": "lmm",
-          "dev": 174757.88837806924
+          "dev": 174757.888378069
         }
       ],
       "q": [
@@ -139,5 +139,6 @@
   ],
   "Julia": "0.3.10",
   "memory": "5.745 GB",
-  "dsname": "Poems"
+  "dsname": "Poems",
+  "Rversion": "R version 3.2.1 (2015-06-18)"
 }
