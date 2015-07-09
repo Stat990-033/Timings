@@ -11,34 +11,34 @@ dialectNL data
 \format{
   A data frame with 225866 observations on the following 37 variables.
   \describe{
-    \item{\code{Word}}{a factor with 559 levels}
-    \item{\code{Transcriber}}{a factor with levels \code{AC} \code{AG} \code{AJ} \code{AK} \code{AO} \code{AOBB} \code{AR} \code{AV} \code{BB} \code{BH} \code{CA} \code{CZ} \code{DV} \code{DVAV} \code{EH} \code{EM} \code{GK} \code{GKBB} \code{HV} \code{IG} \code{IK} \code{JB} \code{JV} \code{KR} \code{LG} \code{MF} \code{MK} \code{MM} \code{MS} \code{PV}}
-    \item{\code{Location}}{a factor with levels 424}
+    \item{\code{G}}{a factor with 559 levels}
+    \item{\code{I}}{a factor with levels \code{AC} \code{AG} \code{AJ} \code{AK} \code{AO} \code{AOBB} \code{AR} \code{AV} \code{BB} \code{BH} \code{CA} \code{CZ} \code{DV} \code{DVAV} \code{EH} \code{EM} \code{GK} \code{GKBB} \code{HV} \code{IG} \code{IK} \code{JB} \code{JV} \code{KR} \code{LG} \code{MF} \code{MK} \code{MM} \code{MS} \code{PV}}
+    \item{\code{H}}{a factor with levels 424}
     \item{\code{PronDistStdDutch}}{a numeric vector}
-    \item{\code{PronDistStdDutch.c}}{a numeric vector}
+    \item{\code{Y}}{a numeric vector}
     \item{\code{Longitude}}{a numeric vector}
     \item{\code{Latitude}}{a numeric vector}
-    \item{\code{Geo}}{a numeric vector}
+    \item{\code{U}{a numeric vector}
     \item{\code{WordFreq.log}}{a numeric vector}
-    \item{\code{WordFreq.log.z}}{a matrix with 1 columns}
+    \item{\code{Z}}{a matrix with 1 columns}
     \item{\code{WordCategory}}{a factor with levels \code{N} \code{A} \code{B} \code{V}}
-    \item{\code{WordIsNounOrAdverb}}{a factor with levels \code{0} \code{1}}
+    \item{\code{A}}{a factor with levels \code{0} \code{1}}
     \item{\code{WordLength.log}}{a numeric vector}
     \item{\code{WordLength.log.z}}{a matrix with 1 columns}
     \item{\code{WordVCratio.log}}{a numeric vector}
-    \item{\code{WordVCratio.log.z}}{a matrix with 1 columns}
+    \item{\code{T}}{a matrix with 1 columns}
     \item{\code{PopSize.log}}{a numeric vector}
     \item{\code{PopSize.log.z}}{a matrix with 1 columns}
     \item{\code{PopSize.log_residGeo}}{a numeric vector}
-    \item{\code{PopSize.log_residGeo.z}}{a matrix with 1 columns}
+    \item{\code{V}}{a matrix with 1 columns}
     \item{\code{PopAvgIncome.log}}{a numeric vector}
     \item{\code{PopAvgIncome.log.z}}{a matrix with 1 columns}
     \item{\code{PopAvgIncome.log_residGeo}}{a numeric vector}
-    \item{\code{PopAvgIncome.log_residGeo.z}}{a matrix with 1 columns}
+    \item{\code{X}}{a matrix with 1 columns}
     \item{\code{PopAvgAge}}{a numeric vector}
     \item{\code{PopAvgAge.z}}{a matrix with 1 columns}
     \item{\code{PopAvgAge_residPopAvgIncome.log_Geo}}{a numeric vector}
-    \item{\code{PopAvgAge_residPopAvgIncome.log_Geo.z}}{a matrix with 1 columns}
+    \item{\code{W}}{a matrix with 1 columns}
     \item{\code{PopMaleFemaleRatio}}{a numeric vector}
     \item{\code{PopMaleFemaleRatio.z}}{a matrix with 1 columns}
     \item{\code{SpeakerIsMale}}{a numeric vector}
@@ -60,13 +60,6 @@ dialectNL data
 %%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
-lmer(PronDistStdDutch.c ~ Geo + PopSize.log_residGeo.z +
-    PopAvgAge_residPopAvgIncome.log_Geo.z +
-    PopAvgIncome.log_residGeo.z + WordFreq.log.z +
-    WordIsNounOrAdverb + WordVCratio.log.z +
-    (1 | Word) +
-    (0 + PopSize.log_residGeo.z + PopAvgAge_residPopAvgIncome.log_Geo.z + PopAvgIncome.log_residGeo.z | Word) +
-    (1 + WordFreq.log.z + WordIsNounOrAdverb | Location) +
-    (1 | Transcriber),REML=FALSE,data=dialectNL)
+lmer(Y ~ U + V +W +X + Z+A + T +(1 | G) +(0 + V + W+ X | G) +(1 + Z + A | H) +(1 | I),REML=FALSE,data=dialectNL)
 }
 \keyword{datasets}
