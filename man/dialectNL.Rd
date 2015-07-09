@@ -13,12 +13,12 @@ dialectNL data
   \describe{
     \item{\code{G}}{a factor with 559 levels}
     \item{\code{I}}{a factor with levels \code{AC} \code{AG} \code{AJ} \code{AK} \code{AO} \code{AOBB} \code{AR} \code{AV} \code{BB} \code{BH} \code{CA} \code{CZ} \code{DV} \code{DVAV} \code{EH} \code{EM} \code{GK} \code{GKBB} \code{HV} \code{IG} \code{IK} \code{JB} \code{JV} \code{KR} \code{LG} \code{MF} \code{MK} \code{MM} \code{MS} \code{PV}}
-    \item{\code{H}}{a factor with levels 424}
+    \item{\code{H}}{a factor with 424 levels}
     \item{\code{PronDistStdDutch}}{a numeric vector}
     \item{\code{Y}}{a numeric vector}
     \item{\code{Longitude}}{a numeric vector}
     \item{\code{Latitude}}{a numeric vector}
-    \item{\code{U}{a numeric vector}
+    \item{\code{U}}{a numeric vector}
     \item{\code{WordFreq.log}}{a numeric vector}
     \item{\code{Z}}{a matrix with 1 columns}
     \item{\code{WordCategory}}{a factor with levels \code{N} \code{A} \code{B} \code{V}}
