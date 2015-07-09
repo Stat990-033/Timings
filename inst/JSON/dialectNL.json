@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "PronDistStdDutch.c ~ Geo + PopSize.log_residGeo.z +PopAvgAge_residPopAvgIncome.log_Geo.z +PopAvgIncome.log_residGeo.z + WordFreq.log.z +WordIsNounOrAdverb + WordVCratio.log.z +(1 | Word) +(0 + PopSize.log_residGeo.z + PopAvgAge_residPopAvgIncome.log_Geo.z + PopAvgIncome.log_residGeo.z | Word) +(1 + WordFreq.log.z + WordIsNounOrAdverb | Location) +(1 | Transcriber)",
+      "formula": "Y ~ U + V +W +X + Z+A + T +(1 | G) +(0 + V + W+ X | G) +(1 + Z + A | H) +(1 | I)",
       "fits": [
         {
           "optimizer": "bobyqa",
