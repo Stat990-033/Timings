@@ -1,10 +1,6 @@
 {
-  "dsname": "Animal",
-  "OS": "Linux",
-  "BLAS": "mkl",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
-  "WORD_SIZE": 64,
-  "CPU_CORES": 4,
   "models": [
     {
       "formula": "Y~1+(1|H)+(1|G)",
@@ -24,29 +20,29 @@
           "dev": 6.47808567207255
         },
         {
-          "time": 0.0229999999999961,
           "optimizer": "NLOPT_LN_BOBYQA",
+          "time": 0.0229999999999961,
           "feval": 15,
           "func": "lmer",
           "dev": 6.47808568132722
         },
         {
-          "time": 0.0240000000000009,
           "optimizer": "NLOPT_LN_COBYLA",
+          "time": 0.0240000000000009,
           "feval": 44,
           "func": "lmer",
           "dev": 6.47808567460328
         },
         {
-          "time": 0.0240000000000009,
           "optimizer": "NLOPT_LN_NELDERMEAD",
+          "time": 0.0240000000000009,
           "feval": 47,
           "func": "lmer",
           "dev": 6.47808584333482
         },
         {
-          "time": 0.0250000000000057,
           "optimizer": "NLOPT_LN_SBPLX",
+          "time": 0.0250000000000057,
           "feval": 68,
           "func": "lmer",
           "dev": 6.47808572191015
@@ -81,35 +77,35 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001856629,
+          "time": 0.001093468,
           "geval": 0,
           "feval": 15,
           "func": "lmm",
-          "dev": 6.47808568132721
+          "dev": 6.478085681327222
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.004600607,
+          "time": 0.001758124,
           "geval": 0,
-          "feval": 47,
+          "feval": 38,
           "func": "lmm",
-          "dev": 6.4780856720916
+          "dev": 6.478085674132561
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.006205843,
+          "time": 0.002381821,
           "geval": 0,
           "feval": 59,
           "func": "lmm",
-          "dev": 6.47808567585707
+          "dev": 6.4780856758570735
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.008753554,
+          "time": 0.003615983,
           "geval": 0,
           "feval": 94,
           "func": "lmm",
-          "dev": 6.47808567278896
+          "dev": 6.4780856727889535
         }
       ],
       "q": [
@@ -118,11 +114,15 @@
       ],
       "nopt": 2,
       "p": 1,
-      "mtype": "PLSNested"
+      "mtype": "PLSDiag{Int32}"
     }
   ],
-  "Julia": "0.3.11-pre+13",
   "memory": "5.745 GB",
-  "n": 20,
-  "Rversion": "R version 3.2.0 (2015-04-16)"
+  "CPU_CORES": 4,
+  "WORD_SIZE": 64,
+  "Julia": "0.3.10",
+  "Rversion": "R version 3.2.0 (2015-04-16)",
+  "dsname": "Animal",
+  "OS": "Linux",
+  "n": 20
 }
