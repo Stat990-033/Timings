@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "models": [
     {
@@ -77,47 +77,47 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.002152851,
+          "time": 0.009212594,
           "geval": 0,
           "feval": 18,
           "func": "lmm",
-          "dev": 22.570577950610836
+          "dev": 22.570577950610815
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.002850795,
+          "time": 0.00188032,
           "geval": 0,
           "feval": 27,
           "func": "lmm",
-          "dev": 22.57057795085501
+          "dev": 22.570577950855004
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.003496747,
+          "time": 0.002072284,
           "geval": 0,
           "feval": 32,
           "func": "lmm",
-          "dev": 22.570577952026813
+          "dev": 22.57057795202682
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.017203025,
+          "time": 0.002964324,
           "geval": 0,
           "feval": 50,
           "func": "lmm",
-          "dev": 22.570577952026813
+          "dev": 22.57057795202682
         },
         {
           "optimizer": "LD_MMA",
-          "time": 0.002016361,
+          "time": 0.019883579,
           "geval": 13,
           "feval": 13,
           "func": "lmm",
-          "dev": 22.5705779506109
+          "dev": 22.570577950610886
         },
         {
           "optimizer": "LD_CCSAQ",
-          "time": 0.002208102,
+          "time": 0.001463976,
           "geval": 14,
           "feval": 14,
           "func": "lmm",
@@ -125,47 +125,47 @@
         },
         {
           "optimizer": "LD_SLSQP",
-          "time": 0.001372636,
+          "time": 0.00096593,
           "geval": 6,
           "feval": 7,
           "func": "lmm",
-          "dev": 22.570577950610836
+          "dev": 22.57057795061084
         },
         {
           "optimizer": "LD_LBFGS",
-          "time": 0.004635766,
+          "time": 0.003156144,
           "geval": 8,
           "feval": 8,
           "func": "lmm",
-          "dev": 22.570577950610822
+          "dev": 22.57057795061084
         },
         {
           "optimizer": "LD_TNEWTON",
-          "time": 0.004312604,
+          "time": 0.002767452,
           "geval": 9,
           "feval": 9,
           "func": "lmm",
-          "dev": 22.570577950610826
+          "dev": 22.57057795061083
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND",
-          "time": 0.004754863,
+          "time": 0.003259089,
           "geval": 9,
           "feval": 9,
           "func": "lmm",
-          "dev": 22.570577950610826
+          "dev": 22.57057795061083
         },
         {
           "optimizer": "LD_TNEWTON_RESTART",
-          "time": 0.004503546,
+          "time": 0.002862381,
           "geval": 11,
           "feval": 11,
           "func": "lmm",
-          "dev": 22.570577950610822
+          "dev": 22.57057795061084
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "time": 0.005023096,
+          "time": 0.003434964,
           "geval": 11,
           "feval": 11,
           "func": "lmm",
@@ -173,19 +173,19 @@
         },
         {
           "optimizer": "LD_VAR1",
-          "time": 0.002386049,
+          "time": 0.003233973,
           "geval": 8,
           "feval": 8,
           "func": "lmm",
-          "dev": 22.570577950610822
+          "dev": 22.57057795061084
         },
         {
           "optimizer": "LD_VAR2",
-          "time": 0.002371187,
+          "time": 0.001976902,
           "geval": 8,
           "feval": 8,
           "func": "lmm",
-          "dev": 22.570577950610822
+          "dev": 22.57057795061084
         }
       ],
       "q": [
@@ -199,7 +199,7 @@
   "memory": "5.745 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.10",
+  "Julia": "0.3.11-pre+13",
   "Rversion": "R version 3.2.1 (2015-06-18)",
   "dsname": "PBIB",
   "OS": "Linux",

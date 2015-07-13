@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "models": [
     {
@@ -84,31 +84,31 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.004538451,
+          "time": 0.00296272,
           "geval": 0,
           "feval": 31,
           "func": "lmm",
-          "dev": -240.38908023259003
+          "dev": -240.38908023259006
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.005814818,
+          "time": 0.004376989,
           "geval": 0,
-          "feval": 45,
+          "feval": 47,
           "func": "lmm",
-          "dev": -240.38908023049572
+          "dev": -240.38908023111435
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.008207509,
+          "time": 0.005251585,
           "geval": 0,
           "feval": 70,
           "func": "lmm",
-          "dev": -240.38908023263943
+          "dev": -240.3890802326394
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.006675682,
+          "time": 0.006111435,
           "geval": 0,
           "feval": 54,
           "func": "lmm",
@@ -116,7 +116,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.010906065,
+          "time": 0.009941223,
           "geval": 0,
           "feval": 98,
           "func": "lmm",
@@ -135,7 +135,7 @@
   "memory": "5.745 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.10",
+  "Julia": "0.3.11-pre+13",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Assay",
   "OS": "Linux",

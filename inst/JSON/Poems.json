@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "models": [
     {
@@ -84,7 +84,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 8.108476781,
+          "time": 5.691811489,
           "geval": 0,
           "feval": 103,
           "func": "lmm",
@@ -92,31 +92,31 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 24.980832901,
+          "time": 13.250342218,
           "geval": 0,
-          "feval": 377,
+          "feval": 295,
           "func": "lmm",
-          "dev": 174757.88837794986
+          "dev": 174757.8883804301
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 8.245803228,
+          "time": 5.308943086,
           "geval": 0,
-          "feval": 105,
+          "feval": 91,
           "func": "lmm",
-          "dev": 174757.88837793155
+          "dev": 174757.8883779315
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 15.027689603,
+          "time": 10.152530493,
           "geval": 0,
           "feval": 216,
           "func": "lmm",
-          "dev": 174757.88837798106
+          "dev": 174757.88837798103
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 16.31259647,
+          "time": 9.031212391,
           "geval": 0,
           "feval": 186,
           "func": "lmm",
@@ -136,7 +136,7 @@
   "memory": "5.745 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.10",
+  "Julia": "0.3.11-pre+13",
   "Rversion": "R version 3.2.1 (2015-06-18)",
   "dsname": "Poems",
   "OS": "Linux",

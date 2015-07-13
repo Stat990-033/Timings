@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "models": [
     {
@@ -77,35 +77,35 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001093468,
+          "time": 0.001651872,
           "geval": 0,
           "feval": 15,
           "func": "lmm",
-          "dev": 6.478085681327222
+          "dev": 6.478085681327215
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001758124,
+          "time": 0.002862254,
           "geval": 0,
           "feval": 38,
           "func": "lmm",
-          "dev": 6.478085674132561
+          "dev": 6.478085672241086
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.002381821,
+          "time": 0.00391619,
           "geval": 0,
           "feval": 59,
           "func": "lmm",
-          "dev": 6.4780856758570735
+          "dev": 6.478085675857077
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.003615983,
+          "time": 0.0057789,
           "geval": 0,
           "feval": 94,
           "func": "lmm",
-          "dev": 6.4780856727889535
+          "dev": 6.478085672788957
         }
       ],
       "q": [
@@ -120,7 +120,7 @@
   "memory": "5.745 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.10",
+  "Julia": "0.3.11-pre+13",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Animal",
   "OS": "Linux",

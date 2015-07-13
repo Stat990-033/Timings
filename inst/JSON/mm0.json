@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas",
+  "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "models": [
     {
@@ -77,23 +77,23 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 2.020211222,
+          "time": 1.097020259,
           "geval": 0,
-          "feval": 415,
+          "feval": 363,
           "func": "lmm",
-          "dev": 395168.83651380695
+          "dev": 395168.83652869635
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 7.890713882,
+          "time": 3.95335145,
           "geval": 0,
-          "feval": 1896,
+          "feval": 1688,
           "func": "lmm",
-          "dev": 395168.8365137364
+          "dev": 395168.83651400724
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 5.13844498,
+          "time": 2.936081963,
           "geval": 0,
           "feval": 1214,
           "func": "lmm",
@@ -101,15 +101,15 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 2.387997818,
+          "time": 1.371122937,
           "geval": 0,
           "feval": 486,
           "func": "lmm",
-          "dev": 395168.8365138609
+          "dev": 395168.83651386097
         },
         {
           "optimizer": "LD_MMA",
-          "time": 9.656785032,
+          "time": 6.13122709,
           "geval": 95,
           "feval": 95,
           "func": "lmm",
@@ -117,23 +117,23 @@
         },
         {
           "optimizer": "LD_CCSAQ",
-          "time": 7.64224516,
+          "time": 4.828621838,
           "geval": 74,
           "feval": 74,
           "func": "lmm",
-          "dev": 395168.8365137045
+          "dev": 395168.83651370456
         },
         {
           "optimizer": "LD_SLSQP",
-          "time": 7.534194179,
-          "geval": 73,
-          "feval": 112,
+          "time": 5.41743354,
+          "geval": 82,
+          "feval": 130,
           "func": "lmm",
-          "dev": 395168.8365137082
+          "dev": 395168.8365137154
         },
         {
           "optimizer": "LD_LBFGS",
-          "time": 6.400533426,
+          "time": 4.147056725,
           "geval": 63,
           "feval": 63,
           "func": "lmm",
@@ -141,39 +141,39 @@
         },
         {
           "optimizer": "LD_TNEWTON",
-          "time": 68.386056681,
-          "geval": 703,
-          "feval": 703,
+          "time": 52.264928206,
+          "geval": 740,
+          "feval": 740,
           "func": "lmm",
-          "dev": 395304.39989402087
+          "dev": 395304.3998940208
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND",
-          "time": 555.17979988,
-          "geval": 5694,
-          "feval": 5694,
+          "time": 228.185765841,
+          "geval": 3505,
+          "feval": 3505,
           "func": "lmm",
           "dev": 395304.3998940208
         },
         {
           "optimizer": "LD_TNEWTON_RESTART",
-          "time": 68.109158291,
-          "geval": 701,
-          "feval": 701,
+          "time": 45.198979463,
+          "geval": 738,
+          "feval": 738,
           "func": "lmm",
-          "dev": 395304.39989402087
+          "dev": 395304.3998940208
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "time": 554.914347676,
-          "geval": 5692,
-          "feval": 5692,
+          "time": 217.655842128,
+          "geval": 3503,
+          "feval": 3503,
           "func": "lmm",
           "dev": 395304.3998940208
         },
         {
           "optimizer": "LD_VAR1",
-          "time": 5.856607534,
+          "time": 4.459400676,
           "geval": 57,
           "feval": 57,
           "func": "lmm",
@@ -181,7 +181,7 @@
         },
         {
           "optimizer": "LD_VAR2",
-          "time": 5.876260368,
+          "time": 3.777987085,
           "geval": 57,
           "feval": 57,
           "func": "lmm",
@@ -200,7 +200,7 @@
   "memory": "5.745 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.10",
+  "Julia": "0.3.11-pre+13",
   "Rversion": "R version 3.2.1 (2015-06-18)",
   "dsname": "mm0",
   "OS": "Linux",
