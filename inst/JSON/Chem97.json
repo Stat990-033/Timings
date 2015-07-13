@@ -132,7 +132,7 @@
       "mtype": "PLSDiag{Int32}"
     },
     {
-      "formula": "Y ~ 1 + gcsecnt + (1|G) + (1|H)",
+      "formula": "Y ~ 1 + U + (1|G) + (1|H)",
       "fits": [
         {
           "optimizer": "bobyqa",

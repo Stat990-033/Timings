@@ -18,7 +18,7 @@
     \item{gender}{Student's gender}
     \item{age}{Age in month, centred at 222 months or 18.5 years}
     \item{gcsescore}{Average GCSE score of individual.}
-    \item{gcsecnt}{Average GCSE score of individual, centered at mean.}
+    \item{U}{Average GCSE score of individual, centered at mean.}
   }
 }
 \details{
