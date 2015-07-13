@@ -77,7 +77,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.148194375,
+          "time": 0.135949402,
           "geval": 0,
           "feval": 146,
           "func": "lmm",
@@ -85,7 +85,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 20.126288726,
+          "time": 22.808283867,
           "geval": 0,
           "feval": 17223,
           "func": "lmm",
@@ -93,7 +93,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.142452932,
+          "time": 0.141610381,
           "geval": 0,
           "feval": 149,
           "func": "lmm",
@@ -101,7 +101,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.581414068,
+          "time": 0.566965617,
           "geval": 0,
           "feval": 516,
           "func": "lmm",
@@ -109,7 +109,7 @@
         },
         {
           "optimizer": "LD_MMA",
-          "time": 0.108602095,
+          "time": 0.105872344,
           "geval": 76,
           "feval": 76,
           "func": "lmm",
@@ -117,7 +117,7 @@
         },
         {
           "optimizer": "LD_CCSAQ",
-          "time": 0.135370546,
+          "time": 0.134013092,
           "geval": 96,
           "feval": 96,
           "func": "lmm",
@@ -125,7 +125,7 @@
         },
         {
           "optimizer": "LD_SLSQP",
-          "time": 0.075938233,
+          "time": 0.074202982,
           "geval": 33,
           "feval": 61,
           "func": "lmm",
@@ -133,7 +133,7 @@
         },
         {
           "optimizer": "LD_LBFGS",
-          "time": 0.027887405,
+          "time": 0.027054671,
           "geval": 16,
           "feval": 16,
           "func": "lmm",
@@ -141,7 +141,7 @@
         },
         {
           "optimizer": "LD_VAR1",
-          "time": 0.027665529,
+          "time": 0.027038496,
           "geval": 16,
           "feval": 16,
           "func": "lmm",
@@ -149,7 +149,7 @@
         },
         {
           "optimizer": "LD_VAR2",
-          "time": 0.027791763,
+          "time": 0.027146487,
           "geval": 16,
           "feval": 16,
           "func": "lmm",
