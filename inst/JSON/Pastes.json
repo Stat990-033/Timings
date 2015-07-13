@@ -1,10 +1,6 @@
 {
-  "n": 60,
-  "OS": "Linux",
   "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
-  "WORD_SIZE": 64,
-  "CPU_CORES": 4,
   "models": [
     {
       "formula": "Y ~ 1 + (1|G) + (1|H)",
@@ -88,15 +84,15 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.002176669,
+          "time": 0.002150522,
           "geval": 0,
           "feval": 35,
           "func": "lmm",
-          "dev": 247.994465862897
+          "dev": 247.99446586289676
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.002071905,
+          "time": 0.0020426,
           "geval": 0,
           "feval": 35,
           "func": "lmm",
@@ -104,27 +100,27 @@
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.003552403,
+          "time": 0.003005104,
           "geval": 0,
-          "feval": 68,
+          "feval": 60,
           "func": "lmm",
           "dev": 247.994465862425
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.003781613,
+          "time": 0.003294252,
           "geval": 0,
           "feval": 67,
           "func": "lmm",
-          "dev": 247.994465863839
+          "dev": 247.99446586383914
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.005252889,
+          "time": 0.004255715,
           "geval": 0,
           "feval": 91,
           "func": "lmm",
-          "dev": 247.994465868464
+          "dev": 247.9944658684637
         }
       ],
       "q": [
@@ -136,8 +132,12 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "Julia": "0.3.10",
   "memory": "5.745 GB",
+  "CPU_CORES": 4,
+  "WORD_SIZE": 64,
+  "Julia": "0.3.10",
+  "Rversion": "R version 3.2.1 (2015-06-18)",
   "dsname": "Pastes",
-  "Rversion": "R version 3.2.1 (2015-06-18)"
+  "OS": "Linux",
+  "n": 60
 }

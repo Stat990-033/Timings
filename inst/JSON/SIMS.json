@@ -1,10 +1,6 @@
 {
-  "dsname": "SIMS",
-  "OS": "Linux",
   "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
-  "WORD_SIZE": 64,
-  "CPU_CORES": 4,
   "models": [
     {
       "formula": "Y ~ 1 + U + (1+U | G)",
@@ -81,83 +77,83 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.289601836,
+          "time": 0.301761321,
           "geval": 0,
           "feval": 145,
           "func": "lmm",
-          "dev": 22373.1066359642
+          "dev": 22373.10663596416
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 42.063929814,
+          "time": 42.363394345,
           "geval": 0,
           "feval": 19470,
           "func": "lmm",
-          "dev": 22373.1066359562
+          "dev": 22373.106635956217
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.291541727,
+          "time": 0.294626737,
           "geval": 0,
           "feval": 149,
           "func": "lmm",
-          "dev": 22373.1066358329
+          "dev": 22373.106635832894
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 1.109753014,
+          "time": 1.105191304,
           "geval": 0,
           "feval": 516,
           "func": "lmm",
-          "dev": 22373.1066358383
+          "dev": 22373.106635838347
         },
         {
           "optimizer": "LD_MMA",
-          "time": 0.236453875,
+          "time": 0.251462474,
           "geval": 76,
           "feval": 76,
           "func": "lmm",
-          "dev": 22376.7151917875
+          "dev": 22376.71519178745
         },
         {
           "optimizer": "LD_CCSAQ",
-          "time": 0.289961636,
+          "time": 0.289253711,
           "geval": 94,
           "feval": 94,
           "func": "lmm",
-          "dev": 22376.7151917579
+          "dev": 22376.715191757878
         },
         {
           "optimizer": "LD_SLSQP",
-          "time": 0.172903638,
+          "time": 0.172848591,
           "geval": 35,
           "feval": 66,
           "func": "lmm",
-          "dev": 22373.1066358271
+          "dev": 22373.106635827135
         },
         {
           "optimizer": "LD_LBFGS",
-          "time": 0.060402035,
+          "time": 0.059374799,
           "geval": 16,
           "feval": 16,
           "func": "lmm",
-          "dev": 22376.7151917474
+          "dev": 22376.715191747375
         },
         {
           "optimizer": "LD_VAR1",
-          "time": 0.058559444,
+          "time": 0.07428592,
           "geval": 16,
           "feval": 16,
           "func": "lmm",
-          "dev": 22376.7151917474
+          "dev": 22376.715191747382
         },
         {
           "optimizer": "LD_VAR2",
-          "time": 0.058855183,
+          "time": 0.059372948,
           "geval": 16,
           "feval": 16,
           "func": "lmm",
-          "dev": 22376.7151917474
+          "dev": 22376.715191747382
         }
       ],
       "q": [
@@ -168,8 +164,12 @@
       "mtype": "PLSOne"
     }
   ],
-  "Julia": "0.3.10",
   "memory": "5.745 GB",
-  "n": 3691,
-  "Rversion": "R version 3.2.1 (2015-06-18)"
+  "CPU_CORES": 4,
+  "WORD_SIZE": 64,
+  "Julia": "0.3.10",
+  "Rversion": "R version 3.2.1 (2015-06-18)",
+  "dsname": "SIMS",
+  "OS": "Linux",
+  "n": 3691
 }

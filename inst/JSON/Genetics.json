@@ -1,5 +1,5 @@
 {
-  "BLAS": "mkl",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "models": [
     {
@@ -77,31 +77,31 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001982555,
+          "time": 0.001801849,
           "geval": 0,
           "feval": 30,
           "func": "lmm",
-          "dev": 478.4052104154435
+          "dev": 478.40521041544355
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.004303489,
+          "time": 0.003934898,
           "geval": 0,
-          "feval": 90,
+          "feval": 92,
           "func": "lmm",
-          "dev": 478.4052104152162
+          "dev": 478.4052104152316
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.004147396,
+          "time": 0.003508393,
           "geval": 0,
-          "feval": 88,
+          "feval": 81,
           "func": "lmm",
           "dev": 478.40521041513085
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.003349651,
+          "time": 0.003013323,
           "geval": 0,
           "feval": 67,
           "func": "lmm",
@@ -109,7 +109,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.004627258,
+          "time": 0.004760484,
           "geval": 0,
           "feval": 100,
           "func": "lmm",
@@ -128,7 +128,7 @@
   "memory": "5.745 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.11-pre+13",
+  "Julia": "0.3.10",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Genetics",
   "OS": "Linux",

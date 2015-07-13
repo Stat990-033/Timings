@@ -1,10 +1,6 @@
 {
-  "dsname": "TeachingII",
-  "OS": "Linux",
   "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
-  "WORD_SIZE": 64,
-  "CPU_CORES": 4,
   "models": [
     {
       "formula": "Y~1+A+T+U+V+W+X+Z+(1|G)",
@@ -81,115 +77,115 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.028986588,
+          "time": 0.002054822,
           "geval": 0,
           "feval": 16,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.002586577,
+          "time": 0.002654663,
           "geval": 0,
           "feval": 24,
           "func": "lmm",
-          "dev": 567.162761189899
+          "dev": 567.1627611898994
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.002971452,
+          "time": 0.003006989,
           "geval": 0,
           "feval": 30,
           "func": "lmm",
-          "dev": 567.16276119829
+          "dev": 567.1627611982898
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.00440407,
+          "time": 0.004442485,
           "geval": 0,
           "feval": 50,
           "func": "lmm",
-          "dev": 567.162761189098
+          "dev": 567.1627611890982
         },
         {
           "optimizer": "LD_MMA",
-          "time": 0.02929363,
+          "time": 0.001864881,
           "geval": 10,
           "feval": 10,
           "func": "lmm",
-          "dev": 567.162761189054
+          "dev": 567.1627611890541
         },
         {
           "optimizer": "LD_CCSAQ",
-          "time": 0.002400414,
+          "time": 0.001811482,
           "geval": 10,
           "feval": 10,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890524
         },
         {
           "optimizer": "LD_SLSQP",
-          "time": 0.00158549,
+          "time": 0.001584504,
           "geval": 6,
           "feval": 8,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LD_LBFGS",
-          "time": 0.004135028,
+          "time": 0.002507865,
           "geval": 7,
           "feval": 7,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LD_TNEWTON",
-          "time": 0.003795692,
+          "time": 0.002664183,
           "geval": 9,
           "feval": 9,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND",
-          "time": 0.010076612,
+          "time": 0.0032091,
           "geval": 9,
           "feval": 9,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LD_TNEWTON_RESTART",
-          "time": 0.00378643,
+          "time": 0.002727038,
           "geval": 9,
           "feval": 9,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "time": 0.004285633,
+          "time": 0.002689734,
           "geval": 9,
           "feval": 9,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LD_VAR1",
-          "time": 0.003911861,
+          "time": 0.002525399,
           "geval": 7,
           "feval": 7,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         },
         {
           "optimizer": "LD_VAR2",
-          "time": 0.002528333,
+          "time": 0.002463537,
           "geval": 7,
           "feval": 7,
           "func": "lmm",
-          "dev": 567.162761189052
+          "dev": 567.1627611890523
         }
       ],
       "q": [
@@ -200,8 +196,12 @@
       "mtype": "PLSOne"
     }
   ],
-  "Julia": "0.3.10",
   "memory": "5.745 GB",
-  "n": 96,
-  "Rversion": "R version 3.2.1 (2015-06-18)"
+  "CPU_CORES": 4,
+  "WORD_SIZE": 64,
+  "Julia": "0.3.10",
+  "Rversion": "R version 3.2.1 (2015-06-18)",
+  "dsname": "TeachingII",
+  "OS": "Linux",
+  "n": 96
 }

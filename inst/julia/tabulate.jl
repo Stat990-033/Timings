@@ -33,12 +33,16 @@ function modelsummary(m)
     opt = ASCIIString[]
     times = Float64[]
     devs = Float64[]
+    reltimes = Float64[]
+    basetime = filter(f -> f["optimizer"] == "LN_BOBYQA", m["fits"])[1]["time"]
     for f in m["fits"]
         push!(opt,f["optimizer"])
-        push!(times,f["time"])
+        tt = f["time"]
+        push!(times,tt)
+        push!(reltimes,tt/basetime)
         push!(devs,f["dev"])
     end
-    opt,times,devs,devs .- minimum(devs),fill(m["formula"],length(opt)),
+    opt,times,reltimes,devs,devs .- minimum(devs),fill(m["formula"],length(opt)),
        fill(m["p"],length(opt)),fill(m["q"],length(opt)),fill(m["nopt"],length(opt))
 end
 
@@ -47,6 +51,7 @@ function optdir(dnm)
     models = ASCIIString[]
     opts = ASCIIString[]
     times = Float64[]
+    reltimes = Float64[]
     devs = Float64[]
     excessdev = Float64[]
     n = Int[]
@@ -57,12 +62,13 @@ function optdir(dnm)
         js = JSON.parsefile(joinpath(dnm,nm))
         dsn = js["dsname"]
         for m in js["models"]
-            opt,tt,dev,edevs,forms,pp,qq,nnpp = modelsummary(m)
+            opt,tt,rtt,dev,edevs,forms,pp,qq,nnpp = modelsummary(m)
             append!(models,forms)
             append!(opts,opt)
             append!(devs,dev)
             append!(excessdev,edevs)
             append!(times,tt)
+            append!(reltimes,rtt)
             append!(p,pp)
             append!(q,qq)
             append!(np,nnpp)
@@ -71,7 +77,7 @@ function optdir(dnm)
         end
     end
     ret = DataFrame(opt=pool(opts),dsname=pool(dsnames),n=n,p=p,q=q,np=np,excess=round(excessdev,5),
-                    time=round(times,4),objective=round(devs,5),models=pool(models))
+                    time=round(times,4),reltime=reltimes,objective=round(devs,5),models=pool(models))
     ret[sortperm(ret[:opt]),:]
 end
 

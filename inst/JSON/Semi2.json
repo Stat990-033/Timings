@@ -1,10 +1,6 @@
 {
-  "dsname": "Semi2",
-  "OS": "Linux",
   "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
-  "WORD_SIZE": 64,
-  "CPU_CORES": 4,
   "models": [
     {
       "formula": "Y ~ A + (1|G)+(1|H) +(1|AH)",
@@ -81,15 +77,15 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.002674638,
+          "time": 0.002884714,
           "geval": 0,
           "feval": 40,
           "func": "lmm",
-          "dev": 456.863943887898
+          "dev": 456.8639438878981
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.003336309,
+          "time": 0.003653378,
           "geval": 0,
           "feval": 58,
           "func": "lmm",
@@ -97,19 +93,19 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.005923818,
+          "time": 0.006578125,
           "geval": 0,
           "feval": 89,
           "func": "lmm",
-          "dev": 456.863943879138
+          "dev": 456.86394387913845
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.007853272,
+          "time": 0.008022575,
           "geval": 0,
           "feval": 156,
           "func": "lmm",
-          "dev": 456.863943872988
+          "dev": 456.8639438729876
         }
       ],
       "q": [
@@ -122,8 +118,12 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "Julia": "0.3.10",
   "memory": "5.745 GB",
-  "n": 72,
-  "Rversion": "R version 3.2.1 (2015-06-18)"
+  "CPU_CORES": 4,
+  "WORD_SIZE": 64,
+  "Julia": "0.3.10",
+  "Rversion": "R version 3.2.1 (2015-06-18)",
+  "dsname": "Semi2",
+  "OS": "Linux",
+  "n": 72
 }
