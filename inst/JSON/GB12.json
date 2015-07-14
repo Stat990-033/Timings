@@ -1,5 +1,5 @@
 {
-  "n": 512,
+  "dsname": "gb12",
   "OS": "Linux",
   "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "Y ~ 1+S+T+U+V+W+X+Z + (1+S+U+W|G) + (1+S+T+V|H)",
+      "formula": "Y ~ 1 + S + T + U + V + W + X + Z + ((1 + S + U + W) | G) + ((1 + S + T + V) | H)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -208,7 +208,7 @@
       "mtype": "PLSTwo"
     },
     {
-      "formula": "Y ~ 1+S+T+U+V+W+X+Z + (1|G)+(0+S|G)+(0+U|G)+(0+W|G) + (1|H)+(0+S|H)+(0+T|H)+(0+V|H)",
+      "formula": "Y ~ 1 + U + V + W + (1 | G) + ((0 + U) | G) + ((0 + V) | G) + ((0 + W) | G) + (1 | H) + ((0 + U) | H) + ((0 + V) | H) + ((0 + W) | H)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -411,5 +411,5 @@
   ],
   "Julia": "0.3.11-pre+13",
   "memory": "5.745 GB",
-  "dsname": "gb12"
+  "n": 512
 }

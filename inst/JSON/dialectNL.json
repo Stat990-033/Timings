@@ -1,5 +1,5 @@
 {
-  "dsname": "dialectNL",
+  "n": 225866,
   "OS": "Linux",
   "BLAS": "mkl",
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
@@ -7,7 +7,7 @@
   "CPU_CORES": 4,
   "models": [
     {
-      "formula": "Y ~ U + V +W +X + Z+A + T +(1 | G) +(0 + V + W+ X | G) +(1 + Z + A | H) +(1 | I)",
+      "formula": "Y ~ 1 + A + U + V + W + X + Z + T + (1 | G) + ((0 + V + W + X) | G) + ((1 + A + Z) | H) + (1 | I)",
       "fits": [
         {
           "optimizer": "bobyqa",
@@ -24,29 +24,29 @@
           "dev": 395350.468577066
         },
         {
-          "time": 16.8810000000001,
           "optimizer": "NLOPT_LN_BOBYQA",
+          "time": 16.8810000000001,
           "feval": 369,
           "func": "lmer",
           "dev": 395168.83657587
         },
         {
-          "time": 79.8810000000001,
           "optimizer": "NLOPT_LN_COBYLA",
+          "time": 79.8810000000001,
           "feval": 2040,
           "func": "lmer",
           "dev": 395168.845118185
         },
         {
-          "time": 49.5250000000001,
           "optimizer": "NLOPT_LN_NELDERMEAD",
+          "time": 49.5250000000001,
           "feval": 1202,
           "func": "lmer",
           "dev": 395168.836514402
         },
         {
-          "time": 21.4859999999999,
           "optimizer": "NLOPT_LN_SBPLX",
+          "time": 21.4859999999999,
           "feval": 486,
           "func": "lmer",
           "dev": 395168.836513861
@@ -203,5 +203,5 @@
   ],
   "Julia": "0.4.0-dev+5181",
   "memory": "5.745 GB",
-  "n":225866
+  "dsname": "dialectNL"
 }
