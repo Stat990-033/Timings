@@ -208,7 +208,7 @@
       "mtype": "PLSTwo"
     },
     {
-      "formula": "Y ~ 1 + U + V + W + (1 | G) + ((0 + U) | G) + ((0 + V) | G) + ((0 + W) | G) + (1 | H) + ((0 + U) | H) + ((0 + V) | H) + ((0 + W) | H)",
+      "formula": "Y ~ 1 + S + T + U + V + W + (1 | G) + ((0 + S) | G) + ((0 + U) | G) + ((0 + W) | G) + (1 | H) + ((0 + S) | H) + ((0 + T) | H) + ((0 + V) | H)",
       "fits": [
         {
           "optimizer": "bobyqa",
