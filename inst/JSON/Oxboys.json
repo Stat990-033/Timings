@@ -3,7 +3,7 @@
   "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
   "models": [
     {
-      "formula": "Y ~ 1 + U + (1 | G)",
+      "formula": "Y ~ 1 + U + ((1 + U) | G)",
       "fits": [
         {
           "optimizer": "bobyqa",
