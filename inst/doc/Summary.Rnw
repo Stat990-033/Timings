@@ -1,0 +1,920 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass{article}
+
+    
+    
+    \usepackage{graphicx} % Used to insert images
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{color} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    
+
+    
+    
+    \definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+    \definecolor{darkorange}{rgb}{.71,0.21,0.01}
+    \definecolor{darkgreen}{rgb}{.12,.54,.11}
+    \definecolor{myteal}{rgb}{.26, .44, .56}
+    \definecolor{gray}{gray}{0.45}
+    \definecolor{lightgray}{gray}{.95}
+    \definecolor{mediumgray}{gray}{.8}
+    \definecolor{inputbackground}{rgb}{.95, .95, .85}
+    \definecolor{outputbackground}{rgb}{.95, .95, .95}
+    \definecolor{traceback}{rgb}{1, .95, .95}
+    % ansi colors
+    \definecolor{red}{rgb}{.6,0,0}
+    \definecolor{green}{rgb}{0,.65,0}
+    \definecolor{brown}{rgb}{0.6,0.6,0}
+    \definecolor{blue}{rgb}{0,.145,.698}
+    \definecolor{purple}{rgb}{.698,.145,.698}
+    \definecolor{cyan}{rgb}{0,.698,.698}
+    \definecolor{lightgray}{gray}{0.5}
+    
+    % bright ansi colors
+    \definecolor{darkgray}{gray}{0.25}
+    \definecolor{lightred}{rgb}{1.0,0.39,0.28}
+    \definecolor{lightgreen}{rgb}{0.48,0.99,0.0}
+    \definecolor{lightblue}{rgb}{0.53,0.81,0.92}
+    \definecolor{lightpurple}{rgb}{0.87,0.63,0.87}
+    \definecolor{lightcyan}{rgb}{0.5,1.0,0.83}
+    
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{Summaries}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=blue,
+      linkcolor=darkorange,
+      citecolor=darkgreen,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \section{Summaries of timing tests}\label{summaries-of-timing-tests}
+
+We compare several optimizers, in both
+\href{http://www.R-project.org}{R} and
+\href{http://julialang.org}{Julia}, fitting a selection of linear mixed
+models. In \textbf{R} the optimizers are called by \texttt{lmer} from
+the \href{https://github.com/lme4/lme4}{lme4 package} (version 1.1-8).
+In \textbf{Julia} the \texttt{lmm} function from the
+\href{https://github.com/dmbates/MixedModels.jl}{MixedModels package}
+calls the optimizers.
+
+There are differences in the model formulations in \texttt{lme4} and in
+\texttt{MixedModels}. The numerical representation of the model in
+\texttt{lme4} and the method of evaluating the objective, described in
+\href{http://arxiv.org/abs/1406.5823}{this paper}, is the same for all
+models. In \texttt{MixedModels} there are specialized representations
+for some model forms, such as models with a single grouping factor for
+the random effects. Some of the specialized representations allow for
+evaluation of the gradient of the objects, which can enhance convergence
+(but, interestingly, sometimes can impede convergence).
+
+\subsection{Methodology}\label{methodology}
+
+To provide consistency we have copied all the data sets used in the
+timings to the \texttt{Timings} package itself. We have done all timings
+on the same computer. This computer has a relatively recent Intel
+processor and we used the
+\href{https://software.intel.com/en-us/intel-mkl}{Intel Math Kernel
+Library (MKL)} with Julia. We attempted to use
+\href{www.revolutionanalytics.com/revolution-r-open}{Revolution R Open
+(RRO)} as the R implementation as it can be configured with MKL.
+However, we ran into version problems with this so we used the standard
+Ubuntu version of R linked against OpenBLAS, which is also
+multi-threaded.
+
+Variables were renamed in the pattern: - \textbf{Y} the response -
+\textbf{A}, \textbf{B}, $\dots$ categorical covariates - \textbf{G},
+\textbf{H}, \textbf{I}, $\dots$ grouping factors for random effects -
+\textbf{U}, \textbf{V}, $\dots$ (skipping \textbf{Y}) continuous
+covariates
+
+The timing results are saved in \href{http://json.org}{JSON (JavaScript
+Object Notation)} files in the directory accessible as
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{system.file}\NormalTok{(}\StringTok{"JSON"}\NormalTok{,}\DataTypeTok{package=}\StringTok{"Timings"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+within \textbf{R}. The directory name will end with
+\texttt{./Timings/inst/JSON/} in the package source directory, for
+example the result of cloning the
+\href{https://github.com/Stat990-033/Timings}{github repository}. There
+is one \texttt{.json} file for each data set. Each such file contains
+results on timings of one or more models.
+
+The \texttt{Timings} package for \textbf{R} provides a \texttt{retime}
+function that takes the name of one of these JSON files and, optionally,
+the name of a file with the updated timings. Similarly there are some
+source files for Julia retimings.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../julia/retime.jl}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{retime}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../JSON/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{/tmp/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+        \PY{n}{retime}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../JSON/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{/tmp/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+dsname => "Alfalfa"
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+        `parse` has no method matching parse(::Int64)
+    while loading In[1], in expression starting on line 2
+
+        
+
+         in retime at /home/bates/git/Timings/inst/julia/retime.jl:17
+
+    \end{Verbatim}
+
+    The timing was repeated so that compilation time is not included in the
+results. This repetition is only needed once per session.
+
+A careful examination of these results shows that the main differences
+in the Julia timings (the R timings are merely reported, not evaluated)
+are that the \texttt{LN\_BOBYQA} and \texttt{LD\_MMA} optimizers are
+much faster in the second run. This is because much of the code needs to
+be compiled the first time that a derivative-free optimizer and a
+derivative-based optimizer are used.
+
+The names of the optimizers used with \texttt{lmm} are those from the
+\href{https://github.com/JuliaOpt/NLopt.jl}{NLopt package} for
+\textbf{Julia}. Names that begin with \texttt{LD\_} are gradient-based
+methods. Names that begin with \texttt{LN\_} are derivative-free
+methods. There is one other derivative-free method, \texttt{LN\_PRAXIS},
+available in the \texttt{NLopt} package but, for some reason, it can
+hang on very simple problems like this. Frequently we omit it.
+
+The optimizers used with \texttt{lmer} include the \texttt{Nelder\_Mead}
+optimizer built into the \texttt{lme4} package, the \texttt{bobyqa}
+optimizer from the
+\href{http://cran.rstudio.com/web/packages/minqa/index.html}{minqa
+package}, the derivative-free optimizers from the
+\href{http://cran.rstudio.com/web/packages/nloptr/index.html}{nloptr
+package} and several optimizers from the
+\href{http://cran.rstudio.com/web/packages/optimx/index.html}{optimx
+pacakge}.
+
+The \texttt{optimx:bobyqa} optimizer is just a wrapper around
+\texttt{bobyqa} (bounded optimization by quadratic approximation) from
+the \texttt{minqa} package and should provide results similar to those
+from the \texttt{bobyqa} optimizer. For some reason the number of
+function evaluations is not reported for the version in \texttt{optimx}.
+
+The optimizers from \texttt{nloptr} (i.e.~those whose names begin with
+\texttt{NLOPT\_LN\_}) use the same underlying code as do the similarly
+named optimizers in the \texttt{NLopt} package for \textbf{Julia}. The
+number of iterations to convergence should be similar for the same
+underlying code, although not nessarily exactly the same because the
+evaluation of the objective in \textbf{R} and in \textbf{Julia} may
+produce slightly different answers. Also the convergence criteria in the
+\textbf{Julia} version are more strict than those in the \textbf{R}
+version
+
+Also shown are the value of the criterion (negative twice the
+log-likelihood, lower is better) achieved, the elapsed time and the
+number of function and gradient evaluations. The \texttt{nopt} value is
+the number of parameters in the optimization problem. \texttt{mtype} is
+the model type in the \textbf{Julia} code. There are special methods for
+solving the penalized least squares (PLS) problem, and for evaluating
+the objective and its gradient when there is only one grouping factor
+for the random effects. The model type is called \texttt{PLSOne}.
+
+The \texttt{Alfalfa} example is a particularly easy one and all of the
+optimizerws converge to an objective value close to -10.81023 in less
+than 0.6 seconds.
+
+\subsubsection{Tabulating results}\label{tabulating-results}
+
+For the \texttt{Alfalfa} data there is not much of a burden in refitting
+the model with all the \textbf{Julia} optimizers just to get the table
+shown above. But other examples can take an hour or more to converge and
+we don't really need to refit them every time. The \texttt{tabulate.jl}
+file contains a function \texttt{optdir} to create a \texttt{DataFrame}
+from the results of all the model fits.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../julia/tabulate.jl}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{res} \PY{o}{=} \PY{n}{optdir}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../JSON}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+        \PY{n}{res}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{30}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{]}\PY{p}{]}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}2}]:} 30x7 DataFrame
+        | Row | opt        | dsname          | n      | np | excess  | time    |
+        |-----|------------|-----------------|--------|----|---------|---------|
+        | 1   | "LD\_CCSAQ" | "Alfalfa"       | 72     | 1  | 0.0     | 0.0017  |
+        | 2   | "LD\_CCSAQ" | "AvgDailyGain"  | 32     | 1  | 0.0     | 0.0014  |
+        | 3   | "LD\_CCSAQ" | "AvgDailyGain"  | 32     | 1  | 0.0     | 0.0014  |
+        | 4   | "LD\_CCSAQ" | "BIB"           | 24     | 1  | 0.0     | 0.0013  |
+        | 5   | "LD\_CCSAQ" | "Bond"          | 21     | 1  | 0.0     | 0.0009  |
+        | 6   | "LD\_CCSAQ" | "bs10"          | 1104   | 20 | 0.0     | 1.0958  |
+        | 7   | "LD\_CCSAQ" | "bs10"          | 1104   | 8  | 39.9948 | 0.0375  |
+        | 8   | "LD\_CCSAQ" | "cake"          | 270    | 1  | 0.0     | 0.0033  |
+        | 9   | "LD\_CCSAQ" | "Cultivation"   | 24     | 1  | 0.0     | 0.0009  |
+        | 10  | "LD\_CCSAQ" | "Demand"        | 77     | 2  | 3.21928 | 0.0055  |
+        | 11  | "LD\_CCSAQ" | "dialectNL"     | 225866 | 6  | 0.0     | 6.9896  |
+        ⋮
+        | 19  | "LD\_CCSAQ" | "gb12"          | 512    | 8  | 103.176 | 0.0218  |
+        | 20  | "LD\_CCSAQ" | "HR"            | 120    | 3  | 0.0     | 0.0089  |
+        | 21  | "LD\_CCSAQ" | "Hsb82"         | 7185   | 1  | 192.73  | 0.0102  |
+        | 22  | "LD\_CCSAQ" | "IncBlk"        | 24     | 1  | 0.55726 | 0.001   |
+        | 23  | "LD\_CCSAQ" | "kb07"          | 1790   | 72 | 8.20739 | 17.4698 |
+        | 24  | "LD\_CCSAQ" | "Mississippi"   | 37     | 1  | 0.93471 | 0.0006  |
+        | 25  | "LD\_CCSAQ" | "mm0"           | 69588  | 6  | 0.0     | 4.8286  |
+        | 26  | "LD\_CCSAQ" | "Oxboys"        | 234    | 3  | 136.788 | 0.0169  |
+        | 27  | "LD\_CCSAQ" | "PBIB"          | 60     | 1  | 0.0     | 0.0014  |
+        | 28  | "LD\_CCSAQ" | "Penicillin"    | 144    | 2  | 0.0     | 0.0131  |
+        | 29  | "LD\_CCSAQ" | "Semiconductor" | 48     | 1  | 0.0     | 0.0012  |
+        | 30  | "LD\_CCSAQ" | "SIMS"          | 3691   | 3  | 3.60856 | 0.134   |
+        
+        | Row | reltime |
+        |-----|---------|
+        | 1   | 1.1342  |
+        | 2   | 0.8207  |
+        | 3   | 0.9283  |
+        | 4   | 0.7897  |
+        | 5   | 1.0265  |
+        | 6   | 4.4375  |
+        | 7   | 0.555   |
+        | 8   | 1.3714  |
+        | 9   | 0.9925  |
+        | 10  | 0.8079  |
+        | 11  | 3.9932  |
+        ⋮
+        | 19  | 0.5604  |
+        | 20  | 1.2196  |
+        | 21  | 0.4919  |
+        | 22  | 0.6573  |
+        | 23  | 4.1242  |
+        | 24  | 0.6716  |
+        | 25  | 4.4016  |
+        | 26  | 0.7092  |
+        | 27  | 0.9986  |
+        | 28  | 4.9414  |
+        | 29  | 1.0461  |
+        | 30  | 0.9858  |
+\end{Verbatim}
+        
+    The \texttt{time} column is the time in seconds to converge. The
+\texttt{reltime} column is the time relative to the \texttt{LN\_BOBYQA}
+optimizer in the \texttt{MixedModels} package for \textbf{Julia}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{res}\PY{p}{[}\PY{n}{res}\PY{p}{[}\PY{p}{:}\PY{n}{opt}\PY{p}{]} \PY{o}{.}\PY{o}{==} \PY{l+s}{\PYZdq{}}\PY{l+s}{NLOPT\PYZus{}LN\PYZus{}BOBYQA}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{]}\PY{p}{]}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}3}]:} 49x7 DataFrame
+        | Row | opt               | dsname          | n      | np | excess | time   |
+        |-----|-------------------|-----------------|--------|----|--------|--------|
+        | 1   | "NLOPT\_LN\_BOBYQA" | "Alfalfa"       | 72     | 1  | 0.0    | 0.042  |
+        | 2   | "NLOPT\_LN\_BOBYQA" | "Animal"        | 20     | 2  | 0.0    | 0.023  |
+        | 3   | "NLOPT\_LN\_BOBYQA" | "Assay"         | 60     | 2  | 1.0e-5 | 0.032  |
+        | 4   | "NLOPT\_LN\_BOBYQA" | "AvgDailyGain"  | 32     | 1  | 0.0    | 0.02   |
+        | 5   | "NLOPT\_LN\_BOBYQA" | "AvgDailyGain"  | 32     | 1  | 0.0    | 0.02   |
+        | 6   | "NLOPT\_LN\_BOBYQA" | "BIB"           | 24     | 1  | 0.0    | 0.02   |
+        | 7   | "NLOPT\_LN\_BOBYQA" | "Bond"          | 21     | 1  | 0.0    | 0.02   |
+        | 8   | "NLOPT\_LN\_BOBYQA" | "bs10"          | 1104   | 20 | 1.0e-5 | 4.661  |
+        | 9   | "NLOPT\_LN\_BOBYQA" | "bs10"          | 1104   | 8  | 0.0    | 1.057  |
+        | 10  | "NLOPT\_LN\_BOBYQA" | "cake"          | 270    | 1  | 0.0    | 0.053  |
+        | 11  | "NLOPT\_LN\_BOBYQA" | "Chem97"        | 31022  | 2  | 0.0    | 0.632  |
+        ⋮
+        | 38  | "NLOPT\_LN\_BOBYQA" | "PBIB"          | 60     | 1  | 0.0    | 0.018  |
+        | 39  | "NLOPT\_LN\_BOBYQA" | "Penicillin"    | 144    | 2  | 0.0    | 0.023  |
+        | 40  | "NLOPT\_LN\_BOBYQA" | "Poems"         | 275996 | 3  | 0.0    | 21.309 |
+        | 41  | "NLOPT\_LN\_BOBYQA" | "ScotsSec"      | 3435   | 2  | 0.0    | 0.076  |
+        | 42  | "NLOPT\_LN\_BOBYQA" | "Semi2"         | 72     | 3  | 0.0    | 0.03   |
+        | 43  | "NLOPT\_LN\_BOBYQA" | "Semiconductor" | 48     | 1  | 0.0    | 0.019  |
+        | 44  | "NLOPT\_LN\_BOBYQA" | "SIMS"          | 3691   | 3  | 0.0    | 0.15   |
+        | 45  | "NLOPT\_LN\_BOBYQA" | "sleepstudy"    | 180    | 3  | 0.0    | 0.037  |
+        | 46  | "NLOPT\_LN\_BOBYQA" | "sleepstudy"    | 180    | 2  | 0.0    | 0.024  |
+        | 47  | "NLOPT\_LN\_BOBYQA" | "TeachingII"    | 96     | 1  | 0.0    | 0.021  |
+        | 48  | "NLOPT\_LN\_BOBYQA" | "Weights"       | 399    | 3  | 1.0e-5 | 0.039  |
+        | 49  | "NLOPT\_LN\_BOBYQA" | "WWheat"        | 60     | 3  | 0.0    | 0.025  |
+        
+        | Row | reltime |
+        |-----|---------|
+        | 1   | 27.5171 |
+        | 2   | 13.9236 |
+        | 3   | 10.8009 |
+        | 4   | 11.7005 |
+        | 5   | 13.6969 |
+        | 6   | 12.608  |
+        | 7   | 23.2699 |
+        | 8   | 18.8753 |
+        | 9   | 15.6477 |
+        | 10  | 22.0827 |
+        | 11  | 3.942   |
+        ⋮
+        | 38  | 13.1358 |
+        | 39  | 8.6481  |
+        | 40  | 3.7438  |
+        | 41  | 5.0422  |
+        | 42  | 9.2732  |
+        | 43  | 15.9582 |
+        | 44  | 1.1034  |
+        | 45  | 5.3039  |
+        | 46  | 8.6177  |
+        | 47  | 15.3763 |
+        | 48  | 1.133   |
+        | 49  | 2.3154  |
+\end{Verbatim}
+        
+    \subsection{Proportion converged}\label{proportion-converged}
+
+The most important question regarding the optimizers is whether or not
+they have converged to the global optimum. We cannot test this directly.
+Instead we use a ``crowd-sourced'' criterion based on the minimum
+objective achieved by any of the algorithms. The difference between the
+objective achieved by a particular algorithm and this minimum is called
+the \texttt{excess}. In the summaries \texttt{excess} is rounded to 5
+digits after the decimal so the minimum non-zero \texttt{excess} is
+$10^{-5}$.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{res}\PY{p}{[}\PY{n}{res}\PY{p}{[}\PY{p}{:}\PY{n}{opt}\PY{p}{]} \PY{o}{.}\PY{o}{==} \PY{l+s}{\PYZdq{}}\PY{l+s}{LN\PYZus{}BOBYQA}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{p}{[}\PY{p}{:}\PY{n}{opt}\PY{p}{,}\PY{p}{:}\PY{n}{dsname}\PY{p}{,}\PY{p}{:}\PY{n}{excess}\PY{p}{]}\PY{p}{]}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}4}]:} 49x3 DataFrame
+        | Row | opt         | dsname          | excess |
+        |-----|-------------|-----------------|--------|
+        | 1   | "LN\_BOBYQA" | "Alfalfa"       | 0.0    |
+        | 2   | "LN\_BOBYQA" | "Animal"        | 0.0    |
+        | 3   | "LN\_BOBYQA" | "Assay"         | 0.0    |
+        | 4   | "LN\_BOBYQA" | "AvgDailyGain"  | 0.0    |
+        | 5   | "LN\_BOBYQA" | "AvgDailyGain"  | 0.0    |
+        | 6   | "LN\_BOBYQA" | "BIB"           | 0.0    |
+        | 7   | "LN\_BOBYQA" | "Bond"          | 0.0    |
+        | 8   | "LN\_BOBYQA" | "bs10"          | 1.0e-5 |
+        | 9   | "LN\_BOBYQA" | "bs10"          | 0.0    |
+        | 10  | "LN\_BOBYQA" | "cake"          | 0.0    |
+        | 11  | "LN\_BOBYQA" | "Chem97"        | 0.0    |
+        ⋮
+        | 38  | "LN\_BOBYQA" | "PBIB"          | 0.0    |
+        | 39  | "LN\_BOBYQA" | "Penicillin"    | 0.0    |
+        | 40  | "LN\_BOBYQA" | "Poems"         | 0.0    |
+        | 41  | "LN\_BOBYQA" | "ScotsSec"      | 0.0    |
+        | 42  | "LN\_BOBYQA" | "Semi2"         | 0.0    |
+        | 43  | "LN\_BOBYQA" | "Semiconductor" | 0.0    |
+        | 44  | "LN\_BOBYQA" | "SIMS"          | 0.0    |
+        | 45  | "LN\_BOBYQA" | "sleepstudy"    | 0.0    |
+        | 46  | "LN\_BOBYQA" | "sleepstudy"    | 0.0    |
+        | 47  | "LN\_BOBYQA" | "TeachingII"    | 0.0    |
+        | 48  | "LN\_BOBYQA" | "Weights"       | 0.0    |
+        | 49  | "LN\_BOBYQA" | "WWheat"        | 0.0    |
+\end{Verbatim}
+        
+    If we wish to declare ``converged'' or ``not converged'' according to
+the excess objective value we must establish a threshold. An absolute
+threshold seems reasonable because the objective, negative twice the
+log-likelihood, is on a scale where differences in this objective are
+compared to a $\chi^2$ random variable. Thus an excess of $10^{-9}$ or
+even $10^{-5}$ is negligible.
+
+For each optimizer we can examine which of the data set/model
+combinations resulted in an excess greater than a threshold.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{by}\PY{p}{(}\PY{n}{res}\PY{p}{,}\PY{p}{:}\PY{n}{opt}\PY{p}{)} \PY{k}{do} \PY{n}{df}
+            \PY{n}{DataFrame}\PY{p}{(}\PY{n}{attempted}\PY{o}{=}\PY{n}{size}\PY{p}{(}\PY{n}{df}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{failed}\PY{o}{=}\PY{n}{countnz}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{p}{:}\PY{n}{excess}\PY{p}{]} \PY{o}{.}\PY{o}{\PYZgt{}} \PY{l+m+mf}{0.02}\PY{p}{)}\PY{p}{)}
+        \PY{k}{end}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}5}]:} 26x3 DataFrame
+        | Row | opt                          | attempted | failed |
+        |-----|------------------------------|-----------|--------|
+        | 1   | "LD\_CCSAQ"                   | 35        | 11     |
+        | 2   | "LD\_LBFGS"                   | 35        | 11     |
+        | 3   | "LD\_MMA"                     | 36        | 5      |
+        | 4   | "LD\_SLSQP"                   | 35        | 4      |
+        | 5   | "LD\_TNEWTON"                 | 34        | 8      |
+        | 6   | "LD\_TNEWTON\_PRECOND"         | 34        | 8      |
+        | 7   | "LD\_TNEWTON\_PRECOND\_RESTART" | 33        | 12     |
+        | 8   | "LD\_TNEWTON\_RESTART"         | 34        | 11     |
+        | 9   | "LD\_VAR1"                    | 35        | 10     |
+        | 10  | "LD\_VAR2"                    | 35        | 10     |
+        | 11  | "LN\_BOBYQA"                  | 49        | 0      |
+        ⋮
+        | 15  | "LN\_SBPLX"                   | 49        | 2      |
+        | 16  | "NLOPT\_LN\_BOBYQA"            | 49        | 0      |
+        | 17  | "NLOPT\_LN\_COBYLA"            | 48        | 2      |
+        | 18  | "NLOPT\_LN\_NELDERMEAD"        | 47        | 6      |
+        | 19  | "NLOPT\_LN\_PRAXIS"            | 18        | 4      |
+        | 20  | "NLOPT\_LN\_SBPLX"             | 48        | 2      |
+        | 21  | "Nelder\_Mead"                | 49        | 8      |
+        | 22  | "bobyqa"                     | 49        | 2      |
+        | 23  | "optimx:L-BFGS-B"            | 49        | 0      |
+        | 24  | "optimx:bobyqa"              | 49        | 2      |
+        | 25  | "optimx:nlminb"              | 49        | 0      |
+        | 26  | "optimx:spg"                 | 49        | 4      |
+\end{Verbatim}
+        
+    At this threshold the most reliable algorithm in Julia is
+\texttt{LN\_BOBYQA}. In R the most reliable algorithms are
+\texttt{NLOPT\_LN\_BOBYQA}, \texttt{optimx:L-BFGS-B} and
+\texttt{optimx:nlminb}. It is interesting that nlminb is reliable as I
+felt that it wasn't converging well when it was the default optimizer in
+\texttt{lmer}.
+
+Interestingly, the derviative-based algorithms in \texttt{NLopt} were
+not as reliable as the derivative-free algorithms. The most likely
+explanation is that I don't have the gradient coded properly.
+
+The Nelder-Mead simplex algorithm did not perform well, failing on 8 out
+of 48 cases. For many of these the value at which convergence was
+declared was far from the optimum.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{noncvg} \PY{o}{=} 
+        \PY{n}{by}\PY{p}{(}\PY{n}{res}\PY{p}{,}\PY{p}{:}\PY{n}{opt}\PY{p}{)} \PY{k}{do} \PY{n}{df}
+            \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{p}{:}\PY{n}{excess}\PY{p}{]} \PY{o}{.}\PY{o}{\PYZgt{}} \PY{l+m+mf}{0.005}\PY{p}{,}\PY{p}{[}\PY{p}{:}\PY{n}{dsname}\PY{p}{,}\PY{p}{:}\PY{n}{excess}\PY{p}{,}\PY{p}{:}\PY{n}{time}\PY{p}{,}\PY{p}{:}\PY{n}{reltime}\PY{p}{,}\PY{p}{:}\PY{n}{np}\PY{p}{,}\PY{p}{:}\PY{n}{n}\PY{p}{]}\PY{p}{]}
+        \PY{k}{end}\PY{p}{;}
+        \PY{n}{dfselect}\PY{p}{(}\PY{n}{df}\PY{p}{:}\PY{p}{:}\PY{n}{AbstractDataFrame}\PY{p}{,}\PY{n}{col}\PY{p}{:}\PY{p}{:}\PY{n}{Symbol}\PY{p}{,}\PY{n}{val}\PY{p}{)} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{n}{col}\PY{p}{]} \PY{o}{.}\PY{o}{==} \PY{n}{val}\PY{p}{,} \PY{p}{:}\PY{p}{]}
+        \PY{n}{dfselect}\PY{p}{(}\PY{n}{noncvg}\PY{p}{,}\PY{p}{:}\PY{n}{opt}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{Nelder\PYZus{}Mead}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}6}]:} 8x7 DataFrame
+        | Row | opt           | dsname        | excess  | time    | reltime | np |
+        |-----|---------------|---------------|---------|---------|---------|----|
+        | 1   | "Nelder\_Mead" | "bs10"        | 71.3859 | 145.368 | 588.684 | 20 |
+        | 2   | "Nelder\_Mead" | "d3"          | 317.59  | 454.519 | 4.2502  | 9  |
+        | 3   | "Nelder\_Mead" | "dialectNL"   | 181.632 | 54.541  | 31.1594 | 6  |
+        | 4   | "Nelder\_Mead" | "gb12"        | 78.7119 | 38.206  | 189.605 | 20 |
+        | 5   | "Nelder\_Mead" | "kb07"        | 398.732 | 2825.46 | 667.015 | 72 |
+        | 6   | "Nelder\_Mead" | "kb07"        | 403.478 | 269.436 | 383.087 | 16 |
+        | 7   | "Nelder\_Mead" | "Mississippi" | 0.04272 | 0.018   | 20.3989 | 1  |
+        | 8   | "Nelder\_Mead" | "mm0"         | 181.632 | 76.87   | 70.0716 | 6  |
+        
+        | Row | n      |
+        |-----|--------|
+        | 1   | 1104   |
+        | 2   | 130418 |
+        | 3   | 225866 |
+        | 4   | 512    |
+        | 5   | 1790   |
+        | 6   | 1790   |
+        | 7   | 37     |
+        | 8   | 69588  |
+\end{Verbatim}
+        
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{dfselect}\PY{p}{(}\PY{n}{noncvg}\PY{p}{,}\PY{p}{:}\PY{n}{opt}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{NLOPT\PYZus{}LN\PYZus{}NELDERMEAD}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}7}]:} 6x7 DataFrame
+        | Row | opt                   | dsname  | excess  | time    | reltime | np |
+        |-----|-----------------------|---------|---------|---------|---------|----|
+        | 1   | "NLOPT\_LN\_NELDERMEAD" | "Assay" | 0.05942 | 0.042   | 14.1762 | 2  |
+        | 2   | "NLOPT\_LN\_NELDERMEAD" | "bs10"  | 0.97096 | 88.286  | 357.524 | 20 |
+        | 3   | "NLOPT\_LN\_NELDERMEAD" | "d3"    | 100.191 | 627.931 | 5.8718  | 9  |
+        | 4   | "NLOPT\_LN\_NELDERMEAD" | "gb12"  | 0.83883 | 52.411  | 260.1   | 20 |
+        | 5   | "NLOPT\_LN\_NELDERMEAD" | "kb07"  | 88.7686 | 2839.07 | 670.229 | 72 |
+        | 6   | "NLOPT\_LN\_NELDERMEAD" | "kb07"  | 3.49868 | 198.845 | 282.72  | 16 |
+        
+        | Row | n      |
+        |-----|--------|
+        | 1   | 60     |
+        | 2   | 1104   |
+        | 3   | 130418 |
+        | 4   | 512    |
+        | 5   | 1790   |
+        | 6   | 1790   |
+\end{Verbatim}
+        
+    The \texttt{Nelder\_Mead} algorithm, either in the native form in
+\texttt{lmer} or in the \texttt{NLopt} implementation performed poorly
+on those cases with many parameters to optimize. It was both unreliable
+and slow, taking over 45 minutes to reach a spurious optimum on the
+``maximal'' model (in the sense of Barr et al., 2012) for the
+\texttt{kb07} data from Kronmueller and Barr (2007). This is not
+terribly surprising given that the model is horribly overparameterized,
+but still it shows that this algorithm is not a good choice in these
+cases.
+
+We note in passing that all the models involving fitting 20 or more
+parameters are ``maximal'' models in the sense of Barr et al., 2012.
+Such models can present difficult optimization problems because they are
+severely overparameterized and inevitably converge on the boundary of
+the allowable parameter space. Whether or not it is sensible to compare
+results on such extreme cases is not clear.
+
+The \texttt{SBPLX} (subplex) algorithm, which is an enhancement of
+\texttt{Nelder\_Mead}, does better in these cases but is still rather
+slow.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{dfselect}\PY{p}{(}\PY{n}{noncvg}\PY{p}{,}\PY{p}{:}\PY{n}{opt}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{NLOPT\PYZus{}LN\PYZus{}SBPLX}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}8}]:} 2x7 DataFrame
+        | Row | opt              | dsname | excess  | time    | reltime | np | n    |
+        |-----|------------------|--------|---------|---------|---------|----|------|
+        | 1   | "NLOPT\_LN\_SBPLX" | "gb12" | 0.82219 | 3.813   | 18.9228 | 20 | 512  |
+        | 2   | "NLOPT\_LN\_SBPLX" | "kb07" | 4.96546 | 564.688 | 133.308 | 72 | 1790 |
+\end{Verbatim}
+        
+    By comparison, the \texttt{LN\_BOBYQA} algorithm converges quite rapidly
+on the \texttt{kb07} models.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{bobyqa} \PY{o}{=} \PY{n}{res}\PY{p}{[}\PY{n+nb}{convert}\PY{p}{(}\PY{n}{Array}\PY{p}{,}\PY{n}{res}\PY{p}{[}\PY{p}{:}\PY{n}{opt}\PY{p}{]} \PY{o}{.}\PY{o}{==} \PY{l+s}{\PYZdq{}}\PY{l+s}{LN\PYZus{}BOBYQA}\PY{l+s}{\PYZdq{}}\PY{p}{)} \PY{o}{\PYZam{}} 
+            \PY{n+nb}{convert}\PY{p}{(}\PY{n}{Array}\PY{p}{,}\PY{n}{res}\PY{p}{[}\PY{p}{:}\PY{n}{dsname}\PY{p}{]} \PY{o}{.}\PY{o}{==} \PY{l+s}{\PYZdq{}}\PY{l+s}{kb07}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{,}
+            \PY{p}{[}\PY{p}{:}\PY{n}{dsname}\PY{p}{,}\PY{p}{:}\PY{n}{excess}\PY{p}{,}\PY{p}{:}\PY{n}{objective}\PY{p}{,}\PY{p}{:}\PY{n}{time}\PY{p}{,}\PY{p}{:}\PY{n}{np}\PY{p}{]}\PY{p}{]}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}9}]:} 2x5 DataFrame
+        | Row | dsname | excess  | objective | time   | np |
+        |-----|--------|---------|-----------|--------|----|
+        | 1   | "kb07" | 0.01695 | 28586.3   | 4.236  | 72 |
+        | 2   | "kb07" | 0.0     | 28670.9   | 0.7033 | 16 |
+\end{Verbatim}
+        
+    \subsection{Relative speed}\label{relative-speed}
+
+We plot the time to convergence, relative to \texttt{LN\_BOBYQA} and on
+a logarithmic scale, for each algorithm.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{k}{using} \PY{n}{Gadfly}
+         \PY{n}{set\PYZus{}default\PYZus{}plot\PYZus{}size}\PY{p}{(}\PY{l+m+mi}{16}\PY{n}{cm}\PY{p}{,}\PY{l+m+mi}{12}\PY{n}{cm}\PY{p}{)}
+         \PY{n}{res}\PY{p}{[}\PY{p}{:}\PY{n}{cvg}\PY{p}{]} \PY{o}{=} \PY{n}{compact}\PY{p}{(}\PY{n}{pool}\PY{p}{(}\PY{p}{[}\PY{n}{e} \PY{o}{\PYZgt{}} \PY{l+m+mf}{0.02} \PY{o}{?} \PY{l+s}{\PYZdq{}}\PY{l+s}{N}\PY{l+s}{\PYZdq{}} \PY{p}{:} \PY{l+s}{\PYZdq{}}\PY{l+s}{Y}\PY{l+s}{\PYZdq{}} \PY{k}{for} \PY{n}{e} \PY{k}{in} \PY{n}{res}\PY{p}{[}\PY{p}{:}\PY{n}{excess}\PY{p}{]}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n}{plot}\PY{p}{(}\PY{n}{res}\PY{p}{,}\PY{n}{x}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{reltime}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{y}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{opt}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{cvg}\PY{l+s}{\PYZdq{}}\PY{p}{,}
+             \PY{n}{Geom}\PY{o}{.}\PY{n}{point}\PY{p}{,}\PY{n}{Scale}\PY{o}{.}\PY{n}{y\PYZus{}discrete}\PY{p}{,}\PY{n}{Scale}\PY{o}{.}\PY{n}{x\PYZus{}log2}\PY{p}{,}
+             \PY{n}{Guide}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{n}{nothing}\PY{p}{)}\PY{p}{,}
+             \PY{n}{Guide}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Time to convergence relative to LN\PYZus{}BOBYQA}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}10}]:}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{Summaries_files/Summaries_18_0.pdf}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+
+    Many of the cases where \texttt{LN\_BOBYQA} is slower than other
+algorithms are simple problems that converge in less than 1/5 of a
+second for most algorithms.
+
+We will declare a data set to be non-simple if at least one of the
+models fit to the data took more than 0.2 seconds to convergence with
+\texttt{LN\_BOBYQA}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{ln\PYZus{}bobyqa} \PY{o}{=} \PY{n}{dfselect}\PY{p}{(}\PY{n}{res}\PY{p}{,}\PY{p}{:}\PY{n}{opt}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{LN\PYZus{}BOBYQA}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+         \PY{n}{nonsimple} \PY{o}{=} \PY{n}{ln\PYZus{}bobyqa}\PY{p}{[}\PY{n}{ln\PYZus{}bobyqa}\PY{p}{[}\PY{p}{:}\PY{n}{time}\PY{p}{]} \PY{o}{.}\PY{o}{\PYZgt{}} \PY{l+m+mf}{0.2}\PY{p}{,}\PY{p}{[}\PY{p}{:}\PY{n}{dsname}\PY{p}{,}\PY{p}{:}\PY{n}{time}\PY{p}{,}\PY{p}{:}\PY{n}{n}\PY{p}{,}\PY{p}{:}\PY{n}{np}\PY{p}{,}\PY{p}{:}\PY{n}{models}\PY{p}{]}\PY{p}{]}
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}12}]:} 10x5 DataFrame
+         | Row | dsname      | time   | n      | np |
+         |-----|-------------|--------|--------|----|
+         | 1   | "bs10"      | 0.2469 | 1104   | 20 |
+         | 2   | "d3"        | 106.94 | 130418 | 9  |
+         | 3   | "dialectNL" | 1.7504 | 225866 | 6  |
+         | 4   | "gb12"      | 0.2015 | 512    | 20 |
+         | 5   | "InstEval"  | 2.3539 | 73421  | 2  |
+         | 6   | "InstEval"  | 4.3593 | 73421  | 3  |
+         | 7   | "kb07"      | 4.236  | 1790   | 72 |
+         | 8   | "kb07"      | 0.7033 | 1790   | 16 |
+         | 9   | "mm0"       | 1.097  | 69588  | 6  |
+         | 10  | "Poems"     | 5.6918 | 275996 | 3  |
+         
+         | Row | models                                                                                                                                                |
+         |-----|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+         | 1   | "29"                                                                                                                                                  |
+         | 2   | "Y \textasciitilde{} U + (U | G)  + (U | H) + (U | I)"                                                                                                                |
+         | 3   | "Y \textasciitilde{} U + V +W +X + Z+A + T +(1 | G) +(0 + V + W+ X | G) +(1 + Z + A | H) +(1 | I)"                                                                    |
+         | 4   | "Y \textasciitilde{} 1+S+T+U+V+W+X+Z + (1+S+U+W|G) + (1+S+T+V|H)"                                                                                                     |
+         | 5   | "Y \textasciitilde{} 1 + I*A + (1|G) + (1|H)"                                                                                                                         |
+         | 6   | "Y \textasciitilde{} 1 + A + (1|G) + (1|H) + (1|I)"                                                                                                                   |
+         | 7   | "Y \textasciitilde{} 1+S+T+U+V+W+X+Z + (1+S+T+U+V+W+X+Z|G) + (1+S+T+U+V+W+X+Z|H)"                                                                                     |
+         | 8   | "Y \textasciitilde{} 1+S+T+U+V+W+X+Z + (1|G)+(0+S|G)+(0+T|G)+(0+U|G)+(0+V|G)+(0+W|G)+(0+X|G)+(0+Z|G) + (1|H)+(0+S|H)+(0+T|H)+(0+U|H)+(0+V|H)+(0+W|H)+(0+X|H)+(0+Z|H)" |
+         | 9   | "Y\textasciitilde{}A*U+(1+U|G)+(1+U|H)"                                                                                                                               |
+         | 10  | "Y \textasciitilde{} 1 + U + V + (1|G) + (1|H) + (1|I)"                                                                                                               |
+\end{Verbatim}
+        
+    Notice that these are cases with a large number of observations
+(\texttt{n}) or a large number of parameters in the optimization problem
+(\texttt{np}) or both.
+
+By comparison, the cases where other algorithms are faster than
+\texttt{LN\_BOBYQA} are, for the most part, models and data sets with
+few observations and few parameters to optimize. In these circumstances
+almost all the optimizers are fast.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{by}\PY{p}{(}\PY{n}{res}\PY{p}{,}\PY{p}{:}\PY{n}{opt}\PY{p}{)} \PY{k}{do} \PY{n}{df}
+             \PY{n}{cvgfast} \PY{o}{=} \PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{p}{:}\PY{n}{reltime}\PY{p}{]} \PY{o}{.}\PY{o}{\PYZlt{}} \PY{l+m+mi}{1}\PY{p}{)} \PY{o}{\PYZam{}} \PY{n+nb}{convert}\PY{p}{(}\PY{n}{Array}\PY{p}{,}\PY{n}{df}\PY{p}{[}\PY{p}{:}\PY{n}{cvg}\PY{p}{]} \PY{o}{.}\PY{o}{==} \PY{l+s}{\PYZdq{}}\PY{l+s}{Y}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{k}{if} \PY{n}{any}\PY{p}{(}\PY{n}{cvgfast}\PY{p}{)}
+                 \PY{n}{print}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{n}{cvgfast}\PY{p}{,}\PY{p}{[}\PY{p}{:}\PY{n}{opt}\PY{p}{,}\PY{p}{:}\PY{n}{dsname}\PY{p}{,}\PY{p}{:}\PY{n}{time}\PY{p}{,}\PY{p}{:}\PY{n}{np}\PY{p}{,}\PY{p}{:}\PY{n}{n}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+                 \PY{n}{println}\PY{p}{(}\PY{p}{)}
+             \PY{k}{end}
+         \PY{k}{end}\PY{p}{;}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+8x5 DataFrame
+| Row | opt        | dsname         | time   | np | n  |
+|-----|------------|----------------|--------|----|----|
+| 1   | "LD\_CCSAQ" | "AvgDailyGain" | 0.0014 | 1  | 32 |
+| 2   | "LD\_CCSAQ" | "AvgDailyGain" | 0.0014 | 1  | 32 |
+| 3   | "LD\_CCSAQ" | "BIB"          | 0.0013 | 1  | 24 |
+| 4   | "LD\_CCSAQ" | "Cultivation"  | 0.0009 | 1  | 24 |
+| 5   | "LD\_CCSAQ" | "Dyestuff2"    | 0.0005 | 1  | 30 |
+| 6   | "LD\_CCSAQ" | "Gasoline"     | 0.0011 | 1  | 32 |
+| 7   | "LD\_CCSAQ" | "PBIB"         | 0.0014 | 1  | 60 |
+| 8   | "LD\_CCSAQ" | "TeachingII"   | 0.0013 | 1  | 96 |
+2x5 DataFrame
+| Row | opt        | dsname | time   | np | n   |
+|-----|------------|--------|--------|----|-----|
+| 1   | "LD\_LBFGS" | "gb12" | 0.1871 | 20 | 512 |
+| 2   | "LD\_LBFGS" | "HR"   | 0.004  | 3  | 120 |
+12x5 DataFrame
+| Row | opt      | dsname         | time   | np | n   |
+|-----|----------|----------------|--------|----|-----|
+| 1   | "LD\_MMA" | "AvgDailyGain" | 0.0015 | 1  | 32  |
+| 2   | "LD\_MMA" | "BIB"          | 0.0012 | 1  | 24  |
+| 3   | "LD\_MMA" | "Bond"         | 0.0008 | 1  | 21  |
+| 4   | "LD\_MMA" | "Dyestuff2"    | 0.0005 | 1  | 30  |
+| 5   | "LD\_MMA" | "Dyestuff"     | 0.0007 | 1  | 30  |
+| 6   | "LD\_MMA" | "ergoStool"    | 0.0009 | 1  | 36  |
+| 7   | "LD\_MMA" | "Gasoline"     | 0.0012 | 1  | 32  |
+| 8   | "LD\_MMA" | "Oxboys"       | 0.0092 | 3  | 234 |
+| 9   | "LD\_MMA" | "PBIB"         | 0.0013 | 1  | 60  |
+| 10  | "LD\_MMA" | "TeachingII"   | 0.0012 | 1  | 96  |
+| 11  | "LD\_MMA" | "Weights"      | 0.027  | 3  | 399 |
+| 12  | "LD\_MMA" | "WWheat"       | 0.0084 | 3  | 60  |
+20x5 DataFrame
+| Row | opt        | dsname          | time   | np | n    |
+|-----|------------|-----------------|--------|----|------|
+| 1   | "LD\_SLSQP" | "Alfalfa"       | 0.0014 | 1  | 72   |
+| 2   | "LD\_SLSQP" | "AvgDailyGain"  | 0.0016 | 1  | 32   |
+| 3   | "LD\_SLSQP" | "BIB"           | 0.0011 | 1  | 24   |
+| 4   | "LD\_SLSQP" | "Bond"          | 0.0007 | 1  | 21   |
+| 5   | "LD\_SLSQP" | "Cultivation"   | 0.0008 | 1  | 24   |
+| 6   | "LD\_SLSQP" | "Demand"        | 0.0054 | 2  | 77   |
+| 7   | "LD\_SLSQP" | "Dyestuff2"     | 0.0007 | 1  | 30   |
+| 8   | "LD\_SLSQP" | "Dyestuff"      | 0.0007 | 1  | 30   |
+| 9   | "LD\_SLSQP" | "ergoStool"     | 0.001  | 1  | 36   |
+| 10  | "LD\_SLSQP" | "Gasoline"      | 0.0011 | 1  | 32   |
+| 11  | "LD\_SLSQP" | "HR"            | 0.0056 | 3  | 120  |
+| 12  | "LD\_SLSQP" | "IncBlk"        | 0.0013 | 1  | 24   |
+| 13  | "LD\_SLSQP" | "Oxboys"        | 0.0072 | 3  | 234  |
+| 14  | "LD\_SLSQP" | "PBIB"          | 0.0009 | 1  | 60   |
+| 15  | "LD\_SLSQP" | "Semiconductor" | 0.001  | 1  | 48   |
+| 16  | "LD\_SLSQP" | "SIMS"          | 0.0742 | 3  | 3691 |
+| 17  | "LD\_SLSQP" | "sleepstudy"    | 0.0052 | 3  | 180  |
+| 18  | "LD\_SLSQP" | "TeachingII"    | 0.0011 | 1  | 96   |
+| 19  | "LD\_SLSQP" | "Weights"       | 0.0234 | 3  | 399  |
+| 20  | "LD\_SLSQP" | "WWheat"        | 0.0079 | 3  | 60   |
+3x5 DataFrame
+| Row | opt          | dsname    | time   | np | n   |
+|-----|--------------|-----------|--------|----|-----|
+| 1   | "LD\_TNEWTON" | "HR"      | 0.0059 | 3  | 120 |
+| 2   | "LD\_TNEWTON" | "Oxboys"  | 0.0087 | 3  | 234 |
+| 3   | "LD\_TNEWTON" | "Weights" | 0.0213 | 3  | 399 |
+3x5 DataFrame
+| Row | opt                  | dsname    | time   | np | n   |
+|-----|----------------------|-----------|--------|----|-----|
+| 1   | "LD\_TNEWTON\_PRECOND" | "HR"      | 0.0048 | 3  | 120 |
+| 2   | "LD\_TNEWTON\_PRECOND" | "Oxboys"  | 0.0092 | 3  | 234 |
+| 3   | "LD\_TNEWTON\_PRECOND" | "Weights" | 0.0152 | 3  | 399 |
+1x5 DataFrame
+| Row | opt                          | dsname | time  | np | n   |
+|-----|------------------------------|--------|-------|----|-----|
+| 1   | "LD\_TNEWTON\_PRECOND\_RESTART" | "HR"   | 0.005 | 3  | 120 |
+1x5 DataFrame
+| Row | opt                  | dsname | time   | np | n   |
+|-----|----------------------|--------|--------|----|-----|
+| 1   | "LD\_TNEWTON\_RESTART" | "HR"   | 0.0052 | 3  | 120 |
+1x5 DataFrame
+| Row | opt       | dsname | time   | np | n   |
+|-----|-----------|--------|--------|----|-----|
+| 1   | "LD\_VAR1" | "HR"   | 0.0044 | 3  | 120 |
+1x5 DataFrame
+| Row | opt       | dsname | time   | np | n   |
+|-----|-----------|--------|--------|----|-----|
+| 1   | "LD\_VAR2" | "HR"   | 0.0044 | 3  | 120 |
+2x5 DataFrame
+| Row | opt         | dsname  | time   | np | n    |
+|-----|-------------|---------|--------|----|------|
+| 1   | "LN\_COBYLA" | "BIB"   | 0.0014 | 1  | 24   |
+| 2   | "LN\_COBYLA" | "Hsb82" | 0.018  | 1  | 7185 |
+3x5 DataFrame
+| Row | opt             | dsname      | time   | np | n   |
+|-----|-----------------|-------------|--------|----|-----|
+| 1   | "LN\_NELDERMEAD" | "BIB"       | 0.0015 | 1  | 24  |
+| 2   | "LN\_NELDERMEAD" | "Dyestuff2" | 0.0005 | 1  | 30  |
+| 3   | "LN\_NELDERMEAD" | "Oxboys"    | 0.0192 | 3  | 234 |
+1x5 DataFrame
+| Row | opt         | dsname  | time   | np | n      |
+|-----|-------------|---------|--------|----|--------|
+| 1   | "LN\_PRAXIS" | "Poems" | 5.3089 | 3  | 275996 |
+4x5 DataFrame
+| Row | opt        | dsname      | time    | np | n      |
+|-----|------------|-------------|---------|----|--------|
+| 1   | "LN\_SBPLX" | "d3"        | 75.8816 | 9  | 130418 |
+| 2   | "LN\_SBPLX" | "Demand"    | 0.0049  | 2  | 77     |
+| 3   | "LN\_SBPLX" | "dialectNL" | 1.4855  | 6  | 225866 |
+| 4   | "LN\_SBPLX" | "Dyestuff2" | 0.0006  | 1  | 30     |
+1x5 DataFrame
+| Row | opt               | dsname | time  | np | n    |
+|-----|-------------------|--------|-------|----|------|
+| 1   | "NLOPT\_LN\_COBYLA" | "SIMS" | 0.092 | 3  | 3691 |
+    \end{Verbatim}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
