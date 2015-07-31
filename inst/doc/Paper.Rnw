@@ -34,13 +34,15 @@
 %% The address of (at least) one author should be given
 %% in the following format:
 \Address{
-  Achim Zeileis\\
-  Department of Statistics and Mathematics\\
-  Faculty of Economics and Statistics\\
-  Universit\"at Innsbruck\\
-  6020 Innsbruck, Austria\\
-  E-mail: \email{Achim.Zeileis@uibk.ac.at}\\
-  URL: \url{http://eeecon.uibk.ac.at/~zeileis/}
+  Douglas Bates\\
+  Emeritus Professor\\
+  Department of Statistics\\
+  University of Wisconsin-Madison\\
+  1300 University Ave
+  Madison, WI 53706-1685
+  U.S.A.\\
+  E-mail: \email{dmbates@stat.wisc.edu}\\
+  Github URL: \url{https://github.com/dmbates}
 }
 %% It is also possible to add a telephone and fax number
 %% before the e-mail in the following format:
@@ -58,7 +60,11 @@
 %% include your article here, just as usual
 %% Note that you should use the \pkg{}, \proglang{} and \code{} commands.
 
-\section[About Java]{About \proglang{Java}}
+\section[Introduction]{Introduction}
 %% Note: If there is markup in \(sub)section, then it has to be escape as above.
+
+Mauris ac lectus sagittis, mollis diam porttitor, efficitur purus. Duis ut eros vitae dolor vulputate sagittis. Aenean viverra, dui in interdum consectetur, lectus elit placerat urna, dictum ultricies ex justo eget est. In at leo quam. Suspendisse eros nulla, gravida nec suscipit vel, egestas eget neque. Etiam pharetra, nisl nec viverra ultricies, mauris lectus facilisis velit, vel aliquam ipsum lorem ut sem. Nulla ornare, justo at tempus blandit, nulla urna porta ligula, id dictum mi est ac massa. Quisque at lacus neque. Pellentesque est nulla, dignissim eget lobortis ut, vehicula at erat. Aenean ornare lacus mattis, elementum elit vel, tempor risus. In in purus tempor lacus imperdiet rhoncus nec nec tortor. Duis sagittis nisl ante, id egestas neque tristique fermentum. Fusce aliquet, odio non auctor aliquet, purus orci venenatis purus, sit amet pulvinar nisi est at dolor. Pellentesque lobortis dui eros, et ultricies tellus ultrices at. Ut sit amet interdum justo. Integer placerat vehicula interdum. 
+
+
 
 \end{document}
