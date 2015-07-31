@@ -16,7 +16,8 @@
 
 %% an abstract and keywords
 \Abstract{
-  Donec pulvinar ligula vel sem finibus, vitae pulvinar metus tincidunt. Nam at arcu sem. Aenean in leo viverra, consectetur ex nec, malesuada lacus. Integer venenatis porta ullamcorper. Cras viverra lectus commodo porttitor dictum. Sed quis nulla rhoncus metus pretium vestibulum. Quisque ut scelerisque tellus, non egestas risus. Quisque finibus ligula id sem ultrices convallis. Vivamus maximus placerat nunc, ac posuere eros viverra quis. Donec magna urna, gravida in orci sed, sagittis congue magna. Duis nec nibh vel augue interdum iaculis a sit amet ipsum. Nunc lectus quam, varius sed sodales in, iaculis et diam. 
+The \pkg{Timings} package allows for the comparison of several optimizers, in both \proglang{R} and \proglang{Julia}, used in the fitting of various linear mixed models. In \proglang{R} the optimizers are called by lmer from the \pkg{lme4} package (version 1.1-8). In \proglang{Julia} the optimizers are called by lmm from \pkg{MixedModels} package.  From the \pkg{Timings} package, conclusions regarding an optimizers relative speed, accuracy and general effectiveness of different optimizers paired with different types of models (ranging from simple to complex) can easily be drawn and interpretted.  \\
+  There are differences in the model formulations in \pkg{lme4} and in \pkg{MixedModels}. The numerical representation of the model in \pkg{lme4} and the method of evaluating the optimizers, described in this paper, is the same for all models. In \pkg{MixedModels} there are specialized representations for some model forms, such as models with a single grouping factor for the random effects. Some of the specialized representations allow for evaluation of the gradient of the objects, which can enhance convergence (but, interestingly, sometimes can impede convergence).
 }
 \Keywords{optimizers, mixed models, linear mixed models, lme4, lmm, \proglang{R}, \proglang{Julia}}
 \Plainkeywords{optimizers, mixed models, linear mixed models, lme4, lmm} %% without formatting
@@ -65,6 +66,22 @@
 
 Mauris ac lectus sagittis, mollis diam porttitor, efficitur purus. Duis ut eros vitae dolor vulputate sagittis. Aenean viverra, dui in interdum consectetur, lectus elit placerat urna, dictum ultricies ex justo eget est. In at leo quam. Suspendisse eros nulla, gravida nec suscipit vel, egestas eget neque. Etiam pharetra, nisl nec viverra ultricies, mauris lectus facilisis velit, vel aliquam ipsum lorem ut sem. Nulla ornare, justo at tempus blandit, nulla urna porta ligula, id dictum mi est ac massa. Quisque at lacus neque. Pellentesque est nulla, dignissim eget lobortis ut, vehicula at erat. Aenean ornare lacus mattis, elementum elit vel, tempor risus. In in purus tempor lacus imperdiet rhoncus nec nec tortor. Duis sagittis nisl ante, id egestas neque tristique fermentum. Fusce aliquet, odio non auctor aliquet, purus orci venenatis purus, sit amet pulvinar nisi est at dolor. Pellentesque lobortis dui eros, et ultricies tellus ultrices at. Ut sit amet interdum justo. Integer placerat vehicula interdum. 
 
+\section[Methods]{Methods}
+
+Mauris ac lectus sagittis, mollis diam porttitor, efficitur purus. Duis ut eros vitae dolor vulputate sagittis. Aenean viverra, dui in interdum consectetur, lectus elit placerat urna, dictum ultricies ex justo eget est. In at leo quam. Suspendisse eros nulla, gravida nec suscipit vel, egestas eget neque. Etiam pharetra, nisl nec viverra ultricies, mauris lectus facilisis velit, vel aliquam ipsum lorem ut sem. Nulla ornare, justo at tempus blandit, nulla urna porta ligula, id dictum mi est ac massa. Quisque at lacus neque. Pellentesque est nulla, dignissim eget lobortis ut, vehicula at erat. Aenean ornare lacus mattis, elementum elit vel, tempor risus. In in purus tempor lacus imperdiet rhoncus nec nec tortor. Duis sagittis nisl ante, id egestas neque tristique fermentum. Fusce aliquet, odio non auctor aliquet, purus orci venenatis purus, sit amet pulvinar nisi est at dolor. Pellentesque lobortis dui eros, et ultricies tellus ultrices at. Ut sit amet interdum justo. Integer placerat vehicula interdum. 
+
+\section[Results]{Results}
+
+Nullam eget gravida justo. Proin lectus mauris, dictum vitae ultricies ut, accumsan sed nisi. Pellentesque quis nunc vestibulum, aliquam arcu eu, dapibus risus. Pellentesque lobortis nulla at posuere molestie. Etiam risus nisi, pellentesque a tortor at, porta mollis est. Curabitur nec ante eget felis pellentesque sagittis id in nulla. Vivamus sit amet accumsan lorem. Nam egestas ultrices nisi, volutpat rutrum tortor tincidunt ac. Ut ex nunc, ornare eget nibh quis, mollis aliquam dui. Sed tempor, sapien sed vestibulum malesuada, dolor est ullamcorper leo, at mollis erat nulla eget urna. Aenean risus leo, pellentesque sit amet pulvinar a, ultrices ut lacus. Sed id nunc tempus, commodo augue a, hendrerit nunc. Mauris et purus lorem. Praesent ornare, ipsum id bibendum placerat, arcu enim iaculis tellus, tincidunt rhoncus augue dui sed ex. Proin nunc nisl, lacinia quis tristique eget, tempor eu velit. 
+
+\subsection[Speed]{Speed}
+ Etiam placerat commodo dapibus. Vivamus a porta dui. Phasellus accumsan sollicitudin cursus. In nec lorem sit amet purus vulputate suscipit quis ac lectus. Aliquam sollicitudin malesuada blandit. Aliquam sed nisi accumsan, pulvinar diam eget, facilisis urna. Fusce a dignissim ipsum. Integer maximus, felis nec lobortis vulputate, nunc leo blandit sem, id suscipit velit leo in purus. Pellentesque vel arcu sit amet nulla tincidunt ornare. Mauris sodales lectus eget est laoreet lobortis. 
+
+\subsection[Reliablility]{Reliability}
+
+ Sed iaculis sodales elit quis vehicula. In et tristique neque, sodales aliquet metus. In posuere dictum nisl, quis laoreet augue congue a. Aenean in commodo neque, sit amet hendrerit ex. Aliquam id faucibus ante. Vivamus in fermentum nunc. Nam condimentum eros id orci pretium, quis aliquam magna eleifend. 
+
+\section[Conclusions]{Conclusions}
 
 
 \end{document}
