@@ -68,7 +68,125 @@ Mauris ac lectus sagittis, mollis diam porttitor, efficitur purus. Duis ut eros 
 
 \section[Methods]{Methods}
 
-Mauris ac lectus sagittis, mollis diam porttitor, efficitur purus. Duis ut eros vitae dolor vulputate sagittis. Aenean viverra, dui in interdum consectetur, lectus elit placerat urna, dictum ultricies ex justo eget est. In at leo quam. Suspendisse eros nulla, gravida nec suscipit vel, egestas eget neque. Etiam pharetra, nisl nec viverra ultricies, mauris lectus facilisis velit, vel aliquam ipsum lorem ut sem. Nulla ornare, justo at tempus blandit, nulla urna porta ligula, id dictum mi est ac massa. Quisque at lacus neque. Pellentesque est nulla, dignissim eget lobortis ut, vehicula at erat. Aenean ornare lacus mattis, elementum elit vel, tempor risus. In in purus tempor lacus imperdiet rhoncus nec nec tortor. Duis sagittis nisl ante, id egestas neque tristique fermentum. Fusce aliquet, odio non auctor aliquet, purus orci venenatis purus, sit amet pulvinar nisi est at dolor. Pellentesque lobortis dui eros, et ultricies tellus ultrices at. Ut sit amet interdum justo. Integer placerat vehicula interdum. 
+
+To provide consistency we have copied all the data sets used in the
+timings to the \pkg{Timings} package itself. We have done all timings
+on the same computer. This computer has a relatively recent Intel
+processor and we used the
+\href{https://software.intel.com/en-us/intel-mkl}{Intel Math Kernel
+Library (MKL)} with \proglang{Julia}. We attempted to use
+\href{www.revolutionanalytics.com/revolution-r-open}{Revolution R Open
+(RRO)} as the \proglang{R} implementation as it can be configured with \pkg{MKL}.
+However, we ran into version problems with this so we used the standard
+Ubuntu version of \proglang{R} linked against OpenBLAS, which is also
+multi-threaded.
+
+Variables were renamed in the pattern: 
+
+\begin{itemize}
+\item \textbf{Y} the response 
+\item \textbf{A}, \textbf{B}, \dots{} categorical covariates 
+\item \textbf{G},\textbf{H}, \textbf{I}, \dots{} grouping factors for random effects 
+\item \textbf{U}, \textbf{V}, \dots{} (skipping \textbf{Y}) continuous covariates
+\end{itemize}
+
+
+The timing results are saved in \href{http://json.org}{JSON (JavaScript
+Object Notation)} files in the directory accessible as
+
+<<eval=FALSE>>=
+system.file("JSON",package="Timings")
+@
+
+within \pkg{R}. The directory name will end with
+\texttt{./Timings/inst/JSON/} in the package source directory, for
+example the result of cloning the
+\href{https://github.com/Stat990-033/Timings}{github repository}. There
+is one \texttt{.json} file for each data set. Each such file contains
+results on timings of one or more models.
+
+The \pkg{Timings} package for \proglang{R} provides a \texttt{retime}
+function that takes the name of one of these JSON files and, optionally,
+the name of a file with the updated timings. Similarly there are some
+source files for Julia retimings.
+
+%    \begin{Verbatim}[commandchars=\\\{\}]
+%{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../julia%%/retime.jl}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+%        \PY{n}{retime}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../JSON/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p%}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{/tmp/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+%       \PY{n}{retime}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../JSON/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}%{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{/tmp/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+%\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+dsname => "Alfalfa"
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+        `parse` has no method matching parse(::Int64)
+    while loading In[1], in expression starting on line 2
+
+        
+
+         in retime at /home/bates/git/Timings/inst/julia/retime.jl:17
+
+    \end{Verbatim}
+
+    The timing was repeated so that compilation time is not included in the
+results. This repetition is only needed once per session.
+
+A careful examination of these results shows that the main differences
+in the Julia timings (the R timings are merely reported, not evaluated)
+are that the \texttt{LN\_BOBYQA} and \texttt{LD\_MMA} optimizers are
+much faster in the second run. This is because much of the code needs to
+be compiled the first time that a derivative-free optimizer and a
+derivative-based optimizer are used.
+
+The names of the optimizers used with \texttt{lmm} are those from the
+\href{https://github.com/JuliaOpt/NLopt.jl}{NLopt package} for
+\textbf{Julia}. Names that begin with \texttt{LD\_} are gradient-based
+methods. Names that begin with \texttt{LN\_} are derivative-free
+methods. There is one other derivative-free method, \texttt{LN\_PRAXIS},
+available in the \texttt{NLopt} package but, for some reason, it can
+hang on very simple problems like this. Frequently we omit it.
+
+The optimizers used with \texttt{lmer} include the \texttt{Nelder\_Mead}
+optimizer built into the \texttt{lme4} package, the \texttt{bobyqa}
+optimizer from the
+\href{http://cran.rstudio.com/web/packages/minqa/index.html}{minqa
+package}, the derivative-free optimizers from the
+\href{http://cran.rstudio.com/web/packages/nloptr/index.html}{nloptr
+package} and several optimizers from the
+\href{http://cran.rstudio.com/web/packages/optimx/index.html}{optimx
+pacakge}.
+
+The \texttt{optimx:bobyqa} optimizer is just a wrapper around
+\texttt{bobyqa} (bounded optimization by quadratic approximation) from
+the \texttt{minqa} package and should provide results similar to those
+from the \texttt{bobyqa} optimizer. For some reason the number of
+function evaluations is not reported for the version in \texttt{optimx}.
+
+The optimizers from \texttt{nloptr} (i.e.~those whose names begin with
+\texttt{NLOPT\_LN\_}) use the same underlying code as do the similarly
+named optimizers in the \texttt{NLopt} package for \textbf{Julia}. The
+number of iterations to convergence should be similar for the same
+underlying code, although not nessarily exactly the same because the
+evaluation of the objective in \textbf{R} and in \textbf{Julia} may
+produce slightly different answers. Also the convergence criteria in the
+\textbf{Julia} version are more strict than those in the \textbf{R}
+version
+
+Also shown are the value of the criterion (negative twice the
+log-likelihood, lower is better) achieved, the elapsed time and the
+number of function and gradient evaluations. The \texttt{nopt} value is
+the number of parameters in the optimization problem. \texttt{mtype} is
+the model type in the \textbf{Julia} code. There are special methods for
+solving the penalized least squares (PLS) problem, and for evaluating
+the objective and its gradient when there is only one grouping factor
+for the random effects. The model type is called \texttt{PLSOne}.
+
+The \texttt{Alfalfa} example is a particularly easy one and all of the
+optimizerws converge to an objective value close to -10.81023 in less
+than 0.6 seconds.
 
 \section[Results]{Results}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  31 JUL 2015 13:33
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  3 AUG 2015 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,56 +428,87 @@ Underfull \vbox (badness 2165) has occurred while \output is active []
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./jsslo
 go.jpg>]
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 87.
+
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/ts1aer.fd
+File: ts1aer.fd 
+)
+LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 87.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 98.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 127
+.
+
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/ts1aett.fd
+File: ts1aett.fd 
+)
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 127
+.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <10.95> not available
+(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 127.
 LaTeX Font Info:    Font shape `T1/aer/b/sl' in size <10.95> not available
-(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 83.
+(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 145.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 2 []
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 87.
- (/usr/local/texlive/2010/texmf-dist/tex/latex/ae/t1aett.fd
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 87.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
-
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 3
  []
 
 [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 207.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 4 []
+ []
+
+[4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: DD58674DA9EB9D097B14CA5D6F406FE7;384.
  ) 
 Here is how much of TeX's memory you used:
- 6370 strings out of 493747
- 94383 string characters out of 3143546
- 167194 words of memory out of 3000000
- 9486 multiletter control sequences out of 15000+200000
- 49526 words of font info for 84 fonts, out of 3000000 for 9000
+ 6427 strings out of 493747
+ 95655 string characters out of 3143546
+ 169194 words of memory out of 3000000
+ 9527 multiletter control sequences out of 15000+200000
+ 52783 words of font info for 91 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,9n,34p,1028b,306s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/local/tex
-live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texl
-ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texli
-ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/local/texl
-ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/te
+xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive
 /2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/
 2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
 010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
-10/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Paper.pdf (3 pages, 152868 bytes).
+10/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2010
+/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2010/t
+exmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on Paper.pdf (4 pages, 201572 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 17 named destinations out of 1000 (max. 500000)
  54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
