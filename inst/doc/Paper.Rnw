@@ -203,9 +203,13 @@ res = optdir("../JSON");
   | 9   | "LD\_CCSAQ" | "Cultivation"   | 24     | 1  | 0.0     | 0.0009  | 15.6477|
   | 10  | "LD\_CCSAQ" | "Demand"        | 77     | 2  | 3.21928 | 0.0055  | 22.0827|
   | 11  | "LD\_CCSAQ" | "dialectNL"     | 225866 | 6  | 0.0     | 6.9896  | 3.942|
-  .
-  .
-  .
+  | 12  | "LD\_CCSAQ" | "Dyestuff2"     | 30     | 1  | 0.0     | 0.0005  | 0.682|
+  | 13  | "LD\_CCSAQ" | "Dyestuff"      | 30     | 1  | 0.0     | 0.0008  | 1.0184|
+  | 14  | "LD\_CCSAQ" | "ergoStool"     | 36     | 1  | 0.0     | 0.0012  | 1.1018|
+  | 15  | "LD\_CCSAQ" | "Exam"          | 4059   | 1  | 0.0     | 0.0105  | 1.1851|
+  | 16  | "LD\_CCSAQ" | "Exam"          | 4059   | 1  | 0.0     | 0.0105  | 1.318|
+  | 17  | "LD\_CCSAQ" | "Gasoline"      | 32     | 1  | 0.0     | 0.0011  | 0.8193|
+  | 18  | "LD\_CCSAQ" | "gb12"          | 225866 | 6  | 0.0     | 3.5221  | 17.4791|
   | 19  | "LD\_CCSAQ" | "gb12"          | 512    | 8  | 103.176 | 0.0218  | 13.1358|
   | 20  | "LD\_CCSAQ" | "HR"            | 120    | 3  | 0.0     | 0.0089  | 8.6481|
   | 21  | "LD\_CCSAQ" | "Hsb82"         | 7185   | 1  | 192.73  | 0.0102  | 3.7438|
@@ -221,6 +225,47 @@ res = optdir("../JSON");
   
 \end{verbatim}
 
+The \texttt{time} column is the time in seconds to converge. The
+\texttt{reltime} column is the time relative to the \texttt{LN\_BOBYQA}
+optimizer in the \pkg{MixedModels} package for \proglang{Julia}.
+
+For \proglang{Julia} the time column is the time in seconds to converge. The reltime column is the time relative to the LN_BOBYQA optimizer in the \pkg{MixedModels} package for \proglang{Julia}.
+
+%%% Note that because of this table, rstudio cannot compile pdf because of margins,
+% but pdf is still available (and compiled properly) as seperate file.
+\begin{verbatim}
+| Row | opt               | dsname          | n      | np | excess | time   | reltime|
+|-----|-------------------|-----------------|--------|----|--------|--------| ----|
+| 1|"NLOPT\_LN\_BOBYQA" | "Alfalfa"      | 72     | 1  | 0.0    | 0.042  | 27.5171|
+| 2|"NLOPT\_LN\_BOBYQA" | "Animal"       | 20     | 2  | 0.0    | 0.023  |13.9236|
+| 3|"NLOPT\_LN\_BOBYQA" | "Assay"        | 60     | 2  | 1.0e-5 | 0.032  |10.8009|
+| 4|"NLOPT\_LN\_BOBYQA" | "AvgDailyGain" | 32     | 1  | 0.0    | 0.02   |11.7005|
+| 5|"NLOPT\_LN\_BOBYQA" | "AvgDailyGain" | 32     | 1  | 0.0    | 0.02   |13.6969|
+| 6|"NLOPT\_LN\_BOBYQA" | "BIB"          | 24     | 1  | 0.0    | 0.02   |12.608|
+| 7|"NLOPT\_LN\_BOBYQA" | "Bond"         | 21     | 1  | 0.0    | 0.02   |23.2699
+| 8|"NLOPT\_LN\_BOBYQA" | "bs10"         | 1104   | 20 | 1.0e-5 | 4.661  |18.8753|
+| 9|"NLOPT\_LN\_BOBYQA" | "bs10"         | 1104   | 8  | 0.0    | 1.057  |15.6477|
+| 10|"NLOPT\_LN\_BOBYQA" | "cake"        | 270    | 1  | 0.0    | 0.053  |22.0827
+| 11|"NLOPT\_LN\_BOBYQA" | "Chem97"      | 31022  | 2  | 0.0    | 0.632  |3.942|
+.
+.
+.
+| 38|"NLOPT\_LN\_BOBYQA" | "PBIB"        | 60     | 1  | 0.0    | 0.018  |13.1358|
+| 39|"NLOPT\_LN\_BOBYQA" | "Penicillin"  | 144    | 2  | 0.0    | 0.023  |8.6481|
+| 40|"NLOPT\_LN\_BOBYQA" | "Poems"       | 275996 | 3  | 0.0    | 21.309 |3.7438|
+| 41|"NLOPT\_LN\_BOBYQA" | "ScotsSec"    | 3435   | 2  | 0.0    | 0.076  |5.0422|
+| 42|"NLOPT\_LN\_BOBYQA" | "Semi2"       | 72     | 3  | 0.0    | 0.03   |9.2732|
+| 43|"NLOPT\_LN\_BOBYQA" | "Semiconductor"| 48     | 1  | 0.0    | 0.019  |15.9582|
+| 44|"NLOPT\_LN\_BOBYQA" | "SIMS"        | 3691   | 3  | 0.0    | 0.15   |1.1034|
+| 45|"NLOPT\_LN\_BOBYQA" | "sleepstudy"  | 180    | 3  | 0.0    | 0.037  |5.3039|
+| 46|"NLOPT\_LN\_BOBYQA" | "sleepstudy"  | 180    | 2  | 0.0    | 0.024  |15.3763|
+| 47|"NLOPT\_LN\_BOBYQA" | "TeachingII"  | 96     | 1  | 0.0    | 0.021  |1.133|
+| 48|"NLOPT\_LN\_BOBYQA" | "Weights"     | 399    | 3  | 1.0e-5 | 0.039  |5.3039|
+| 49|"NLOPT\_LN\_BOBYQA" | "WWheat"      | 60     | 3  | 0.0    | 0.025  |2.3154|
+\end{verbatim}
+
+
+
 
 
 \subsection[Convergence]{Proportion Converged}
@@ -235,5 +280,8 @@ res = optdir("../JSON");
 \section[References]{References}
 
 Note all optimization packages used, lmm, lme4, jsonlite, 
+
+
+
 
 \end{document}
