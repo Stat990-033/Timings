@@ -108,78 +108,62 @@ results on timings of one or more models.
 The \pkg{Timings} package for \proglang{R} provides a \texttt{retime}
 function that takes the name of one of these JSON files and, optionally,
 the name of a file with the updated timings. Similarly there are some
-source files for Julia retimings.
+source files for \pkg{Julia} retimings.
 
-%    \begin{Verbatim}[commandchars=\\\{\}]
-%{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../julia%%/retime.jl}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-%        \PY{n}{retime}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../JSON/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p%}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{/tmp/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
-%       \PY{n}{retime}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{../JSON/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}%{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{/tmp/Alfalfa.json}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
-%\end{Verbatim}
+<<eval=FALSE>>=
+include("../julia/retime.jl")
+retime("../JSON/Alfalfa.json","/tmp/Alfalfa.json")
+retime("../JSON/Alfalfa.json","/tmp/Alfalfa.json")
+@
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-dsname => "Alfalfa"
-    \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
+INCLUDE SUMMARY TABLE USING res.rda
 
-        `parse` has no method matching parse(::Int64)
-    while loading In[1], in expression starting on line 2
-
-        
-
-         in retime at /home/bates/git/Timings/inst/julia/retime.jl:17
-
-    \end{Verbatim}
-
-    The timing was repeated so that compilation time is not included in the
+  The timing was repeated so that compilation time is not included in the
 results. This repetition is only needed once per session.
 
 A careful examination of these results shows that the main differences
-in the Julia timings (the R timings are merely reported, not evaluated)
+in the \pkg{Julia} timings (the \pkg{R} timings are merely reported, not evaluated)
 are that the \texttt{LN\_BOBYQA} and \texttt{LD\_MMA} optimizers are
 much faster in the second run. This is because much of the code needs to
 be compiled the first time that a derivative-free optimizer and a
 derivative-based optimizer are used.
 
 The names of the optimizers used with \texttt{lmm} are those from the
-\href{https://github.com/JuliaOpt/NLopt.jl}{NLopt package} for
-\textbf{Julia}. Names that begin with \texttt{LD\_} are gradient-based
+\pkg{NLopt} package for \proglang{Julia}. Names that begin with \texttt{LD\_} are gradient-based
 methods. Names that begin with \texttt{LN\_} are derivative-free
 methods. There is one other derivative-free method, \texttt{LN\_PRAXIS},
-available in the \texttt{NLopt} package but, for some reason, it can
+available in the \pkg{NLopt} package but, for some reason, it can
 hang on very simple problems like this. Frequently we omit it.
 
 The optimizers used with \texttt{lmer} include the \texttt{Nelder\_Mead}
-optimizer built into the \texttt{lme4} package, the \texttt{bobyqa}
+optimizer built into the \pkg{lme4} package, the \texttt{bobyqa}
 optimizer from the
-\href{http://cran.rstudio.com/web/packages/minqa/index.html}{minqa
-package}, the derivative-free optimizers from the
-\href{http://cran.rstudio.com/web/packages/nloptr/index.html}{nloptr
-package} and several optimizers from the
-\href{http://cran.rstudio.com/web/packages/optimx/index.html}{optimx
-pacakge}.
+\pkg{minqa} package, the derivative-free optimizers from the
+\pkg{nloptr} package and several optimizers from the
+\pkg{optimx} pacakge.
 
 The \texttt{optimx:bobyqa} optimizer is just a wrapper around
 \texttt{bobyqa} (bounded optimization by quadratic approximation) from
-the \texttt{minqa} package and should provide results similar to those
+the \pkg{minqa} package and should provide results similar to those
 from the \texttt{bobyqa} optimizer. For some reason the number of
-function evaluations is not reported for the version in \texttt{optimx}.
+function evaluations is not reported for the version in \pkg{optimx}.
 
-The optimizers from \texttt{nloptr} (i.e.~those whose names begin with
+The optimizers from \pkg{nloptr} (i.e.~those whose names begin with
 \texttt{NLOPT\_LN\_}) use the same underlying code as do the similarly
-named optimizers in the \texttt{NLopt} package for \textbf{Julia}. The
+named optimizers in the \pkg{NLopt} package for \proglang{Julia}. The
 number of iterations to convergence should be similar for the same
 underlying code, although not nessarily exactly the same because the
-evaluation of the objective in \textbf{R} and in \textbf{Julia} may
+evaluation of the objective in \proglang{R} and in \proglang{Julia} may
 produce slightly different answers. Also the convergence criteria in the
-\textbf{Julia} version are more strict than those in the \textbf{R}
+\proglang{Julia} version are more strict than those in the \proglang{R}
 version
 
 Also shown are the value of the criterion (negative twice the
 log-likelihood, lower is better) achieved, the elapsed time and the
 number of function and gradient evaluations. The \texttt{nopt} value is
 the number of parameters in the optimization problem. \texttt{mtype} is
-the model type in the \textbf{Julia} code. There are special methods for
+the model type in the \proglang{Julia} code. There are special methods for
 solving the penalized least squares (PLS) problem, and for evaluating
 the objective and its gradient when there is only one grouping factor
 for the random effects. The model type is called \texttt{PLSOne}.
@@ -190,9 +174,56 @@ than 0.6 seconds.
 
 \section[Results]{Results}
 
-Nullam eget gravida justo. Proin lectus mauris, dictum vitae ultricies ut, accumsan sed nisi. Pellentesque quis nunc vestibulum, aliquam arcu eu, dapibus risus. Pellentesque lobortis nulla at posuere molestie. Etiam risus nisi, pellentesque a tortor at, porta mollis est. Curabitur nec ante eget felis pellentesque sagittis id in nulla. Vivamus sit amet accumsan lorem. Nam egestas ultrices nisi, volutpat rutrum tortor tincidunt ac. Ut ex nunc, ornare eget nibh quis, mollis aliquam dui. Sed tempor, sapien sed vestibulum malesuada, dolor est ullamcorper leo, at mollis erat nulla eget urna. Aenean risus leo, pellentesque sit amet pulvinar a, ultrices ut lacus. Sed id nunc tempus, commodo augue a, hendrerit nunc. Mauris et purus lorem. Praesent ornare, ipsum id bibendum placerat, arcu enim iaculis tellus, tincidunt rhoncus augue dui sed ex. Proin nunc nisl, lacinia quis tristique eget, tempor eu velit. 
+For the \texttt{Alfalfa} data there is not much of a burden in refitting
+the model with all the \textbf{Julia} optimizers just to get the table
+shown above. But other examples can take an hour or more to converge and
+we don't really need to refit them every time. The \texttt{tabulate.jl}
+file contains a function \texttt{optdir} to create a \texttt{DataFrame}
+from the results of all the model fits.
 
-\subsection[Speed]{Speed}
+<<eval=FALSE>>=
+include("../julia/tabulate.jl")
+res = optdir("../JSON");
+
+@
+
+
+
+\begin{verbatim}
+  | Row | opt        | dsname          | n      | np | excess  | time    | reltime|    
+  |-----|------------|-----------------|--------|----|---------|---------|-------|
+  | 1   | "LD\_CCSAQ" | "Alfalfa"       | 72     | 1  | 0.0     | 0.0017  | 27.5171|
+  | 2   | "LD\_CCSAQ" | "AvgDailyGain"  | 32     | 1  | 0.0     | 0.0014  | 13.9236|
+  | 3   | "LD\_CCSAQ" | "AvgDailyGain"  | 32     | 1  | 0.0     | 0.0014  | 10.8009|
+  | 4   | "LD\_CCSAQ" | "BIB"           | 24     | 1  | 0.0     | 0.0013  | 11.7005|
+  | 5   | "LD\_CCSAQ" | "Bond"          | 21     | 1  | 0.0     | 0.0009  | 13.6969|
+  | 6   | "LD\_CCSAQ" | "bs10"          | 1104   | 20 | 0.0     | 1.0958  | 12.608|
+  | 7   | "LD\_CCSAQ" | "bs10"          | 1104   | 8  | 39.9948 | 0.0375  | 23.2699|
+  | 8   | "LD\_CCSAQ" | "cake"          | 270    | 1  | 0.0     | 0.0033  | 18.8753|
+  | 9   | "LD\_CCSAQ" | "Cultivation"   | 24     | 1  | 0.0     | 0.0009  | 15.6477|
+  | 10  | "LD\_CCSAQ" | "Demand"        | 77     | 2  | 3.21928 | 0.0055  | 22.0827|
+  | 11  | "LD\_CCSAQ" | "dialectNL"     | 225866 | 6  | 0.0     | 6.9896  | 3.942|
+  .
+  .
+  .
+  | 19  | "LD\_CCSAQ" | "gb12"          | 512    | 8  | 103.176 | 0.0218  | 13.1358|
+  | 20  | "LD\_CCSAQ" | "HR"            | 120    | 3  | 0.0     | 0.0089  | 8.6481|
+  | 21  | "LD\_CCSAQ" | "Hsb82"         | 7185   | 1  | 192.73  | 0.0102  | 3.7438|
+  | 22  | "LD\_CCSAQ" | "IncBlk"        | 24     | 1  | 0.55726 | 0.001   | 5.0422|
+  | 23  | "LD\_CCSAQ" | "kb07"          | 1790   | 72 | 8.20739 | 17.4698 | 9.2732|
+  | 24  | "LD\_CCSAQ" | "Mississippi"   | 37     | 1  | 0.93471 | 0.0006  | 15.9582|
+  | 25  | "LD\_CCSAQ" | "mm0"           | 69588  | 6  | 0.0     | 4.8286  | 1.1034|
+  | 26  | "LD\_CCSAQ" | "Oxboys"        | 234    | 3  | 136.788 | 0.0169  | 5.3039|
+  | 27  | "LD\_CCSAQ" | "PBIB"          | 60     | 1  | 0.0     | 0.0014  | 8.6177|
+  | 28  | "LD\_CCSAQ" | "Penicillin"    | 144    | 2  | 0.0     | 0.0131  | 15.3763|
+  | 29  | "LD\_CCSAQ" | "Semiconductor" | 48     | 1  | 0.0     | 0.0012  | 1.133|
+  | 30  | "LD\_CCSAQ" | "SIMS"          | 3691   | 3  | 3.60856 | 0.134   | 2.3154|
+  
+\end{verbatim}
+
+
+
+\subsection[Convergence]{Proportion Converged}
  Etiam placerat commodo dapibus. Vivamus a porta dui. Phasellus accumsan sollicitudin cursus. In nec lorem sit amet purus vulputate suscipit quis ac lectus. Aliquam sollicitudin malesuada blandit. Aliquam sed nisi accumsan, pulvinar diam eget, facilisis urna. Fusce a dignissim ipsum. Integer maximus, felis nec lobortis vulputate, nunc leo blandit sem, id suscipit velit leo in purus. Pellentesque vel arcu sit amet nulla tincidunt ornare. Mauris sodales lectus eget est laoreet lobortis. 
 
 \subsection[Reliablility]{Reliability}
@@ -201,5 +232,8 @@ Nullam eget gravida justo. Proin lectus mauris, dictum vitae ultricies ut, accum
 
 \section[Conclusions]{Conclusions}
 
+\section[References]{References}
+
+Note all optimization packages used, lmm, lme4, jsonlite, 
 
 \end{document}
