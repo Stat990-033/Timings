@@ -237,7 +237,8 @@ optimizer in the \pkg{MixedModels} package for \proglang{Julia}.
 
 For \proglang{Julia} the time column is the time in seconds to converge. The reltime column is the time relative to the LN_BOBYQA optimizer in the \pkg{MixedModels} package for \proglang{Julia}.
 
-
+%%% Note that because of this table, rstudio cannot compile pdf because of margins,
+% but pdf is still available (and compiled properly) as seperate file.
 \begin{verbatim}
 | Row | opt               | dsname          | n      | np | excess | time   | reltime|
 |-----|-------------------|-----------------|--------|----|--------|--------| ----|
@@ -274,7 +275,160 @@ For \proglang{Julia} the time column is the time in seconds to converge. The rel
 
 
 \subsection[Convergence]{Proportion Converged}
- Etiam placerat commodo dapibus. Vivamus a porta dui. Phasellus accumsan sollicitudin cursus. In nec lorem sit amet purus vulputate suscipit quis ac lectus. Aliquam sollicitudin malesuada blandit. Aliquam sed nisi accumsan, pulvinar diam eget, facilisis urna. Fusce a dignissim ipsum. Integer maximus, felis nec lobortis vulputate, nunc leo blandit sem, id suscipit velit leo in purus. Pellentesque vel arcu sit amet nulla tincidunt ornare. Mauris sodales lectus eget est laoreet lobortis. 
+
+
+
+The most important question regarding the optimizers is whether or not they have converged to the global optimum. We cannot test this directly. Instead we use a "crowd-sourced" criterion based on the minimum objective achieved by any of the algorithms. The difference between the objective achieved by a particular algorithm and this minimum is called the excess. In the summaries \texttt{excess} is rounded to 5 digits after the decimal so the minimum non-zero \texttt{excess} is $10^{-5}$.
+
+
+ \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}4}]:} 49x3 DataFrame
+        | Row | opt         | dsname          | excess |
+        |-----|-------------|-----------------|--------|
+        | 1   | "LN\_BOBYQA" | "Alfalfa"       | 0.0    |
+        | 2   | "LN\_BOBYQA" | "Animal"        | 0.0    |
+        | 3   | "LN\_BOBYQA" | "Assay"         | 0.0    |
+        | 4   | "LN\_BOBYQA" | "AvgDailyGain"  | 0.0    |
+        | 5   | "LN\_BOBYQA" | "AvgDailyGain"  | 0.0    |
+        | 6   | "LN\_BOBYQA" | "BIB"           | 0.0    |
+        | 7   | "LN\_BOBYQA" | "Bond"          | 0.0    |
+        | 8   | "LN\_BOBYQA" | "bs10"          | 1.0e-5 |
+        | 9   | "LN\_BOBYQA" | "bs10"          | 0.0    |
+        | 10  | "LN\_BOBYQA" | "cake"          | 0.0    |
+        | 11  | "LN\_BOBYQA" | "Chem97"        | 0.0    |
+        \end{verbatim}
+        \vdots
+        \begin{verbatim}
+        | 38  | "LN\_BOBYQA" | "PBIB"          | 0.0    |
+        | 39  | "LN\_BOBYQA" | "Penicillin"    | 0.0    |
+        | 40  | "LN\_BOBYQA" | "Poems"         | 0.0    |
+        | 41  | "LN\_BOBYQA" | "ScotsSec"      | 0.0    |
+        | 42  | "LN\_BOBYQA" | "Semi2"         | 0.0    |
+        | 43  | "LN\_BOBYQA" | "Semiconductor" | 0.0    |
+        | 44  | "LN\_BOBYQA" | "SIMS"          | 0.0    |
+        | 45  | "LN\_BOBYQA" | "sleepstudy"    | 0.0    |
+        | 46  | "LN\_BOBYQA" | "sleepstudy"    | 0.0    |
+        | 47  | "LN\_BOBYQA" | "TeachingII"    | 0.0    |
+        | 48  | "LN\_BOBYQA" | "Weights"       | 0.0    |
+        | 49  | "LN\_BOBYQA" | "WWheat"        | 0.0    |
+\end{Verbatim}
+
+
+  If we wish to declare ``converged'' or ``not converged'' according to
+the excess objective value we must establish a threshold. An absolute
+threshold seems reasonable because the objective, negative twice the
+log-likelihood, is on a scale where differences in this objective are
+compared to a $\chi^2$ random variable. Thus an excess of $10^{-9}$ or
+even $10^{-5}$ is negligible.
+
+For each optimizer we can examine which of the data set/model
+combinations resulted in an excess greater than a threshold.
+
+
+            \begin{Verbatim}
+        | Row | opt                          | attempted | failed |
+        |-----|------------------------------|-----------|--------|
+        | 1   | "LD\_CCSAQ"                   | 35        | 11     |
+        | 2   | "LD\_LBFGS"                   | 35        | 11     |
+        | 3   | "LD\_MMA"                     | 36        | 5      |
+        | 4   | "LD\_SLSQP"                   | 35        | 4      |
+        | 5   | "LD\_TNEWTON"                 | 34        | 8      |
+        | 6   | "LD\_TNEWTON\_PRECOND"         | 34        | 8      |
+        | 7   | "LD\_TNEWTON\_PRECOND\_RESTART" | 33        | 12     |
+        | 8   | "LD\_TNEWTON\_RESTART"         | 34        | 11     |
+        | 9   | "LD\_VAR1"                    | 35        | 10     |
+        | 10  | "LD\_VAR2"                    | 35        | 10     |
+        | 11  | "LN\_BOBYQA"                  | 49        | 0      |
+        ⋮
+        | 15  | "LN\_SBPLX"                   | 49        | 2      |
+        | 16  | "NLOPT\_LN\_BOBYQA"            | 49        | 0      |
+        | 17  | "NLOPT\_LN\_COBYLA"            | 48        | 2      |
+        | 18  | "NLOPT\_LN\_NELDERMEAD"        | 47        | 6      |
+        | 19  | "NLOPT\_LN\_PRAXIS"            | 18        | 4      |
+        | 20  | "NLOPT\_LN\_SBPLX"             | 48        | 2      |
+        | 21  | "Nelder\_Mead"                | 49        | 8      |
+        | 22  | "bobyqa"                     | 49        | 2      |
+        | 23  | "optimx:L-BFGS-B"            | 49        | 0      |
+        | 24  | "optimx:bobyqa"              | 49        | 2      |
+        | 25  | "optimx:nlminb"              | 49        | 0      |
+        | 26  | "optimx:spg"                 | 49        | 4      |
+\end{verbatim}
+
+    At this threshold the most reliable algorithm in Julia is
+\texttt{LN\_BOBYQA}. In \proglang{R} the most reliable algorithms are
+\texttt{NLOPT\_LN\_BOBYQA}, \texttt{optimx:L-BFGS-B} and
+\texttt{optimx:nlminb}. It is interesting that nlminb is reliable as I
+felt that it wasn't converging well when it was the default optimizer in
+\pkg{lmer}.
+
+Interestingly, the derviative-based algorithms in \texttt{NLopt} were
+not as reliable as the derivative-free algorithms. The most likely
+explanation is that I don't have the gradient coded properly.
+
+The Nelder-Mead simplex algorithm did not perform well, failing on 8 out
+of 48 cases. For many of these the value at which convergence was
+declared was far from the optimum.
+
+
+
+\begin{verbatim}
+| Row | opt           | dsname        | excess  | time    | reltime | np | n|
+|-----|---------------|---------------|---------|---------|---------|----|--|
+| 1   | "Nelder\_Mead" | "bs10"        | 71.3859 | 145.368 | 588.684 | 20 |1104|
+| 2   | "Nelder\_Mead" | "d3"          | 317.59  | 454.519 | 4.2502  | 9  |130418|
+| 3   | "Nelder\_Mead" | "dialectNL"   | 181.632 | 54.541  | 31.1594 | 6  |225866|
+| 4   | "Nelder\_Mead" | "gb12"        | 78.7119 | 38.206  | 189.605 | 20 |512|
+| 5   | "Nelder\_Mead" | "kb07"        | 398.732 | 2825.46 | 667.015 | 72 |1790|
+| 6   | "Nelder\_Mead" | "kb07"        | 403.478 | 269.436 | 383.087 | 16 |1790|
+| 7   | "Nelder\_Mead" | "Mississippi" | 0.04272 | 0.018   | 20.3989 | 1  |37|
+| 8   | "Nelder\_Mead" | "mm0"         | 181.632 | 76.87   | 70.0716 | 6  |69588|  
+\end{verbatim}
+
+ The \texttt{Nelder\_Mead} algorithm, either in the native form in
+\pkg{lmer} or in the \texttt{NLopt} implementation performed poorly
+on those cases with many parameters to optimize. It was both unreliable
+and slow, taking over 45 minutes to reach a spurious optimum on the
+``maximal'' model (in the sense of Barr et al., 2012) for the
+\texttt{kb07} data from Kronmueller and Barr (2007). This is not
+terribly surprising given that the model is horribly overparameterized,
+but still it shows that this algorithm is not a good choice in these
+cases.
+
+We note in passing that all the models involving fitting 20 or more
+parameters are ``maximal'' models in the sense of Barr et al., 2012.
+Such models can present difficult optimization problems because they are
+severely overparameterized and inevitably converge on the boundary of
+the allowable parameter space. Whether or not it is sensible to compare
+results on such extreme cases is not clear.
+
+The \texttt{SBPLX} (subplex) algorithm, which is an enhancement of
+\texttt{Nelder\_Mead}, does better in these cases but is still rather
+slow.
+
+
+ \begin{verbatim}
+        | Row | opt              | dsname | excess  | time    | reltime | np | n    |
+        |-----|------------------|--------|---------|---------|---------|----|------|
+        | 1   | "NLOPT\_LN\_SBPLX" | "gb12" | 0.82219 | 3.813   | 18.9228 | 20 | 512  |
+        | 2   | "NLOPT\_LN\_SBPLX" | "kb07" | 4.96546 | 564.688 | 133.308 | 72 | 1790 |
+\end{verbatim}
+
+  
+    By comparison, the \texttt{LN\_BOBYQA} algorithm converges quite rapidly
+on the \texttt{kb07} models.
+
+
+\begin{Verbatim}
+        | Row | dsname | excess  | objective | time   | np |
+        |-----|--------|---------|-----------|--------|----|
+        | 1   | "kb07" | 0.01695 | 28586.3   | 4.236  | 72 |
+        | 2   | "kb07" | 0.0     | 28670.9   | 0.7033 | 16 |
+\end{Verbatim}
+        
+        
+        
+        
+
 
 \subsection[Reliablility]{Reliability}
 
