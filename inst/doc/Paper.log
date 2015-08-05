@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  3 AUG 2015 21:57
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  4 AUG 2015 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -329,7 +329,25 @@ Package hyperref Warning: Option `hyperindex' has already been used,
 Package hyperref Info: Option `colorlinks' set `true' on input line 444.
 Package hyperref Info: Option `linktocpage' set `true' on input line 444.
 Package hyperref Info: Option `plainpages' set `false' on input line 444.
-) (./Paper.aux)
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count100
+\LTcapwidth=\dimen108
+\LT@head=\box27
+\LT@firsthead=\box28
+\LT@foot=\box29
+\LT@lastfoot=\box30
+\LT@cols=\count101
+\LT@rows=\count102
+\c@LT@tables=\count103
+\c@LT@chunks=\count104
+\LT@p@ftn=\toks16
+)
+(./Paper.aux)
 \openout1 = `Paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -355,16 +373,16 @@ LaTeX Font Info:    ... okay on input line 59.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
-\scratchdimen=\dimen108
-\scratchbox=\box27
-\nofMPsegments=\count101
-\nofMParguments=\count102
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count103
-\MPscratchDim=\dimen109
-\MPnumerator=\count104
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count105
+\scratchdimen=\dimen109
+\scratchbox=\box31
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen110
+\MPnumerator=\count109
+\everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -380,7 +398,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box28
+\AtBeginShipoutBox=\box32
 Package hyperref Info: Link coloring ON on input line 59.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -392,7 +410,7 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 )
-\c@section@level=\count105
+\c@section@level=\count110
 )
 LaTeX Info: Redefining \ref on input line 59.
 LaTeX Info: Redefining \pageref on input line 59.
@@ -428,226 +446,31 @@ Underfull \vbox (badness 2165) has occurred while \output is active []
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./jsslo
 go.jpg>]
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 87.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 90.
 
 (/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 87.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 98.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 90.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 101.
+
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 LaTeX Font Info:    Font shape `T1/aer/b/sl' in size <10.95> not available
-(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 142.
+(Font)              Font shape `T1/aer/bx/sl' tried instead on input line 145.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 2 []
  []
 
 [2]
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | Row | opt        | dsname          | n      | np | exc
-ess  | time    | reltime|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 |-----|------------|-----------------|--------|----|----
------|---------|-------|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 1   | "LD\_CCSAQ" | "Alfalfa"       | 72     | 1  | 0.
-0     | 0.0017  | 27.5171|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 2   | "LD\_CCSAQ" | "AvgDailyGain"  | 32     | 1  | 0.
-0     | 0.0014  | 13.9236|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 3   | "LD\_CCSAQ" | "AvgDailyGain"  | 32     | 1  | 0.
-0     | 0.0014  | 10.8009|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 4   | "LD\_CCSAQ" | "BIB"           | 24     | 1  | 0.
-0     | 0.0013  | 11.7005|[] 
- []
-
-
-Overfull \hbox (5.47499pt too wide) has occurred while \output is active
-[] \T1/aer/m/n/10.95 3
- []
-
-[3]
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 5   | "LD\_CCSAQ" | "Bond"          | 21     | 1  | 0.
-0     | 0.0009  | 13.6969|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 6   | "LD\_CCSAQ" | "bs10"          | 1104   | 20 | 0.
-0     | 1.0958  | 12.608|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 7   | "LD\_CCSAQ" | "bs10"          | 1104   | 8  | 39
-.9948 | 0.0375  | 23.2699|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 8   | "LD\_CCSAQ" | "cake"          | 270    | 1  | 0.
-0     | 0.0033  | 18.8753|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 9   | "LD\_CCSAQ" | "Cultivation"   | 24     | 1  | 0.
-0     | 0.0009  | 15.6477|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 10  | "LD\_CCSAQ" | "Demand"        | 77     | 2  | 3.
-21928 | 0.0055  | 22.0827|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 11  | "LD\_CCSAQ" | "dialectNL"     | 225866 | 6  | 0.
-0     | 6.9896  | 3.942|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 12  | "LD\_CCSAQ" | "Dyestuff2"     | 30     | 1  | 0.
-0     | 0.0005  | 0.682|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 13  | "LD\_CCSAQ" | "Dyestuff"      | 30     | 1  | 0.
-0     | 0.0008  | 1.0184|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 14  | "LD\_CCSAQ" | "ergoStool"     | 36     | 1  | 0.
-0     | 0.0012  | 1.1018|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 15  | "LD\_CCSAQ" | "Exam"          | 4059   | 1  | 0.
-0     | 0.0105  | 1.1851|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 16  | "LD\_CCSAQ" | "Exam"          | 4059   | 1  | 0.
-0     | 0.0105  | 1.318|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 17  | "LD\_CCSAQ" | "Gasoline"      | 32     | 1  | 0.
-0     | 0.0011  | 0.8193|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 18  | "LD\_CCSAQ" | "gb12"          | 225866 | 6  | 0.
-0     | 3.5221  | 17.4791|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 19  | "LD\_CCSAQ" | "gb12"          | 512    | 8  | 10
-3.176 | 0.0218  | 13.1358|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 20  | "LD\_CCSAQ" | "HR"            | 120    | 3  | 0.
-0     | 0.0089  | 8.6481|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 21  | "LD\_CCSAQ" | "Hsb82"         | 7185   | 1  | 19
-2.73  | 0.0102  | 3.7438|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 22  | "LD\_CCSAQ" | "IncBlk"        | 24     | 1  | 0.
-55726 | 0.001   | 5.0422|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 23  | "LD\_CCSAQ" | "kb07"          | 1790   | 72 | 8.
-20739 | 17.4698 | 9.2732|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 24  | "LD\_CCSAQ" | "Mississippi"   | 37     | 1  | 0.
-93471 | 0.0006  | 15.9582|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 25  | "LD\_CCSAQ" | "mm0"           | 69588  | 6  | 0.
-0     | 4.8286  | 1.1034|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 26  | "LD\_CCSAQ" | "Oxboys"        | 234    | 3  | 13
-6.788 | 0.0169  | 5.3039|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 27  | "LD\_CCSAQ" | "PBIB"          | 60     | 1  | 0.
-0     | 0.0014  | 8.6177|[] 
- []
-
-
-Overfull \hbox (39.31958pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 28  | "LD\_CCSAQ" | "Penicillin"    | 144    | 2  | 0.
-0     | 0.0131  | 15.3763|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 29  | "LD\_CCSAQ" | "Semiconductor" | 48     | 1  | 0.
-0     | 0.0012  | 1.133|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 232--232
-[]  \T1/aett/m/n/10.95 | 30  | "LD\_CCSAQ" | "SIMS"          | 3691   | 3  | 3.
-60856 | 0.134   | 2.3154|[] 
- []
-
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.238 ...me column is the time relative to the LN_
+l.250 ...me column is the time relative to the LN_
                                                   BOBYQA optimizer in the \p...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -655,399 +478,88 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.239 
+l.251 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (50.79514pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | Row | opt               | dsname          | n      | np 
-| excess | time   | reltime|[] 
+Overfull \hbox (12.7647pt too wide) in paragraph at lines 256--311
+ [][] 
  []
 
 
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 |-----|-------------------|-----------------|--------|----
-|--------|--------| ----|[] 
+LaTeX Warning: Float too large for page by 44.59924pt on input line 311.
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+[] \T1/aer/m/n/10.95 3
  []
 
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 1|"NLOPT\_LN\_BOBYQA" | "Alfalfa"      | 72     | 1  | 0
-.0    | 0.042  | 27.5171|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 2|"NLOPT\_LN\_BOBYQA" | "Animal"       | 20     | 2  | 0
-.0    | 0.023  |13.9236|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 3|"NLOPT\_LN\_BOBYQA" | "Assay"        | 60     | 2  | 1
-.0e-5 | 0.032  |10.8009|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 4|"NLOPT\_LN\_BOBYQA" | "AvgDailyGain" | 32     | 1  | 0
-.0    | 0.02   |11.7005|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 5|"NLOPT\_LN\_BOBYQA" | "AvgDailyGain" | 32     | 1  | 0
-.0    | 0.02   |13.6969|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 6|"NLOPT\_LN\_BOBYQA" | "BIB"          | 24     | 1  | 0
-.0    | 0.02   |12.608|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 7|"NLOPT\_LN\_BOBYQA" | "Bond"         | 21     | 1  | 0
-.0    | 0.02   |23.2699[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 8|"NLOPT\_LN\_BOBYQA" | "bs10"         | 1104   | 20 | 1
-.0e-5 | 4.661  |18.8753|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 9|"NLOPT\_LN\_BOBYQA" | "bs10"         | 1104   | 8  | 0
-.0    | 1.057  |15.6477|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 10|"NLOPT\_LN\_BOBYQA" | "cake"        | 270    | 1  | 0
-.0    | 0.053  |22.0827[] 
- []
-
-
-Overfull \hbox (16.36847pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 11|"NLOPT\_LN\_BOBYQA" | "Chem97"      | 31022  | 2  | 0
-.0    | 0.632  |3.942|[] 
- []
-
-
+[3]
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 4 []
  []
 
 [4]
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 38|"NLOPT\_LN\_BOBYQA" | "PBIB"        | 60     | 1  | 0
-.0    | 0.018  |13.1358|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 39|"NLOPT\_LN\_BOBYQA" | "Penicillin"  | 144    | 2  | 0
-.0    | 0.023  |8.6481|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 40|"NLOPT\_LN\_BOBYQA" | "Poems"       | 275996 | 3  | 0
-.0    | 21.309 |3.7438|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 41|"NLOPT\_LN\_BOBYQA" | "ScotsSec"    | 3435   | 2  | 0
-.0    | 0.076  |5.0422|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 42|"NLOPT\_LN\_BOBYQA" | "Semi2"       | 72     | 3  | 0
-.0    | 0.03   |9.2732|[] 
- []
-
-
-Overfull \hbox (33.5818pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 43|"NLOPT\_LN\_BOBYQA" | "Semiconductor"| 48     | 1  | 
-0.0    | 0.019  |15.9582|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 44|"NLOPT\_LN\_BOBYQA" | "SIMS"        | 3691   | 3  | 0
-.0    | 0.15   |1.1034|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 45|"NLOPT\_LN\_BOBYQA" | "sleepstudy"  | 180    | 3  | 0
-.0    | 0.037  |5.3039|[] 
- []
-
-
-Overfull \hbox (27.84402pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 46|"NLOPT\_LN\_BOBYQA" | "sleepstudy"  | 180    | 2  | 0
-.0    | 0.024  |15.3763|[] 
- []
-
-
-Overfull \hbox (16.36847pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 47|"NLOPT\_LN\_BOBYQA" | "TeachingII"  | 96     | 1  | 0
-.0    | 0.021  |1.133|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 48|"NLOPT\_LN\_BOBYQA" | "Weights"     | 399    | 3  | 1
-.0e-5 | 0.039  |5.3039|[] 
- []
-
-
-Overfull \hbox (22.10625pt too wide) in paragraph at lines 271--271
-[]\T1/aett/m/n/10.95 | 49|"NLOPT\_LN\_BOBYQA" | "WWheat"      | 60     | 3  | 0
-.0    | 0.025  |2.3154|[] 
- []
-
-
-! LaTeX Error: Undefined color `outcolor'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.285 ...Out[{\color{outcolor}4}]:} 49x3 DataFrame
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Undefined color `outcolor'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.285 ...Out[{\color{outcolor}4}]:} 49x3 DataFrame
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: \begin{Verbatim} on input line 284 ended by \end{verbatim}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.299         \end{verbatim}
-                            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.299         \end{verbatim}
-                            
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.299         \end{verbatim}
-                            
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) detected at line 299
-       
- []
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.299         \end{verbatim}
-                            
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\FancyVerbFormatLine #1->\FV@ObeyTabs {#1}
-                                          
-l.299         \end{verbatim}
-                            
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\FV@ListProcessLine ...Frame \FV@RightListNumber }
-                                                  \hss }
-l.299         \end{verbatim}
-                            
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\FV@ListProcessLine ...\FV@RightListNumber }\hss }
-                                                  
-l.299         \end{verbatim}
-                            
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
-\vdots \begin {verbatim} | 38 | "LN\_BOBYQA" | "PBIB" | 0.0 | | 39 | \ETC.
-! Paragraph ended before \FancyVerbGetLine was complete.
-<to be read again> 
-                   \par 
-l.315 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-! Paragraph ended before \FV@CheckScan was complete.
-<to be read again> 
-                   \par 
-l.315 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Infinite glue shrinkage found in a paragraph.
-<recently read> \par 
-                     
-l.315 
-      
-The paragraph just ended includes some glue that has
-infinite shrinkability, e.g., `\hskip 0pt minus 1fil'.
-Such glue doesn't belong there---it allows a paragraph
-of any length to fit on one line. But it's safe to proceed,
-since the offensive shrinkability has been made finite.
-
-
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 5
  []
 
 [5]
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 361
-.
- (/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/ts1aett.fd
-File: ts1aett.fd 
-)
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 361
-.
- (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 361.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 6 []
  []
 
 [6]
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 404.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
+
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 7
  []
 
 [7]
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 446.
-
-
-! LaTeX Error: \begin{Verbatim} on input line 284 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.446 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 446.
-
-Overfull \hbox (5.47499pt too wide) has occurred while \output is active
-\T1/aer/m/n/10.95 8 []
- []
-
-[8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 446.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: F6C47EB924761064F540CF1FCFB0EBD2;454.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 284 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 6436 strings out of 493747
- 95779 string characters out of 3143546
- 185194 words of memory out of 3000000
- 9530 multiletter control sequences out of 15000+200000
- 52783 words of font info for 91 fonts, out of 3000000 for 9000
+ 6492 strings out of 493747
+ 96007 string characters out of 3143546
+ 206917 words of memory out of 3000000
+ 9590 multiletter control sequences out of 15000+200000
+ 52485 words of font info for 90 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,9n,34p,1028b,471s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm
--super-ts1.enc}{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></
-usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
-sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></u
-sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/
-texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local
-/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/
-texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
-xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/tex
-live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
-ive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texliv
-e/2010/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/
-2010/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on Paper.pdf (8 pages, 256051 bytes).
+ 38i,9n,34p,1028b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/te
+xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+10/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2010/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2010/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2010/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2010/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2010/texmf
+-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2010/texmf-d
+ist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on Paper.pdf (7 pages, 231635 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
  62 words of extra memory for PDF output out of 10000 (max. 10000000)
 
