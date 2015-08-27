@@ -212,66 +212,13 @@ optimizer in the \pkg{MixedModels} package for \proglang{Julia}.
 
 For \proglang{Julia} the time column is the time in seconds to converge. The reltime column is the time relative to the LN_BOBYQA optimizer in the \pkg{MixedModels} package for \proglang{Julia}.
 
+\begin
+{center}
+<<results=tex,echo=FALSE>>=
+print(xtable(subset(res, opt=="NLOPT_LN_BOBYQA")[1:8]), floating=FALSE, table.placement="H")
+@
+\end {center}
 
-
-\begin{table}[htbp]
-\centering
-\begin{tabular}{rllrrrrrr}
-  \hline
- & opt & dsname & n & p & np & excess & time & reltime \\ 
-  \hline
-560 & NLOPT\_LN\_BOBYQA & Alfalfa &  72 &  12 &   1 & 0.00 & 0.04 & 27.52 \\ 
-  561 & NLOPT\_LN\_BOBYQA & Animal &  20 &   1 &   2 & 0.00 & 0.02 & 13.92 \\ 
-  562 & NLOPT\_LN\_BOBYQA & Assay &  60 &  31 &   2 & 0.00 & 0.03 & 10.80 \\ 
-  563 & NLOPT\_LN\_BOBYQA & AvgDailyGain &  32 &   8 &   1 & 0.00 & 0.02 & 11.70 \\ 
-  564 & NLOPT\_LN\_BOBYQA & AvgDailyGain &  32 &   5 &   1 & 0.00 & 0.02 & 13.70 \\ 
-  565 & NLOPT\_LN\_BOBYQA & BIB &  24 &   8 &   1 & 0.00 & 0.02 & 12.61 \\ 
-  566 & NLOPT\_LN\_BOBYQA & Bond &  21 &   3 &   1 & 0.00 & 0.02 & 23.27 \\ 
-  567 & NLOPT\_LN\_BOBYQA & bs10 & 1104 &   4 &  20 & 0.00 & 4.66 & 18.88 \\ 
-  568 & NLOPT\_LN\_BOBYQA & bs10 & 1104 &   4 &   8 & 0.00 & 1.06 & 15.65 \\ 
-  569 & NLOPT\_LN\_BOBYQA & cake & 270 &  18 &   1 & 0.00 & 0.05 & 22.08 \\ 
-  570 & NLOPT\_LN\_BOBYQA & Chem97 & 31022 &   1 &   2 & 0.00 & 0.63 & 3.94 \\ 
-  571 & NLOPT\_LN\_BOBYQA & Chem97 & 31022 &   2 &   2 & 0.00 & 0.56 & 3.60 \\ 
-  572 & NLOPT\_LN\_BOBYQA & Cultivation &  24 &   6 &   1 & 0.00 & 0.02 & 23.10 \\ 
-  573 & NLOPT\_LN\_BOBYQA & d3 & 130418 &   2 &   9 & 0.00 & 231.30 & 2.16 \\ 
-  574 & NLOPT\_LN\_BOBYQA & Demand &  77 &   5 &   2 & 0.00 & 0.03 & 3.81 \\ 
-  575 & NLOPT\_LN\_BOBYQA & dialectNL & 225866 &   4 &   6 & 0.00 & 16.88 & 9.64 \\ 
-  576 & NLOPT\_LN\_BOBYQA & Dyestuff2 &  30 &   1 &   1 & 0.00 & 0.05 & 62.58 \\ 
-  577 & NLOPT\_LN\_BOBYQA & Dyestuff &  30 &   1 &   1 & 0.00 & 0.02 & 24.87 \\ 
-  578 & NLOPT\_LN\_BOBYQA & egsingle & 7230 &   5 &   2 & 0.00 & 0.17 & 2.39 \\ 
-  579 & NLOPT\_LN\_BOBYQA & ergoStool &  36 &   4 &   1 & 0.00 & 0.02 & 17.25 \\ 
-  580 & NLOPT\_LN\_BOBYQA & Exam & 4059 &   5 &   1 & 0.00 & 0.05 & 5.40 \\ 
-  581 & NLOPT\_LN\_BOBYQA & Exam & 4059 &   6 &   1 & 0.00 & 0.05 & 6.33 \\ 
-  582 & NLOPT\_LN\_BOBYQA & Gasoline &  32 &   2 &   1 & 0.00 & 0.02 & 14.30 \\ 
-  583 & NLOPT\_LN\_BOBYQA & gb12 & 512 &   8 &  20 & 0.00 & 1.87 & 9.28 \\ 
-  584 & NLOPT\_LN\_BOBYQA & gb12 & 512 &   8 &   8 & 0.00 & 0.42 & 10.77 \\ 
-  585 & NLOPT\_LN\_BOBYQA & Genetics &  60 &   5 &   2 & 0.00 & 0.03 & 9.60 \\ 
-  586 & NLOPT\_LN\_BOBYQA & HR & 120 &   7 &   3 & 0.00 & 0.02 & 3.29 \\ 
-  587 & NLOPT\_LN\_BOBYQA & Hsb82 & 7185 &   5 &   1 & 0.00 & 0.07 & 3.52 \\ 
-  588 & NLOPT\_LN\_BOBYQA & IncBlk &  24 &   8 &   1 & 0.00 & 0.02 & 12.89 \\ 
-  589 & NLOPT\_LN\_BOBYQA & InstEval & 73421 &  28 &   2 & 0.00 & 10.06 & 4.28 \\ 
-  590 & NLOPT\_LN\_BOBYQA & InstEval & 73421 &   2 &   3 & 0.00 & 15.82 & 3.63 \\ 
-  591 & NLOPT\_LN\_BOBYQA & kb07 & 1790 &   8 &  72 & 0.01 & 311.03 & 73.43 \\ 
-  592 & NLOPT\_LN\_BOBYQA & kb07 & 1790 &   8 &  16 & 0.00 & 18.50 & 26.31 \\ 
-  593 & NLOPT\_LN\_BOBYQA & Mississippi &  37 &   3 &   1 & 0.00 & 0.02 & 21.53 \\ 
-  594 & NLOPT\_LN\_BOBYQA & mm0 & 69588 &   4 &   6 & 0.00 & 26.20 & 23.88 \\ 
-  595 & NLOPT\_LN\_BOBYQA & Oxboys & 234 &   2 &   3 & 0.00 & 0.03 & 1.35 \\ 
-  596 & NLOPT\_LN\_BOBYQA & Pastes &  60 &   1 &   2 & 0.00 & 0.02 & 9.51 \\ 
-  597 & NLOPT\_LN\_BOBYQA & PBIB &  60 &  15 &   1 & 0.00 & 0.02 & 13.14 \\ 
-  598 & NLOPT\_LN\_BOBYQA & Penicillin & 144 &   1 &   2 & 0.00 & 0.02 & 8.65 \\ 
-  599 & NLOPT\_LN\_BOBYQA & Poems & 275996 &   3 &   3 & 0.00 & 21.31 & 3.74 \\ 
-  600 & NLOPT\_LN\_BOBYQA & ScotsSec & 3435 &   4 &   2 & 0.00 & 0.08 & 5.04 \\ 
-  601 & NLOPT\_LN\_BOBYQA & Semi2 &  72 &   2 &   3 & 0.00 & 0.03 & 9.27 \\ 
-  602 & NLOPT\_LN\_BOBYQA & Semiconductor &  48 &  16 &   1 & 0.00 & 0.02 & 15.96 \\ 
-  603 & NLOPT\_LN\_BOBYQA & SIMS & 3691 &   2 &   3 & 0.00 & 0.15 & 1.10 \\ 
-  604 & NLOPT\_LN\_BOBYQA & sleepstudy & 180 &   2 &   3 & 0.00 & 0.04 & 5.30 \\ 
-  605 & NLOPT\_LN\_BOBYQA & sleepstudy & 180 &   2 &   2 & 0.00 & 0.02 & 8.62 \\ 
-  606 & NLOPT\_LN\_BOBYQA & TeachingII &  96 &  12 &   1 & 0.00 & 0.02 & 15.38 \\ 
-  607 & NLOPT\_LN\_BOBYQA & Weights & 399 &   6 &   3 & 0.00 & 0.04 & 1.13 \\ 
-  608 & NLOPT\_LN\_BOBYQA & WWheat &  60 &   2 &   3 & 0.00 & 0.03 & 2.32 \\ 
-   \hline
-\end{tabular}
-\end{table}
 
 
 
@@ -280,14 +227,14 @@ For \proglang{Julia} the time column is the time in seconds to converge. The rel
 
 
 \subsection[Convergence]{Proportion Converged}
-
-
-
 The most important question regarding the optimizers is whether or not they have converged to the global optimum. We cannot test this directly. Instead we use a "crowd-sourced" criterion based on the minimum objective achieved by any of the algorithms. The difference between the objective achieved by a particular algorithm and this minimum is called the excess. In the summaries \texttt{excess} is rounded to 5 digits after the decimal so the minimum non-zero \texttt{excess} is $10^{-5}$.
 
-
-
-
+\begin
+{center}
+<<results=tex,echo=FALSE>>=
+print(xtable(subset(res, opt=="LN_BOBYQA")[c(1,2,6)]),floating=FALSE, table.placement="H")
+@
+\end {center}
 
   If we wish to declare ``converged'' or ``not converged'' according to
 the excess objective value we must establish a threshold. An absolute
@@ -315,6 +262,13 @@ The Nelder-Mead simplex algorithm did not perform well, failing on 8 out
 of 48 cases. For many of these the value at which convergence was
 declared was far from the optimum.
 
+<<results=tex>>=
+print(xtable(subset(res, opt=="Nelder_Mead" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
+@
+
+<<results=tex>>=
+print(xtable(subset(res, opt=="NLOPT_LN_Nelder_Mead" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
+@
 
 
 
