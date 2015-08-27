@@ -58,6 +58,13 @@ The \pkg{Timings} package allows for the comparison of several optimizers, in bo
 
 \begin{document}
 
+
+\begin{Schunk}
+\begin{Sinput}
+> load("~/Desktop/Summer_Sweave/Timings/data/res.rda")
+\end{Sinput}
+\end{Schunk}
+
 %% include your article here, just as usual
 %% Note that you should use the \pkg{}, \proglang{} and \code{} commands.
 
@@ -195,7 +202,16 @@ from the results of all the model fits.
 \end{Sinput}
 \end{Schunk}
 
-\begin{table}[htbp]
+
+\begin
+{center}
+\begin{Schunk}
+\begin{Sinput}
+> print(xtable(subset(res, opt=="LD_CCSAQ")[1:8]), table.placement="!htp")
+\end{Sinput}
+% latex table generated in R 3.1.3 by xtable 1.7-4 package
+% Thu Aug 27 11:06:12 2015
+\begin{table}[!htp]
 \centering
 \begin{tabular}{rllrrrrrr}
   \hline
@@ -238,9 +254,8 @@ from the results of all the model fits.
   35 & LD\_CCSAQ & WWheat &  60 &   2 &   3 & 18.20 & 0.01 & 0.68 \\ 
    \hline
 \end{tabular}
-\end{table}
-
-
+\end{table}\end{Schunk}
+\end {center}
 
 
 The \texttt{time} column is the time in seconds to converge. The
