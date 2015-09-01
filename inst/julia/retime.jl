@@ -39,7 +39,7 @@ function retime(fnm,ofile)
             println()
         end
     end
-    open(ofile,"w") do io
+    open(isdir(ofile) ? joinpath(ofile,basename(fnm)) : ofile,"w") do io
         write(io,json(js,2))
     end
 end
