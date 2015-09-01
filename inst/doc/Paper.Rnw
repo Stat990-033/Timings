@@ -267,7 +267,7 @@ print(xtable(subset(res, opt=="Nelder_Mead" & excess > 0.005)[c(1,2,3,5,6,7,8)])
 @
 
 <<results=tex>>=
-print(xtable(subset(res, opt=="NLOPT_LN_Nelder_Mead" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
+print(xtable(subset(res, opt=="NLOPT_LN_NELDERMEAD" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
 @
 
 
@@ -295,6 +295,9 @@ The \texttt{SBPLX} (subplex) algorithm, which is an enhancement of
 slow.
 
 
+<<results=tex>>=
+print(xtable(subset(res, opt=="NLOPT_LN_SBPLX" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
+@
 
   
     By comparison, the \texttt{LN\_BOBYQA} algorithm converges quite rapidly
@@ -303,6 +306,30 @@ on the \texttt{kb07} models.
         
         
         
+<<results=tex>>=
+print(xtable(subset(res, opt=="LN_BOBYQA" & dsname == "kb07")[c(1,2,5,6,7,9)]),floating=FALSE, table.placement="H")
+@
+
+\subsection[Relative Speed]{Relative Speed}
+
+We plot the time to convergence, relative to LN_BOBYQA and on a logarithmic scale, for each algorithm.
+
+PLOT
+
+
+
+
+Many of the cases where LN_BOBYQA is slower than other algorithms are simple problems that converge in less than 1/5 of a second for most algorithms.
+
+We will declare a data set to be non-simple if at least one of the models fit to the data took more than 0.2 seconds to convergence with LN_BOBYQA.
+
+<<results=tex>>=
+print(xtable(subset(res, opt=="LN_BOBYQA" & time >= 0.2)[c("dsname","time","n","np","models")]),floating=FALSE, table.placement="H")
+@
+
+
+
+
 
 
 \subsection[Reliablility]{Reliability}
