@@ -59,8 +59,9 @@ The \pkg{Timings} package allows for the comparison of several optimizers, in bo
 \begin{document}
 \SweaveOpts{concordance=FALSE}
 
-<<>>=
+<<echo=FALSE>>=
 load("~/Desktop/Summer_Sweave/Timings/data/res.rda")
+library(ggplot2)
 @
 
 %% include your article here, just as usual
@@ -124,8 +125,6 @@ retime("../JSON/Alfalfa.json","/tmp/Alfalfa.json")
 retime("../JSON/Alfalfa.json","/tmp/Alfalfa.json")
 @
 
-
-INCLUDE SUMMARY TABLE USING res.rda
 
   The timing was repeated so that compilation time is not included in the
 results. This repetition is only needed once per session.
@@ -221,11 +220,6 @@ print(xtable(subset(res, opt=="NLOPT_LN_BOBYQA")[1:8]), floating=FALSE, table.pl
 
 
 
-
-
-
-
-
 \subsection[Convergence]{Proportion Converged}
 The most important question regarding the optimizers is whether or not they have converged to the global optimum. We cannot test this directly. Instead we use a "crowd-sourced" criterion based on the minimum objective achieved by any of the algorithms. The difference between the objective achieved by a particular algorithm and this minimum is called the excess. In the summaries \texttt{excess} is rounded to 5 digits after the decimal so the minimum non-zero \texttt{excess} is $10^{-5}$.
 
@@ -271,8 +265,6 @@ print(xtable(subset(res, opt=="NLOPT_LN_NELDERMEAD" & excess > 0.005)[c(1,2,3,5,
 @
 
 
-
-
  The \texttt{Nelder\_Mead} algorithm, either in the native form in
 \pkg{lmer} or in the \texttt{NLopt} implementation performed poorly
 on those cases with many parameters to optimize. It was both unreliable
@@ -302,9 +294,7 @@ print(xtable(subset(res, opt=="NLOPT_LN_SBPLX" & excess > 0.005)[c(1,2,3,5,6,7,8
   
     By comparison, the \texttt{LN\_BOBYQA} algorithm converges quite rapidly
 on the \texttt{kb07} models.
-
-        
-        
+     
         
 <<results=tex>>=
 print(xtable(subset(res, opt=="LN_BOBYQA" & dsname == "kb07")[c(1,2,5,6,7,9)]),floating=FALSE, table.placement="H")
@@ -314,9 +304,15 @@ print(xtable(subset(res, opt=="LN_BOBYQA" & dsname == "kb07")[c(1,2,5,6,7,9)]),f
 
 We plot the time to convergence, relative to LN_BOBYQA and on a logarithmic scale, for each algorithm.
 
-PLOT
 
 
+<<fig=TRUE>>=
+res$cvg<-rep("yes",nrow(res))
+res$cvg[which(res$excess>.02)] <- "no"
+res$cvg<-as.factor(res$cvg)
+k<-ggplot(res, aes(x=log(reltime), y=opt))
+k + geom_point(aes(color=cvg))
+@
 
 
 Many of the cases where LN_BOBYQA is slower than other algorithms are simple problems that converge in less than 1/5 of a second for most algorithms.
@@ -329,9 +325,6 @@ print(xtable(subset(res, opt=="LN_BOBYQA" & time >= 0.2)[c("dsname","time","n","
 
 
 
-
-
-
 \subsection[Reliablility]{Reliability}
 
  Sed iaculis sodales elit quis vehicula. In et tristique neque, sodales aliquet metus. In posuere dictum nisl, quis laoreet augue congue a. Aenean in commodo neque, sit amet hendrerit ex. Aliquam id faucibus ante. Vivamus in fermentum nunc. Nam condimentum eros id orci pretium, quis aliquam magna eleifend. 
@@ -340,9 +333,31 @@ print(xtable(subset(res, opt=="LN_BOBYQA" & time >= 0.2)[c("dsname","time","n","
 
 \section[References]{References}
 
-Note all optimization packages used, lmm, lme4, jsonlite, 
+<<echo=FALSE,eval=FALSE>>=
+toBibtex(citation(package="lme4"))
+toBibtex(citation(package="jsonlite"))
+toBibtex(citation(package="optimx"))
+toBibtex(citation(package="minqa"))
+toBibtex(citation(package="nloptr"))
+@
 
 
+Douglas Bates, Katharine M. Mullen, John C. Nash and Ravi Varadhan (2014). minqa:
+  Derivative-free optimization algorithms by quadratic approximation. R package version 1.2.4.
+  http://CRAN.R-project.org/package=minqa
 
+Bates D, Maechler M, Bolker B and Walker S (2014). _lme4: Linear mixed-effects models using Eigen
+  and S4_. R package version 1.1-7, <URL: http://CRAN.R-project.org/package=lme4>.
 
+John C. Nash, Ravi Varadhan (2011). Unifying Optimization Algorithms to Aid Software System
+  Users: optimx for R. Journal of Statistical Software, 43(9), 1-14. URL
+  http://www.jstatsoft.org/v43/i09/.
+
+Jeroen Ooms (2014). The jsonlite Package: A Practical and Consistent Mapping Between JSON Data
+  and R Objects. arXiv:1403.2805 [stat.CO] URL http://arxiv.org/abs/1403.2805.
+
+Steven G. Johnson, The NLopt nonlinear-optimization package, http://ab-initio.mit.edu/nlopt
+  
+(For the nloptr package they want us to go through and cite each algorithm we used)  
+  
 \end{document}

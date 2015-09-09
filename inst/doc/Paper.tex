@@ -59,11 +59,6 @@ The \pkg{Timings} package allows for the comparison of several optimizers, in bo
 \begin{document}
 
 
-\begin{Schunk}
-\begin{Sinput}
-> load("~/Desktop/Summer_Sweave/Timings/data/res.rda")
-\end{Sinput}
-\end{Schunk}
 
 %% include your article here, just as usual
 %% Note that you should use the \pkg{}, \proglang{} and \code{} commands.
@@ -206,7 +201,7 @@ from the results of all the model fits.
 \begin
 {center}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Thu Aug 27 12:42:05 2015
+% Wed Sep  9 17:45:30 2015
 \begin{table}[!htp]
 \centering
 \begin{tabular}{rllrrrrrr}
@@ -262,7 +257,7 @@ For \proglang{Julia} the time column is the time in seconds to converge. The rel
 \begin
 {center}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Thu Aug 27 12:42:05 2015
+% Wed Sep  9 17:45:31 2015
 \begin{tabular}{rllrrrrrr}
   \hline
  & opt & dsname & n & p & np & excess & time & reltime \\ 
@@ -332,7 +327,7 @@ The most important question regarding the optimizers is whether or not they have
 \begin
 {center}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Thu Aug 27 12:42:05 2015
+% Wed Sep  9 17:45:31 2015
 \begin{tabular}{rllr}
   \hline
  & opt & dsname & excess \\ 
@@ -420,7 +415,7 @@ declared was far from the optimum.
 > print(xtable(subset(res, opt=="Nelder_Mead" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
 \end{Sinput}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Thu Aug 27 12:42:05 2015
+% Wed Sep  9 17:45:31 2015
 \begin{tabular}{rllrrrrr}
   \hline
  & opt & dsname & n & np & excess & time & reltime \\ 
@@ -436,7 +431,24 @@ declared was far from the optimum.
    \hline
 \end{tabular}\end{Schunk}
 
-
+\begin{Schunk}
+\begin{Sinput}
+> print(xtable(subset(res, opt=="NLOPT_LN_NELDERMEAD" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
+\end{Sinput}
+% latex table generated in R 3.1.3 by xtable 1.7-4 package
+% Wed Sep  9 17:45:31 2015
+\begin{tabular}{rllrrrrr}
+  \hline
+ & opt & dsname & n & np & excess & time & reltime \\ 
+  \hline
+659 & NLOPT\_LN\_NELDERMEAD & Assay &  60 &   2 & 0.06 & 0.04 & 14.18 \\ 
+  664 & NLOPT\_LN\_NELDERMEAD & bs10 & 1104 &  20 & 0.97 & 88.29 & 357.52 \\ 
+  670 & NLOPT\_LN\_NELDERMEAD & d3 & 130418 &   9 & 100.19 & 627.93 & 5.87 \\ 
+  680 & NLOPT\_LN\_NELDERMEAD & gb12 & 512 &  20 & 0.84 & 52.41 & 260.10 \\ 
+  688 & NLOPT\_LN\_NELDERMEAD & kb07 & 1790 &  72 & 88.77 & 2839.07 & 670.23 \\ 
+  689 & NLOPT\_LN\_NELDERMEAD & kb07 & 1790 &  16 & 3.50 & 198.84 & 282.72 \\ 
+   \hline
+\end{tabular}\end{Schunk}
 
 
 
@@ -463,6 +475,20 @@ The \texttt{SBPLX} (subplex) algorithm, which is an enhancement of
 slow.
 
 
+\begin{Schunk}
+\begin{Sinput}
+> print(xtable(subset(res, opt=="NLOPT_LN_SBPLX" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
+\end{Sinput}
+% latex table generated in R 3.1.3 by xtable 1.7-4 package
+% Wed Sep  9 17:45:31 2015
+\begin{tabular}{rllrrrrr}
+  \hline
+ & opt & dsname & n & np & excess & time & reltime \\ 
+  \hline
+745 & NLOPT\_LN\_SBPLX & gb12 & 512 &  20 & 0.82 & 3.81 & 18.92 \\ 
+  753 & NLOPT\_LN\_SBPLX & kb07 & 1790 &  72 & 4.97 & 564.69 & 133.31 \\ 
+   \hline
+\end{tabular}\end{Schunk}
 
   
     By comparison, the \texttt{LN\_BOBYQA} algorithm converges quite rapidly
@@ -471,6 +497,73 @@ on the \texttt{kb07} models.
         
         
         
+\begin{Schunk}
+\begin{Sinput}
+> print(xtable(subset(res, opt=="LN_BOBYQA" & dsname == "kb07")[c(1,2,5,6,7,9)]),floating=FALSE, table.placement="H")
+\end{Sinput}
+% latex table generated in R 3.1.3 by xtable 1.7-4 package
+% Wed Sep  9 17:45:31 2015
+\begin{tabular}{rllrrrr}
+  \hline
+ & opt & dsname & np & excess & time & objective \\ 
+  \hline
+378 & LN\_BOBYQA & kb07 &  72 & 0.02 & 4.24 & 28586.33 \\ 
+  379 & LN\_BOBYQA & kb07 &  16 & 0.00 & 0.70 & 28670.91 \\ 
+   \hline
+\end{tabular}\end{Schunk}
+
+\subsection[Relative Speed]{Relative Speed}
+
+We plot the time to convergence, relative to LN_BOBYQA and on a logarithmic scale, for each algorithm.
+
+
+
+\begin{Schunk}
+\begin{Sinput}
+> res$cvg<-rep("yes",nrow(res))
+> res$cvg[which(res$excess>.02)] <- "no"
+> res$cvg<-as.factor(res$cvg)
+> k<-ggplot(res, aes(x=log(reltime), y=opt))
+> k + geom_point(aes(color=cvg))
+\end{Sinput}
+\end{Schunk}
+\includegraphics{Paper-013}
+
+
+
+
+
+
+Many of the cases where LN_BOBYQA is slower than other algorithms are simple problems that converge in less than 1/5 of a second for most algorithms.
+
+We will declare a data set to be non-simple if at least one of the models fit to the data took more than 0.2 seconds to convergence with LN_BOBYQA.
+
+\begin{Schunk}
+\begin{Sinput}
+> print(xtable(subset(res, opt=="LN_BOBYQA" & time >= 0.2)[c("dsname","time","n","np","models")]),floating=FALSE, table.placement="H")
+\end{Sinput}
+% latex table generated in R 3.1.3 by xtable 1.7-4 package
+% Wed Sep  9 17:45:31 2015
+\begin{tabular}{rlrrrl}
+  \hline
+ & dsname & time & n & np & models \\ 
+  \hline
+354 & bs10 & 0.25 & 1104 &  20 & Y \~{} 1 + U + V + W + ((1 + U + V + W) $|$ G) + ((1 + U + V + W) $|$ H) \\ 
+  360 & d3 & 106.94 & 130418 &   9 & Y \~{} 1 + U + ((1 + U) $|$ G) + ((1 + U) $|$ H) + ((1 + U) $|$ I) \\ 
+  362 & dialectNL & 1.75 & 225866 &   6 & Y \~{} 1 + A + U + V + W + X + Z + T + (1 $|$ G) + ((0 + V + W + X) $|$ G) + ((1 + A + Z) $|$ H) + (1 $|$ I) \\ 
+  370 & gb12 & 0.20 & 512 &  20 & Y \~{} 1 + S + T + U + V + W + X + Z + ((1 + S + U + W) $|$ G) + ((1 + S + T + V) $|$ H) \\ 
+  376 & InstEval & 2.35 & 73421 &   2 & Y \~{} 1 + I * A + (1 $|$ G) + (1 $|$ H) \\ 
+  377 & InstEval & 4.36 & 73421 &   3 & Y \~{} 1 + A + (1 $|$ G) + (1 $|$ H) + (1 $|$ I) \\ 
+  378 & kb07 & 4.24 & 1790 &  72 & Y \~{} 1 + S + T + U + V + W + X + Z + ((1 + S + T + U + V + W + X + Z) $|$ G) + ((1 + S + T + U + V + W + X + Z) $|$ H) \\ 
+  379 & kb07 & 0.70 & 1790 &  16 & Y \~{} 1 + S + T + U + V + W + X + Z + (1 $|$ G) + ((0 + S) $|$ G) + ((0 + T) $|$ G) + ((0 + U) $|$ G) + ((0 + V) $|$ G) + ((0 + W) $|$ G) + ((0 + X) $|$ G) + ((0 + Z) $|$ G) + (1 $|$ H) + ((0 + S) $|$ H) + ((0 + T) $|$ H) + ((0 + U) $|$ H) + ((0 + V) $|$ H) + ((0 + W) $|$ H) + ((0 + X) $|$ H) + ((0 + Z) $|$ H) \\ 
+  381 & mm0 & 1.10 & 69588 &   6 & Y \~{} 1 + A * U + ((1 + U) $|$ G) + ((1 + U) $|$ H) \\ 
+  386 & Poems & 5.69 & 275996 &   3 & Y \~{} 1 + U + V + (1 $|$ G) + (1 $|$ H) + (1 $|$ I) \\ 
+   \hline
+\end{tabular}\end{Schunk}
+
+
+
+
 
 
 \subsection[Reliablility]{Reliability}
@@ -481,9 +574,66 @@ on the \texttt{kb07} models.
 
 \section[References]{References}
 
-Note all optimization packages used, lmm, lme4, jsonlite, 
+\begin{Schunk}
+\begin{Soutput}
+@Manual{,
+  title = {{lme4}: Linear mixed-effects models using Eigen and S4},
+  author = {Douglas Bates and Martin Maechler and Ben Bolker and Steven Walker},
+  year = {2014},
+  note = {R package version 1.1-7},
+  url = {http://CRAN.R-project.org/package=lme4},
+}
 
-
-
+@Misc{,
+  title = {{lme4}: Linear mixed-effects models using Eigen and S4},
+  year = {2014},
+  author = {Douglas Bates and Martin Maechler and Benjamin M. Bolker and Steven Walker},
+  note = {ArXiv e-print; submitted to \emph{Journal of Statistical Software}},
+  url = {http://arxiv.org/abs/1406.5823},
+}
+\end{Soutput}
+\begin{Soutput}
+@Article{,
+  title = {The jsonlite Package: A Practical and Consistent Mapping Between JSON Data and R Objects},
+  author = {Jeroen Ooms},
+  journal = {arXiv:1403.2805 [stat.CO]},
+  year = {2014},
+  url = {http://arxiv.org/abs/1403.2805},
+}
+\end{Soutput}
+\begin{Soutput}
+@Article{,
+  title = {Unifying Optimization Algorithms to Aid Software System Users: {optimx} for {R}},
+  author = {John C. Nash and Ravi Varadhan},
+  journal = {Journal of Statistical Software},
+  year = {2011},
+  volume = {43},
+  number = {9},
+  pages = {1--14},
+  url = {http://www.jstatsoft.org/v43/i09/},
+}
+\end{Soutput}
+\begin{Soutput}
+@Manual{,
+  title = {minqa: Derivative-free optimization algorithms by quadratic
+approximation},
+  author = {Douglas Bates and Katharine M. Mullen and John C. Nash and Ravi Varadhan},
+  year = {2014},
+  note = {R package version 1.2.4},
+  url = {http://CRAN.R-project.org/package=minqa},
+}
+\end{Soutput}
+\begin{Soutput}
+@Article{,
+  title = {The NLopt nonlinear-optimization package},
+  author = {Steven G. Johnson},
+  year = {?},
+  journal = {?},
+  volume = {?},
+  number = {?},
+  pages = {?},
+}
+\end{Soutput}
+\end{Schunk}
 
 \end{document}
