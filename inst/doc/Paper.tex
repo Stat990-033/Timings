@@ -126,8 +126,6 @@ source files for \pkg{Julia} retimings.
 \end{Schunk}
 
 
-INCLUDE SUMMARY TABLE USING res.rda
-
   The timing was repeated so that compilation time is not included in the
 results. This repetition is only needed once per session.
 
@@ -201,7 +199,7 @@ from the results of all the model fits.
 \begin
 {center}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:30 2015
+% Thu Sep 24 15:26:30 2015
 \begin{table}[!htp]
 \centering
 \begin{tabular}{rllrrrrrr}
@@ -257,7 +255,7 @@ For \proglang{Julia} the time column is the time in seconds to converge. The rel
 \begin
 {center}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:31 2015
+% Thu Sep 24 15:26:30 2015
 \begin{tabular}{rllrrrrrr}
   \hline
  & opt & dsname & n & p & np & excess & time & reltime \\ 
@@ -316,18 +314,13 @@ For \proglang{Julia} the time column is the time in seconds to converge. The rel
 
 
 
-
-
-
-
-
 \subsection[Convergence]{Proportion Converged}
 The most important question regarding the optimizers is whether or not they have converged to the global optimum. We cannot test this directly. Instead we use a "crowd-sourced" criterion based on the minimum objective achieved by any of the algorithms. The difference between the objective achieved by a particular algorithm and this minimum is called the excess. In the summaries \texttt{excess} is rounded to 5 digits after the decimal so the minimum non-zero \texttt{excess} is $10^{-5}$.
 
 \begin
 {center}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:31 2015
+% Thu Sep 24 15:26:30 2015
 \begin{tabular}{rllr}
   \hline
  & opt & dsname & excess \\ 
@@ -415,7 +408,7 @@ declared was far from the optimum.
 > print(xtable(subset(res, opt=="Nelder_Mead" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
 \end{Sinput}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:31 2015
+% Thu Sep 24 15:26:30 2015
 \begin{tabular}{rllrrrrr}
   \hline
  & opt & dsname & n & np & excess & time & reltime \\ 
@@ -436,7 +429,7 @@ declared was far from the optimum.
 > print(xtable(subset(res, opt=="NLOPT_LN_NELDERMEAD" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
 \end{Sinput}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:31 2015
+% Thu Sep 24 15:26:30 2015
 \begin{tabular}{rllrrrrr}
   \hline
  & opt & dsname & n & np & excess & time & reltime \\ 
@@ -449,8 +442,6 @@ declared was far from the optimum.
   689 & NLOPT\_LN\_NELDERMEAD & kb07 & 1790 &  16 & 3.50 & 198.84 & 282.72 \\ 
    \hline
 \end{tabular}\end{Schunk}
-
-
 
 
  The \texttt{Nelder\_Mead} algorithm, either in the native form in
@@ -480,7 +471,7 @@ slow.
 > print(xtable(subset(res, opt=="NLOPT_LN_SBPLX" & excess > 0.005)[c(1,2,3,5,6,7,8)]),floating=FALSE, table.placement="H")
 \end{Sinput}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:31 2015
+% Thu Sep 24 15:26:30 2015
 \begin{tabular}{rllrrrrr}
   \hline
  & opt & dsname & n & np & excess & time & reltime \\ 
@@ -493,16 +484,14 @@ slow.
   
     By comparison, the \texttt{LN\_BOBYQA} algorithm converges quite rapidly
 on the \texttt{kb07} models.
-
-        
-        
+     
         
 \begin{Schunk}
 \begin{Sinput}
 > print(xtable(subset(res, opt=="LN_BOBYQA" & dsname == "kb07")[c(1,2,5,6,7,9)]),floating=FALSE, table.placement="H")
 \end{Sinput}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:31 2015
+% Thu Sep 24 15:26:30 2015
 \begin{tabular}{rllrrrr}
   \hline
  & opt & dsname & np & excess & time & objective \\ 
@@ -517,21 +506,17 @@ on the \texttt{kb07} models.
 We plot the time to convergence, relative to LN_BOBYQA and on a logarithmic scale, for each algorithm.
 
 
-
+\setkeys{Gin}{width=.99\textwidth}
 \begin{Schunk}
 \begin{Sinput}
 > res$cvg<-rep("yes",nrow(res))
 > res$cvg[which(res$excess>.02)] <- "no"
 > res$cvg<-as.factor(res$cvg)
 > k<-ggplot(res, aes(x=log(reltime), y=opt))
-> k + geom_point(aes(color=cvg))
+> k + geom_point(aes(color=cvg))+scale_x_log10()
 \end{Sinput}
 \end{Schunk}
 \includegraphics{Paper-013}
-
-
-
-
 
 
 Many of the cases where LN_BOBYQA is slower than other algorithms are simple problems that converge in less than 1/5 of a second for most algorithms.
@@ -543,7 +528,7 @@ We will declare a data set to be non-simple if at least one of the models fit to
 > print(xtable(subset(res, opt=="LN_BOBYQA" & time >= 0.2)[c("dsname","time","n","np","models")]),floating=FALSE, table.placement="H")
 \end{Sinput}
 % latex table generated in R 3.1.3 by xtable 1.7-4 package
-% Wed Sep  9 17:45:31 2015
+% Thu Sep 24 15:26:31 2015
 \begin{tabular}{rlrrrl}
   \hline
  & dsname & time & n & np & models \\ 
@@ -563,9 +548,6 @@ We will declare a data set to be non-simple if at least one of the models fit to
 
 
 
-
-
-
 \subsection[Reliablility]{Reliability}
 
  Sed iaculis sodales elit quis vehicula. In et tristique neque, sodales aliquet metus. In posuere dictum nisl, quis laoreet augue congue a. Aenean in commodo neque, sit amet hendrerit ex. Aliquam id faucibus ante. Vivamus in fermentum nunc. Nam condimentum eros id orci pretium, quis aliquam magna eleifend. 
@@ -574,66 +556,24 @@ We will declare a data set to be non-simple if at least one of the models fit to
 
 \section[References]{References}
 
-\begin{Schunk}
-\begin{Soutput}
-@Manual{,
-  title = {{lme4}: Linear mixed-effects models using Eigen and S4},
-  author = {Douglas Bates and Martin Maechler and Ben Bolker and Steven Walker},
-  year = {2014},
-  note = {R package version 1.1-7},
-  url = {http://CRAN.R-project.org/package=lme4},
-}
 
-@Misc{,
-  title = {{lme4}: Linear mixed-effects models using Eigen and S4},
-  year = {2014},
-  author = {Douglas Bates and Martin Maechler and Benjamin M. Bolker and Steven Walker},
-  note = {ArXiv e-print; submitted to \emph{Journal of Statistical Software}},
-  url = {http://arxiv.org/abs/1406.5823},
-}
-\end{Soutput}
-\begin{Soutput}
-@Article{,
-  title = {The jsonlite Package: A Practical and Consistent Mapping Between JSON Data and R Objects},
-  author = {Jeroen Ooms},
-  journal = {arXiv:1403.2805 [stat.CO]},
-  year = {2014},
-  url = {http://arxiv.org/abs/1403.2805},
-}
-\end{Soutput}
-\begin{Soutput}
-@Article{,
-  title = {Unifying Optimization Algorithms to Aid Software System Users: {optimx} for {R}},
-  author = {John C. Nash and Ravi Varadhan},
-  journal = {Journal of Statistical Software},
-  year = {2011},
-  volume = {43},
-  number = {9},
-  pages = {1--14},
-  url = {http://www.jstatsoft.org/v43/i09/},
-}
-\end{Soutput}
-\begin{Soutput}
-@Manual{,
-  title = {minqa: Derivative-free optimization algorithms by quadratic
-approximation},
-  author = {Douglas Bates and Katharine M. Mullen and John C. Nash and Ravi Varadhan},
-  year = {2014},
-  note = {R package version 1.2.4},
-  url = {http://CRAN.R-project.org/package=minqa},
-}
-\end{Soutput}
-\begin{Soutput}
-@Article{,
-  title = {The NLopt nonlinear-optimization package},
-  author = {Steven G. Johnson},
-  year = {?},
-  journal = {?},
-  volume = {?},
-  number = {?},
-  pages = {?},
-}
-\end{Soutput}
-\end{Schunk}
 
+Douglas Bates, Katharine M. Mullen, John C. Nash and Ravi Varadhan (2014). minqa:
+  Derivative-free optimization algorithms by quadratic approximation. R package version 1.2.4.
+  http://CRAN.R-project.org/package=minqa
+
+Bates D, Maechler M, Bolker B and Walker S (2014). _lme4: Linear mixed-effects models using Eigen
+  and S4_. R package version 1.1-7, <URL: http://CRAN.R-project.org/package=lme4>.
+
+John C. Nash, Ravi Varadhan (2011). Unifying Optimization Algorithms to Aid Software System
+  Users: optimx for R. Journal of Statistical Software, 43(9), 1-14. URL
+  http://www.jstatsoft.org/v43/i09/.
+
+Jeroen Ooms (2014). The jsonlite Package: A Practical and Consistent Mapping Between JSON Data
+  and R Objects. arXiv:1403.2805 [stat.CO] URL http://arxiv.org/abs/1403.2805.
+
+Steven G. Johnson, The NLopt nonlinear-optimization package, http://ab-initio.mit.edu/nlopt
+  
+(For the nloptr package they want us to go through and cite each algorithm we used)  
+  
 \end{document}

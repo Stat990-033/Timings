@@ -305,13 +305,13 @@ print(xtable(subset(res, opt=="LN_BOBYQA" & dsname == "kb07")[c(1,2,5,6,7,9)]),f
 We plot the time to convergence, relative to LN_BOBYQA and on a logarithmic scale, for each algorithm.
 
 
-
+\setkeys{Gin}{width=.99\textwidth}
 <<fig=TRUE>>=
 res$cvg<-rep("yes",nrow(res))
 res$cvg[which(res$excess>.02)] <- "no"
 res$cvg<-as.factor(res$cvg)
 k<-ggplot(res, aes(x=log(reltime), y=opt))
-k + geom_point(aes(color=cvg))
+k + geom_point(aes(color=cvg))+scale_x_log10()
 @
 
 
@@ -346,7 +346,7 @@ Douglas Bates, Katharine M. Mullen, John C. Nash and Ravi Varadhan (2014). minqa
   Derivative-free optimization algorithms by quadratic approximation. R package version 1.2.4.
   http://CRAN.R-project.org/package=minqa
 
-Bates D, Maechler M, Bolker B and Walker S (2014). _lme4: Linear mixed-effects models using Eigen
+Bates D, Maechler M, Bolker B and Walker S (2014). \_lme4: Linear mixed-effects models using Eigen
   and S4_. R package version 1.1-7, <URL: http://CRAN.R-project.org/package=lme4>.
 
 John C. Nash, Ravi Varadhan (2011). Unifying Optimization Algorithms to Aid Software System
