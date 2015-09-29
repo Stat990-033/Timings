@@ -1,8 +1,8 @@
 #' Retime a model fit
-#' 
+#'
 #' \code{retime} adds a new timing to a list, usually created from a JSON file,
 #' by refitting the model.
-#' 
+#'
 #' @param fin name of the input JSON file
 #' @param fout name of the output JSON file, default is the same name as the input.
 #' @return the same list augmented with a new timing
@@ -15,7 +15,7 @@ retime <- function(fin,fout=fin) {
     for (i in seq_along(mods)) {
         m <- mods[[i]]
         form <- eval(parse(text=m$formula))
-        
+
         for (j in seq_along(m$fits)) {
             algorithm <- "NA"
             method <- "NA"
@@ -36,7 +36,7 @@ retime <- function(fin,fout=fin) {
                               Nelder_Mead = list(maxfun=100000),
                               nloptwrap = list(algorithm=algorithm, maxeval=100000),
                               optimx = list(method=method))
-            ctrl <- lmerControl(optimizer=opt,optCtrl=optCtrl)
+            ctrl <- lmerControl(optimizer=opt,optCtrl=optCtrl,calc.derivs=FALSE)
             tt <- system.time(ff <- lmer(form,dat,REML=FALSE,control=ctrl))
             f$time <- unclass(tt)[3]
             f$dev <- deviance(ff)
