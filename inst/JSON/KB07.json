@@ -121,86 +121,6 @@
           "feval": 17411,
           "func": "lmm",
           "dev": 28591.281178615787
-        },
-        {
-          "optimizer": "LD_MMA",
-          "time": 176.895252747,
-          "geval": 2601,
-          "feval": 2601,
-          "func": "lmm",
-          "dev": 28586.31761872399
-        },
-        {
-          "optimizer": "LD_CCSAQ",
-          "time": 17.469820174,
-          "geval": 289,
-          "feval": 289,
-          "func": "lmm",
-          "dev": 28594.525004819257
-        },
-        {
-          "optimizer": "LD_SLSQP",
-          "time": 19.430713478,
-          "geval": 306,
-          "feval": 596,
-          "func": "lmm",
-          "dev": 28586.31761319942
-        },
-        {
-          "optimizer": "LD_LBFGS",
-          "time": 5.357410868,
-          "geval": 89,
-          "feval": 89,
-          "func": "lmm",
-          "dev": 28586.31761320218
-        },
-        {
-          "optimizer": "LD_TNEWTON",
-          "time": 14.910298737,
-          "geval": 245,
-          "feval": 245,
-          "func": "lmm",
-          "dev": 28586.341337643076
-        },
-        {
-          "optimizer": "LD_TNEWTON_PRECOND",
-          "time": 8.525274883,
-          "geval": 141,
-          "feval": 141,
-          "func": "lmm",
-          "dev": 28586.341337643073
-        },
-        {
-          "optimizer": "LD_TNEWTON_RESTART",
-          "time": 16.974108129,
-          "geval": 274,
-          "feval": 274,
-          "func": "lmm",
-          "dev": 28586.317613199026
-        },
-        {
-          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "time": 6.971683464,
-          "geval": 115,
-          "feval": 115,
-          "func": "lmm",
-          "dev": 28586.341337643073
-        },
-        {
-          "optimizer": "LD_VAR1",
-          "time": 5.732878056,
-          "geval": 95,
-          "feval": 95,
-          "func": "lmm",
-          "dev": 28586.317613230018
-        },
-        {
-          "optimizer": "LD_VAR2",
-          "time": 5.728138137,
-          "geval": 95,
-          "feval": 95,
-          "func": "lmm",
-          "dev": 28586.317613230018
         }
       ],
       "q": [
@@ -323,14 +243,6 @@
           "feval": 888,
           "func": "lmm",
           "dev": 28670.91331961964
-        },
-        {
-          "optimizer": "LD_MMA",
-          "time": 1.516017153,
-          "geval": 29,
-          "feval": 29,
-          "func": "lmm",
-          "dev": 28682.06739419186
         }
       ],
       "q": [

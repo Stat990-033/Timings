@@ -1,6 +1,6 @@
 {
-  "BLAS": "mkl",
-  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "BLAS": "openblas64",
+  "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
       "formula": "Y ~ 1 + U + ((1 + U) | G)",
@@ -77,123 +77,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.01079725,
+          "time": 0.003148821,
           "geval": 0,
-          "feval": 134,
+          "feval": 139,
           "func": "lmm",
-          "dev": 182.05557643480654
+          "dev": 182.05557644315462
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 8.936016198,
+          "time": 1.673227382,
           "geval": 0,
-          "feval": 99846,
+          "feval": 97712,
           "func": "lmm",
-          "dev": 182.05558216705631
+          "dev": 182.0555944198405
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.013378794,
+          "time": 0.003220885,
           "geval": 0,
-          "feval": 174,
+          "feval": 157,
           "func": "lmm",
-          "dev": 182.05557638814398
+          "dev": 182.05557638796014
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.017546859,
+          "time": 0.003997936,
           "geval": 0,
           "feval": 213,
           "func": "lmm",
-          "dev": 182.05557639265214
+          "dev": 182.05557639258012
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.028390504,
+          "time": 0.006729955,
           "geval": 0,
-          "feval": 378,
+          "feval": 386,
           "func": "lmm",
-          "dev": 182.05557639454054
-        },
-        {
-          "optimizer": "LD_MMA",
-          "time": 0.00836493,
-          "geval": 78,
-          "feval": 78,
-          "func": "lmm",
-          "dev": 182.05557639725203
-        },
-        {
-          "optimizer": "LD_CCSAQ",
-          "time": 0.007333806,
-          "geval": 64,
-          "feval": 64,
-          "func": "lmm",
-          "dev": 200.25349919537445
-        },
-        {
-          "optimizer": "LD_SLSQP",
-          "time": 0.00793017,
-          "geval": 51,
-          "feval": 77,
-          "func": "lmm",
-          "dev": 182.05557638814122
-        },
-        {
-          "optimizer": "LD_LBFGS",
-          "time": 0.003047968,
-          "geval": 15,
-          "feval": 15,
-          "func": "lmm",
-          "dev": 200.2534991927202
-        },
-        {
-          "optimizer": "LD_TNEWTON",
-          "time": 0.004522246,
-          "geval": 30,
-          "feval": 30,
-          "func": "lmm",
-          "dev": 200.2534991927203
-        },
-        {
-          "optimizer": "LD_TNEWTON_PRECOND",
-          "time": 0.004145048,
-          "geval": 26,
-          "feval": 26,
-          "func": "lmm",
-          "dev": 200.25349919272014
-        },
-        {
-          "optimizer": "LD_TNEWTON_RESTART",
-          "time": 0.005513407,
-          "geval": 34,
-          "feval": 34,
-          "func": "lmm",
-          "dev": 200.25349919272026
-        },
-        {
-          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "time": 0.004409095,
-          "geval": 29,
-          "feval": 29,
-          "func": "lmm",
-          "dev": 200.25349919272037
-        },
-        {
-          "optimizer": "LD_VAR1",
-          "time": 0.003515157,
-          "geval": 20,
-          "feval": 20,
-          "func": "lmm",
-          "dev": 200.25349919274285
-        },
-        {
-          "optimizer": "LD_VAR2",
-          "time": 0.003509721,
-          "geval": 20,
-          "feval": 20,
-          "func": "lmm",
-          "dev": 200.25349919274285
+          "dev": 182.05557639308353
         }
       ],
       "q": [
@@ -204,10 +124,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "5.745 GB",
+  "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.11-pre+13",
+  "Julia": "0.4.0-rc3",
   "Rversion": "R version 3.2.1 (2015-06-18)",
   "dsname": "WWheat",
   "OS": "Linux",

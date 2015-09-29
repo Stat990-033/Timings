@@ -1,6 +1,6 @@
 {
-  "BLAS": "mkl",
-  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "BLAS": "openblas64",
+  "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
       "formula": "Y ~ 1 + U + V + W + X + (1 | G) + (1 | H)",
@@ -77,115 +77,35 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.006824065,
+          "time": 0.001232507,
           "geval": 0,
           "feval": 40,
           "func": "lmm",
-          "dev": -260.6283232482049
+          "dev": -260.62832324760814
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.01256483,
+          "time": 0.004173908,
           "geval": 0,
-          "feval": 333,
+          "feval": 309,
           "func": "lmm",
-          "dev": -260.6283230247102
+          "dev": -260.62832322356473
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.002267842,
+          "time": 0.001209051,
           "geval": 0,
           "feval": 44,
           "func": "lmm",
-          "dev": -257.4090478803781
+          "dev": -257.4090478789781
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.004878879,
+          "time": 0.001940726,
           "geval": 0,
-          "feval": 119,
+          "feval": 115,
           "func": "lmm",
-          "dev": -260.62832324824944
-        },
-        {
-          "optimizer": "LD_MMA",
-          "time": 0.02051314,
-          "geval": 32,
-          "feval": 32,
-          "func": "lmm",
-          "dev": -260.6283232485338
-        },
-        {
-          "optimizer": "LD_CCSAQ",
-          "time": 0.005513261,
-          "geval": 14,
-          "feval": 14,
-          "func": "lmm",
-          "dev": -257.40904788503
-        },
-        {
-          "optimizer": "LD_SLSQP",
-          "time": 0.005372836,
-          "geval": 13,
-          "feval": 18,
-          "func": "lmm",
-          "dev": -260.6283232485356
-        },
-        {
-          "optimizer": "LD_LBFGS",
-          "time": 0.004752113,
-          "geval": 9,
-          "feval": 9,
-          "func": "lmm",
-          "dev": -257.40904788503104
-        },
-        {
-          "optimizer": "LD_TNEWTON",
-          "time": 0.010866162,
-          "geval": 27,
-          "feval": 27,
-          "func": "lmm",
-          "dev": -260.6283232485356
-        },
-        {
-          "optimizer": "LD_TNEWTON_PRECOND",
-          "time": 0.009645353,
-          "geval": 23,
-          "feval": 23,
-          "func": "lmm",
-          "dev": -260.62832324853554
-        },
-        {
-          "optimizer": "LD_TNEWTON_RESTART",
-          "time": 0.005438768,
-          "geval": 11,
-          "feval": 11,
-          "func": "lmm",
-          "dev": -257.4090478850312
-        },
-        {
-          "optimizer": "LD_TNEWTON_PRECOND_RESTART",
-          "time": 0.008767591,
-          "geval": 11,
-          "feval": 11,
-          "func": "lmm",
-          "dev": -257.4090478850312
-        },
-        {
-          "optimizer": "LD_VAR1",
-          "time": 0.0048083,
-          "geval": 9,
-          "feval": 9,
-          "func": "lmm",
-          "dev": -257.4090478850314
-        },
-        {
-          "optimizer": "LD_VAR2",
-          "time": 0.004770065,
-          "geval": 9,
-          "feval": 9,
-          "func": "lmm",
-          "dev": -257.4090478850314
+          "dev": -260.62832324745284
         }
       ],
       "q": [
@@ -197,10 +117,10 @@
       "mtype": "PLSTwo"
     }
   ],
-  "memory": "5.745 GB",
+  "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.11-pre+13",
+  "Julia": "0.4.0-rc3",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Demand",
   "OS": "Linux",
