@@ -7,120 +7,120 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.0249999999996362,
+          "time": 0.0259999999998399,
           "feval": 69,
           "func": "lmer",
           "dev": 332.188348668501
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.0300000000006548,
+          "time": 0.0319999999999254,
           "feval": 97,
           "func": "lmer",
           "dev": 332.188348668538
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 0.115999999999985,
+          "time": 0.125999999999976,
           "feval": 18,
           "func": "lmer",
           "dev": 332.188348669205
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 0.110000000000582,
+          "time": 0.125,
           "feval": 35,
           "func": "lmer",
           "dev": 332.188348668501
         },
         {
           "optimizer": "optimx:spg",
-          "time": 0.193999999999505,
+          "time": 0.239000000000033,
           "feval": "NA",
           "func": "lmer",
           "dev": 332.188348668501
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 0.113000000001193,
+          "time": 0.130999999999858,
           "feval": "NA",
           "func": "lmer",
           "dev": 332.188348668501
         },
         {
           "optimizer": "NLOPT_LN_BOBYQA",
-          "time": 0.0229999999992287,
+          "time": 0.0260000000000673,
           "feval": 27,
           "func": "lmer",
           "dev": 332.188353156272
         },
         {
           "optimizer": "NLOPT_LN_COBYLA",
-          "time": 0.0290000000004511,
+          "time": 0.0260000000000673,
           "feval": 41,
           "func": "lmer",
           "dev": 332.188349126145
         },
         {
           "optimizer": "NLOPT_LN_PRAXIS",
-          "time": 0.0239999999994325,
-          "feval": 46,
+          "time": 0.0270000000000437,
+          "feval": 52,
           "func": "lmer",
           "dev": 332.188348668501
         },
         {
           "optimizer": "NLOPT_LN_NELDERMEAD",
-          "time": 0.0249999999996362,
+          "time": 0.02800000000002,
           "feval": 54,
           "func": "lmer",
           "dev": 332.188349597467
         },
         {
           "optimizer": "NLOPT_LN_SBPLX",
-          "time": 0.0280000000002474,
+          "time": 0.0310000000001764,
           "feval": 103,
           "func": "lmer",
           "dev": 332.18834867533
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001162404,
+          "time": 0.001178458,
           "geval": 0,
           "feval": 44,
           "func": "lmm",
-          "dev": 332.1883486722182
+          "dev": 332.188348672218
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001693398,
+          "time": 0.001632122,
           "geval": 0,
           "feval": 91,
           "func": "lmm",
-          "dev": 332.1883487005291
+          "dev": 332.188348700529
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.001512307,
+          "time": 0.001453943,
           "geval": 0,
-          "feval": 84,
+          "feval": 76,
           "func": "lmm",
-          "dev": 332.1883486683688
+          "dev": 332.188348668423
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001471206,
+          "time": 0.001395041,
           "geval": 0,
           "feval": 74,
           "func": "lmm",
-          "dev": 332.18834867256066
+          "dev": 332.188348672561
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.001837054,
+          "time": 0.001843711,
           "geval": 0,
           "feval": 111,
           "func": "lmm",
-          "dev": 332.18834866895304
+          "dev": 332.188348668953
         }
       ],
       "q": [
@@ -136,7 +136,7 @@
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
   "Julia": "0.4.0-rc3",
-  "Rversion": "R version 3.2.1 (2015-06-18)",
+  "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Penicillin",
   "OS": "Linux",
   "n": 144

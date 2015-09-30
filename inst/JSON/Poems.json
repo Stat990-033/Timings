@@ -7,80 +7,80 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 33.596,
-          "feval": 81,
+          "time": 20.566,
+          "feval": 79,
           "func": "lmer",
-          "dev": 174757.888378013
+          "dev": 174757.888377969
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 48.561,
+          "time": 25.9749999999999,
           "feval": 130,
           "func": "lmer",
           "dev": 174757.888378288
         },
         {
           "optimizer": "NLOPT_LN_BOBYQA",
-          "time": 21.309,
+          "time": 13.646,
           "feval": 41,
           "func": "lmer",
-          "dev": 174757.888378265
+          "dev": 174757.88837826
         },
         {
           "optimizer": "NLOPT_LN_COBYLA",
-          "time": 36.183,
-          "feval": 95,
+          "time": 18.424,
+          "feval": 80,
           "func": "lmer",
-          "dev": 174757.888382024
+          "dev": 174757.888425692
         },
         {
           "optimizer": "NLOPT_LN_PRAXIS",
-          "time": 29.01,
-          "feval": 68,
+          "time": 18.6870000000001,
+          "feval": 77,
           "func": "lmer",
-          "dev": 174757.888377926
+          "dev": 174757.888377932
         },
         {
           "optimizer": "NLOPT_LN_NELDERMEAD",
-          "time": 41.033,
+          "time": 27.318,
           "feval": 110,
           "func": "lmer",
-          "dev": 174757.888379247
+          "dev": 174757.888379246
         },
         {
           "optimizer": "NLOPT_LN_SBPLX",
-          "time": 38.523,
+          "time": 24.3619999999999,
           "feval": 107,
           "func": "lmer",
-          "dev": 174757.888392059
+          "dev": 174757.888392058
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 56.693,
+          "time": 39.7959999999998,
           "feval": 28,
           "func": "lmer",
-          "dev": 174757.888378108
+          "dev": 174757.888378109
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 64.715,
+          "time": 37.7040000000002,
           "feval": 126,
           "func": "lmer",
-          "dev": 174757.888378717
+          "dev": 174757.888378751
         },
         {
           "optimizer": "optimx:spg",
-          "time": 78.129,
+          "time": 79.7370000000001,
           "feval": "NA",
           "func": "lmer",
-          "dev": 174757.888377939
+          "dev": 174757.888378388
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 54.385,
+          "time": 33.4259999999999,
           "feval": "NA",
           "func": "lmer",
-          "dev": 174757.888378013
+          "dev": 174757.888377969
         },
         {
           "optimizer": "LN_BOBYQA",
@@ -88,7 +88,7 @@
           "geval": 0,
           "feval": 103,
           "func": "lmm",
-          "dev": 174757.8883780016
+          "dev": 174757.888378002
         },
         {
           "optimizer": "LN_COBYLA",
@@ -96,7 +96,7 @@
           "geval": 0,
           "feval": 295,
           "func": "lmm",
-          "dev": 174757.8883804301
+          "dev": 174757.88838043
         },
         {
           "optimizer": "LN_PRAXIS",
@@ -104,7 +104,7 @@
           "geval": 0,
           "feval": 91,
           "func": "lmm",
-          "dev": 174757.8883779315
+          "dev": 174757.888377931
         },
         {
           "optimizer": "LN_NELDERMEAD",
@@ -112,7 +112,7 @@
           "geval": 0,
           "feval": 216,
           "func": "lmm",
-          "dev": 174757.88837798103
+          "dev": 174757.888377981
         },
         {
           "optimizer": "LN_SBPLX",
@@ -120,7 +120,7 @@
           "geval": 0,
           "feval": 186,
           "func": "lmm",
-          "dev": 174757.88837806924
+          "dev": 174757.888378069
         }
       ],
       "q": [
@@ -137,7 +137,7 @@
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
   "Julia": "0.3.11-pre+13",
-  "Rversion": "R version 3.2.1 (2015-06-18)",
+  "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Poems",
   "OS": "Linux",
   "n": 275996

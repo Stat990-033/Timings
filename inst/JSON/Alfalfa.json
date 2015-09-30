@@ -77,35 +77,35 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000886262,
+          "time": 0.00094067,
           "geval": 0,
           "feval": 21,
           "func": "lmm",
-          "dev": -10.8102280685952
+          "dev": -10.810228068595205
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000875961,
+          "time": 0.000836388,
           "geval": 0,
           "feval": 24,
           "func": "lmm",
-          "dev": -10.8102280670529
+          "dev": -10.810228067052854
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000932911,
+          "time": 0.000815601,
           "geval": 0,
           "feval": 26,
           "func": "lmm",
-          "dev": -10.8102280129091
+          "dev": -10.810228012909093
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.00123904,
+          "time": 0.00095347,
           "geval": 0,
           "feval": 50,
           "func": "lmm",
-          "dev": -10.8102280658439
+          "dev": -10.810228065843908
         }
       ],
       "q": [

@@ -77,7 +77,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000646074,
+          "time": 0.000682332,
           "geval": 0,
           "feval": 13,
           "func": "lmm",
@@ -85,7 +85,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000695619,
+          "time": 0.000677167,
           "geval": 0,
           "feval": 24,
           "func": "lmm",
@@ -93,7 +93,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000804119,
+          "time": 0.000715331,
           "geval": 0,
           "feval": 30,
           "func": "lmm",
@@ -101,7 +101,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000787689,
+          "time": 0.000773132,
           "geval": 0,
           "feval": 50,
           "func": "lmm",

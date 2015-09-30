@@ -7,7 +7,7 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000550924,
+          "time": 0.000548349,
           "geval": 0,
           "feval": 21,
           "func": "lmm",
@@ -15,7 +15,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000554713,
+          "time": 0.000547943,
           "geval": 0,
           "feval": 26,
           "func": "lmm",
@@ -23,7 +23,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000597371,
+          "time": 0.000544836,
           "geval": 0,
           "feval": 28,
           "func": "lmm",
@@ -31,7 +31,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000667034,
+          "time": 0.000642793,
           "geval": 0,
           "feval": 49,
           "func": "lmm",
