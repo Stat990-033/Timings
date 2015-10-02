@@ -205,14 +205,6 @@
           "dev": 28670.913319616116
         },
         {
-          "optimizer": "LN_PRAXIS",
-          "time": 2.924809309,
-          "geval": 0,
-          "feval": 670,
-          "func": "lmm",
-          "dev": null
-        },
-        {
           "optimizer": "LN_NELDERMEAD",
           "time": 48.290565289,
           "geval": 0,
