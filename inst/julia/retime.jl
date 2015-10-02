@@ -4,7 +4,7 @@ function retime(fnm,ofile)
     js = JSON.parsefile(fnm)
     dsname = js["dsname"]
     @show dsname
-    dat = rcopy(reval(string("Timings::",dsname)))
+    dat = rcopy(rcall(:(::),:Timings,symbol(dsname)))
     js["n"] = size(dat,1)
     js["CPU"] = Sys.cpu_info()[1].model
     js["CPU_CORES"] = CPU_CORES
@@ -12,7 +12,6 @@ function retime(fnm,ofile)
     js["Julia"] = string(VERSION)
     js["WORD_SIZE"] = Sys.WORD_SIZE
     js["BLAS"] = Base.blas_vendor()
-    blas_set_num_threads(1)
     js["memory"] = string(@sprintf("%.3f ",Sys.total_memory()/2^30),"GB")
     for m in js["models"]
         form = eval(parse(m["formula"]))
@@ -27,7 +26,6 @@ function retime(fnm,ofile)
                 f["time"] = @elapsed mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
                 f["dev"] = objective(mod)
                 f["feval"] = mod.opt.feval
-                f["geval"] = mod.opt.geval
                 m["p"] = size(mod.trms[end],2) - 1
 #                m["q"] = Int[length(b) for b in mod.b]
             end
