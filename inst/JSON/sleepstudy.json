@@ -1,49 +1,49 @@
 {
-  "BLAS": "mkl",
-  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "BLAS": "openblas64",
+  "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
       "formula": "Y ~ 1 + U + ((1 + U) | G)",
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.006976022,
+          "time": 0.003987201,
           "geval": 0,
           "feval": 57,
           "func": "lmm",
-          "dev": 1751.93934446468
+          "dev": 1751.9393444647046
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.035169403,
+          "time": 0.016033883,
           "geval": 0,
-          "feval": 320,
+          "feval": 362,
           "func": "lmm",
-          "dev": 1751.93934447095
+          "dev": 1751.9393444635052
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.012172551,
+          "time": 0.005878846,
           "geval": 0,
-          "feval": 106,
+          "feval": 121,
           "func": "lmm",
-          "dev": 1751.9393444632
+          "dev": 1751.9393444632415
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.015791476,
+          "time": 0.006676194,
           "geval": 0,
           "feval": 140,
           "func": "lmm",
-          "dev": 1751.939344475
+          "dev": 1751.9393444750278
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.022536698,
+          "time": 0.00920255,
           "geval": 0,
           "feval": 202,
           "func": "lmm",
-          "dev": 1751.93934447556
+          "dev": 1751.939344475581
         },
         {
           "optimizer": "optimx:L-BFGS-B",
@@ -107,43 +107,43 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.002784951,
+          "time": 0.001227267,
           "geval": 0,
           "feval": 30,
           "func": "lmm",
-          "dev": 1752.00325514158
+          "dev": 1752.0032551416
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.011035851,
+          "time": 0.002269981,
           "geval": 0,
-          "feval": 168,
+          "feval": 134,
           "func": "lmm",
-          "dev": 1752.00325514042
+          "dev": 1752.0032551556878
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.006014743,
+          "time": 0.001547388,
           "geval": 0,
-          "feval": 86,
+          "feval": 72,
           "func": "lmm",
-          "dev": 1752.00325513988
+          "dev": 1752.0032551399033
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.005290921,
+          "time": 0.001581223,
           "geval": 0,
           "feval": 75,
           "func": "lmm",
-          "dev": 1752.00325514351
+          "dev": 1752.0032551435258
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.008449802,
+          "time": 0.002231946,
           "geval": 0,
           "feval": 126,
           "func": "lmm",
-          "dev": 1752.00325514139
+          "dev": 1752.0032551414129
         },
         {
           "optimizer": "bobyqa",
@@ -217,10 +217,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "5.745 GB",
+  "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.11-pre+13",
+  "Julia": "0.4.0-rc3",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "sleepstudy",
   "OS": "Linux",

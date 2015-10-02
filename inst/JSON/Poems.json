@@ -1,6 +1,6 @@
 {
-  "BLAS": "mkl",
-  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "BLAS": "openblas64",
+  "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
       "formula": "Y ~ 1 + U + V + (1 | G) + (1 | H) + (1 | I)",
@@ -84,43 +84,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 5.691811489,
+          "time": 4.466265894,
           "geval": 0,
-          "feval": 103,
+          "feval": 106,
           "func": "lmm",
-          "dev": 174757.888378002
+          "dev": 174757.88837776944
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 13.250342218,
+          "time": 13.451433953,
           "geval": 0,
-          "feval": 295,
+          "feval": 377,
           "func": "lmm",
-          "dev": 174757.88838043
+          "dev": 174757.88837802864
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 5.308943086,
+          "time": 4.623807582,
           "geval": 0,
-          "feval": 91,
+          "feval": 111,
           "func": "lmm",
-          "dev": 174757.888377931
+          "dev": 174757.88837780294
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 10.152530493,
+          "time": 8.189586546,
           "geval": 0,
-          "feval": 216,
+          "feval": 217,
           "func": "lmm",
-          "dev": 174757.888377981
+          "dev": 174757.8883778996
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 9.031212391,
+          "time": 7.712658833,
           "geval": 0,
-          "feval": 186,
+          "feval": 204,
           "func": "lmm",
-          "dev": 174757.888378069
+          "dev": 174757.88837777497
         }
       ],
       "q": [
@@ -133,10 +133,10 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "memory": "5.745 GB",
+  "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.11-pre+13",
+  "Julia": "0.4.0-rc3",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Poems",
   "OS": "Linux",
