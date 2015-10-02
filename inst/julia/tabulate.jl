@@ -20,10 +20,10 @@ function timingtab(fin)
                               rpad(f["optimizer"] == "nloptwrap" ?
                                    f["algorithm"] : f["optimizer"],30)))
             push!(elapsed, f["time"])
-            push!(deviance,f["deviance"])
+            push!(deviance,f["dev"])
         end
-        for i in sortperm(deviance)
-            @printf("%s%12.3f, %8.3f",opts[i],deviance[i],elapsed[i])
+        for i in sortperm(elapsed)
+            @printf("%s%12.3f, %9.4f",opts[i],deviance[i],elapsed[i])
             println()
         end
     end
@@ -60,6 +60,7 @@ function optdir(dnm)
     np = Int[]
     for nm in filter(r"\.json$",readdir(dnm))
         js = JSON.parsefile(joinpath(dnm,nm))
+        js["Julia"] == "0.4.0-rc3" && js["Rversion"] == "R version 3.2.2 (2015-08-14)" || continue
         dsn = js["dsname"]
         for m in js["models"]
             opt,tt,rtt,dev,edevs,forms,pp,qq,nnpp = modelsummary(m)
