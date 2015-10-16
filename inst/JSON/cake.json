@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -7,35 +7,35 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001737415,
+          "time": 0.002287581,
           "geval": 0,
           "feval": 14,
           "func": "lmm",
-          "dev": 1679.0518652547585
+          "dev": 1679.0518652547635
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001898111,
+          "time": 0.002500151,
           "geval": 0,
           "feval": 26,
           "func": "lmm",
-          "dev": 1679.0518652568414
+          "dev": 1679.0518652568412
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001929282,
+          "time": 0.0024813,
           "geval": 0,
           "feval": 30,
           "func": "lmm",
-          "dev": 1679.0518652667931
+          "dev": 1679.051865266793
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.002337438,
+          "time": 0.002938006,
           "geval": 0,
           "feval": 57,
           "func": "lmm",
-          "dev": 1679.0518652549304
+          "dev": 1679.0518652549306
         },
         {
           "optimizer": "NLOPT_LN_BOBYQA",
@@ -119,7 +119,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "cake",
   "OS": "Linux",

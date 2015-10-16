@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -84,7 +84,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.00074468,
+          "time": 0.00074158,
           "geval": 0,
           "feval": 28,
           "func": "lmm",
@@ -92,7 +92,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000695821,
+          "time": 0.000686722,
           "geval": 0,
           "feval": 25,
           "func": "lmm",
@@ -100,7 +100,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.0006983,
+          "time": 0.000699208,
           "geval": 0,
           "feval": 30,
           "func": "lmm",
@@ -108,7 +108,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.00079345,
+          "time": 0.000863724,
           "geval": 0,
           "feval": 45,
           "func": "lmm",
@@ -204,7 +204,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000570931,
+          "time": 0.000578129,
           "geval": 0,
           "feval": 17,
           "func": "lmm",
@@ -212,7 +212,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000668926,
+          "time": 0.000590392,
           "geval": 0,
           "feval": 26,
           "func": "lmm",
@@ -220,7 +220,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000618637,
+          "time": 0.00060338,
           "geval": 0,
           "feval": 32,
           "func": "lmm",
@@ -228,7 +228,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000724528,
+          "time": 0.00070857,
           "geval": 0,
           "feval": 52,
           "func": "lmm",
@@ -246,7 +246,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "AvgDailyGain",
   "OS": "Linux",

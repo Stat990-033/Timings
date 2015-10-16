@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -84,7 +84,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.006774133,
+          "time": 0.008727652,
           "geval": 0,
           "feval": 20,
           "func": "lmm",
@@ -92,7 +92,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.006822202,
+          "time": 0.009101325,
           "geval": 0,
           "feval": 32,
           "func": "lmm",
@@ -100,7 +100,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.007038604,
+          "time": 0.00905813,
           "geval": 0,
           "feval": 38,
           "func": "lmm",
@@ -108,7 +108,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.007342173,
+          "time": 0.008807547,
           "geval": 0,
           "feval": 59,
           "func": "lmm",
@@ -204,7 +204,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.007682015,
+          "time": 0.009858996,
           "geval": 0,
           "feval": 20,
           "func": "lmm",
@@ -212,7 +212,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.007769275,
+          "time": 0.010019551,
           "geval": 0,
           "feval": 32,
           "func": "lmm",
@@ -220,7 +220,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.007982332,
+          "time": 0.010126893,
           "geval": 0,
           "feval": 40,
           "func": "lmm",
@@ -228,7 +228,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.008222877,
+          "time": 0.009984212,
           "geval": 0,
           "feval": 66,
           "func": "lmm",
@@ -246,7 +246,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Exam",
   "OS": "Linux",

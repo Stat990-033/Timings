@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -7,7 +7,7 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.0005327,
+          "time": 0.000569532,
           "geval": 0,
           "feval": 18,
           "func": "lmm",
@@ -15,7 +15,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000494713,
+          "time": 0.000652272,
           "geval": 0,
           "feval": 27,
           "func": "lmm",
@@ -23,7 +23,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000500529,
+          "time": 0.000479777,
           "geval": 0,
           "feval": 28,
           "func": "lmm",
@@ -31,7 +31,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000551777,
+          "time": 0.000530102,
           "geval": 0,
           "feval": 43,
           "func": "lmm",
@@ -119,7 +119,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Dyestuff",
   "OS": "Linux",

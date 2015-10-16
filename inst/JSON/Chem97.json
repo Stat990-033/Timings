@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -84,7 +84,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.058952634,
+          "time": 0.078134119,
           "geval": 0,
           "feval": 32,
           "func": "lmm",
@@ -92,7 +92,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.070539477,
+          "time": 0.080440275,
           "geval": 0,
           "feval": 71,
           "func": "lmm",
@@ -100,15 +100,15 @@
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.071234249,
+          "time": 0.081804766,
           "geval": 0,
-          "feval": 73,
+          "feval": 80,
           "func": "lmm",
-          "dev": 157869.92614931994
+          "dev": 157869.92614931992
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.075099343,
+          "time": 0.083095823,
           "geval": 0,
           "feval": 85,
           "func": "lmm",
@@ -116,7 +116,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.088988401,
+          "time": 0.094120635,
           "geval": 0,
           "feval": 123,
           "func": "lmm",
@@ -213,7 +213,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.071503612,
+          "time": 0.086297021,
           "geval": 0,
           "feval": 31,
           "func": "lmm",
@@ -221,7 +221,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.091087858,
+          "time": 0.102638981,
           "geval": 0,
           "feval": 82,
           "func": "lmm",
@@ -229,15 +229,15 @@
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.098544132,
+          "time": 0.113459994,
           "geval": 0,
-          "feval": 106,
+          "feval": 115,
           "func": "lmm",
-          "dev": 141685.56021410238
+          "dev": 141685.56021410244
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.093036076,
+          "time": 0.106371731,
           "geval": 0,
           "feval": 91,
           "func": "lmm",
@@ -245,7 +245,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.099799746,
+          "time": 0.1105493,
           "geval": 0,
           "feval": 111,
           "func": "lmm",
@@ -264,7 +264,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Chem97",
   "OS": "Linux",

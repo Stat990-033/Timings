@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -77,35 +77,35 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.034198013,
+          "time": 0.112442184,
           "geval": 0,
           "feval": 142,
           "func": "lmm",
-          "dev": 22373.106635829
+          "dev": 22373.10663582896
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 2.29726292,
+          "time": 7.342250445,
           "geval": 0,
           "feval": 14108,
           "func": "lmm",
-          "dev": 22373.1066359644
+          "dev": 22373.106635964396
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.03438151,
+          "time": 0.085380047,
           "geval": 0,
           "feval": 149,
           "func": "lmm",
-          "dev": 22373.1066358329
+          "dev": 22373.106635832886
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.091918639,
+          "time": 0.285622049,
           "geval": 0,
           "feval": 516,
           "func": "lmm",
-          "dev": 22373.1066358383
+          "dev": 22373.106635838347
         }
       ],
       "q": [
@@ -119,7 +119,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "SIMS",
   "OS": "Linux",

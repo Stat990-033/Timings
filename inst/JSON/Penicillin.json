@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -84,43 +84,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001178458,
+          "time": 0.001470343,
           "geval": 0,
           "feval": 44,
           "func": "lmm",
-          "dev": 332.188348672218
+          "dev": 332.1883486722182
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001632122,
+          "time": 0.001909158,
           "geval": 0,
           "feval": 91,
           "func": "lmm",
-          "dev": 332.188348700529
+          "dev": 332.1883487005291
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.001453943,
+          "time": 0.001605092,
           "geval": 0,
-          "feval": 76,
+          "feval": 84,
           "func": "lmm",
-          "dev": 332.188348668423
+          "dev": 332.1883486685774
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001395041,
+          "time": 0.001480753,
           "geval": 0,
           "feval": 74,
           "func": "lmm",
-          "dev": 332.188348672561
+          "dev": 332.18834867256066
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.001843711,
+          "time": 0.002007625,
           "geval": 0,
           "feval": 111,
           "func": "lmm",
-          "dev": 332.188348668953
+          "dev": 332.18834866895304
         }
       ],
       "q": [
@@ -135,7 +135,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Penicillin",
   "OS": "Linux",

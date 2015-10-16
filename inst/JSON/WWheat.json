@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -77,43 +77,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.003538814,
+          "time": 0.004777384,
           "geval": 0,
           "feval": 139,
           "func": "lmm",
-          "dev": 182.055576443155
+          "dev": 182.05557644315462
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 1.514915723,
+          "time": 3.848493483,
           "geval": 0,
           "feval": 97712,
           "func": "lmm",
-          "dev": 182.055594419841
+          "dev": 182.0555944198405
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.003193623,
+          "time": 0.005751847,
           "geval": 0,
-          "feval": 178,
+          "feval": 163,
           "func": "lmm",
-          "dev": 182.055576388238
+          "dev": 182.05557638958487
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.003625428,
+          "time": 0.006334974,
           "geval": 0,
           "feval": 213,
           "func": "lmm",
-          "dev": 182.05557639258
+          "dev": 182.05557639258012
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.005994189,
+          "time": 0.017225414,
           "geval": 0,
           "feval": 386,
           "func": "lmm",
-          "dev": 182.055576393084
+          "dev": 182.05557639308353
         }
       ],
       "q": [
@@ -127,7 +127,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "WWheat",
   "OS": "Linux",

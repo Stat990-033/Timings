@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -84,31 +84,31 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.195407705,
+          "time": 0.241245787,
           "geval": 0,
-          "feval": 338,
+          "feval": 336,
           "func": "lmm",
-          "dev": 1030.9552951232602
+          "dev": 1030.9552951836918
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 1.27268814,
+          "time": 1.486189717,
           "geval": 0,
-          "feval": 2357,
+          "feval": 2182,
           "func": "lmm",
-          "dev": 1030.9552950506027
+          "dev": 1030.955295050372
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.29669074,
+          "time": 0.366818591,
           "geval": 0,
-          "feval": 550,
+          "feval": 545,
           "func": "lmm",
-          "dev": 1049.1515125122946
+          "dev": 1049.1515121928649
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 14.497258178,
+          "time": 18.553716035,
           "geval": 0,
           "feval": 28024,
           "func": "lmm",
@@ -116,7 +116,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 1.056713247,
+          "time": 1.33019803,
           "geval": 0,
           "feval": 2031,
           "func": "lmm",
@@ -213,7 +213,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.056115745,
+          "time": 0.058871593,
           "geval": 0,
           "feval": 124,
           "func": "lmm",
@@ -221,7 +221,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.556012884,
+          "time": 0.596319116,
           "geval": 0,
           "feval": 1578,
           "func": "lmm",
@@ -229,7 +229,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.567354078,
+          "time": 0.594996298,
           "geval": 0,
           "feval": 1625,
           "func": "lmm",
@@ -237,7 +237,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.122907726,
+          "time": 0.128378701,
           "geval": 0,
           "feval": 342,
           "func": "lmm",
@@ -256,7 +256,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "bs10",
   "OS": "Linux",

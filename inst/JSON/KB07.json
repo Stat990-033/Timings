@@ -1,5 +1,5 @@
 {
-  "BLAS": "openblas64",
+  "BLAS": "openblas",
   "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
@@ -84,27 +84,19 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 11.820432108,
+          "time": 10.931613468,
           "geval": 0,
-          "feval": 2086,
+          "feval": 1528,
           "func": "lmm",
-          "dev": 28586.331919670512
-        },
-        {
-          "optimizer": "LN_COBYLA",
-          "time": 581.823713993,
-          "geval": 0,
-          "feval": 104398,
-          "func": "lmm",
-          "dev": 28586.317613334413
+          "dev": -3947.6118186163308
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 355.970374181,
+          "time": 161.665986763,
           "geval": 0,
-          "feval": 69176,
+          "feval": 25812,
           "func": "lmm",
-          "dev": 28594.273881814614
+          "dev": 28586.32844568613
         }
       ],
       "q": [
@@ -190,7 +182,7 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 1.49999759,
+          "time": 1.398293999,
           "geval": 0,
           "feval": 314,
           "func": "lmm",
@@ -198,7 +190,7 @@
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 4.353805259,
+          "time": 4.303160611,
           "geval": 0,
           "feval": 999,
           "func": "lmm",
@@ -206,7 +198,7 @@
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 48.290565289,
+          "time": 58.408756712,
           "geval": 0,
           "feval": 11357,
           "func": "lmm",
@@ -214,7 +206,7 @@
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 3.778766543,
+          "time": 4.988407441,
           "geval": 0,
           "feval": 888,
           "func": "lmm",
@@ -233,7 +225,7 @@
   "memory": "15.562 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0-rc3",
+  "Julia": "0.4.0",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "kb07",
   "OS": "Linux",
