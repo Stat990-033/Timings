@@ -23,15 +23,13 @@ function retime(fnm,ofile)
         for f in m["fits"]
             if f["func"] == "lmm"
                 gc()
-                f["time"] = @elapsed mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
+                f["time"] = @elapsed mod = fit!(lmm(form,dat),false,symbol(f["optimizer"]))
                 f["dev"] = objective(mod)
                 f["feval"] = mod.opt.feval
                 m["p"] = size(mod.trms[end],2) - 1
-#                m["q"] = Int[length(b) for b in mod.b]
             end
-            geval = get(f,"geval",0)
-            @printf("%14.4f %10.4f%s%6d %s",f["dev"],f["time"],
-                    lpad(string(f["feval"]),6),geval,f["optimizer"])
+            @printf("%14.4f %10.4f%s %s",f["dev"],f["time"],
+                    lpad(string(f["feval"]),6),f["optimizer"])
             println()
         end
     end
