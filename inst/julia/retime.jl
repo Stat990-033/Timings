@@ -19,7 +19,7 @@ function retime(fnm,ofile)
         mod = lmm(form,dat)
         nopt = length(mod[:θ])
         m["nopt"] = nopt
-        println("-2log(likelihood) time(s) feval geval optimizer")
+        println("-2log(likelihood) time(s) feval optimizer")
         for f in m["fits"]
             if f["func"] == "lmm"
                 gc()
