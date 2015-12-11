@@ -1,126 +1,126 @@
 {
-  "BLAS": "mkl",
-  "CPU": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+  "BLAS": "openblas",
+  "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
   "models": [
     {
       "formula": "Y ~ 1 + (1 | G) + (1 | H)",
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 0.0229999999992287,
+          "time": 0.0250000000000909,
           "feval": 79,
           "func": "lmer",
           "dev": 247.994465862425
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 0.0289999999986321,
+          "time": 0.0330000000001291,
           "feval": 119,
           "func": "lmer",
           "dev": 247.994465862436
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 0.109000000000378,
+          "time": 0.124000000000024,
           "feval": 20,
           "func": "lmer",
           "dev": 247.994465862794
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 0.108000000000175,
+          "time": 0.124000000000024,
           "feval": 41,
           "func": "lmer",
           "dev": 247.994465862427
         },
         {
           "optimizer": "optimx:spg",
-          "time": 0.190000000000509,
+          "time": 0.2349999999999,
           "feval": "NA",
           "func": "lmer",
           "dev": 247.994465862425
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 0.114999999999782,
+          "time": 0.125999999999976,
           "feval": "NA",
           "func": "lmer",
           "dev": 247.994465862425
         },
         {
           "optimizer": "NLOPT_LN_BOBYQA",
-          "time": 0.0229999999992287,
+          "time": 0.0260000000000673,
           "feval": 34,
           "func": "lmer",
           "dev": 247.994465864104
         },
         {
           "optimizer": "NLOPT_LN_COBYLA",
-          "time": 0.0230000000010477,
+          "time": 0.0239999999998872,
           "feval": 33,
           "func": "lmer",
           "dev": 247.994467100822
         },
         {
           "optimizer": "NLOPT_LN_PRAXIS",
-          "time": 0.0239999999994325,
-          "feval": 60,
+          "time": 0.0269999999998163,
+          "feval": 59,
           "func": "lmer",
           "dev": 247.994465862425
         },
         {
           "optimizer": "NLOPT_LN_NELDERMEAD",
-          "time": 0.0230000000010477,
+          "time": 0.0260000000000673,
           "feval": 53,
           "func": "lmer",
           "dev": 247.994465984991
         },
         {
           "optimizer": "NLOPT_LN_SBPLX",
-          "time": 0.0239999999994325,
+          "time": 0.02800000000002,
           "feval": 77,
           "func": "lmer",
           "dev": 247.994465993423
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.002417973,
-          "geval": 0,
+          "time": 0.000948411,
+
           "feval": 35,
           "func": "lmm",
-          "dev": 247.9944658628968
+          "dev": 247.9944658632296
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.002557681,
-          "geval": 0,
-          "feval": 40,
+          "time": 0.00099043,
+
+          "feval": 44,
           "func": "lmm",
-          "dev": 247.99446586261325
+          "dev": 247.99446586299194
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.003624489,
-          "geval": 0,
-          "feval": 64,
+          "time": 0.001233891,
+
+          "feval": 81,
           "func": "lmm",
-          "dev": 247.99446586242493
+          "dev": 247.99446586246518
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.003757421,
-          "geval": 0,
+          "time": 0.001111289,
+
           "feval": 67,
           "func": "lmm",
-          "dev": 247.99446586383914
+          "dev": 247.994465864037
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.004904031,
-          "geval": 0,
+          "time": 0.001332877,
+
           "feval": 91,
           "func": "lmm",
-          "dev": 247.9944658684637
+          "dev": 247.99446586837263
         }
       ],
       "q": [
@@ -132,11 +132,11 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "memory": "5.745 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.3.11-pre+13",
-  "Rversion": "R version 3.2.1 (2015-06-18)",
+  "Julia": "0.4.2",
+  "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Pastes",
   "OS": "Linux",
   "n": 60

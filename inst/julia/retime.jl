@@ -1,10 +1,12 @@
 using DataFrames,JSON,MixedModels,RCall
 
+@rimport Timings
+
 function retime(fnm,ofile)
     js = JSON.parsefile(fnm)
     dsname = js["dsname"]
     @show dsname
-    dat = DataFrame(string("Timings::",dsname))
+    dat = rcopy(symbol(dsname))
     js["n"] = size(dat,1)
     js["CPU"] = Sys.cpu_info()[1].model
     js["CPU_CORES"] = CPU_CORES
@@ -17,25 +19,19 @@ function retime(fnm,ofile)
         form = eval(parse(m["formula"]))
         @show form
         mod = lmm(form,dat)
-        nopt = length(MixedModels.θ(mod))
-        mtype = typeof(mod.s)
-        @show(nopt,mtype)
-        m["mtype"] = mtype
+        nopt = length(mod[:θ])
         m["nopt"] = nopt
-        println("-2log(likelihood) time(s) feval geval optimizer") 
+        println("-2log(likelihood) time(s) feval optimizer")
         for f in m["fits"]
             if f["func"] == "lmm"
                 gc()
-                f["time"] = @elapsed mod = fit(lmm(form,dat),false,symbol(f["optimizer"]))
-                f["dev"] = deviance(mod)
+                f["time"] = @elapsed mod = fit!(lmm(form,dat),false,symbol(f["optimizer"]))
+                f["dev"] = objective(mod)
                 f["feval"] = mod.opt.feval
-                f["geval"] = mod.opt.geval
-                m["p"] = size(mod.X,2)
-                m["q"] = Int[length(b) for b in mod.b]
+                m["p"] = size(mod.trms[end],2) - 1
             end
-            geval = get(f,"geval",0)
-            @printf("%14.4f %10.4f%s%6d %s",f["dev"],f["time"],
-                    lpad(string(f["feval"]),6),geval,f["optimizer"])
+            @printf("%14.4f %10.4f%s %s",f["dev"],f["time"],
+                    lpad(string(f["feval"]),6),f["optimizer"])
             println()
         end
     end

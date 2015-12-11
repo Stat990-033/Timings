@@ -7,77 +7,77 @@
       "fits": [
         {
           "optimizer": "bobyqa",
-          "time": 420.82,
+          "time": 287.933,
           "feval": 2143,
           "func": "lmer",
           "dev": 884957.553935358
         },
         {
           "optimizer": "Nelder_Mead",
-          "time": 454.519,
+          "time": 351.452,
           "feval": 2444,
           "func": "lmer",
           "dev": 885275.143762569
         },
         {
           "optimizer": "NLOPT_LN_BOBYQA",
-          "time": 231.304,
+          "time": 158.429,
           "feval": 1150,
           "func": "lmer",
           "dev": 884957.55400579
         },
         {
           "optimizer": "NLOPT_LN_COBYLA",
-          "time": 4784.927,
+          "time": 3701.923,
           "feval": 27572,
           "func": "lmer",
           "dev": 884958.472667862
         },
         {
           "optimizer": "NLOPT_LN_PRAXIS",
-          "time": 186.255,
-          "feval": 871,
+          "time": 140.655,
+          "feval": 1003,
           "func": "lmer",
-          "dev": 884957.553935272
+          "dev": 884957.553935213
         },
         {
           "optimizer": "NLOPT_LN_NELDERMEAD",
-          "time": 627.931,
+          "time": 528.627,
           "feval": 3438,
           "func": "lmer",
           "dev": 885057.744695523
         },
         {
           "optimizer": "NLOPT_LN_SBPLX",
-          "time": 166.335000000001,
+          "time": 129.078,
           "feval": 783,
           "func": "lmer",
           "dev": 884957.553936305
         },
         {
           "optimizer": "optimx:L-BFGS-B",
-          "time": 500.360000000001,
+          "time": 377.577,
           "feval": 246,
           "func": "lmer",
           "dev": 884957.554180218
         },
         {
           "optimizer": "optimx:nlminb",
-          "time": 376.329,
+          "time": 311.978,
           "feval": 1557,
           "func": "lmer",
           "dev": 884957.55395002
         },
         {
           "optimizer": "optimx:spg",
-          "time": 2699.55,
+          "time": 1957.385,
           "feval": "NA",
           "func": "lmer",
           "dev": 884957.553944505
         },
         {
           "optimizer": "optimx:bobyqa",
-          "time": 485.065999999999,
+          "time": 335.661,
           "feval": "NA",
           "func": "lmer",
           "dev": 884957.553935358
@@ -88,7 +88,7 @@
           "geval": 0,
           "feval": 1098,
           "func": "lmm",
-          "dev": 884957.5539831683
+          "dev": 884957.553983168
         },
         {
           "optimizer": "LN_COBYLA",
@@ -112,7 +112,7 @@
           "geval": 0,
           "feval": 785,
           "func": "lmm",
-          "dev": 884957.5539363533
+          "dev": 884957.553936353
         }
       ],
       "q": [
@@ -129,7 +129,7 @@
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
   "Julia": "0.3.11-pre+13",
-  "Rversion": "R version 3.2.1 (2015-06-18)",
+  "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "d3",
   "OS": "Linux",
   "n": 130418
