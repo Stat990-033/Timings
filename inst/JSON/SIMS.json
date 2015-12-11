@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.112442184,
-          "geval": 0,
+          "time": 0.110215094,
+
           "feval": 142,
           "func": "lmm",
           "dev": 22373.10663582896
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 7.342250445,
-          "geval": 0,
+          "time": 5.669654787,
+
           "feval": 14108,
           "func": "lmm",
           "dev": 22373.106635964396
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.085380047,
-          "geval": 0,
+          "time": 0.069034119,
+
           "feval": 149,
           "func": "lmm",
           "dev": 22373.106635832886
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.285622049,
-          "geval": 0,
+          "time": 0.201322517,
+
           "feval": 516,
           "func": "lmm",
           "dev": 22373.106635838347
@@ -116,10 +116,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "SIMS",
   "OS": "Linux",

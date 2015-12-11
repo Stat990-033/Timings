@@ -77,28 +77,28 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.05734797,
+          "time": 0.03678231,
           "feval": 107,
           "func": "lmm",
           "dev": 143232.63414973964
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 2.100840964,
+          "time": 2.106316116,
           "feval": 69711,
           "func": "lmm",
           "dev": 143232.63815430258
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.055545853,
+          "time": 0.033379677,
           "feval": 56,
           "func": "lmm",
           "dev": 143803.9822916053
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.058007257,
+          "time": 0.035731745,
           "feval": 147,
           "func": "lmm",
           "dev": 143232.63408135416
@@ -182,28 +182,28 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.028578694,
+          "time": 0.016700839,
           "feval": 43,
           "func": "lmm",
           "dev": 143232.63408130567
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.028079556,
+          "time": 0.016722195,
           "feval": 34,
           "func": "lmm",
           "dev": 143232.63408134982
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.029066397,
+          "time": 0.016884544,
           "feval": 52,
           "func": "lmm",
           "dev": 143232.6340814206
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.030264717,
+          "time": 0.018679672,
           "feval": 81,
           "func": "lmm",
           "dev": 143232.6340814206
@@ -213,10 +213,10 @@
       "p": 4
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "paulsim",
   "OS": "Linux",

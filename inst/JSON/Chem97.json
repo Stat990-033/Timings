@@ -84,40 +84,40 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.078134119,
-          "geval": 0,
+          "time": 0.061430736,
+
           "feval": 32,
           "func": "lmm",
           "dev": 157869.92614932367
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.080440275,
-          "geval": 0,
+          "time": 0.063734743,
+
           "feval": 71,
           "func": "lmm",
           "dev": 157869.92614932262
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.081804766,
-          "geval": 0,
-          "feval": 80,
+          "time": 0.063851077,
+
+          "feval": 73,
           "func": "lmm",
           "dev": 157869.92614931992
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.083095823,
-          "geval": 0,
+          "time": 0.067175358,
+
           "feval": 85,
           "func": "lmm",
           "dev": 157869.926149434
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.094120635,
-          "geval": 0,
+          "time": 0.07713968,
+
           "feval": 123,
           "func": "lmm",
           "dev": 157869.9261493361
@@ -128,8 +128,7 @@
         131
       ],
       "nopt": 2,
-      "p": 1,
-      "mtype": "PLSDiag{Int32}"
+      "p": 1
     },
     {
       "formula": "Y ~ 1 + U + (1 | G) + (1 | H)",
@@ -213,40 +212,40 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.086297021,
-          "geval": 0,
+          "time": 0.062521627,
+
           "feval": 31,
           "func": "lmm",
           "dev": 141685.56021410233
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.102638981,
-          "geval": 0,
+          "time": 0.077046261,
+
           "feval": 82,
           "func": "lmm",
           "dev": 141685.56021411225
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.113459994,
-          "geval": 0,
-          "feval": 115,
+          "time": 0.083367801,
+
+          "feval": 104,
           "func": "lmm",
-          "dev": 141685.56021410244
+          "dev": 141685.56021410238
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.106371731,
-          "geval": 0,
+          "time": 0.079563994,
+
           "feval": 91,
           "func": "lmm",
           "dev": 141685.5602141773
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.1105493,
-          "geval": 0,
+          "time": 0.085662848,
+
           "feval": 111,
           "func": "lmm",
           "dev": 141685.56021417704
@@ -257,14 +256,13 @@
         131
       ],
       "nopt": 2,
-      "p": 2,
-      "mtype": "PLSDiag{Int32}"
+      "p": 2
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Chem97",
   "OS": "Linux",

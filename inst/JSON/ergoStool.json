@@ -7,32 +7,32 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000607718,
-          "geval": 0,
+          "time": 0.000607576,
+
           "feval": 16,
           "func": "lmm",
           "dev": 122.14443740810579
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000589437,
-          "geval": 0,
+          "time": 0.000564179,
+
           "feval": 25,
           "func": "lmm",
           "dev": 122.1444374084411
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000588591,
-          "geval": 0,
+          "time": 0.000571327,
+
           "feval": 30,
           "func": "lmm",
           "dev": 122.14443741205368
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000670924,
-          "geval": 0,
+          "time": 0.000706539,
+
           "feval": 50,
           "func": "lmm",
           "dev": 122.14443740811703
@@ -112,14 +112,13 @@
         9
       ],
       "nopt": 1,
-      "p": 4,
-      "mtype": "PLSOne"
+      "p": 4
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "ergoStool",
   "OS": "Linux",

@@ -84,40 +84,40 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000923385,
-          "geval": 0,
+          "time": 0.000948411,
+
           "feval": 35,
           "func": "lmm",
           "dev": 247.9944658632296
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001117718,
-          "geval": 0,
+          "time": 0.00099043,
+
           "feval": 44,
           "func": "lmm",
           "dev": 247.99446586299194
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.001294861,
-          "geval": 0,
-          "feval": 75,
+          "time": 0.001233891,
+
+          "feval": 81,
           "func": "lmm",
-          "dev": 247.99446586267004
+          "dev": 247.99446586246518
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001259963,
-          "geval": 0,
+          "time": 0.001111289,
+
           "feval": 67,
           "func": "lmm",
           "dev": 247.994465864037
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.001654261,
-          "geval": 0,
+          "time": 0.001332877,
+
           "feval": 91,
           "func": "lmm",
           "dev": 247.99446586837263
@@ -132,10 +132,10 @@
       "mtype": "PLSDiag{Int32}"
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Pastes",
   "OS": "Linux",

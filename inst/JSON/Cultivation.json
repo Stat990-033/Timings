@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000756797,
-          "geval": 0,
+          "time": 0.00062659,
+
           "feval": 13,
           "func": "lmm",
           "dev": 73.32183555936457
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000720887,
-          "geval": 0,
+          "time": 0.000694519,
+
           "feval": 24,
           "func": "lmm",
           "dev": 73.32183555976744
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000757826,
-          "geval": 0,
+          "time": 0.000635991,
+
           "feval": 30,
           "func": "lmm",
           "dev": 73.32183556431228
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000937815,
-          "geval": 0,
+          "time": 0.00072043,
+
           "feval": 50,
           "func": "lmm",
           "dev": 73.32183555976744
@@ -112,14 +112,13 @@
         4
       ],
       "nopt": 1,
-      "p": 6,
-      "mtype": "PLSOne"
+      "p": 6
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Cultivation",
   "OS": "Linux",

@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000958056,
-          "geval": 0,
+          "time": 0.001238736,
+
           "feval": 21,
           "func": "lmm",
           "dev": -10.810228068595205
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000898962,
-          "geval": 0,
+          "time": 0.001117599,
+
           "feval": 24,
           "func": "lmm",
           "dev": -10.810228067052854
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000863651,
-          "geval": 0,
+          "time": 0.000942625,
+
           "feval": 26,
           "func": "lmm",
           "dev": -10.810228012909093
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000997913,
-          "geval": 0,
+          "time": 0.001013395,
+
           "feval": 50,
           "func": "lmm",
           "dev": -10.810228065843908
@@ -112,14 +112,13 @@
         6
       ],
       "nopt": 1,
-      "p": 12,
-      "mtype": "PLSOne"
+      "p": 12
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Alfalfa",
   "OS": "Linux",

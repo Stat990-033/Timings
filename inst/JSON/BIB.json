@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000708836,
-          "geval": 0,
+          "time": 0.000684697,
+
           "feval": 28,
           "func": "lmm",
           "dev": 92.9914641231791
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000677159,
-          "geval": 0,
+          "time": 0.000673238,
+
           "feval": 27,
           "func": "lmm",
           "dev": 92.99146412446456
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000681301,
-          "geval": 0,
+          "time": 0.000747822,
+
           "feval": 30,
           "func": "lmm",
           "dev": 92.99146413913904
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000796216,
-          "geval": 0,
+          "time": 0.001151786,
+
           "feval": 42,
           "func": "lmm",
           "dev": 92.99146413913904
@@ -112,14 +112,13 @@
         8
       ],
       "nopt": 1,
-      "p": 8,
-      "mtype": "PLSOne"
+      "p": 8
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "BIB",
   "OS": "Linux",

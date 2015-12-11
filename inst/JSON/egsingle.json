@@ -77,40 +77,40 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.041510368,
-          "geval": 0,
+          "time": 0.028887806,
+
           "feval": 37,
           "func": "lmm",
           "dev": 16732.496543366702
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.058224469,
-          "geval": 0,
+          "time": 0.044563763,
+
           "feval": 95,
           "func": "lmm",
           "dev": 16732.496543367084
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.05511189,
-          "geval": 0,
-          "feval": 85,
+          "time": 0.045054629,
+
+          "feval": 87,
           "func": "lmm",
-          "dev": 16732.496543366713
+          "dev": 16732.49654336666
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.054275625,
-          "geval": 0,
+          "time": 0.041525587,
+
           "feval": 82,
           "func": "lmm",
           "dev": 16732.496543369336
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.064271766,
-          "geval": 0,
+          "time": 0.052025808,
+
           "feval": 120,
           "func": "lmm",
           "dev": 16732.49654336724
@@ -121,14 +121,13 @@
         60
       ],
       "nopt": 2,
-      "p": 5,
-      "mtype": "PLSDiag{Int32}"
+      "p": 5
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "egsingle",
   "OS": "Linux",

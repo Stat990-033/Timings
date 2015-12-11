@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001288776,
-          "geval": 0,
+          "time": 0.001229959,
+
           "feval": 57,
           "func": "lmm",
           "dev": 456.86394386069276
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001273128,
-          "geval": 0,
+          "time": 0.001165993,
+
           "feval": 62,
           "func": "lmm",
           "dev": 456.8639438731093
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001593726,
-          "geval": 0,
+          "time": 0.001529089,
+
           "feval": 109,
           "func": "lmm",
           "dev": 456.8639438633066
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.001574663,
-          "geval": 0,
+          "time": 0.001714951,
+
           "feval": 116,
           "func": "lmm",
           "dev": 456.8639438614858
@@ -114,14 +114,13 @@
         8
       ],
       "nopt": 2,
-      "p": 2,
-      "mtype": "PLSDiag{Int32}"
+      "p": 2
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Semi2",
   "OS": "Linux",

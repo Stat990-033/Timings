@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000659294,
-          "geval": 0,
+          "time": 0.000799648,
+
           "feval": 13,
           "func": "lmm",
           "dev": -119.10816627064244
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000747782,
-          "geval": 0,
+          "time": 0.00072846,
+
           "feval": 27,
           "func": "lmm",
           "dev": -119.10816627040482
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001016402,
-          "geval": 0,
+          "time": 0.000733048,
+
           "feval": 33,
           "func": "lmm",
           "dev": -119.10816626915891
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000850135,
-          "geval": 0,
+          "time": 0.000851717,
+
           "feval": 53,
           "func": "lmm",
           "dev": -119.1081662705835
@@ -112,14 +112,13 @@
         12
       ],
       "nopt": 1,
-      "p": 8,
-      "mtype": "PLSOne"
+      "p": 8
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "IncBlk",
   "OS": "Linux",

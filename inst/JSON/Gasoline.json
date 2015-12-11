@@ -7,32 +7,32 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000561982,
-          "geval": 0,
+          "time": 0.0006537,
+
           "feval": 21,
           "func": "lmm",
           "dev": 170.662519564419
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000538375,
-          "geval": 0,
+          "time": 0.000704967,
+
           "feval": 26,
           "func": "lmm",
           "dev": 170.6625195663753
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000531669,
-          "geval": 0,
+          "time": 0.000591378,
+
           "feval": 28,
           "func": "lmm",
           "dev": 170.6625196619112
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000653961,
-          "geval": 0,
+          "time": 0.000716495,
+
           "feval": 49,
           "func": "lmm",
           "dev": 170.6625195694289
@@ -112,14 +112,13 @@
         10
       ],
       "nopt": 1,
-      "p": 2,
-      "mtype": "PLSOne"
+      "p": 2
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Gasoline",
   "OS": "Linux",

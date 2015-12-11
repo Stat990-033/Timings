@@ -84,32 +84,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.00074158,
-          "geval": 0,
+          "time": 0.001004773,
+
           "feval": 28,
           "func": "lmm",
           "dev": 9.970955873863243
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000686722,
-          "geval": 0,
+          "time": 0.000671757,
+
           "feval": 25,
           "func": "lmm",
           "dev": 9.970955874146721
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000699208,
-          "geval": 0,
+          "time": 0.000709665,
+
           "feval": 30,
           "func": "lmm",
           "dev": 9.97095587485126
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000863724,
-          "geval": 0,
+          "time": 0.000840308,
+
           "feval": 45,
           "func": "lmm",
           "dev": 9.97095587485126
@@ -119,8 +119,7 @@
         8
       ],
       "nopt": 1,
-      "p": 8,
-      "mtype": "PLSOne"
+      "p": 8
     },
     {
       "formula": "Y ~ 1 + A + U + (1 | G)",
@@ -204,32 +203,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000578129,
-          "geval": 0,
+          "time": 0.000575153,
+
           "feval": 17,
           "func": "lmm",
           "dev": 13.617215626584365
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000590392,
-          "geval": 0,
+          "time": 0.000667154,
+
           "feval": 26,
           "func": "lmm",
           "dev": 13.617215626663882
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.00060338,
-          "geval": 0,
+          "time": 0.000588531,
+
           "feval": 32,
           "func": "lmm",
           "dev": 13.617215628366424
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.00070857,
-          "geval": 0,
+          "time": 0.000761895,
+
           "feval": 52,
           "func": "lmm",
           "dev": 13.617215626663882
@@ -239,14 +238,13 @@
         8
       ],
       "nopt": 1,
-      "p": 5,
-      "mtype": "PLSOne"
+      "p": 5
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "AvgDailyGain",
   "OS": "Linux",

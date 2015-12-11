@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000497556,
-          "geval": 0,
+          "time": 0.000495672,
+
           "feval": 13,
           "func": "lmm",
           "dev": 115.70738588549834
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.00051963,
-          "geval": 0,
+          "time": 0.000516066,
+
           "feval": 24,
           "func": "lmm",
           "dev": 115.70738588674541
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000527742,
-          "geval": 0,
+          "time": 0.0005461,
+
           "feval": 30,
           "func": "lmm",
           "dev": 115.70738588720768
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000601578,
-          "geval": 0,
+          "time": 0.000614677,
+
           "feval": 50,
           "func": "lmm",
           "dev": 115.7073858855928
@@ -112,14 +112,13 @@
         7
       ],
       "nopt": 1,
-      "p": 3,
-      "mtype": "PLSOne"
+      "p": 3
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Bond",
   "OS": "Linux",

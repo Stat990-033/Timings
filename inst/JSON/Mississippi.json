@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000669603,
-          "geval": 0,
+          "time": 0.000532059,
+
           "feval": 14,
           "func": "lmm",
           "dev": 246.57361397156447
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000674992,
-          "geval": 0,
+          "time": 0.000812804,
+
           "feval": 28,
           "func": "lmm",
           "dev": 246.57361397214441
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000696982,
-          "geval": 0,
+          "time": 0.000558649,
+
           "feval": 33,
           "func": "lmm",
           "dev": 246.57361398012455
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000978971,
-          "geval": 0,
+          "time": 0.000656319,
+
           "feval": 53,
           "func": "lmm",
           "dev": 246.57361397156512
@@ -116,10 +116,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Mississippi",
   "OS": "Linux",

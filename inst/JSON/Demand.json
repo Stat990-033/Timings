@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001449548,
-          "geval": 0,
+          "time": 0.001353144,
+
           "feval": 40,
           "func": "lmm",
           "dev": -260.62832324760814
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.004390066,
-          "geval": 0,
+          "time": 0.00463358,
+
           "feval": 309,
           "func": "lmm",
           "dev": -260.62832322356473
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.003448506,
-          "geval": 0,
+          "time": 0.001214878,
+
           "feval": 44,
           "func": "lmm",
           "dev": -257.4090478789781
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.002023407,
-          "geval": 0,
+          "time": 0.002028165,
+
           "feval": 115,
           "func": "lmm",
           "dev": -260.62832324745284
@@ -113,14 +113,13 @@
         7
       ],
       "nopt": 2,
-      "p": 5,
-      "mtype": "PLSTwo"
+      "p": 5
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Demand",
   "OS": "Linux",

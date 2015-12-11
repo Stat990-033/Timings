@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.00109563,
-          "geval": 0,
+          "time": 0.000896823,
+
           "feval": 16,
           "func": "lmm",
           "dev": 567.1627611890535
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001059448,
-          "geval": 0,
+          "time": 0.001034844,
+
           "feval": 24,
           "func": "lmm",
           "dev": 567.1627611898934
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.00108165,
-          "geval": 0,
+          "time": 0.000957629,
+
           "feval": 30,
           "func": "lmm",
           "dev": 567.162761198294
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.001158914,
-          "geval": 0,
+          "time": 0.00115786,
+
           "feval": 50,
           "func": "lmm",
           "dev": 567.1627611890948
@@ -116,10 +116,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.1 (2015-06-18)",
   "dsname": "TeachingII",
   "OS": "Linux",

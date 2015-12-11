@@ -84,32 +84,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.008727652,
-          "geval": 0,
+          "time": 0.005394374,
+
           "feval": 20,
           "func": "lmm",
           "dev": 9325.4273050669
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.009101325,
-          "geval": 0,
+          "time": 0.005752602,
+
           "feval": 32,
           "func": "lmm",
           "dev": 9325.42730506727
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.00905813,
-          "geval": 0,
+          "time": 0.005448566,
+
           "feval": 38,
           "func": "lmm",
           "dev": 9325.427305072133
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.008807547,
-          "geval": 0,
+          "time": 0.005728712,
+
           "feval": 59,
           "func": "lmm",
           "dev": 9325.427305072133
@@ -119,8 +119,7 @@
         65
       ],
       "nopt": 1,
-      "p": 5,
-      "mtype": "PLSOne"
+      "p": 5
     },
     {
       "formula": "Y ~ 1 + A * U + B + (1 | G)",
@@ -204,32 +203,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.009858996,
-          "geval": 0,
+          "time": 0.005920895,
+
           "feval": 20,
           "func": "lmm",
           "dev": 9325.38460889901
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.010019551,
-          "geval": 0,
+          "time": 0.006154718,
+
           "feval": 32,
           "func": "lmm",
           "dev": 9325.384608899432
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.010126893,
-          "geval": 0,
+          "time": 0.006220627,
+
           "feval": 40,
           "func": "lmm",
           "dev": 9325.38460890019
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.009984212,
-          "geval": 0,
+          "time": 0.006468319,
+
           "feval": 66,
           "func": "lmm",
           "dev": 9325.384608899016
@@ -239,14 +238,13 @@
         65
       ],
       "nopt": 1,
-      "p": 6,
-      "mtype": "PLSOne"
+      "p": 6
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Exam",
   "OS": "Linux",

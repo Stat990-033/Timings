@@ -7,40 +7,40 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.01441398,
-          "geval": 0,
+          "time": 0.003580404,
+
           "feval": 57,
           "func": "lmm",
           "dev": 1751.9393444647046
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.025916741,
-          "geval": 0,
+          "time": 0.030158307,
+
           "feval": 362,
           "func": "lmm",
           "dev": 1751.9393444635052
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.009930676,
-          "geval": 0,
-          "feval": 113,
+          "time": 0.006866064,
+
+          "feval": 105,
           "func": "lmm",
-          "dev": 1751.9393444632224
+          "dev": 1751.939344463233
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.00711035,
-          "geval": 0,
+          "time": 0.008774701,
+
           "feval": 140,
           "func": "lmm",
           "dev": 1751.9393444750278
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.016805662,
-          "geval": 0,
+          "time": 0.009985485,
+
           "feval": 202,
           "func": "lmm",
           "dev": 1751.939344475581
@@ -107,40 +107,40 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001347658,
-          "geval": 0,
+          "time": 0.001173265,
+
           "feval": 30,
           "func": "lmm",
           "dev": 1752.0032551416
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.002050326,
-          "geval": 0,
+          "time": 0.00212788,
+
           "feval": 134,
           "func": "lmm",
           "dev": 1752.0032551556878
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.001575178,
-          "geval": 0,
-          "feval": 84,
+          "time": 0.001703731,
+
+          "feval": 98,
           "func": "lmm",
-          "dev": 1752.0032551398995
+          "dev": 1752.0032551398976
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001561311,
-          "geval": 0,
+          "time": 0.00145093,
+
           "feval": 75,
           "func": "lmm",
           "dev": 1752.0032551435258
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.00218229,
-          "geval": 0,
+          "time": 0.001903456,
+
           "feval": 126,
           "func": "lmm",
           "dev": 1752.0032551414129
@@ -217,10 +217,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "sleepstudy",
   "OS": "Linux",

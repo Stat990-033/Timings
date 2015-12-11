@@ -84,43 +84,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 5.085100269,
-          "geval": 0,
-          "feval": 106,
+          "time": 3.464215244,
+
+          "feval": 105,
           "func": "lmm",
-          "dev": 174757.88837776944
+          "dev": 174757.88837784604
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 14.94760431,
-          "geval": 0,
-          "feval": 377,
+          "time": 9.909827149,
+
+          "feval": 345,
           "func": "lmm",
-          "dev": 174757.88837802864
+          "dev": 174757.88837864113
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 5.646323216,
-          "geval": 0,
-          "feval": 115,
+          "time": 3.324728987,
+
+          "feval": 100,
           "func": "lmm",
-          "dev": 174757.8883777801
+          "dev": 174757.88837771997
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 9.487809331,
-          "geval": 0,
+          "time": 6.450001031,
+
           "feval": 217,
           "func": "lmm",
-          "dev": 174757.8883778996
+          "dev": 174757.88837790172
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 8.890171176,
-          "geval": 0,
+          "time": 5.927169458,
+
           "feval": 204,
           "func": "lmm",
-          "dev": 174757.88837777497
+          "dev": 174757.8883777757
         }
       ],
       "q": [
@@ -129,14 +129,13 @@
         87
       ],
       "nopt": 3,
-      "p": 3,
-      "mtype": "PLSDiag{Int32}"
+      "p": 3
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Poems",
   "OS": "Linux",

@@ -7,32 +7,32 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.000569532,
-          "geval": 0,
+          "time": 0.000499522,
+
           "feval": 18,
           "func": "lmm",
           "dev": 327.3270598811394
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000652272,
-          "geval": 0,
+          "time": 0.000510599,
+
           "feval": 27,
           "func": "lmm",
           "dev": 327.32705988280196
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.000479777,
-          "geval": 0,
+          "time": 0.000486036,
+
           "feval": 28,
           "func": "lmm",
           "dev": 327.3270599022331
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.000530102,
-          "geval": 0,
+          "time": 0.000550335,
+
           "feval": 43,
           "func": "lmm",
           "dev": 327.3270599022331
@@ -112,14 +112,13 @@
         6
       ],
       "nopt": 1,
-      "p": 1,
-      "mtype": "PLSOne"
+      "p": 1
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Dyestuff",
   "OS": "Linux",

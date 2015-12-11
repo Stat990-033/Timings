@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.009678545,
-          "geval": 0,
+          "time": 0.010004758,
+
           "feval": 144,
           "func": "lmm",
           "dev": 725.9676890821911
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.07056716,
-          "geval": 0,
+          "time": 0.03618971,
+
           "feval": 547,
           "func": "lmm",
           "dev": 725.967689430797
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.014155985,
-          "geval": 0,
+          "time": 0.008166958,
+
           "feval": 125,
           "func": "lmm",
           "dev": 725.9676890838884
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.029003509,
-          "geval": 0,
+          "time": 0.183393979,
+
           "feval": 380,
           "func": "lmm",
           "dev": 725.9676890805996
@@ -116,10 +116,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Oxboys",
   "OS": "Linux",

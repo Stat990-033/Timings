@@ -84,19 +84,17 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 10.931613468,
-          "geval": 0,
-          "feval": 1528,
+          "time": 11.664164043,
+          "feval": 2159,
           "func": "lmm",
-          "dev": -3947.6118186163308
+          "dev": 28586.43082831252
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 161.665986763,
-          "geval": 0,
-          "feval": 25812,
+          "time": 82.658410978,
+          "feval": 15562,
           "func": "lmm",
-          "dev": 28586.32844568613
+          "dev": 28591.282222403403
         }
       ],
       "q": [
@@ -104,8 +102,7 @@
         256
       ],
       "nopt": 72,
-      "p": 8,
-      "mtype": "PLSTwo"
+      "p": 8
     },
     {
       "formula": "Y ~ 1 + S + T + U + V + W + X + Z + (1 | G) + ((0 + S) | G) + ((0 + T) | G) + ((0 + U) | G) + ((0 + V) | G) + ((0 + W) | G) + ((0 + X) | G) + ((0 + Z) | G) + (1 | H) + ((0 + S) | H) + ((0 + T) | H) + ((0 + U) | H) + ((0 + V) | H) + ((0 + W) | H) + ((0 + X) | H) + ((0 + Z) | H)",
@@ -182,32 +179,28 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 1.398293999,
-          "geval": 0,
+          "time": 1.447203574,
           "feval": 314,
           "func": "lmm",
           "dev": 28670.913319852883
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 4.303160611,
-          "geval": 0,
+          "time": 4.929884823,
           "feval": 999,
           "func": "lmm",
           "dev": 28670.913319616116
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 58.408756712,
-          "geval": 0,
+          "time": 51.302330049,
           "feval": 11357,
           "func": "lmm",
           "dev": 28674.333132771393
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 4.988407441,
-          "geval": 0,
+          "time": 3.826481192,
           "feval": 888,
           "func": "lmm",
           "dev": 28670.913319619616
@@ -218,14 +211,13 @@
         256
       ],
       "nopt": 16,
-      "p": 8,
-      "mtype": "PLSTwo"
+      "p": 8
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "kb07",
   "OS": "Linux",

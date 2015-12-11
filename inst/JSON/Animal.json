@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.155464124,
-          "geval": 0,
+          "time": 0.000966449,
+
           "feval": 15,
           "func": "lmm",
           "dev": 6.478085681327402
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.000975542,
-          "geval": 0,
+          "time": 0.001045074,
+
           "feval": 41,
           "func": "lmm",
           "dev": 6.478085681891443
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001071155,
-          "geval": 0,
+          "time": 0.001111584,
+
           "feval": 59,
           "func": "lmm",
           "dev": 6.478085675857233
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.001458843,
-          "geval": 0,
+          "time": 0.001292105,
+
           "feval": 94,
           "func": "lmm",
           "dev": 6.478085672788525
@@ -113,14 +113,13 @@
         5
       ],
       "nopt": 2,
-      "p": 1,
-      "mtype": "PLSDiag{Int32}"
+      "p": 1
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Animal",
   "OS": "Linux",

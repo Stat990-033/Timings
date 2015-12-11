@@ -7,32 +7,32 @@
       "fits": [
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.002287581,
-          "geval": 0,
+          "time": 0.001571308,
+
           "feval": 14,
           "func": "lmm",
           "dev": 1679.0518652547635
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.002500151,
-          "geval": 0,
+          "time": 0.001750888,
+
           "feval": 26,
           "func": "lmm",
           "dev": 1679.0518652568412
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.0024813,
-          "geval": 0,
+          "time": 0.001848836,
+
           "feval": 30,
           "func": "lmm",
           "dev": 1679.051865266793
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.002938006,
-          "geval": 0,
+          "time": 0.002268757,
+
           "feval": 57,
           "func": "lmm",
           "dev": 1679.0518652549306
@@ -112,14 +112,13 @@
         45
       ],
       "nopt": 1,
-      "p": 18,
-      "mtype": "PLSOne"
+      "p": 18
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "cake",
   "OS": "Linux",

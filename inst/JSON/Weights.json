@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.027912473,
-          "geval": 0,
+          "time": 0.016598735,
+
           "feval": 115,
           "func": "lmm",
           "dev": 1313.3536154663393
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.572226084,
-          "geval": 0,
+          "time": 0.470931917,
+
           "feval": 3076,
           "func": "lmm",
           "dev": 1313.3536263518786
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.026325518,
-          "geval": 0,
+          "time": 0.020995996,
+
           "feval": 159,
           "func": "lmm",
           "dev": 1313.3536154701133
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.038592568,
-          "geval": 0,
+          "time": 0.031734782,
+
           "feval": 250,
           "func": "lmm",
           "dev": 1313.3536154736066
@@ -112,14 +112,13 @@
         114
       ],
       "nopt": 3,
-      "p": 6,
-      "mtype": "PLSOne"
+      "p": 6
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Weights",
   "OS": "Linux",

@@ -84,43 +84,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 3.395409158,
-          "geval": 0,
-          "feval": 49,
+          "time": 2.118679321,
+
+          "feval": 48,
           "func": "lmm",
-          "dev": 237585.5534151696
+          "dev": 237585.5534151693
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 3.597709741,
-          "geval": 0,
-          "feval": 54,
+          "time": 2.771259256,
+
+          "feval": 66,
           "func": "lmm",
-          "dev": 237585.553415455
+          "dev": 237585.55341521293
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 5.322609289,
-          "geval": 0,
-          "feval": 93,
+          "time": 3.322616469,
+
+          "feval": 92,
           "func": "lmm",
-          "dev": 237585.55341516942
+          "dev": 237585.55341516976
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 5.206151932,
-          "geval": 0,
+          "time": 3.289189176,
+
           "feval": 89,
           "func": "lmm",
-          "dev": 237585.55341524008
+          "dev": 237585.55341523996
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 7.166815521,
-          "geval": 0,
+          "time": 4.59315689,
+
           "feval": 136,
           "func": "lmm",
-          "dev": 237585.55341517794
+          "dev": 237585.55341517797
         }
       ],
       "q": [
@@ -128,8 +128,7 @@
         1128
       ],
       "nopt": 2,
-      "p": 28,
-      "mtype": "PLSDiag{Int32}"
+      "p": 28
     },
     {
       "formula": "Y ~ 1 + A + (1 | G) + (1 | H) + (1 | I)",
@@ -213,40 +212,40 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 4.733465324,
-          "geval": 0,
+          "time": 2.953151946,
+
           "feval": 104,
           "func": "lmm",
-          "dev": 237721.768774686
+          "dev": 237721.76877470303
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 80.494060565,
-          "geval": 0,
-          "feval": 1805,
+          "time": 52.750908108,
+
+          "feval": 1788,
           "func": "lmm",
-          "dev": 237721.76877456732
+          "dev": 237721.76877482372
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 10.844359473,
-          "geval": 0,
-          "feval": 151,
+          "time": 3.996872249,
+
+          "feval": 137,
           "func": "lmm",
-          "dev": 237721.76877449575
+          "dev": 237721.7687744956
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 13.530510849,
-          "geval": 0,
+          "time": 5.97236568,
+
           "feval": 216,
           "func": "lmm",
-          "dev": 237721.76877459712
+          "dev": 237721.76877459703
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 9.943298635,
-          "geval": 0,
+          "time": 5.491667898,
+
           "feval": 194,
           "func": "lmm",
           "dev": 237721.76877450285
@@ -258,14 +257,13 @@
         14
       ],
       "nopt": 3,
-      "p": 2,
-      "mtype": "PLSDiag{Int32}"
+      "p": 2
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "InstEval",
   "OS": "Linux",

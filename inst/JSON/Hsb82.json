@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.015799522,
-          "geval": 0,
+          "time": 0.009645463,
+
           "feval": 16,
           "func": "lmm",
           "dev": 46331.43240584543
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.0150322,
-          "geval": 0,
+          "time": 0.00980827,
+
           "feval": 27,
           "func": "lmm",
           "dev": 46331.43240585933
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.015248898,
-          "geval": 0,
+          "time": 0.009838075,
+
           "feval": 41,
           "func": "lmm",
           "dev": 46331.43240585403
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.016126708,
-          "geval": 0,
+          "time": 0.012003487,
+
           "feval": 67,
           "func": "lmm",
           "dev": 46331.432405845924
@@ -112,14 +112,13 @@
         160
       ],
       "nopt": 1,
-      "p": 5,
-      "mtype": "PLSOne"
+      "p": 5
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.0 (2015-04-16)",
   "dsname": "Hsb82",
   "OS": "Linux",

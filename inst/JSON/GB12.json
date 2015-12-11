@@ -84,32 +84,28 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.265048868,
-          "geval": 0,
+          "time": 0.236232923,
           "feval": 494,
           "func": "lmm",
           "dev": 7926.6754430057945
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 6.851628668,
-          "geval": 0,
+          "time": 4.499626797,
           "feval": 9774,
           "func": "lmm",
           "dev": 7927.497386520627
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 22.271568735,
-          "geval": 0,
+          "time": 21.911336095,
           "feval": 47490,
           "func": "lmm",
           "dev": 7927.498507587255
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 1.171858528,
-          "geval": 0,
+          "time": 1.097279584,
           "feval": 2376,
           "func": "lmm",
           "dev": 7927.497387083771
@@ -120,8 +116,7 @@
         64
       ],
       "nopt": 20,
-      "p": 8,
-      "mtype": "PLSTwo"
+      "p": 8
     },
     {
       "formula": "Y ~ 1 + S + T + U + V + W + (1 | G) + ((0 + S) | G) + ((0 + U) | G) + ((0 + W) | G) + (1 | H) + ((0 + S) | H) + ((0 + T) | H) + ((0 + V) | H)",
@@ -205,32 +200,28 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.056044498,
-          "geval": 0,
+          "time": 0.071256011,
           "feval": 189,
           "func": "lmm",
           "dev": 7980.033438589046
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.345915467,
-          "geval": 0,
+          "time": 0.334858269,
           "feval": 1346,
           "func": "lmm",
           "dev": 7980.03343858451
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.572960315,
-          "geval": 0,
+          "time": 0.504078536,
           "feval": 2149,
           "func": "lmm",
           "dev": 7980.033438635609
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.104740814,
-          "geval": 0,
+          "time": 0.099004877,
           "feval": 415,
           "func": "lmm",
           "dev": 7980.033438582641
@@ -241,14 +232,13 @@
         64
       ],
       "nopt": 8,
-      "p": 6,
-      "mtype": "PLSTwo"
+      "p": 6
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "gb12",
   "OS": "Linux",

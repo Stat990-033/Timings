@@ -77,32 +77,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.001112063,
-          "geval": 0,
+          "time": 0.000939831,
+
           "feval": 21,
           "func": "lmm",
           "dev": 30.146722436344607
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.001000346,
-          "geval": 0,
+          "time": 0.000931963,
+
           "feval": 23,
           "func": "lmm",
           "dev": 30.146722436649217
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.001395838,
-          "geval": 0,
+          "time": 0.000992869,
+
           "feval": 32,
           "func": "lmm",
           "dev": 30.146722439589105
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.001242363,
-          "geval": 0,
+          "time": 0.001161388,
+
           "feval": 50,
           "func": "lmm",
           "dev": 30.146722439589105
@@ -116,10 +116,10 @@
       "mtype": "PLSOne"
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "Semiconductor",
   "OS": "Linux",

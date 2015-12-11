@@ -84,43 +84,43 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.241245787,
-          "geval": 0,
+          "time": 0.505144231,
+
           "feval": 336,
           "func": "lmm",
           "dev": 1030.9552951836918
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 1.486189717,
-          "geval": 0,
+          "time": 1.511361984,
+
           "feval": 2182,
           "func": "lmm",
           "dev": 1030.955295050372
         },
         {
           "optimizer": "LN_PRAXIS",
-          "time": 0.366818591,
-          "geval": 0,
+          "time": 0.381500606,
+
           "feval": 545,
           "func": "lmm",
-          "dev": 1049.1515121928649
+          "dev": 1049.1515121928653
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 18.553716035,
-          "geval": 0,
+          "time": 19.67456337,
+
           "feval": 28024,
           "func": "lmm",
           "dev": 1031.925969835754
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 1.33019803,
-          "geval": 0,
+          "time": 1.381867799,
+
           "feval": 2031,
           "func": "lmm",
-          "dev": 1030.9552952412093
+          "dev": 1030.9552952496413
         }
       ],
       "q": [
@@ -128,8 +128,7 @@
         48
       ],
       "nopt": 20,
-      "p": 4,
-      "mtype": "PLSTwo"
+      "p": 4
     },
     {
       "formula": "Y ~ 1 + U + V + W + (1 | G) + ((0 + U) | G) + ((0 + V) | G) + ((0 + W) | G) + (1 | H) + ((0 + U) | H) + ((0 + V) | H) + ((0 + W) | H)",
@@ -213,32 +212,32 @@
         },
         {
           "optimizer": "LN_BOBYQA",
-          "time": 0.058871593,
-          "geval": 0,
+          "time": 0.079474696,
+
           "feval": 124,
           "func": "lmm",
           "dev": 1080.0806840802868
         },
         {
           "optimizer": "LN_COBYLA",
-          "time": 0.596319116,
-          "geval": 0,
+          "time": 0.578005657,
+
           "feval": 1578,
           "func": "lmm",
           "dev": 1080.0806840659434
         },
         {
           "optimizer": "LN_NELDERMEAD",
-          "time": 0.594996298,
-          "geval": 0,
+          "time": 0.593036239,
+
           "feval": 1625,
           "func": "lmm",
           "dev": 1080.0806841139818
         },
         {
           "optimizer": "LN_SBPLX",
-          "time": 0.128378701,
-          "geval": 0,
+          "time": 0.127797292,
+
           "feval": 342,
           "func": "lmm",
           "dev": 1080.0806840648029
@@ -249,14 +248,13 @@
         48
       ],
       "nopt": 8,
-      "p": 4,
-      "mtype": "PLSTwo"
+      "p": 4
     }
   ],
-  "memory": "15.562 GB",
+  "memory": "15.561 GB",
   "CPU_CORES": 4,
   "WORD_SIZE": 64,
-  "Julia": "0.4.0",
+  "Julia": "0.4.2",
   "Rversion": "R version 3.2.2 (2015-08-14)",
   "dsname": "bs10",
   "OS": "Linux",
