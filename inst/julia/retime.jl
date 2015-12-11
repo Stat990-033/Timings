@@ -1,10 +1,12 @@
 using DataFrames,JSON,MixedModels,RCall
 
+@rimport Timings
+
 function retime(fnm,ofile)
     js = JSON.parsefile(fnm)
     dsname = js["dsname"]
     @show dsname
-    dat = rcopy(rcall(:(::),:Timings,symbol(dsname)))
+    dat = rcopy(symbol(dsname))
     js["n"] = size(dat,1)
     js["CPU"] = Sys.cpu_info()[1].model
     js["CPU_CORES"] = CPU_CORES
