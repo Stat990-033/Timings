@@ -29,6 +29,7 @@ function retime(fnm,ofile)
                 f["dev"] = objective(mod)
                 f["feval"] = mod.opt.feval
                 m["p"] = size(mod.trms[end],2) - 1
+                m["q"] = Int[size(mod.A[i,i],2) for i in 1:size(mod.A,2)-1]
             end
             @printf("%14.4f %10.4f%s %s",f["dev"],f["time"],
                     lpad(string(f["feval"]),6),f["optimizer"])
