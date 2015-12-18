@@ -1,0 +1,32 @@
+{
+  "BLAS": "openblas",
+  "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
+  "models": [
+    {
+      "formula": "Y ~ 1 + (1 | G) + (1 | H)",
+      "fits": [
+        {
+          "optimizer": "LN_BOBYQA",
+          "time": 561.41173288,
+          "feval": 43,
+          "func": "lmm",
+          "dev": 2.5589475545395695e7
+        }
+      ],
+      "q": [
+        30,
+        10
+      ],
+      "nopt": 2,
+      "p": 1
+    }
+  ],
+  "memory": "15.561 GB",
+  "CPU_CORES": 4,
+  "WORD_SIZE": 64,
+  "Julia": "0.4.2",
+  "Rversion": "R version 3.2.2 (2015-08-14)",
+  "dsname": "ml10m",
+  "OS": "Linux",
+  "n": 10000054
+}
