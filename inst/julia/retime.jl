@@ -1,44 +1,40 @@
-using DataFrames,JSON,MixedModels,RCall
+using Compat, DataFrames, DataStructures, JSON, MixedModels, RCall
 
+R" suppressPackageStartupMessages(library(Timings)) "
 @rimport Timings
 
-function retime(fnm,ofile)
-    js = JSON.parsefile(fnm)
-    dsname = js["dsname"]
-    @show dsname
-    dat = rcopy(symbol(dsname))
-    js["n"] = size(dat,1)
-    js["CPU"] = Sys.cpu_info()[1].model
-    js["CPU_CORES"] = CPU_CORES
-    js["OS"] = Sys.OS_NAME
-    js["Julia"] = string(VERSION)
-    js["WORD_SIZE"] = Sys.WORD_SIZE
-    js["BLAS"] = Base.blas_vendor()
-    js["memory"] = string(@sprintf("%.3f ",Sys.total_memory()/2^30),"GB")
-    for m in js["models"]
-        form = eval(parse(m["formula"]))
-        @show form
-        mod = lmm(form,dat)
-        nopt = length(mod[:θ])
-        m["nopt"] = nopt
-        println("-2log(likelihood) time(s) feval optimizer")
-        for f in m["fits"]
-            if f["func"] == "lmm"
-                gc()
-                f["time"] = @elapsed mod = fit!(lmm(form,dat),false,symbol(f["optimizer"]))
-                f["dev"] = objective(mod)
-                f["feval"] = mod.opt.feval
-                m["p"] = size(mod.trms[end],2) - 1
-                m["q"] = Int[size(mod.A[i,i],2) for i in 1:size(mod.A,2)-1]
-            end
-            @printf("%14.4f %10.4f%s %s",f["dev"],f["time"],
-                    lpad(string(f["feval"]),6),f["optimizer"])
-            println()
-        end
-    end
-    open(isdir(ofile) ? joinpath(ofile,basename(fnm)) : ofile,"w") do io
-        write(io,json(js,2))
-    end
-end
+const desc = OrderedDict(
+    :Jvers => string(VERSION, " (", Base.GIT_VERSION_INFO.date_string, ")"),
+    :Rvers => rcopy(reval(:version)[symbol("version.string")]),
+    :CPU => Sys.cpu_info()[1].model,
+    :OS => string(Sys.KERNEL),
+    :CPU_CORES => length(Sys.cpu_info()),
+    :WORD_SIZE => Sys.WORD_SIZE,
+    :BLAS => BLAS.vendor(),
+    :memory => string(@sprintf("%.3f ",Sys.total_memory()/2^30),"GB"))
 
-retime(fnm) = retime(fnm,fnm)
+function retime(fnm)
+    js = JSON.parsefile(fnm)
+    dsname = symbol(js["dsname"])
+    @show dsname
+    dat = rcopy(dsname)
+    dd = OrderedDict{Compat.String, Any}("n" => size(dat, 1))
+    for m in js["models"]
+        fstr = m["formula"]
+        form = eval(parse(fstr))
+        @show form
+        model = fit!(lmm(form, dat))
+        fits = OrderedDict(:nopt => length(model[:θ]),
+            :p => length(fixef(model)),
+            :q => map(length, ranef(model, true))
+            )
+        for opt in (:LN_BOBYQA, :LN_BOBYQA, :LN_COBYLA, :LN_NELDERMEAD, :LN_SBPLX)
+            gc()
+            tm = @elapsed mod = fit!(lmm(form, dat), false, opt)
+            fits[opt] = OrderedDict(:objective => objective(mod),
+                :time => tm, :neval => mod.opt.feval)
+        end
+        dd[fstr] = fits
+    end
+    desc[dsname] = dd
+end
