@@ -1,0 +1,1363 @@
+{
+  "Jvers": "0.5.0-dev+4545 (2016-06-05 16:22 UTC)",
+  "Rvers": "R version 3.3.0 (2016-05-03)",
+  "CPU": "Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz",
+  "OS": "Linux",
+  "CPU_CORES": 4,
+  "WORD_SIZE": 64,
+  "BLAS": "openblas64",
+  "memory": "15.561 GB",
+  "Alfalfa": {
+    "n": 72,
+    "Y ~ 1 + A * B + (1 | G)": {
+      "nopt": 1,
+      "p": 12,
+      "q": [
+        6
+      ],
+      "LN_BOBYQA": {
+        "objective": -10.810228068596697,
+        "time": 0.000790423,
+        "neval": 18
+      },
+      "LN_COBYLA": {
+        "objective": -10.810228067052854,
+        "time": 0.000800454,
+        "neval": 25
+      },
+      "LN_NELDERMEAD": {
+        "objective": -10.81022801290906,
+        "time": 0.000819567,
+        "neval": 26
+      },
+      "LN_SBPLX": {
+        "objective": -10.810228065843859,
+        "time": 0.000980199,
+        "neval": 50
+      }
+    }
+  },
+  "Animal": {
+    "n": 20,
+    "Y ~ 1 + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 1,
+      "q": [
+        10,
+        5
+      ],
+      "LN_BOBYQA": {
+        "objective": 6.478085681326792,
+        "time": 0.000639112,
+        "neval": 15
+      },
+      "LN_COBYLA": {
+        "objective": 6.478085672090188,
+        "time": 0.000931836,
+        "neval": 47
+      },
+      "LN_NELDERMEAD": {
+        "objective": 6.478085675856125,
+        "time": 0.001002543,
+        "neval": 59
+      },
+      "LN_SBPLX": {
+        "objective": 6.478085672788708,
+        "time": 0.00132604,
+        "neval": 94
+      }
+    }
+  },
+  "Assay": {
+    "n": 60,
+    "Y ~ 1 + A + B * C + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 31,
+      "q": [
+        12,
+        10
+      ],
+      "LN_BOBYQA": {
+        "objective": -240.3890802326005,
+        "time": 0.001799929,
+        "neval": 31
+      },
+      "LN_COBYLA": {
+        "objective": -240.38908023231858,
+        "time": 0.002284756,
+        "neval": 49
+      },
+      "LN_NELDERMEAD": {
+        "objective": -240.32966269971882,
+        "time": 0.002372596,
+        "neval": 54
+      },
+      "LN_SBPLX": {
+        "objective": -240.38908023154522,
+        "time": 0.003641712,
+        "neval": 98
+      }
+    }
+  },
+  "AvgDailyGain": {
+    "n": 32,
+    "Y ~ 1 + A * U + (1 | G)": {
+      "nopt": 1,
+      "p": 8,
+      "q": [
+        8
+      ],
+      "LN_BOBYQA": {
+        "objective": 9.970955873862945,
+        "time": 0.00076412,
+        "neval": 23
+      },
+      "LN_COBYLA": {
+        "objective": 9.970955874593383,
+        "time": 0.000750608,
+        "neval": 24
+      },
+      "LN_NELDERMEAD": {
+        "objective": 9.97095587485126,
+        "time": 0.000785996,
+        "neval": 30
+      },
+      "LN_SBPLX": {
+        "objective": 9.97095587485126,
+        "time": 0.000888177,
+        "neval": 45
+      }
+    },
+    "Y ~ 1 + A + U + (1 | G)": {
+      "nopt": 1,
+      "p": 5,
+      "q": [
+        8
+      ],
+      "LN_BOBYQA": {
+        "objective": 13.617215626584144,
+        "time": 0.000631495,
+        "neval": 17
+      },
+      "LN_COBYLA": {
+        "objective": 13.617215626663882,
+        "time": 0.000672553,
+        "neval": 26
+      },
+      "LN_NELDERMEAD": {
+        "objective": 13.617215628366424,
+        "time": 0.000708712,
+        "neval": 32
+      },
+      "LN_SBPLX": {
+        "objective": 13.617215626663882,
+        "time": 0.000833687,
+        "neval": 52
+      }
+    }
+  },
+  "BIB": {
+    "n": 24,
+    "Y ~ 1 + A * U + (1 | G)": {
+      "nopt": 1,
+      "p": 8,
+      "q": [
+        8
+      ],
+      "LN_BOBYQA": {
+        "objective": 92.99146412317344,
+        "time": 0.000823572,
+        "neval": 33
+      },
+      "LN_COBYLA": {
+        "objective": 92.99146412446422,
+        "time": 0.000782433,
+        "neval": 27
+      },
+      "LN_NELDERMEAD": {
+        "objective": 92.99146413913921,
+        "time": 0.000775481,
+        "neval": 30
+      },
+      "LN_SBPLX": {
+        "objective": 92.99146413913921,
+        "time": 0.000878723,
+        "neval": 42
+      }
+    }
+  },
+  "Bond": {
+    "n": 21,
+    "Y ~ 1 + A + (1 | G)": {
+      "nopt": 1,
+      "p": 3,
+      "q": [
+        7
+      ],
+      "LN_BOBYQA": {
+        "objective": 115.70738588549854,
+        "time": 0.000556362,
+        "neval": 14
+      },
+      "LN_COBYLA": {
+        "objective": 115.70738588674541,
+        "time": 0.000606424,
+        "neval": 24
+      },
+      "LN_NELDERMEAD": {
+        "objective": 115.70738588720768,
+        "time": 0.000636791,
+        "neval": 30
+      },
+      "LN_SBPLX": {
+        "objective": 115.7073858855928,
+        "time": 0.000755876,
+        "neval": 50
+      }
+    }
+  },
+  "Chem97": {
+    "n": 31022,
+    "Y ~ 1 + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 1,
+      "q": [
+        2410,
+        131
+      ],
+      "LN_BOBYQA": {
+        "objective": 157869.92614932367,
+        "time": 0.007544447,
+        "neval": 32
+      },
+      "LN_COBYLA": {
+        "objective": 157869.92614932946,
+        "time": 0.012650957,
+        "neval": 73
+      },
+      "LN_NELDERMEAD": {
+        "objective": 157869.92614943403,
+        "time": 0.014041386,
+        "neval": 85
+      },
+      "LN_SBPLX": {
+        "objective": 157869.92614933607,
+        "time": 0.018746693,
+        "neval": 123
+      }
+    },
+    "Y ~ 1 + U + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 2,
+      "q": [
+        2410,
+        131
+      ],
+      "LN_BOBYQA": {
+        "objective": 141685.56021410236,
+        "time": 0.008380836,
+        "neval": 31
+      },
+      "LN_COBYLA": {
+        "objective": 141685.56021413335,
+        "time": 0.017289731,
+        "neval": 94
+      },
+      "LN_NELDERMEAD": {
+        "objective": 141685.56021417736,
+        "time": 0.017060671,
+        "neval": 91
+      },
+      "LN_SBPLX": {
+        "objective": 141685.56021417704,
+        "time": 0.019470353,
+        "neval": 111
+      }
+    }
+  },
+  "Cultivation": {
+    "n": 24,
+    "Y ~ 1 + A * B + (1 | G)": {
+      "nopt": 1,
+      "p": 6,
+      "q": [
+        4
+      ],
+      "LN_BOBYQA": {
+        "objective": 73.32183555936771,
+        "time": 0.000699204,
+        "neval": 13
+      },
+      "LN_COBYLA": {
+        "objective": 73.32183555976744,
+        "time": 0.000750943,
+        "neval": 24
+      },
+      "LN_NELDERMEAD": {
+        "objective": 73.32183556431177,
+        "time": 0.000759153,
+        "neval": 30
+      },
+      "LN_SBPLX": {
+        "objective": 73.32183555976744,
+        "time": 0.000886688,
+        "neval": 50
+      }
+    }
+  },
+  "Demand": {
+    "n": 77,
+    "Y ~ 1 + U + V + W + X + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 5,
+      "q": [
+        11,
+        7
+      ],
+      "LN_BOBYQA": {
+        "objective": -260.6283232475094,
+        "time": 0.001156369,
+        "neval": 40
+      },
+      "LN_COBYLA": {
+        "objective": -260.62832323692214,
+        "time": 0.00456531,
+        "neval": 314
+      },
+      "LN_NELDERMEAD": {
+        "objective": -257.40904787898086,
+        "time": 0.001149585,
+        "neval": 44
+      },
+      "LN_SBPLX": {
+        "objective": -260.62832324745284,
+        "time": 0.002037492,
+        "neval": 115
+      }
+    }
+  },
+  "Dyestuff": {
+    "n": 30,
+    "Y ~ 1 + (1 | G)": {
+      "nopt": 1,
+      "p": 1,
+      "q": [
+        6
+      ],
+      "LN_BOBYQA": {
+        "objective": 327.32705988113645,
+        "time": 0.000517876,
+        "neval": 18
+      },
+      "LN_COBYLA": {
+        "objective": 327.32705988280196,
+        "time": 0.00056317,
+        "neval": 27
+      },
+      "LN_NELDERMEAD": {
+        "objective": 327.3270599022331,
+        "time": 0.000556629,
+        "neval": 28
+      },
+      "LN_SBPLX": {
+        "objective": 327.3270599022331,
+        "time": 0.000643567,
+        "neval": 43
+      }
+    }
+  },
+  "Dyestuff2": {
+    "n": 30,
+    "Y ~ 1 + (1 | G)": {
+      "nopt": 1,
+      "p": 1,
+      "q": [
+        6
+      ],
+      "LN_BOBYQA": {
+        "objective": 162.87303665382575,
+        "time": 0.000514595,
+        "neval": 18
+      },
+      "LN_COBYLA": {
+        "objective": 162.87303665382575,
+        "time": 0.000537175,
+        "neval": 22
+      },
+      "LN_NELDERMEAD": {
+        "objective": 162.87303665382575,
+        "time": 0.000425913,
+        "neval": 4
+      },
+      "LN_SBPLX": {
+        "objective": 162.87303665570963,
+        "time": 0.000471756,
+        "neval": 12
+      }
+    }
+  },
+  "Exam": {
+    "n": 4059,
+    "Y ~ 1 + A + B + U + (1 | G)": {
+      "nopt": 1,
+      "p": 5,
+      "q": [
+        65
+      ],
+      "LN_BOBYQA": {
+        "objective": 9325.4273050669,
+        "time": 0.001317241,
+        "neval": 20
+      },
+      "LN_COBYLA": {
+        "objective": 9325.427305067271,
+        "time": 0.00142824,
+        "neval": 32
+      },
+      "LN_NELDERMEAD": {
+        "objective": 9325.427305072133,
+        "time": 0.001470512,
+        "neval": 38
+      },
+      "LN_SBPLX": {
+        "objective": 9325.427305072133,
+        "time": 0.001694558,
+        "neval": 59
+      }
+    },
+    "Y ~ 1 + A * U + B + (1 | G)": {
+      "nopt": 1,
+      "p": 6,
+      "q": [
+        65
+      ],
+      "LN_BOBYQA": {
+        "objective": 9325.384608899009,
+        "time": 0.001462805,
+        "neval": 20
+      },
+      "LN_COBYLA": {
+        "objective": 9325.384608899434,
+        "time": 0.001551746,
+        "neval": 32
+      },
+      "LN_NELDERMEAD": {
+        "objective": 9325.38460890019,
+        "time": 0.00162102,
+        "neval": 40
+      },
+      "LN_SBPLX": {
+        "objective": 9325.384608899016,
+        "time": 0.001898727,
+        "neval": 66
+      }
+    }
+  },
+  "Gasoline": {
+    "n": 32,
+    "Y ~ 1 + U + (1 | G)": {
+      "nopt": 1,
+      "p": 2,
+      "q": [
+        10
+      ],
+      "LN_BOBYQA": {
+        "objective": 170.66251956442153,
+        "time": 0.000576269,
+        "neval": 21
+      },
+      "LN_COBYLA": {
+        "objective": 170.6625195663753,
+        "time": 0.000594392,
+        "neval": 26
+      },
+      "LN_NELDERMEAD": {
+        "objective": 170.6625196619112,
+        "time": 0.000593051,
+        "neval": 28
+      },
+      "LN_SBPLX": {
+        "objective": 170.6625195694289,
+        "time": 0.000730347,
+        "neval": 49
+      }
+    }
+  },
+  "Genetics": {
+    "n": 60,
+    "Y ~ 1 + A + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 5,
+      "q": [
+        12,
+        4
+      ],
+      "LN_BOBYQA": {
+        "objective": 478.40521041544645,
+        "time": 0.000889955,
+        "neval": 30
+      },
+      "LN_COBYLA": {
+        "objective": 478.40521041554615,
+        "time": 0.001512056,
+        "neval": 92
+      },
+      "LN_NELDERMEAD": {
+        "objective": 478.4052104202933,
+        "time": 0.001213716,
+        "neval": 67
+      },
+      "LN_SBPLX": {
+        "objective": 478.40521041586095,
+        "time": 0.001553514,
+        "neval": 100
+      }
+    }
+  },
+  "HR": {
+    "n": 120,
+    "Y ~ 1 + A * U + V + ((1 + U) | G)": {
+      "nopt": 3,
+      "p": 7,
+      "q": [
+        48
+      ],
+      "LN_BOBYQA": {
+        "objective": 787.7542476908427,
+        "time": 0.002314739,
+        "neval": 47
+      },
+      "LN_COBYLA": {
+        "objective": 787.7542476927101,
+        "time": 0.003202905,
+        "neval": 76
+      },
+      "LN_NELDERMEAD": {
+        "objective": 787.7542476985467,
+        "time": 0.004161277,
+        "neval": 108
+      },
+      "LN_SBPLX": {
+        "objective": 787.7542477329276,
+        "time": 0.005399189,
+        "neval": 151
+      }
+    }
+  },
+  "Hsb82": {
+    "n": 7185,
+    "Y ~ 1 + A + B + C + U + (1 | G)": {
+      "nopt": 1,
+      "p": 5,
+      "q": [
+        160
+      ],
+      "LN_BOBYQA": {
+        "objective": 46331.43240584542,
+        "time": 0.002013953,
+        "neval": 14
+      },
+      "LN_COBYLA": {
+        "objective": 46331.43240585932,
+        "time": 0.002191499,
+        "neval": 27
+      },
+      "LN_NELDERMEAD": {
+        "objective": 46331.43240585403,
+        "time": 0.002398301,
+        "neval": 41
+      },
+      "LN_SBPLX": {
+        "objective": 46331.432405845924,
+        "time": 0.002789713,
+        "neval": 67
+      }
+    }
+  },
+  "IncBlk": {
+    "n": 24,
+    "Y ~ 1 + A + U + V + W + Z + (1 | G)": {
+      "nopt": 1,
+      "p": 8,
+      "q": [
+        12
+      ],
+      "LN_BOBYQA": {
+        "objective": -119.10816627064243,
+        "time": 0.000685032,
+        "neval": 13
+      },
+      "LN_COBYLA": {
+        "objective": -119.10816626969495,
+        "time": 0.000770528,
+        "neval": 27
+      },
+      "LN_NELDERMEAD": {
+        "objective": -119.10816626915894,
+        "time": 0.000808795,
+        "neval": 33
+      },
+      "LN_SBPLX": {
+        "objective": -119.10816627058351,
+        "time": 0.000971679,
+        "neval": 53
+      }
+    }
+  },
+  "InstEval": {
+    "n": 73421,
+    "Y ~ 1 + I * A + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 28,
+      "q": [
+        2972,
+        1128
+      ],
+      "LN_BOBYQA": {
+        "objective": 237585.5534151697,
+        "time": 1.852806882,
+        "neval": 62
+      },
+      "LN_COBYLA": {
+        "objective": 237585.55341519538,
+        "time": 1.534782846,
+        "neval": 54
+      },
+      "LN_NELDERMEAD": {
+        "objective": 237585.55341524,
+        "time": 2.480976018,
+        "neval": 89
+      },
+      "LN_SBPLX": {
+        "objective": 237585.553415178,
+        "time": 3.747742756,
+        "neval": 136
+      }
+    },
+    "Y ~ 1 + A + (1 | G) + (1 | H) + (1 | I)": {
+      "nopt": 3,
+      "p": 2,
+      "q": [
+        2972,
+        1128,
+        14
+      ],
+      "LN_BOBYQA": {
+        "objective": 237721.76877452698,
+        "time": 2.900371048,
+        "neval": 112
+      },
+      "LN_COBYLA": {
+        "objective": 237721.76877450853,
+        "time": 37.096603435,
+        "neval": 1443
+      },
+      "LN_NELDERMEAD": {
+        "objective": 237721.76877459703,
+        "time": 5.557814934,
+        "neval": 216
+      },
+      "LN_SBPLX": {
+        "objective": 237721.76877450282,
+        "time": 4.994892018,
+        "neval": 194
+      }
+    }
+  },
+  "Mississippi": {
+    "n": 37,
+    "Y ~ 1 + A + (1 | G)": {
+      "nopt": 1,
+      "p": 3,
+      "q": [
+        6
+      ],
+      "LN_BOBYQA": {
+        "objective": 246.5736139715645,
+        "time": 0.000581336,
+        "neval": 14
+      },
+      "LN_COBYLA": {
+        "objective": 246.57361397214441,
+        "time": 0.000633397,
+        "neval": 28
+      },
+      "LN_NELDERMEAD": {
+        "objective": 246.57361398012452,
+        "time": 0.000658245,
+        "neval": 33
+      },
+      "LN_SBPLX": {
+        "objective": 246.5736139715651,
+        "time": 0.000784695,
+        "neval": 53
+      }
+    }
+  },
+  "Oxboys": {
+    "n": 234,
+    "Y ~ 1 + U + ((1 + U) | G)": {
+      "nopt": 3,
+      "p": 2,
+      "q": [
+        52
+      ],
+      "LN_BOBYQA": {
+        "objective": 725.9676890743374,
+        "time": 0.005148509,
+        "neval": 185
+      },
+      "LN_COBYLA": {
+        "objective": 725.9676894416498,
+        "time": 0.012844144,
+        "neval": 525
+      },
+      "LN_NELDERMEAD": {
+        "objective": 725.9676890838925,
+        "time": 0.003461393,
+        "neval": 125
+      },
+      "LN_SBPLX": {
+        "objective": 725.967689063928,
+        "time": 0.008670898,
+        "neval": 356
+      }
+    }
+  },
+  "PBIB": {
+    "n": 60,
+    "Y ~ 1 + A + (1 | G)": {
+      "nopt": 1,
+      "p": 15,
+      "q": [
+        15
+      ],
+      "LN_BOBYQA": {
+        "objective": 22.570577950608687,
+        "time": 0.000723579,
+        "neval": 24
+      },
+      "LN_COBYLA": {
+        "objective": 22.57057795141686,
+        "time": 0.000749732,
+        "neval": 28
+      },
+      "LN_NELDERMEAD": {
+        "objective": 22.570577952029275,
+        "time": 0.000792091,
+        "neval": 32
+      },
+      "LN_SBPLX": {
+        "objective": 22.570577952029275,
+        "time": 0.00094679,
+        "neval": 50
+      }
+    }
+  },
+  "Pastes": {
+    "n": 60,
+    "Y ~ 1 + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 1,
+      "q": [
+        30,
+        10
+      ],
+      "LN_BOBYQA": {
+        "objective": 247.99446586294397,
+        "time": 0.000874198,
+        "neval": 35
+      },
+      "LN_COBYLA": {
+        "objective": 247.99446586317163,
+        "time": 0.000948815,
+        "neval": 44
+      },
+      "LN_NELDERMEAD": {
+        "objective": 247.994465864037,
+        "time": 0.001142857,
+        "neval": 67
+      },
+      "LN_SBPLX": {
+        "objective": 247.99446586837263,
+        "time": 0.001393788,
+        "neval": 91
+      }
+    }
+  },
+  "Penicillin": {
+    "n": 144,
+    "Y ~ 1 + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 1,
+      "q": [
+        24,
+        6
+      ],
+      "LN_BOBYQA": {
+        "objective": 332.1883486722098,
+        "time": 0.001070351,
+        "neval": 44
+      },
+      "LN_COBYLA": {
+        "objective": 332.18834869501495,
+        "time": 0.001609839,
+        "neval": 91
+      },
+      "LN_NELDERMEAD": {
+        "objective": 332.18834867256066,
+        "time": 0.001355931,
+        "neval": 74
+      },
+      "LN_SBPLX": {
+        "objective": 332.188348668953,
+        "time": 0.001802083,
+        "neval": 111
+      }
+    }
+  },
+  "Poems": {
+    "n": 275996,
+    "Y ~ 1 + U + V + (1 | G) + (1 | H) + (1 | I)": {
+      "nopt": 3,
+      "p": 3,
+      "q": [
+        2315,
+        326,
+        87
+      ],
+      "LN_BOBYQA": {
+        "objective": 174757.88837790114,
+        "time": 2.879963976,
+        "neval": 104
+      },
+      "LN_COBYLA": {
+        "objective": 174757.88837817684,
+        "time": 10.00197038,
+        "neval": 373
+      },
+      "LN_NELDERMEAD": {
+        "objective": 174757.88837790405,
+        "time": 5.907040707,
+        "neval": 217
+      },
+      "LN_SBPLX": {
+        "objective": 174757.88837777716,
+        "time": 5.501865758,
+        "neval": 204
+      }
+    }
+  },
+  "SIMS": {
+    "n": 3691,
+    "Y ~ 1 + U + ((1 + U) | G)": {
+      "nopt": 3,
+      "p": 2,
+      "q": [
+        380
+      ],
+      "LN_BOBYQA": {
+        "objective": 22373.106635906064,
+        "time": 0.016674831,
+        "neval": 138
+      },
+      "LN_COBYLA": {
+        "objective": 22373.10663604547,
+        "time": 2.397893832,
+        "neval": 20773
+      },
+      "LN_NELDERMEAD": {
+        "objective": 22373.10663583289,
+        "time": 0.017455402,
+        "neval": 149
+      },
+      "LN_SBPLX": {
+        "objective": 22373.106635838347,
+        "time": 0.057318607,
+        "neval": 516
+      }
+    }
+  },
+  "ScotsSec": {
+    "n": 3435,
+    "Y ~ 1 + A + U + V + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 4,
+      "q": [
+        148,
+        19
+      ],
+      "LN_BOBYQA": {
+        "objective": 14773.221491160497,
+        "time": 0.002873117,
+        "neval": 43
+      },
+      "LN_COBYLA": {
+        "objective": 14773.221491161128,
+        "time": 0.00430341,
+        "neval": 85
+      },
+      "LN_NELDERMEAD": {
+        "objective": 14773.261636264384,
+        "time": 0.003643724,
+        "neval": 68
+      },
+      "LN_SBPLX": {
+        "objective": 14773.221491167742,
+        "time": 0.005279379,
+        "neval": 115
+      }
+    }
+  },
+  "Semi2": {
+    "n": 72,
+    "Y ~ 1 + A + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 2,
+      "q": [
+        24,
+        8
+      ],
+      "LN_BOBYQA": {
+        "objective": 456.86394387905716,
+        "time": 0.000894256,
+        "neval": 32
+      },
+      "LN_COBYLA": {
+        "objective": 456.86394388583284,
+        "time": 0.001125449,
+        "neval": 58
+      },
+      "LN_NELDERMEAD": {
+        "objective": 456.8639438633066,
+        "time": 0.001575267,
+        "neval": 109
+      },
+      "LN_SBPLX": {
+        "objective": 456.8639438614858,
+        "time": 0.001656258,
+        "neval": 116
+      }
+    }
+  },
+  "Semiconductor": {
+    "n": 48,
+    "Y ~ 1 + A * B + (1 | G)": {
+      "nopt": 1,
+      "p": 16,
+      "q": [
+        12
+      ],
+      "LN_BOBYQA": {
+        "objective": 30.14672243633641,
+        "time": 0.00077763,
+        "neval": 13
+      },
+      "LN_COBYLA": {
+        "objective": 30.14672243664877,
+        "time": 0.000876419,
+        "neval": 23
+      },
+      "LN_NELDERMEAD": {
+        "objective": 30.146722439589418,
+        "time": 0.00095322,
+        "neval": 32
+      },
+      "LN_SBPLX": {
+        "objective": 30.146722439589418,
+        "time": 0.001113889,
+        "neval": 50
+      }
+    }
+  },
+  "TeachingII": {
+    "n": 96,
+    "Y ~ 1 + A + T + U + V + W + X + Z + (1 | G)": {
+      "nopt": 1,
+      "p": 12,
+      "q": [
+        12
+      ],
+      "LN_BOBYQA": {
+        "objective": 567.162761189051,
+        "time": 0.000792184,
+        "neval": 16
+      },
+      "LN_COBYLA": {
+        "objective": 567.162761189893,
+        "time": 0.000849871,
+        "neval": 24
+      },
+      "LN_NELDERMEAD": {
+        "objective": 567.1627611982944,
+        "time": 0.000880393,
+        "neval": 30
+      },
+      "LN_SBPLX": {
+        "objective": 567.1627611890957,
+        "time": 0.001051642,
+        "neval": 50
+      }
+    }
+  },
+  "WWheat": {
+    "n": 60,
+    "Y ~ 1 + U + ((1 + U) | G)": {
+      "nopt": 3,
+      "p": 2,
+      "q": [
+        20
+      ],
+      "LN_BOBYQA": {
+        "objective": 182.05557651110016,
+        "time": 0.002529611,
+        "neval": 125
+      },
+      "LN_COBYLA": {
+        "objective": 182.05563003904035,
+        "time": 1.217800169,
+        "neval": 83897
+      },
+      "LN_NELDERMEAD": {
+        "objective": 182.05557639265234,
+        "time": 0.003588003,
+        "neval": 213
+      },
+      "LN_SBPLX": {
+        "objective": 182.05557639314966,
+        "time": 0.005908847,
+        "neval": 383
+      }
+    }
+  },
+  "Weights": {
+    "n": 399,
+    "Y ~ 1 + A * U + ((1 + U) | G)": {
+      "nopt": 3,
+      "p": 6,
+      "q": [
+        114
+      ],
+      "LN_BOBYQA": {
+        "objective": 1313.3536154794328,
+        "time": 0.007340789,
+        "neval": 115
+      },
+      "LN_COBYLA": {
+        "objective": 1313.3536227390878,
+        "time": 0.160588945,
+        "neval": 2865
+      },
+      "LN_NELDERMEAD": {
+        "objective": 1313.3536154701187,
+        "time": 0.009755642,
+        "neval": 159
+      },
+      "LN_SBPLX": {
+        "objective": 1313.3536154702924,
+        "time": 0.019427117,
+        "neval": 337
+      }
+    }
+  },
+  "cake": {
+    "n": 270,
+    "Y ~ 1 + A * B + (1 | G)": {
+      "nopt": 1,
+      "p": 18,
+      "q": [
+        45
+      ],
+      "LN_BOBYQA": {
+        "objective": 1679.051865254755,
+        "time": 0.000987469,
+        "neval": 14
+      },
+      "LN_COBYLA": {
+        "objective": 1679.0518652568412,
+        "time": 0.001189807,
+        "neval": 26
+      },
+      "LN_NELDERMEAD": {
+        "objective": 1679.051865266793,
+        "time": 0.001240194,
+        "neval": 30
+      },
+      "LN_SBPLX": {
+        "objective": 1679.0518652549306,
+        "time": 0.001722815,
+        "neval": 57
+      }
+    }
+  },
+  "egsingle": {
+    "n": 7230,
+    "Y ~ 1 + A + U * V + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 5,
+      "q": [
+        1721,
+        60
+      ],
+      "LN_BOBYQA": {
+        "objective": 16732.49654336663,
+        "time": 0.007725537,
+        "neval": 37
+      },
+      "LN_COBYLA": {
+        "objective": 16732.496543368678,
+        "time": 0.014460136,
+        "neval": 82
+      },
+      "LN_NELDERMEAD": {
+        "objective": 16732.496543369452,
+        "time": 0.014408333,
+        "neval": 82
+      },
+      "LN_SBPLX": {
+        "objective": 16732.49654336716,
+        "time": 0.020075553,
+        "neval": 120
+      }
+    }
+  },
+  "ergoStool": {
+    "n": 36,
+    "Y ~ 1 + A + (1 | G)": {
+      "nopt": 1,
+      "p": 4,
+      "q": [
+        9
+      ],
+      "LN_BOBYQA": {
+        "objective": 122.14443740810718,
+        "time": 0.000596628,
+        "neval": 16
+      },
+      "LN_COBYLA": {
+        "objective": 122.14443740920682,
+        "time": 0.000600391,
+        "neval": 23
+      },
+      "LN_NELDERMEAD": {
+        "objective": 122.14443741205368,
+        "time": 0.000636151,
+        "neval": 30
+      },
+      "LN_SBPLX": {
+        "objective": 122.14443740811701,
+        "time": 0.000760494,
+        "neval": 50
+      }
+    }
+  },
+  "ml10m": {
+    "n": 10000054,
+    "Y ~ 1 + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 1,
+      "q": [
+        69878,
+        10677
+      ],
+      "LN_BOBYQA": {
+        "objective": 2.5589475545395855e7,
+        "time": 524.602562007,
+        "neval": 43
+      },
+      "LN_COBYLA": {
+        "objective": 2.558947554701693e7,
+        "time": 1070.713590569,
+        "neval": 90
+      },
+      "LN_NELDERMEAD": {
+        "objective": 2.5589475545401905e7,
+        "time": 1041.620118476,
+        "neval": 87
+      },
+      "LN_SBPLX": {
+        "objective": 2.558947554539797e7,
+        "time": 1527.455744414,
+        "neval": 129
+      }
+    }
+  },
+  "ml1m": {
+    "n": 1000209,
+    "Y ~ 1 + (1 | G) + (1 | H)": {
+      "nopt": 2,
+      "p": 1,
+      "q": [
+        6040,
+        3706
+      ],
+      "LN_BOBYQA": {
+        "objective": 2.6639720116220126e6,
+        "time": 23.857119875,
+        "neval": 29
+      },
+      "LN_COBYLA": {
+        "objective": 2.6639720116171637e6,
+        "time": 43.58936899,
+        "neval": 55
+      },
+      "LN_NELDERMEAD": {
+        "objective": 2.663972011618999e6,
+        "time": 62.393925871,
+        "neval": 80
+      },
+      "LN_SBPLX": {
+        "objective": 2.6639720116172717e6,
+        "time": 96.169244621,
+        "neval": 125
+      }
+    }
+  },
+  "mm0": {
+    "n": 69588,
+    "Y ~ 1 + A * U + ((1 + U) | G) + ((1 + U) | H)": {
+      "nopt": 6,
+      "p": 4,
+      "q": [
+        120,
+        74
+      ],
+      "LN_BOBYQA": {
+        "objective": 395168.83667523036,
+        "time": 0.354479124,
+        "neval": 393
+      },
+      "LN_COBYLA": {
+        "objective": 395168.83651409135,
+        "time": 1.147638009,
+        "neval": 1473
+      },
+      "LN_NELDERMEAD": {
+        "objective": 395168.8365140383,
+        "time": 0.968573885,
+        "neval": 1214
+      },
+      "LN_SBPLX": {
+        "objective": 395168.83651386097,
+        "time": 0.412189573,
+        "neval": 486
+      }
+    }
+  },
+  "paulsim": {
+    "n": 15419,
+    "Y ~ 1+S+T+U + (1|G) + (0+S|G)": {
+      "nopt": 2,
+      "p": 4,
+      "q": [
+        100,
+        100
+      ],
+      "LN_BOBYQA": {
+        "objective": 143232.63408130567,
+        "time": 0.004998708,
+        "neval": 119
+      },
+      "LN_COBYLA": {
+        "objective": 143232.63797260885,
+        "time": 1.463396398,
+        "neval": 75182
+      },
+      "LN_NELDERMEAD": {
+        "objective": 143803.98229160527,
+        "time": 0.003660739,
+        "neval": 56
+      },
+      "LN_SBPLX": {
+        "objective": 143232.63408135416,
+        "time": 0.005283262,
+        "neval": 147
+      }
+    },
+    "Y ~ 1+S+T+U + (0+S|G)": {
+      "nopt": 1,
+      "p": 4,
+      "q": [
+        100
+      ],
+      "LN_BOBYQA": {
+        "objective": 143232.6340813057,
+        "time": 0.002472129,
+        "neval": 43
+      },
+      "LN_COBYLA": {
+        "objective": 143232.63408134982,
+        "time": 0.002385499,
+        "neval": 37
+      },
+      "LN_NELDERMEAD": {
+        "objective": 143232.6340814206,
+        "time": 0.002533671,
+        "neval": 52
+      },
+      "LN_SBPLX": {
+        "objective": 143232.6340814206,
+        "time": 0.002823251,
+        "neval": 81
+      }
+    }
+  },
+  "sleepstudy": {
+    "n": 180,
+    "Y ~ 1 + U + ((1 + U) | G)": {
+      "nopt": 3,
+      "p": 2,
+      "q": [
+        36
+      ],
+      "LN_BOBYQA": {
+        "objective": 1751.9393444646628,
+        "time": 0.001768264,
+        "neval": 57
+      },
+      "LN_COBYLA": {
+        "objective": 1751.939344463791,
+        "time": 0.007055835,
+        "neval": 344
+      },
+      "LN_NELDERMEAD": {
+        "objective": 1751.9393444750258,
+        "time": 0.00320237,
+        "neval": 140
+      },
+      "LN_SBPLX": {
+        "objective": 1751.939344475596,
+        "time": 0.004289003,
+        "neval": 202
+      }
+    },
+    "Y ~ 1 + U + (1 | G) + ((0 + U) | G)": {
+      "nopt": 2,
+      "p": 2,
+      "q": [
+        18,
+        18
+      ],
+      "LN_BOBYQA": {
+        "objective": 1752.0032551416107,
+        "time": 0.000941086,
+        "neval": 30
+      },
+      "LN_COBYLA": {
+        "objective": 1752.0032551573643,
+        "time": 0.001962382,
+        "neval": 138
+      },
+      "LN_NELDERMEAD": {
+        "objective": 1752.0032551435263,
+        "time": 0.001327713,
+        "neval": 75
+      },
+      "LN_SBPLX": {
+        "objective": 1752.0032551414129,
+        "time": 0.001802906,
+        "neval": 126
+      }
+    }
+  }
+}
