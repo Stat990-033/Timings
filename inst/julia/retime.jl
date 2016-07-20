@@ -3,19 +3,21 @@ using Compat, DataFrames, DataStructures, JSON, MixedModels, RCall
 R" suppressPackageStartupMessages(library(Timings)) "
 @rimport Timings
 
+const OS = string(VERSION ≤ v"0.4.6" ? Sys.OS_NAME : Sys.KERNEL)
 const desc = OrderedDict(
     :Jvers => string(VERSION, " (", Base.GIT_VERSION_INFO.date_string, ")"),
-    :Rvers => rcopy(reval(:version)[symbol("version.string")]),
+    :Rvers => rcopy(reval(:version)[Symbol("version.string")]),
     :CPU => Sys.cpu_info()[1].model,
-    :OS => string(Sys.KERNEL),
+    :OS => OS,
     :CPU_CORES => length(Sys.cpu_info()),
     :WORD_SIZE => Sys.WORD_SIZE,
-    :BLAS => BLAS.vendor(),
+#    :BLAS => BLAS.vendor(),
+    :BLAS => Base.libblas_name,
     :memory => string(@sprintf("%.3f ",Sys.total_memory()/2^30),"GB"))
 
 function retime(fnm)
     js = JSON.parsefile(fnm)
-    dsname = symbol(js["dsname"])
+    dsname =  Symbol(js["dsname"])
     @show dsname
     dat = rcopy(dsname)
     dd = OrderedDict{Compat.String, Any}("n" => size(dat, 1))
