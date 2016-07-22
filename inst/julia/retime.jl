@@ -1,7 +1,6 @@
 using Compat, DataFrames, DataStructures, JSON, MixedModels, RCall
 
 R" suppressPackageStartupMessages(library(Timings)) "
-@rimport Timings
 
 const OS = string(VERSION ≤ v"0.4.6" ? Sys.OS_NAME : Sys.KERNEL)
 const desc = OrderedDict(
@@ -17,26 +16,34 @@ const desc = OrderedDict(
 
 function retime(fnm)
     js = JSON.parsefile(fnm)
-    dsname =  Symbol(js["dsname"])
-    @show dsname
-    dat = rcopy(dsname)
-    dd = OrderedDict{Compat.String, Any}("n" => size(dat, 1))
-    for m in js["models"]
-        fstr = m["formula"]
-        form = eval(parse(fstr))
-        @show form
-        model = fit!(lmm(form, dat))
-        fits = OrderedDict(:nopt => length(model[:θ]),
-            :p => length(fixef(model)),
-            :q => map(length, ranef(model, true))
-            )
-        for opt in (:LN_BOBYQA, :LN_BOBYQA, :LN_COBYLA, :LN_NELDERMEAD, :LN_SBPLX)
-            gc()
-            tm = @elapsed mod = fit!(lmm(form, dat), false, opt)
-            fits[opt] = OrderedDict(:objective => objective(mod),
-                :time => tm, :neval => mod.opt.feval)
+    for (ds, dict) in JSON.parsefile(fnm, dicttype = OrderedDict)
+        dat = rcopy(Symbol(ds))
+        dd = OrderedDict{Compat.String, Any}("n" => size(dat, 1))
+        for (form, optimizers) in dict
+            fform = eval(parse(form))
+            model = fit!(lmm(fform, dat))
+            fits = OrderedDict(:nopt => length(model[:θ]),
+                :p => length(fixef(model)),
+                :q => map(length, ranef(model, true))
+                )
+            for joptimizer in filter(r"^LN_", optimizers)  # optimize with lmm in Julia
+                gc()
+                optsym = Symbol(joptimizer)
+                tm = @elapsed model = fit!(lmm(fform, dat), false, optsym)
+                fits[optsym] = OrderedDict{Symbol,Any}(:objective => objective(model),
+                     :time => tm, :neval => model.opt.feval)
+            end
+            for nloptalg in filter(r"^NLOPT_LN_", optimizers)
+                tt = R"""
+                system.time(mm <- lmer($fform , $dat, REML = FALSE,
+                    control = lmerControl(optimizer = "nloptwrap", calc.derivs = FALSE,
+                        optCtrl = list(algorithm = $nloptalg, maxeval = 100000))))
+                """[3]
+               fits[Symbol(nloptalg)] = OrderedDict{Symbol, Any}(:objective => rcopy("deviance(mm)"),
+                    :time => round(tt, 3), :neval => R"mm@optinfo$feval"[1])
+            end
+            dd[form] = fits
         end
-        dd[fstr] = fits
+        desc[Symbol(ds)] = dd
     end
-    desc[dsname] = dd
 end
