@@ -30,17 +30,42 @@ function retime(fnm)
                 gc()
                 optsym = Symbol(joptimizer)
                 tm = @elapsed model = fit!(lmm(fform, dat), false, optsym)
-                fits[optsym] = OrderedDict{Symbol,Any}(:objective => objective(model),
-                     :time => tm, :neval => model.opt.feval)
+                fits[optsym] = Float64[objective(model), tm, model.opt.feval]
+            end
+            R"form <- eval(parse(text = $form))"
+            R"ds <- eval(as.symbol($ds))"
+            if "bobyqa" ∈ optimizers
+                fits[:bobyqa] = rcopy(R"""
+                    tt <- system.time(mm <- lmer(form, ds, REML = FALSE,
+                        control = lmerControl(optimizer = "bobyqa", calc.derivs = FALSE,
+                            optCtrl = list(maxfun = 100000))))
+                    c(deviance(mm), round(tt[3], 3), mm@optinfo$feval)
+                """)
+            end
+            if "Nelder_Mead" ∈ optimizers
+                fits[:Nelder_Mead] = rcopy(R"""
+                    tt <- system.time(mm <- lmer(form, ds, REML = FALSE,
+                        control = lmerControl(optimizer = "Nelder_Mead", calc.derivs = FALSE,
+                            optCtrl = list(maxfun = 100000))))
+                    c(deviance(mm), round(tt[3], 3), mm@optinfo$feval)
+                """)
             end
             for nloptalg in filter(r"^NLOPT_LN_", optimizers)
-                tt = R"""
-                system.time(mm <- lmer($fform , $dat, REML = FALSE,
-                    control = lmerControl(optimizer = "nloptwrap", calc.derivs = FALSE,
-                        optCtrl = list(algorithm = $nloptalg, maxeval = 100000))))
-                """[3]
-               fits[Symbol(nloptalg)] = OrderedDict{Symbol, Any}(:objective => rcopy("deviance(mm)"),
-                    :time => round(tt, 3), :neval => R"mm@optinfo$feval"[1])
+                fits[Symbol(nloptalg)] = rcopy(R"""
+                    tt <- system.time(mm <- lmer(form, ds, REML = FALSE,
+                        control = lmerControl(optimizer = "nloptwrap", calc.derivs = FALSE,
+                            optCtrl = list(algorithm = $nloptalg, maxeval = 100000))))
+                    c(deviance(mm), round(tt[3], 3), mm@optinfo$feval)
+                """)
+            end
+            for optimxalg in filter(r"^optimx:", optimizers)
+                RCall.globalEnv[:method] = RCall.sexp(convert(ASCIIString, split(optimxalg, ':')[2]))
+                fits[Symbol(optimxalg)] = rcopy(R"""
+                    tt <- system.time(mm <- lmer(form, ds, REML = FALSE,
+                        control = lmerControl(optimizer = "optimx", calc.derivs = FALSE,
+                            optCtrl = list(method = method, maxit = 100000))))
+                    c(deviance(mm), round(tt[3], 3), mm@optinfo$feval)
+                """)
             end
             dd[form] = fits
         end
